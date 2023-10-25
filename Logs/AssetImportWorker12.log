@@ -1,0 +1,2008 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.11f1 (d00248457e15) revision 13632072'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit CoreSingleLanguage' Language: 'ru' Physical Memory: 15715 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.11f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker12
+-projectPath
+C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story
+-logFile
+Logs/AssetImportWorker12.log
+-srvPort
+49993
+Successfully changed project path to: C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story
+C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [24068] Host "[IP] 192.168.0.107 [Port] 0 [Flags] 2 [Guid] 197925541 [EditorId] 197925541 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-5U3T1134) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [24068] Host "[IP] 192.168.0.107 [Port] 0 [Flags] 2 [Guid] 197925541 [EditorId] 197925541 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-5U3T1134) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
+Refreshing native plugins compatible for Editor in 15.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.11f1 (d00248457e15)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6010 MB
+    Driver:   31.0.15.4584
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56648
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.008974 seconds.
+- Loaded All Assemblies, in  0.398 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 249 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.639 seconds
+Domain Reload Profiling: 1035ms
+	BeginReloadAssembly (117ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (66ms)
+	LoadAllAssembliesAndSetupDomain (164ms)
+		LoadAssemblies (115ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (161ms)
+			TypeCache.Refresh (160ms)
+				TypeCache.ScanAssembly (144ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (640ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (567ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (386ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (118ms)
+			ProcessInitializeOnLoadMethodAttributes (57ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.700 seconds
+Refreshing native plugins compatible for Editor in 4.27 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.763 seconds
+Domain Reload Profiling: 1460ms
+	BeginReloadAssembly (161ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (457ms)
+		LoadAssemblies (331ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (216ms)
+			TypeCache.Refresh (191ms)
+				TypeCache.ScanAssembly (171ms)
+			ScanForSourceGeneratedMonoScriptInfo (18ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (763ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (591ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (32ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (81ms)
+			ProcessInitializeOnLoadAttributes (440ms)
+			ProcessInitializeOnLoadMethodAttributes (25ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 4.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3865 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (1.4 MB). Loaded Objects now: 4325.
+Memory consumption went from 170.2 MB to 168.9 MB.
+Total: 4.380500 ms (FindLiveObjects: 0.509700 ms CreateObjectMapping: 0.178900 ms MarkObjects: 3.196700 ms  DeleteObjects: 0.493900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/SimpleCameraController.cs: 9d5e45e836538af465ffb763b138c221 -> 639b45e76fa5fda920a92b90c69d9e74
+========================================================================
+Received Import Request.
+  Time since last request: 8526.820731 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Models/FX_Cylinder_01.fbx
+  artifactKey: Guid(372ae975cf6643444ae1c6ef9cbd981f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Models/FX_Cylinder_01.fbx using Guid(372ae975cf6643444ae1c6ef9cbd981f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68d04246368977da3d869f169df62c82') in 0.153063 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 6.348111 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Materials/FX_Plane_Particle.obj
+  artifactKey: Guid(30479c000e383a745bd05d57364b1f61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Materials/FX_Plane_Particle.obj using Guid(30479c000e383a745bd05d57364b1f61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa53a2c81438f681fb3623464590ba20') in 0.024038 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 12.814147 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Models/SunShafts.fbx
+  artifactKey: Guid(26e4a750d47e56a408d32a571488849e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Models/SunShafts.fbx using Guid(26e4a750d47e56a408d32a571488849e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0789ad7f2cefbe519b6b6b1411b33d7') in 0.009116 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 41.308254 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Materials/PolygonParticleFX_Sparkle 1.mat
+  artifactKey: Guid(75375bb6651b4c84995a0dbbc490cc11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Materials/PolygonParticleFX_Sparkle 1.mat using Guid(75375bb6651b4c84995a0dbbc490cc11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5da2c472e06e6bb12eacf3fce9fc6dd5') in 0.034180 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 5.166785 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Models/FX_Star_Pivot.fbx
+  artifactKey: Guid(a95782c1aa2915647a6294f31ef1dfb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Models/FX_Star_Pivot.fbx using Guid(a95782c1aa2915647a6294f31ef1dfb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd70115cfd578b6f3cf234a3a19a08931') in 0.009260 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 13.702808 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Models/FX_Shard_Rock_01.fbx
+  artifactKey: Guid(80d58589634d74c4db24453c22522574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Models/FX_Shard_Rock_01.fbx using Guid(80d58589634d74c4db24453c22522574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ce57c2b17a6f7a426f4dc3ee0182f71') in 0.010623 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 3.828395 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Materials/PolygonParticleFX_Cutout_Round 1.mat
+  artifactKey: Guid(931f6cb81f32ff8418b581d210c8dd21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Materials/PolygonParticleFX_Cutout_Round 1.mat using Guid(931f6cb81f32ff8418b581d210c8dd21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a06b1f4a14cc3200f528e50ba77f532') in 0.006698 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 4.877406 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Models/FX_Crystal_01.fbx
+  artifactKey: Guid(9115d2cb5328f3344829360e8791a466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Models/FX_Crystal_01.fbx using Guid(9115d2cb5328f3344829360e8791a466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '449f149c48c17da7e263a058f57138c7') in 0.008976 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 3.145172 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Materials/PolygonParticleFX_RitualCircle_01.mat
+  artifactKey: Guid(d3042a8a5e619204e89c65372c11ec64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Materials/PolygonParticleFX_RitualCircle_01.mat using Guid(d3042a8a5e619204e89c65372c11ec64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0405d2d76e8e3585a7341882134a5c59') in 0.013413 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 25.103256 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Models/FX_Arrow_02.fbx
+  artifactKey: Guid(7458e01912c97e64fa0518ea6abb8f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Models/FX_Arrow_02.fbx using Guid(7458e01912c97e64fa0518ea6abb8f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '948c90fc4c88ddfb60b43c0710970bb8') in 0.016814 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 5.875500 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Materials/PolygonParticleFX_Sparkle.mat
+  artifactKey: Guid(2372c82814ea2ed41aed3d611d81953d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Materials/PolygonParticleFX_Sparkle.mat using Guid(2372c82814ea2ed41aed3d611d81953d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07a0f870186cdad4407f689689ff0f70') in 0.010209 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 24.998177 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Models/FX_Cylinder_02.fbx
+  artifactKey: Guid(241e478857fef114eac8f58872ef0104) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Models/FX_Cylinder_02.fbx using Guid(241e478857fef114eac8f58872ef0104) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '067d369a55369db78c7102efc81745fc') in 0.009638 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 10.059550 seconds.
+  path: Assets/Visual/3D Models/PolygonParticles/Models/FX_WoodChip_01.fbx
+  artifactKey: Guid(8f7555f2a39ae4d47acc3d1fde3b0066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonParticles/Models/FX_WoodChip_01.fbx using Guid(8f7555f2a39ae4d47acc3d1fde3b0066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8d841c5f335d451e82f74e02e5946f0') in 0.009880 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.602 seconds
+Refreshing native plugins compatible for Editor in 6.53 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.667 seconds
+Domain Reload Profiling: 2266ms
+	BeginReloadAssembly (208ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (51ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (282ms)
+		LoadAssemblies (375ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (19ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1669ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (884ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (39ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (111ms)
+			ProcessInitializeOnLoadAttributes (673ms)
+			ProcessInitializeOnLoadMethodAttributes (40ms)
+			AfterProcessingInitializeOnLoad (14ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 6.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3807 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (1.3 MB). Loaded Objects now: 4385.
+Memory consumption went from 158.0 MB to 156.6 MB.
+Total: 7.086900 ms (FindLiveObjects: 0.444000 ms CreateObjectMapping: 0.400300 ms MarkObjects: 5.665700 ms  DeleteObjects: 0.575500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/SimpleCameraController.cs: 9d5e45e836538af465ffb763b138c221 -> 639b45e76fa5fda920a92b90c69d9e74
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.575 seconds
+Refreshing native plugins compatible for Editor in 5.47 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.516 seconds
+Domain Reload Profiling: 2086ms
+	BeginReloadAssembly (196ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (43ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (273ms)
+		LoadAssemblies (358ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (17ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1516ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (758ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (39ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (118ms)
+			ProcessInitializeOnLoadAttributes (547ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Refreshing native plugins compatible for Editor in 6.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3807 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (1.3 MB). Loaded Objects now: 4400.
+Memory consumption went from 159.9 MB to 158.6 MB.
+Total: 5.974100 ms (FindLiveObjects: 0.516900 ms CreateObjectMapping: 0.184500 ms MarkObjects: 4.841200 ms  DeleteObjects: 0.430100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/SimpleCameraController.cs: 9d5e45e836538af465ffb763b138c221 -> 639b45e76fa5fda920a92b90c69d9e74
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.544 seconds
+Refreshing native plugins compatible for Editor in 5.14 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.490 seconds
+Domain Reload Profiling: 2030ms
+	BeginReloadAssembly (188ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (266ms)
+		LoadAssemblies (351ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (17ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1491ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (811ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (43ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (118ms)
+			ProcessInitializeOnLoadAttributes (593ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (14ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 7.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3807 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (1.3 MB). Loaded Objects now: 4415.
+Memory consumption went from 161.8 MB to 160.5 MB.
+Total: 5.037600 ms (FindLiveObjects: 0.284400 ms CreateObjectMapping: 0.139900 ms MarkObjects: 4.191000 ms  DeleteObjects: 0.421300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/SimpleCameraController.cs: 9d5e45e836538af465ffb763b138c221 -> 639b45e76fa5fda920a92b90c69d9e74
+========================================================================
+Received Import Request.
+  Time since last request: 393.902574 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations
+  artifactKey: Guid(5d3ce9e463569514f9a445029d358e20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations using Guid(5d3ce9e463569514f9a445029d358e20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a154db59e23823600bf9612fa0da56f2') in 0.006166 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.087360 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/T_pose.fbx
+  artifactKey: Guid(232c5f166caf4c347a0862a91c9dfa56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/T_pose.fbx using Guid(232c5f166caf4c347a0862a91c9dfa56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a05bfd312a900aac75f657fcd126fa18') in 0.043420 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 141
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_SwingJump.fbx
+  artifactKey: Guid(435feeb552966244dad88101a394aff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_SwingJump.fbx using Guid(435feeb552966244dad88101a394aff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b32d889840067f1bb85f8e7d52266f9f') in 0.006522 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Left.fbx
+  artifactKey: Guid(672bcd9470a37254487d8cd935be380b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Left.fbx using Guid(672bcd9470a37254487d8cd935be380b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fbe1817d3f413432fd034135be51c15') in 0.010178 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Forward_LoopFast.fbx
+  artifactKey: Guid(b946cee9453fc0145b275a98b3cc5d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Forward_LoopFast.fbx using Guid(b946cee9453fc0145b275a98b3cc5d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '011a8e3820aac8297192b0602e824b44') in 0.006797 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Forward_Loop.fbx
+  artifactKey: Guid(8aa3c9f212025ec4088edd85efeabf35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Forward_Loop.fbx using Guid(8aa3c9f212025ec4088edd85efeabf35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b00fe3a4ceee6597f93f9d7078e4d315') in 0.007336 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_SwingJump_Fall_Landing.fbx
+  artifactKey: Guid(dcf5b7884a8a26144803bbcf50f45b28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_SwingJump_Fall_Landing.fbx using Guid(dcf5b7884a8a26144803bbcf50f45b28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d59d1f9f825b0b8a1c78f16a4653726') in 0.005698 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_KipUp_Idle.fbx
+  artifactKey: Guid(8e08a2372699e654186dcc7b5b8265b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_KipUp_Idle.fbx using Guid(8e08a2372699e654186dcc7b5b8265b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4325f818eecd11d63ade0a6024031516') in 0.005973 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Hanging_Shimmy_Right.fbx
+  artifactKey: Guid(5400e57072dcaba418cb2237146b0d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Hanging_Shimmy_Right.fbx using Guid(5400e57072dcaba418cb2237146b0d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a16e164c0d6867c3572b6e6ccd3ed91') in 0.006622 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_End_toCliffTop.fbx
+  artifactKey: Guid(9a6128d8f76185644b7ca12b5fcc0720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_End_toCliffTop.fbx using Guid(9a6128d8f76185644b7ca12b5fcc0720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a72e3f8041d35b94bc28f65c66f4a4d') in 0.006565 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_KipUpIdle_JumpUpTo_NextBar.fbx
+  artifactKey: Guid(1dfbf006e18e3384e8aa14d5412c43dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_KipUpIdle_JumpUpTo_NextBar.fbx using Guid(1dfbf006e18e3384e8aa14d5412c43dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f340aeae9c20449bbf11a4e0c7ca466') in 0.006912 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Behind.fbx
+  artifactKey: Guid(a1faee77c9aea1149b3addd981596340) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Behind.fbx using Guid(a1faee77c9aea1149b3addd981596340) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27ccacef5ab4d4a84e9d814b851af06e') in 0.006352 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Hanging_To_SwingJump.fbx
+  artifactKey: Guid(bdedd56a4dcd69c41ad9834b2ec5998c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Hanging_To_SwingJump.fbx using Guid(bdedd56a4dcd69c41ad9834b2ec5998c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58a4f664c37244378ed1dab2282390b2') in 0.006227 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Swing.fbx
+  artifactKey: Guid(19d340a96edb9f14baf1021c65eebf99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Swing.fbx using Guid(19d340a96edb9f14baf1021c65eebf99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61ac6644f31d58149b9188ea344146b9') in 0.007127 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Turn_180.fbx
+  artifactKey: Guid(19897f16f75da454680b1d8cf8d95570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Turn_180.fbx using Guid(19897f16f75da454680b1d8cf8d95570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4da33984e1d422dc32014d59d5696161') in 0.006098 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Behind_Up.fbx
+  artifactKey: Guid(6247027663abc42418b2d8cba49ca5df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Behind_Up.fbx using Guid(6247027663abc42418b2d8cba49ca5df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20585f6cf8b1c690a8bfe4784d1fa2de') in 0.006406 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Forward_End.fbx
+  artifactKey: Guid(ae23574238109b440b6a928784049413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Forward_End.fbx using Guid(ae23574238109b440b6a928784049413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a20d21c5580cf567766fcd4b3b0bf67') in 0.006514 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Behind_Down.fbx
+  artifactKey: Guid(74a44d65d98d3ca429de8026f662b0ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Behind_Down.fbx using Guid(74a44d65d98d3ca429de8026f662b0ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b921eb778127d6cfeb7667b506981e6') in 0.007595 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_EdgeHold_Walk_Left.fbx
+  artifactKey: Guid(815804798a85ea048a33e1177479e27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_EdgeHold_Walk_Left.fbx using Guid(815804798a85ea048a33e1177479e27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5cfccb4e000a6d1b18e49bf09a0391c') in 0.007277 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_PreJump.fbx
+  artifactKey: Guid(fa4bfd1a78b141247a6099a5114ed960) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_PreJump.fbx using Guid(fa4bfd1a78b141247a6099a5114ed960) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e792cc039f58c1fffa81e2c47ab91d76') in 0.006173 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Forward_Run.fbx
+  artifactKey: Guid(b27d09783f03572448b354d1a837371e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Forward_Run.fbx using Guid(b27d09783f03572448b354d1a837371e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f01a818062a4a1a14c74f04486f19c51') in 0.007128 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Jump.fbx
+  artifactKey: Guid(eb6e574a7a4443c4f8db4c4c206d35c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Jump.fbx using Guid(eb6e574a7a4443c4f8db4c4c206d35c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3908f1c139f687cbde20fbdb7b860cd') in 0.005004 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_BackIntoCliff_Recover_Hold.fbx
+  artifactKey: Guid(05de32c5185d7a540b9ff51696376922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_BackIntoCliff_Recover_Hold.fbx using Guid(05de32c5185d7a540b9ff51696376922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e02991ae036e907fcd2e7ce0135680a') in 0.005878 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Land.fbx
+  artifactKey: Guid(7176d305216e9c34f85651ca8cdeffac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Land.fbx using Guid(7176d305216e9c34f85651ca8cdeffac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b3610e3aa63088e89f192e0f35220e6') in 0.006705 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 3.632037 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Up.fbx
+  artifactKey: Guid(d3b3805cd59c05b4da3fb88d8df45143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Up.fbx using Guid(d3b3805cd59c05b4da3fb88d8df45143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15f0ec0ca0f8e461ae06f223e0001240') in 0.006293 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_LeapForward_fromSquat.fbx
+  artifactKey: Guid(c53b193ad1fa4524f925c2a4726f7e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_LeapForward_fromSquat.fbx using Guid(c53b193ad1fa4524f925c2a4726f7e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '162fe789dcccddf3e6a990527bf7b9ab') in 0.007459 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_LeftHand_GripSlip_Loop.fbx
+  artifactKey: Guid(2da4d026b93bd7e4e87aa0f2752b88e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_LeftHand_GripSlip_Loop.fbx using Guid(2da4d026b93bd7e4e87aa0f2752b88e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ef0077523a50a12274e953f3f4f530f') in 0.006021 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Start_fromCliffTop.fbx
+  artifactKey: Guid(4f588dd01dde6874c8c55918f77e16e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Start_fromCliffTop.fbx using Guid(4f588dd01dde6874c8c55918f77e16e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abb3ca8cddfe42377fed08fb287bf0bf') in 0.006511 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_RightHand_GripSlip_Start.fbx
+  artifactKey: Guid(bbb95814e1d945f4bb2f8c81568010eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_RightHand_GripSlip_Start.fbx using Guid(bbb95814e1d945f4bb2f8c81568010eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef999ba2b8f7f4015722fecfbd7359c5') in 0.007993 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Start_fromNarrowEdge_Squat.fbx
+  artifactKey: Guid(74f9be453d4af0a4796078cf3d55b799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Start_fromNarrowEdge_Squat.fbx using Guid(74f9be453d4af0a4796078cf3d55b799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7824b77f767116a27e3b5f92dd6fff23') in 0.006081 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_CatJump.fbx
+  artifactKey: Guid(3fa45ecb26697914ca49950245e3e5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_CatJump.fbx using Guid(3fa45ecb26697914ca49950245e3e5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cecc9ca24b6d8e22a31d01c28270174') in 0.008875 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_Start.fbx
+  artifactKey: Guid(7fff2feede4e74942a2ad10d7e32c728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_Start.fbx using Guid(7fff2feede4e74942a2ad10d7e32c728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c3c6c6e711152c293fefc4b5f4db04e') in 0.006250 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_Left_InPlaceRoot.fbx
+  artifactKey: Guid(cc617488659721a45b78d115b0cb25f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_Left_InPlaceRoot.fbx using Guid(cc617488659721a45b78d115b0cb25f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b786d33d65bb46110de2268248e281d6') in 0.007737 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_FallLoop.fbx
+  artifactKey: Guid(1ce44a41685774b4f885ea9ca58947f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_FallLoop.fbx using Guid(1ce44a41685774b4f885ea9ca58947f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5af004915c74e395fb271975c63dd96') in 0.006402 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_WholeSequence.fbx
+  artifactKey: Guid(0f20653d721da4c4bb1edde5aa98a24d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_WholeSequence.fbx using Guid(0f20653d721da4c4bb1edde5aa98a24d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cef7ce9449227323fd9f4465e82e9d0') in 0.007721 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_Right_InPlaceRoot.fbx
+  artifactKey: Guid(9aa0949890d7b58458b9d73cc48fab56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_Right_InPlaceRoot.fbx using Guid(9aa0949890d7b58458b9d73cc48fab56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5176d09b0b8146811b5260f72bdc468e') in 0.007396 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Idle_Crouched.fbx
+  artifactKey: Guid(f315bde7be4a07347b0e222c0d172331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Idle_Crouched.fbx using Guid(f315bde7be4a07347b0e222c0d172331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4392f73afd9cef34ceaf7b34a3d1628c') in 0.007142 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_InwardCorner_Left.fbx
+  artifactKey: Guid(a3f3a2ec0e131ea4fbc285fef0ed5b87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_InwardCorner_Left.fbx using Guid(a3f3a2ec0e131ea4fbc285fef0ed5b87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15e3f20efec9a9cebb03b6d1e9f35ba6') in 0.008839 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_End_Crouched.fbx
+  artifactKey: Guid(cddd3ba920114a8418dfbee5a31d273b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_End_Crouched.fbx using Guid(cddd3ba920114a8418dfbee5a31d273b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d57367abf0d6fc310ff6d24281fee4d') in 0.008568 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_HangingIdle.fbx
+  artifactKey: Guid(20cb0aaa618991a4096e04d5ab772c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_HangingIdle.fbx using Guid(20cb0aaa618991a4096e04d5ab772c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4db96b7e73fdba06a895cb74fbc7458f') in 0.005977 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_End.fbx
+  artifactKey: Guid(b5442161692ee6e4581c3fb022f2bc78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_End.fbx using Guid(b5442161692ee6e4581c3fb022f2bc78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc881265f5a1e1e60fe94b33c4f30d37') in 0.007048 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Up_Cancel.fbx
+  artifactKey: Guid(3ea76b425d184d749915e3805222da8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Up_Cancel.fbx using Guid(3ea76b425d184d749915e3805222da8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ba32c5b3bf5d870926c81feba3191c7') in 0.006480 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_JumpOver_FromRunToRun.fbx
+  artifactKey: Guid(63f20cc1f2b82824eb33d0289b06ed54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_JumpOver_FromRunToRun.fbx using Guid(63f20cc1f2b82824eb33d0289b06ed54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4389b6a489fa557608e370ad1134627e') in 0.011529 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Gate_LiftUp.fbx
+  artifactKey: Guid(21a12fa6861f8154c9c88648181d6378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Gate_LiftUp.fbx using Guid(21a12fa6861f8154c9c88648181d6378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ff1558208083160ae92ca2ce816ea55') in 0.009906 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Down_Start.fbx
+  artifactKey: Guid(04be3975e88fc614cad33ad22f1d1da6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Down_Start.fbx using Guid(04be3975e88fc614cad33ad22f1d1da6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2664754661be6ab09e5bf64616ac9859') in 0.007026 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_HangingIdle_To_4Limbs_Hold_Idle.fbx
+  artifactKey: Guid(a6d7a029d0a38c54e814fad0ad2e1384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_HangingIdle_To_4Limbs_Hold_Idle.fbx using Guid(a6d7a029d0a38c54e814fad0ad2e1384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f955ab096bd73eabec508fa9a3bd6b4') in 0.012825 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_90Degrees_InsideCorner.fbx
+  artifactKey: Guid(3c3f8cf9bb3d5c448b8c20fed77d9e2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_90Degrees_InsideCorner.fbx using Guid(3c3f8cf9bb3d5c448b8c20fed77d9e2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0192e85d8ee4e397d53bcfda2548fd89') in 0.008127 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_90Degrees_InsideCorner_Crouched.fbx
+  artifactKey: Guid(4af3d8b324d061340821aaf364043986) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_90Degrees_InsideCorner_Crouched.fbx using Guid(4af3d8b324d061340821aaf364043986) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa62a2072f428ea4b199e431de6b0067') in 0.006196 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_OutwardCorner_Left.fbx
+  artifactKey: Guid(56cc8655685a7b0438e5f58645d2513a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_OutwardCorner_Left.fbx using Guid(56cc8655685a7b0438e5f58645d2513a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21afc1a1b9c2ba1fa09da39af011a329') in 0.007150 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Cancel.fbx
+  artifactKey: Guid(44be315e60cc00140a538602e99ca74e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Cancel.fbx using Guid(44be315e60cc00140a538602e99ca74e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4813b842c9a6114a2dfc159f429a914') in 0.008111 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_ReleaseGrip_Recover_Hold.fbx
+  artifactKey: Guid(c53bce89065b8d246b9e6aeea4ab6bda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_ReleaseGrip_Recover_Hold.fbx using Guid(c53bce89065b8d246b9e6aeea4ab6bda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5589cbf8b3535e2e1879dac6b4938294') in 0.007792 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_345cm_ClimbOver.fbx
+  artifactKey: Guid(433c5d4fe208e6d4da878fd1b55fd9c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_345cm_ClimbOver.fbx using Guid(433c5d4fe208e6d4da878fd1b55fd9c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e337e99b711b305e19faa40ee1ba6d4') in 0.007220 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Up_Loop.fbx
+  artifactKey: Guid(3b7ac1793fc8f2d4a8155dcc552619d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Up_Loop.fbx using Guid(3b7ac1793fc8f2d4a8155dcc552619d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fb09780c224d26daeb4a6b76a6fe861') in 0.006690 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_HangingIdle_InPlaceRoot.fbx
+  artifactKey: Guid(d320e00d7a185e04cbd570e17845a7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_HangingIdle_InPlaceRoot.fbx using Guid(d320e00d7a185e04cbd570e17845a7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74ff69aa734e98c2383883e08bff62b9') in 0.006166 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Slide_Down_Start.fbx
+  artifactKey: Guid(ac7a1865f0a645d49a20b6233b2466fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Slide_Down_Start.fbx using Guid(ac7a1865f0a645d49a20b6233b2466fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c854a485882ee992d621d96f48622304') in 0.005905 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_RightHand_GripSlip_End.fbx
+  artifactKey: Guid(500823c8b99e83f4cbf0f8ce20338ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_RightHand_GripSlip_End.fbx using Guid(500823c8b99e83f4cbf0f8ce20338ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '071285bf73d342b10ddef722d936795b') in 0.005396 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.385978 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Start_Crouched.fbx
+  artifactKey: Guid(dd357a49f8adc884f8fc8957ac43e7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Start_Crouched.fbx using Guid(dd357a49f8adc884f8fc8957ac43e7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb1d96e524960ebed05761c7eddf8508') in 0.006187 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Idle_Crouched.fbx
+  artifactKey: Guid(e5069899b1379484eb14df2b780e4d1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Idle_Crouched.fbx using Guid(e5069899b1379484eb14df2b780e4d1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f99b7cb0272f5b3756fd67c4eeef49bd') in 0.006793 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Start.fbx
+  artifactKey: Guid(82eb2a509e3db1a43be82f8f63a35ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Start.fbx using Guid(82eb2a509e3db1a43be82f8f63a35ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4b0f4977d9fc4624bf0949a27c309b9') in 0.007295 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_90Degrees_OutwardCorner_Crouched.fbx
+  artifactKey: Guid(0b34aff7fb8edc24dac7eb25ae7fe3ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_90Degrees_OutwardCorner_Crouched.fbx using Guid(0b34aff7fb8edc24dac7eb25ae7fe3ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6131471d1621bfca4e44c83b2ba149b') in 0.007289 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Cancel.fbx
+  artifactKey: Guid(981ec8326d9b01d4fbf33a792c5a5a6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Cancel.fbx using Guid(981ec8326d9b01d4fbf33a792c5a5a6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47ac11edd6cd46cc273a1af975d7d78d') in 0.008277 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_End.fbx
+  artifactKey: Guid(4acc133323243e741af88e6d66d76be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_End.fbx using Guid(4acc133323243e741af88e6d66d76be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6e308927ee9f6f5906feb48e91dff52') in 0.007790 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backflip.fbx
+  artifactKey: Guid(1ae2a516027d36d4197273b19727eca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backflip.fbx using Guid(1ae2a516027d36d4197273b19727eca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0d98af29e8376d10ec5947e46c49bc5') in 0.006606 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_CartWheelRight.fbx
+  artifactKey: Guid(b04692e42d4877746849289bb96e9e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_CartWheelRight.fbx using Guid(b04692e42d4877746849289bb96e9e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6216deec29d68244f59b9d7df5362f5c') in 0.007692 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_CartWheelLeft.fbx
+  artifactKey: Guid(7bdd1588da288d14b8f17a36ac2537fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_CartWheelLeft.fbx using Guid(7bdd1588da288d14b8f17a36ac2537fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6fcb5cc1095941d94d07be252daa03b') in 0.006719 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrontCartwheelFlip.fbx
+  artifactKey: Guid(2a385367d7a82e34a906a56af58e5abd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrontCartwheelFlip.fbx using Guid(2a385367d7a82e34a906a56af58e5abd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6436a60bd1cc546715c3d073f629c3b') in 0.007962 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Landing.fbx
+  artifactKey: Guid(a367ea39edd43f3439978cb55fbc6309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Landing.fbx using Guid(a367ea39edd43f3439978cb55fbc6309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55f4f1860495a7b5ee44b9f902ce0a46') in 0.006833 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Forward.fbx
+  artifactKey: Guid(e9e260d367470284ab7bc0c00b4c646a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Forward.fbx using Guid(e9e260d367470284ab7bc0c00b4c646a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78b465e6a8b9e0f3739ac27aab6ce50c') in 0.007314 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Start.fbx
+  artifactKey: Guid(9691d5368511e6047a9f5301a770077c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Start.fbx using Guid(9691d5368511e6047a9f5301a770077c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4690245ca26d54d1607c83883cfb118e') in 0.008530 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Jump.fbx
+  artifactKey: Guid(121823cfff911a346b9d6c7118a30037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Jump.fbx using Guid(121823cfff911a346b9d6c7118a30037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d9661fe40f8471c5e4f1bfbe3833882') in 0.005776 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Back.fbx
+  artifactKey: Guid(fe15681f79bfb2e4c9a2f2253838d7a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Back.fbx using Guid(fe15681f79bfb2e4c9a2f2253838d7a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '664a46673d5ef71ad6c67656d1afd3db') in 0.006620 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Ledge_Climb_HangingIdle.fbx
+  artifactKey: Guid(668f2c6d0dbb2124ca98c611789f90ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Ledge_Climb_HangingIdle.fbx using Guid(668f2c6d0dbb2124ca98c611789f90ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '068743604ebc43e65811810926ac3b2d') in 0.007438 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backhandspring_WholeSequence.fbx
+  artifactKey: Guid(be287e4c289c8b9499b9ac54500b0253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backhandspring_WholeSequence.fbx using Guid(be287e4c289c8b9499b9ac54500b0253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68496b39d61d2125df8f1ae1416502bd') in 0.007230 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_WholeSequence_Crouched.fbx
+  artifactKey: Guid(9ba32b0a2a37e014996729c2c6d91085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_WholeSequence_Crouched.fbx using Guid(9ba32b0a2a37e014996729c2c6d91085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '896cd1597e3af6a03461447217fd6e2f') in 0.007163 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Pistol_Start.fbx
+  artifactKey: Guid(c26035a126cb5464d8254b09f95d2106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Pistol_Start.fbx using Guid(c26035a126cb5464d8254b09f95d2106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57e94efdeb97707353995c8caf618a1a') in 0.006700 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Forward.fbx
+  artifactKey: Guid(c42c1c3cdf09da44b8dc57c64ae76d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Forward.fbx using Guid(c42c1c3cdf09da44b8dc57c64ae76d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '245f66dc45c24b05d99f885cb7656bba') in 0.007262 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Loop.fbx
+  artifactKey: Guid(cb9004a65acf80f4aa0f128316c76241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Loop.fbx using Guid(cb9004a65acf80f4aa0f128316c76241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7439d77a34740a8213d4013e4931251') in 0.005857 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Idle.fbx
+  artifactKey: Guid(901cf23cf51848c42ab846b25b070e6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Idle.fbx using Guid(901cf23cf51848c42ab846b25b070e6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7bec266ecb226db7253e751ab9a75bd') in 0.007408 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Turn_Left90.fbx
+  artifactKey: Guid(6598efb80f336da469f2e388f6bd5408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Turn_Left90.fbx using Guid(6598efb80f336da469f2e388f6bd5408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1854a117ee492ced6230eddce703065c') in 0.006198 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrontFlipJump_fromRuntoRun.fbx
+  artifactKey: Guid(ea23dbc1ceb252d4a971814c3b7fb015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrontFlipJump_fromRuntoRun.fbx using Guid(ea23dbc1ceb252d4a971814c3b7fb015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bcad22dfa39d72b823c849c5d0d0664') in 0.007815 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_ForwardRight.fbx
+  artifactKey: Guid(07926e9ea582639458b65e43146fe615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_ForwardRight.fbx using Guid(07926e9ea582639458b65e43146fe615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29dc266c6704cd8d90fefdfe2d871fb8') in 0.006397 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Stop.fbx
+  artifactKey: Guid(b8534fcda0fe32f40ae281317311a7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Stop.fbx using Guid(b8534fcda0fe32f40ae281317311a7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '245331d20cfafa05aaea5d5ed3ba4d70') in 0.007220 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_End.fbx
+  artifactKey: Guid(9049c44495392b74298d68ede6bc5d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_End.fbx using Guid(9049c44495392b74298d68ede6bc5d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1da6cf1e2d1d1da1d5e01798d233db2') in 0.013608 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Left.fbx
+  artifactKey: Guid(7d40560771911fd44877a6847cb1fe55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Left.fbx using Guid(7d40560771911fd44877a6847cb1fe55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5a00f9d171b4ecfbdd37d38d16c34b1') in 0.006479 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_BackLeft.fbx
+  artifactKey: Guid(26f52dde9e06d1240a63cedd50682636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_BackLeft.fbx using Guid(26f52dde9e06d1240a63cedd50682636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '684b98c49812b253abb5bf68c497abab') in 0.006459 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrogJump_91cmHeight_runTo_SquatIdle.fbx
+  artifactKey: Guid(6e6f4fc7128b32f439613283d3009dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrogJump_91cmHeight_runTo_SquatIdle.fbx using Guid(6e6f4fc7128b32f439613283d3009dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '975f40031412969baa0ebc0443a145a7') in 0.008218 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_Slide_Start.fbx
+  artifactKey: Guid(733703ddbc9b3eb41ae8596add161a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_Slide_Start.fbx using Guid(733703ddbc9b3eb41ae8596add161a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5214b417c9ea4a17f4f0d598615c794a') in 0.007192 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_LazyVault_Right.fbx
+  artifactKey: Guid(668f126ab2376d949bff3c572cd85e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_LazyVault_Right.fbx using Guid(668f126ab2376d949bff3c572cd85e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e10afab70a6db97c2be54be38f50ecd') in 0.008641 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Loop.fbx
+  artifactKey: Guid(d6692751e7ff19b4cb1be78bea3c75d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Loop.fbx using Guid(d6692751e7ff19b4cb1be78bea3c75d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cd4e4ab7c21772bbe799ef432b47704') in 0.008131 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_ForwardRight.fbx
+  artifactKey: Guid(4ad64b675ac588d4e89733a24ae9b840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_ForwardRight.fbx using Guid(4ad64b675ac588d4e89733a24ae9b840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35c3499a953955db0dc6cc6e343bd114') in 0.008932 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrogJump_91cmHeight_JumpForward_toRun.fbx
+  artifactKey: Guid(826ebd495df62944ea3c40284098847d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrogJump_91cmHeight_JumpForward_toRun.fbx using Guid(826ebd495df62944ea3c40284098847d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fc94c209470f17367c5ecb158055af3') in 0.007342 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_BackLeft.fbx
+  artifactKey: Guid(b54288abf24a0ca4aadbd3332c665bd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_BackLeft.fbx using Guid(b54288abf24a0ca4aadbd3332c665bd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8e06d3feacbacd392dbf6d83f2fb935') in 0.016131 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Left.fbx
+  artifactKey: Guid(92ac1da328c01df49a5af0e8d5af83b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Left.fbx using Guid(92ac1da328c01df49a5af0e8d5af83b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '524503eff260f5b949ecceb420f36571') in 0.009279 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backhandspring_End.fbx
+  artifactKey: Guid(6f4b1c1854568704bb1994ccb072e82b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backhandspring_End.fbx using Guid(6f4b1c1854568704bb1994ccb072e82b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65fae8785f802887971d7f005649bbf8') in 0.008439 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_90Degrees_InsideCorner.fbx
+  artifactKey: Guid(8fd9184f559c6284c87d76e3d557e1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_90Degrees_InsideCorner.fbx using Guid(8fd9184f559c6284c87d76e3d557e1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dffd62084e583b8792a7a6a8956b425d') in 0.008514 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Pistol_Loop.fbx
+  artifactKey: Guid(48c679d2359ca514f9fbaed7f4e6bd16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Pistol_Loop.fbx using Guid(48c679d2359ca514f9fbaed7f4e6bd16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ac21ec18e3087777898592f722bc69b') in 0.008150 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.530011 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Right.fbx
+  artifactKey: Guid(2c4efb9502f6542498d509b070bba2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Right.fbx using Guid(2c4efb9502f6542498d509b070bba2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfbbbae75462ea42f3089a7c7e400621') in 0.007129 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_End.fbx
+  artifactKey: Guid(5a047efb704f40342b961336db3928e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_End.fbx using Guid(5a047efb704f40342b961336db3928e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27338842ac970d2d7886973da89fcf5b') in 0.008112 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_Loop.fbx
+  artifactKey: Guid(80c04a4b7b4c428468bb9fe3a9f2894b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_Loop.fbx using Guid(80c04a4b7b4c428468bb9fe3a9f2894b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f33dde07310d5dfdcaebade73045a7d') in 0.006245 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_End.fbx
+  artifactKey: Guid(4d56d3a45feee034989b756f265d19d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_End.fbx using Guid(4d56d3a45feee034989b756f265d19d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afcae023085c3b7952adff6d4f41ba60') in 0.006910 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_Landing.fbx
+  artifactKey: Guid(6ccf316b52e4a4c47bf38bd51fdee8fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_Landing.fbx using Guid(6ccf316b52e4a4c47bf38bd51fdee8fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b8cbdea8a452c4e5fce87b4876e5fcf') in 0.006716 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_End.fbx
+  artifactKey: Guid(79bf29b0fc4cfa44aabb801287255521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_End.fbx using Guid(79bf29b0fc4cfa44aabb801287255521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '955f95093857e95c4cc278c1b71935d4') in 0.006484 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_WholeSequence.fbx
+  artifactKey: Guid(1600360aaa16a93458a67f0b00036c5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_WholeSequence.fbx using Guid(1600360aaa16a93458a67f0b00036c5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72d9a7f74751f2efd44233274c54995c') in 0.008436 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Enter.fbx
+  artifactKey: Guid(3bbcfe60790b8f642bdbbeeb7ae89ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Enter.fbx using Guid(3bbcfe60790b8f642bdbbeeb7ae89ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fd0eba881d599edb420a46f89bbfca9') in 0.006295 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000928 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_Turn_Right90.fbx
+  artifactKey: Guid(44a04f94d199c7941b36b339fdba8a01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_Turn_Right90.fbx using Guid(44a04f94d199c7941b36b339fdba8a01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f82230e4297adb35e9b7d4b5bdf697de') in 0.006229 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_End.fbx
+  artifactKey: Guid(0654ef2f1a2d9434b949ec4b87118347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_End.fbx using Guid(0654ef2f1a2d9434b949ec4b87118347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68d73a18f4dd4089ddf50b4748bac4a5') in 0.006264 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_WholeSequence.fbx
+  artifactKey: Guid(3840f77fa684cd54f9987e9b4b170f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_WholeSequence.fbx using Guid(3840f77fa684cd54f9987e9b4b170f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc8f0c4272e22dafebf60ebedeaf64c8') in 0.008996 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_Start.fbx
+  artifactKey: Guid(9c6e2e41c3784dc4698128f18e9ca17e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_Start.fbx using Guid(9c6e2e41c3784dc4698128f18e9ca17e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc68e08a3cfb01b774d36d6d2ffd27f6') in 0.006586 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Start.fbx
+  artifactKey: Guid(317cbbc343bd7c346897b71cd231c679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Start.fbx using Guid(317cbbc343bd7c346897b71cd231c679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebb23eedb6426c0f6d8a32aa37f0e823') in 0.005805 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_4Limbs_Hold_Idle_InPlaceRoot.fbx
+  artifactKey: Guid(275134979551e11499d019b61447de50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_4Limbs_Hold_Idle_InPlaceRoot.fbx using Guid(275134979551e11499d019b61447de50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d928477d22c180ab427f6aff908440d') in 0.007056 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Down_LeftHand_HalfDistance.fbx
+  artifactKey: Guid(0fd74bce728ce0943a6aa31c4c307080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Down_LeftHand_HalfDistance.fbx using Guid(0fd74bce728ce0943a6aa31c4c307080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c961173837f30973ef3d5734eeacecab') in 0.009352 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_WholeSequence.fbx
+  artifactKey: Guid(ab1e721647634e8489c7689614585abe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_WholeSequence.fbx using Guid(ab1e721647634e8489c7689614585abe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69f817c01f98cf941b0972e8e64e2c9e') in 0.008148 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_Start.fbx
+  artifactKey: Guid(88d1d833357db8d4c9ff70fa2bbe942b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_Start.fbx using Guid(88d1d833357db8d4c9ff70fa2bbe942b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9788e486fd1d679af1ebab5e847e7ad5') in 0.006449 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_Cancel.fbx
+  artifactKey: Guid(1fd81e96fb350914fbe4b49623e158b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_Cancel.fbx using Guid(1fd81e96fb350914fbe4b49623e158b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6758ce6521d6f13d25b2b633348011b') in 0.007342 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_WholeSequence.fbx
+  artifactKey: Guid(30deb2a657024f642a463ddb5d37c056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_WholeSequence.fbx using Guid(30deb2a657024f642a463ddb5d37c056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81269414030a780cba7fc82bbf622d18') in 0.008386 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Exit_StepBack.fbx
+  artifactKey: Guid(f039198b931cbb940a9fa621a6710df1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Exit_StepBack.fbx using Guid(f039198b931cbb940a9fa621a6710df1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e574dee56e260f72d60ea9aa950e32f') in 0.006176 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_Loop.fbx
+  artifactKey: Guid(4bad54652cea33e41b8cc94ee6d86b74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_Loop.fbx using Guid(4bad54652cea33e41b8cc94ee6d86b74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48c82e9d83ba21cca94429d918a7adbc') in 0.006502 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_Idle.fbx
+  artifactKey: Guid(87be37985f77d8143ba3d150acaf91b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_Idle.fbx using Guid(87be37985f77d8143ba3d150acaf91b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fb2f3b928a62f113c0cc0f8777dcfe0') in 0.008057 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_Start.fbx
+  artifactKey: Guid(47d7bf932e27c63489948832e0e85881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_Start.fbx using Guid(47d7bf932e27c63489948832e0e85881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9021bc13b3f03f187b95a8ad40edeba') in 0.008283 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.227133 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DownLeft.fbx
+  artifactKey: Guid(433954551e25a204fb4705e559b98c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DownLeft.fbx using Guid(433954551e25a204fb4705e559b98c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a95c669ef443735d1faede0fe4d3bf2f') in 0.006009 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Left.fbx
+  artifactKey: Guid(c25d59dff81c6174caaa5c32e4ead48e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Left.fbx using Guid(c25d59dff81c6174caaa5c32e4ead48e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad4c4fb829cc101b6edbea07de7f18ca') in 0.008286 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Left_InPlaceRoot.fbx
+  artifactKey: Guid(5901c1c9b63f653499b8b2375aebb415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Left_InPlaceRoot.fbx using Guid(5901c1c9b63f653499b8b2375aebb415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58e041e94d0e88d16cf00bdbf55f7bf4') in 0.007324 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_LookLeft_Start.fbx
+  artifactKey: Guid(89dbcd32dcc57e449bd493093ccc0032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_LookLeft_Start.fbx using Guid(89dbcd32dcc57e449bd493093ccc0032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c1fbc6c0919e3491970e79376624cd7') in 0.006908 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_InwardCorner_Right.fbx
+  artifactKey: Guid(101410b75acbb6143b0cc19bfcd275db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_InwardCorner_Right.fbx using Guid(101410b75acbb6143b0cc19bfcd275db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fd0e43451b64380c7d97c67e354658d') in 0.005976 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.014157 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_OutwardCorner_Left.fbx
+  artifactKey: Guid(35697a74ccec2dd418ac1752ae55f9aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_OutwardCorner_Left.fbx using Guid(35697a74ccec2dd418ac1752ae55f9aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abbb64cfeb394d934cd89bbff1a6f06b') in 0.007286 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Right_InPlaceRoot.fbx
+  artifactKey: Guid(0570724b81f273143bf525017c01e44f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Right_InPlaceRoot.fbx using Guid(0570724b81f273143bf525017c01e44f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0366366db50705408e3e578504071cd0') in 0.006561 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_UpRight_HalfDistance.fbx
+  artifactKey: Guid(79a9b70c58f79504c8d1196d524c4c36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_UpRight_HalfDistance.fbx using Guid(79a9b70c58f79504c8d1196d524c4c36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26f7760c133807de69c9fdb507210301') in 0.006862 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_UpLeft.fbx
+  artifactKey: Guid(c96e23c433c5c9d41b993d4ae36ae9c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_UpLeft.fbx using Guid(c96e23c433c5c9d41b993d4ae36ae9c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b51cdd5f054eb188342ac5cd1d67fc46') in 0.006848 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Window_BreakGlass.fbx
+  artifactKey: Guid(e1ebde2557478434abfad7480c45414b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Window_BreakGlass.fbx using Guid(e1ebde2557478434abfad7480c45414b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '074c463e9872b3a05c1affd5fe7aa746') in 0.006856 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Start_Jump_fromRunning.fbx
+  artifactKey: Guid(62ba13c4ee90ead49a36d8840545e53d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Start_Jump_fromRunning.fbx using Guid(62ba13c4ee90ead49a36d8840545e53d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '063267313fef1a4100d8ad3cd5e1cf23') in 0.006028 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Up_RightHand.fbx
+  artifactKey: Guid(eeac48dac55ee9c4e9a79aa0519fa9e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Up_RightHand.fbx using Guid(eeac48dac55ee9c4e9a79aa0519fa9e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dad15f57a2a72f5b519ec6cf840a72f') in 0.007173 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.582 seconds
+Refreshing native plugins compatible for Editor in 5.39 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.162 seconds
+Domain Reload Profiling: 1740ms
+	BeginReloadAssembly (195ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (290ms)
+		LoadAssemblies (359ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (30ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (13ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1163ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (565ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (32ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (81ms)
+			ProcessInitializeOnLoadAttributes (410ms)
+			ProcessInitializeOnLoadMethodAttributes (28ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 4.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3818 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (1.3 MB). Loaded Objects now: 4441.
+Memory consumption went from 167.2 MB to 165.8 MB.
+Total: 4.013000 ms (FindLiveObjects: 0.298100 ms CreateObjectMapping: 0.155300 ms MarkObjects: 3.189700 ms  DeleteObjects: 0.368400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/SimpleCameraController.cs: 9d5e45e836538af465ffb763b138c221 -> 639b45e76fa5fda920a92b90c69d9e74
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.563 seconds
+Refreshing native plugins compatible for Editor in 4.47 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.270 seconds
+Domain Reload Profiling: 1830ms
+	BeginReloadAssembly (178ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (285ms)
+		LoadAssemblies (347ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (31ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (12ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1271ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (573ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (32ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (88ms)
+			ProcessInitializeOnLoadAttributes (407ms)
+			ProcessInitializeOnLoadMethodAttributes (29ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 8.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3818 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (1.3 MB). Loaded Objects now: 4456.
+Memory consumption went from 169.1 MB to 167.8 MB.
+Total: 9.078600 ms (FindLiveObjects: 0.910100 ms CreateObjectMapping: 0.219800 ms MarkObjects: 7.179100 ms  DeleteObjects: 0.767600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/SimpleCameraController.cs: 9d5e45e836538af465ffb763b138c221 -> 639b45e76fa5fda920a92b90c69d9e74
+========================================================================
+Received Import Request.
+  Time since last request: 383.885524 seconds.
+  path: Assets/Visual/UI/Joystick Pack
+  artifactKey: Guid(2292cd86c4cd7794791c8949f95421ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/UI/Joystick Pack using Guid(2292cd86c4cd7794791c8949f95421ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64686b011cc157ca35bf406f37b6097c') in 0.003343 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.404205 seconds.
+  path: Assets/Visual/UI/Joystick Pack/Prefabs
+  artifactKey: Guid(d41e4075f56d1e1438b3af3673ec6081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/UI/Joystick Pack/Prefabs using Guid(d41e4075f56d1e1438b3af3673ec6081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27b64d6863ad13022242287b7ef80bd7') in 0.000994 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.074349 seconds.
+  path: Assets/Visual/UI/Joystick Pack/Prefabs/Dynamic Joystick.prefab
+  artifactKey: Guid(56fae09712773584fb63896d473a98ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/UI/Joystick Pack/Prefabs/Dynamic Joystick.prefab using Guid(56fae09712773584fb63896d473a98ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7ba6b6e8e0aebab1c510115eaaa44de') in 0.046033 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Visual/UI/Joystick Pack/Prefabs/Variable Joystick.prefab
+  artifactKey: Guid(ec536a7718376554185e4a856d5ae230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/UI/Joystick Pack/Prefabs/Variable Joystick.prefab using Guid(ec536a7718376554185e4a856d5ae230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb66bf02e0737b667b8dbaeb4c599709') in 0.005776 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Visual/UI/Joystick Pack/Prefabs/Floating Joystick.prefab
+  artifactKey: Guid(0d230cc8be529a542a08cb878ab14b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/UI/Joystick Pack/Prefabs/Floating Joystick.prefab using Guid(0d230cc8be529a542a08cb878ab14b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae1e75b92db8c402e759fe1f99fb3766') in 0.004599 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.605 seconds
+Refreshing native plugins compatible for Editor in 4.84 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.445 seconds
+Domain Reload Profiling: 2045ms
+	BeginReloadAssembly (191ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (48ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (308ms)
+		LoadAssemblies (393ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (15ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1446ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (725ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (38ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (110ms)
+			ProcessInitializeOnLoadAttributes (519ms)
+			ProcessInitializeOnLoadMethodAttributes (38ms)
+			AfterProcessingInitializeOnLoad (13ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 5.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3818 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (1.3 MB). Loaded Objects now: 4471.
+Memory consumption went from 171.0 MB to 169.7 MB.
+Total: 4.510400 ms (FindLiveObjects: 0.457300 ms CreateObjectMapping: 0.159200 ms MarkObjects: 3.609800 ms  DeleteObjects: 0.282900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/SimpleCameraController.cs: 9d5e45e836538af465ffb763b138c221 -> 639b45e76fa5fda920a92b90c69d9e74
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.773 seconds
+Refreshing native plugins compatible for Editor in 7.07 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.766 seconds
+Domain Reload Profiling: 2536ms
+	BeginReloadAssembly (255ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (78ms)
+	RebuildCommonClasses (59ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (389ms)
+		LoadAssemblies (490ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (24ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1767ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (913ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (48ms)
+			SetLoadedEditorAssemblies (10ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (131ms)
+			ProcessInitializeOnLoadAttributes (666ms)
+			ProcessInitializeOnLoadMethodAttributes (43ms)
+			AfterProcessingInitializeOnLoad (14ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 7.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3818 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (1.3 MB). Loaded Objects now: 4486.
+Memory consumption went from 173.0 MB to 171.6 MB.
+Total: 10.134100 ms (FindLiveObjects: 0.972200 ms CreateObjectMapping: 0.442600 ms MarkObjects: 7.995200 ms  DeleteObjects: 0.721900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/SimpleCameraController.cs: 9d5e45e836538af465ffb763b138c221 -> 639b45e76fa5fda920a92b90c69d9e74
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.748 seconds
+Refreshing native plugins compatible for Editor in 8.44 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.834 seconds
+Domain Reload Profiling: 2579ms
+	BeginReloadAssembly (246ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (68ms)
+	RebuildCommonClasses (55ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (381ms)
+		LoadAssemblies (479ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (27ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1835ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (945ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (54ms)
+			SetLoadedEditorAssemblies (10ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (140ms)
+			ProcessInitializeOnLoadAttributes (687ms)
+			ProcessInitializeOnLoadMethodAttributes (39ms)
+			AfterProcessingInitializeOnLoad (14ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 10.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3818 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (1.3 MB). Loaded Objects now: 4501.
+Memory consumption went from 174.9 MB to 173.6 MB.
+Total: 9.515000 ms (FindLiveObjects: 1.278500 ms CreateObjectMapping: 0.381700 ms MarkObjects: 6.683500 ms  DeleteObjects: 1.167500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/SimpleCameraController.cs: 9d5e45e836538af465ffb763b138c221 -> 639b45e76fa5fda920a92b90c69d9e74
+========================================================================
+Received Import Request.
+  Time since last request: 182.017780 seconds.
+  path: Assets/Code/Character
+  artifactKey: Guid(444d3a6d78b274c429b9d4872b5b3a10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Code/Character using Guid(444d3a6d78b274c429b9d4872b5b3a10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df352718283edb280a274c3609b71641') in 0.004195 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.543 seconds
+Refreshing native plugins compatible for Editor in 5.10 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.473 seconds
+Domain Reload Profiling: 2013ms
+	BeginReloadAssembly (183ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (43ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (258ms)
+		LoadAssemblies (343ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1474ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (737ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (42ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (106ms)
+			ProcessInitializeOnLoadAttributes (538ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Refreshing native plugins compatible for Editor in 6.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3818 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (1.3 MB). Loaded Objects now: 4516.
+Memory consumption went from 176.8 MB to 175.5 MB.
+Total: 5.155600 ms (FindLiveObjects: 0.396500 ms CreateObjectMapping: 0.144100 ms MarkObjects: 4.294800 ms  DeleteObjects: 0.319300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/SimpleCameraController.cs: 9d5e45e836538af465ffb763b138c221 -> 639b45e76fa5fda920a92b90c69d9e74
