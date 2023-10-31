@@ -15,7 +15,7 @@ C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61703
+60327
 Successfully changed project path to: C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story
 C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [12780] Host "[IP] 192.168.0.107 [Port] 0 [Flags] 2 [Guid] 1244844201 [EditorId] 1244844201 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-5U3T1134) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [2356] Host "[IP] 192.168.0.107 [Port] 0 [Flags] 2 [Guid] 970194498 [EditorId] 970194498 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-5U3T1134) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [12780] Host "[IP] 192.168.0.107 [Port] 0 [Flags] 2 [Guid] 1244844201 [EditorId] 1244844201 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-5U3T1134) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [2356] Host "[IP] 192.168.0.107 [Port] 0 [Flags] 2 [Guid] 970194498 [EditorId] 970194498 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-5U3T1134) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 25.42 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 14.24 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.11f1 (d00248457e15)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -70,47 +70,47 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56484
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.015180 seconds.
-- Loaded All Assemblies, in  0.674 seconds
+Registered in 0.009893 seconds.
+- Loaded All Assemblies, in  0.426 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 555 ms
+Android Extension - Scanning For ADB Devices 248 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.170 seconds
-Domain Reload Profiling: 1842ms
-	BeginReloadAssembly (202ms)
+- Finished resetting the current domain, in  0.612 seconds
+Domain Reload Profiling: 1036ms
+	BeginReloadAssembly (129ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (67ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (108ms)
-	LoadAllAssembliesAndSetupDomain (275ms)
-		LoadAssemblies (199ms)
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (71ms)
+	LoadAllAssembliesAndSetupDomain (168ms)
+		LoadAssemblies (126ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (272ms)
-			TypeCache.Refresh (269ms)
-				TypeCache.ScanAssembly (245ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (1171ms)
+		AnalyzeDomain (165ms)
+			TypeCache.Refresh (164ms)
+				TypeCache.ScanAssembly (148ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (613ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1053ms)
+		SetupLoadedEditorAssemblies (548ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (763ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (373ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (189ms)
-			ProcessInitializeOnLoadMethodAttributes (91ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (115ms)
+			ProcessInitializeOnLoadMethodAttributes (53ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -119,8 +119,8 @@ Domain Reload Profiling: 1842ms
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.432 seconds
-Refreshing native plugins compatible for Editor in 7.30 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.902 seconds
+Refreshing native plugins compatible for Editor in 6.70 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Package Manager log level set to [2]
@@ -128,394 +128,1220 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.602 seconds
-Domain Reload Profiling: 3018ms
-	BeginReloadAssembly (258ms)
+- Finished resetting the current domain, in  0.983 seconds
+Domain Reload Profiling: 1882ms
+	BeginReloadAssembly (177ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (59ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (1022ms)
-		LoadAssemblies (665ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (630ms)
+		LoadAssemblies (425ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (502ms)
-			TypeCache.Refresh (432ms)
-				TypeCache.ScanAssembly (388ms)
-			ScanForSourceGeneratedMonoScriptInfo (50ms)
-			ResolveRequiredComponents (17ms)
-	FinalizeReload (1603ms)
+		AnalyzeDomain (309ms)
+			TypeCache.Refresh (263ms)
+				TypeCache.ScanAssembly (242ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (984ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1202ms)
+		SetupLoadedEditorAssemblies (774ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (47ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (28ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (152ms)
-			ProcessInitializeOnLoadAttributes (828ms)
-			ProcessInitializeOnLoadMethodAttributes (157ms)
-			AfterProcessingInitializeOnLoad (12ms)
+			BeforeProcessingInitializeOnLoad (114ms)
+			ProcessInitializeOnLoadAttributes (540ms)
+			ProcessInitializeOnLoadMethodAttributes (79ms)
+			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
-Refreshing native plugins compatible for Editor in 13.77 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 6.47 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5789 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 104 unused Assets / (2.1 MB). Loaded Objects now: 6239.
-Memory consumption went from 243.8 MB to 241.8 MB.
-Total: 22.626000 ms (FindLiveObjects: 1.238600 ms CreateObjectMapping: 0.589400 ms MarkObjects: 16.846200 ms  DeleteObjects: 3.949800 ms)
+Unloading 207 unused Assets / (10.1 MB). Loaded Objects now: 6136.
+Memory consumption went from 241.2 MB to 231.1 MB.
+Total: 8.695900 ms (FindLiveObjects: 0.425100 ms CreateObjectMapping: 0.236700 ms MarkObjects: 3.880200 ms  DeleteObjects: 4.152500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 208.717606 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Prefabs/Buildings/SM_Bld_Ceiling_Pipes_Straight_01.prefab
-  artifactKey: Guid(eab46053e32a19d4bbcc05ecd80bf859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Prefabs/Buildings/SM_Bld_Ceiling_Pipes_Straight_01.prefab using Guid(eab46053e32a19d4bbcc05ecd80bf859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc468fc32f17cd6cfe8ee185fa1468d5') in 0.326492 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Prefabs/Props/SM_Prop_Detail_Pipes_02.prefab
-  artifactKey: Guid(0b03c1f3d292df04297c1f7bf41eb91c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Prefabs/Props/SM_Prop_Detail_Pipes_02.prefab using Guid(0b03c1f3d292df04297c1f7bf41eb91c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e461857f6c80db1f94e56615c7777cf') in 0.042212 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiCity/Prefabs/Props/SM_Prop_Pipes_02.prefab
-  artifactKey: Guid(4a04ac585c75e09439142d5def79782b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiCity/Prefabs/Props/SM_Prop_Pipes_02.prefab using Guid(4a04ac585c75e09439142d5def79782b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08708478e6bdd2ca915bf66fb3211921') in 0.207589 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 15
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Bld_Ceiling_Pipes_Turn_L_01_Convex.asset
-  artifactKey: Guid(2c64fa91211622f48b81f307a3c87428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Bld_Ceiling_Pipes_Turn_L_01_Convex.asset using Guid(2c64fa91211622f48b81f307a3c87428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8664859f4158616c54a7358d2f807b18') in 0.064583 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000064 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiCity/Models/SM_Prop_Sidewalk_Pipe_02.fbx
-  artifactKey: Guid(d3efe9b0189d7404eb614fb151994eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiCity/Models/SM_Prop_Sidewalk_Pipe_02.fbx using Guid(d3efe9b0189d7404eb614fb151994eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec09a3c9e392e1daf885ebfc4495d2a4') in 0.038238 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiCity/Models/SM_Prop_Sidewalk_Pipe_02_Convex.asset
-  artifactKey: Guid(ba08fb283c9954c47b1c021420651dba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiCity/Models/SM_Prop_Sidewalk_Pipe_02_Convex.asset using Guid(ba08fb283c9954c47b1c021420651dba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b286ea106e4987096f93a751e15b70f9') in 0.017150 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiCity/Prefabs/Props/SM_Prop_Pipes_03.prefab
-  artifactKey: Guid(af8e7b9e234ccc445989f26edf6513ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiCity/Prefabs/Props/SM_Prop_Pipes_03.prefab using Guid(af8e7b9e234ccc445989f26edf6513ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c63a06ce0138c2c1ea2994f57e19e4e8') in 0.040795 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 15
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/SM_Prop_Detail_Pipes_03.fbx
-  artifactKey: Guid(8d42d87e8a94b9c44adb435ca7de7683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/SM_Prop_Detail_Pipes_03.fbx using Guid(8d42d87e8a94b9c44adb435ca7de7683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76d1f29115d8570283e31ae5c6097aaa') in 0.013276 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Bld_Ceiling_Pipes_Straight_01_Convex.asset
-  artifactKey: Guid(6c3b1b25cf62df048b20597aac3da3b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Bld_Ceiling_Pipes_Straight_01_Convex.asset using Guid(6c3b1b25cf62df048b20597aac3da3b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dc28fa572b97aea8c4569582687d831') in 0.010483 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Models/Convex/SM_Env_StormCanal_Pipe_02_Convex.asset
-  artifactKey: Guid(a4cd4bead10108d45823d549b2daf226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/Convex/SM_Env_StormCanal_Pipe_02_Convex.asset using Guid(a4cd4bead10108d45823d549b2daf226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a51b54d51392f9db1fe293f787277b8') in 0.010575 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Prop_Bunker_WallPipe_01.fbx
-  artifactKey: Guid(ca25c251d395c9b4aaf7fc83bd171877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Prop_Bunker_WallPipe_01.fbx using Guid(ca25c251d395c9b4aaf7fc83bd171877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c8dc5a1e2269faf2bcc2ce723d760dc') in 0.029615 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiCity/Models/SM_Prop_Pipes_03_Convex.asset
-  artifactKey: Guid(92466f4dc825efe4f92f33b6140a897f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiCity/Models/SM_Prop_Pipes_03_Convex.asset using Guid(92466f4dc825efe4f92f33b6140a897f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb8617214c98d64dc1433845588e3da3') in 0.012297 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiCity/Models/SM_Prop_Pipes_03.fbx
-  artifactKey: Guid(88be7001e07454340939b26ffa008db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiCity/Models/SM_Prop_Pipes_03.fbx using Guid(88be7001e07454340939b26ffa008db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80616471e3808433cde2d2fb52659282') in 0.016459 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Prefabs/Weapons/Misc/SM_Wep_PipeBomb_01.prefab
-  artifactKey: Guid(1a75ef4748f1f434a91631d321105b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Prefabs/Weapons/Misc/SM_Wep_PipeBomb_01.prefab using Guid(1a75ef4748f1f434a91631d321105b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b27f25c23a7ed833bcbdb89506b2ba44') in 0.091378 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 13
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Prop_Detail_Pipe_02_Convex.asset
-  artifactKey: Guid(3f7ec6cef72eb5444b5d666d2b81598a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Prop_Detail_Pipe_02_Convex.asset using Guid(3f7ec6cef72eb5444b5d666d2b81598a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9678db0d9a85a519a451f779d856a7c') in 0.017719 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Models/Convex/SM_Prop_Pipe_Valve_01_Convex.asset
-  artifactKey: Guid(e776e2cf82c3f684fad5474e35d0ec01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/Convex/SM_Prop_Pipe_Valve_01_Convex.asset using Guid(e776e2cf82c3f684fad5474e35d0ec01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '410f342f20c39c90a89cf8212d7e6015') in 0.009783 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Bld_Ceiling_Pipes_Turn_R_01_Convex.asset
-  artifactKey: Guid(5c45d4d8258ba4b43b4f32a5e268842e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Bld_Ceiling_Pipes_Turn_R_01_Convex.asset using Guid(5c45d4d8258ba4b43b4f32a5e268842e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e815aba1ae6ec406c7536821e41b53d') in 0.011875 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Prop_Detail_Pipes_01_Convex.asset
-  artifactKey: Guid(2d75a3497f445c14e8eac27c913a2590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Prop_Detail_Pipes_01_Convex.asset using Guid(2d75a3497f445c14e8eac27c913a2590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0076929faf77641f95a53cfca91ab243') in 0.009415 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000126 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Prop_Detail_Pipes_02_Convex.asset
-  artifactKey: Guid(ccee6cea08cf22b4fb53fb40d6a0fc35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Prop_Detail_Pipes_02_Convex.asset using Guid(ccee6cea08cf22b4fb53fb40d6a0fc35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd743f2297fec6ddbc6daf9b64334c3f9') in 0.010094 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Prefabs/Props/SM_Prop_Pipes_01.prefab
-  artifactKey: Guid(33c0c06bf5774ba4d8b693193812aa5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Prefabs/Props/SM_Prop_Pipes_01.prefab using Guid(33c0c06bf5774ba4d8b693193812aa5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3a7fcfdda727d86d5ed28e2e2b7912a') in 0.077710 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 13
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Env_Debris_Pipe_01_Convex.asset
-  artifactKey: Guid(f27255648becb33448e771a323c095f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Env_Debris_Pipe_01_Convex.asset using Guid(f27255648becb33448e771a323c095f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b69f28222ccecdb597ba0e1d7d634f5') in 0.010993 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Prefabs/Props/SM_Prop_Detail_Pipe_Pillar_01.prefab
-  artifactKey: Guid(ce9b978936ceef746818d82687f446f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Prefabs/Props/SM_Prop_Detail_Pipe_Pillar_01.prefab using Guid(ce9b978936ceef746818d82687f446f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4671f8e46d7862c368fa849f1d1792e') in 0.019092 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Prefabs/Props/SM_Prop_Pipe_Valve_02.prefab
-  artifactKey: Guid(df102e7b9e27a2642a1f96342ca72baf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Prefabs/Props/SM_Prop_Pipe_Valve_02.prefab using Guid(df102e7b9e27a2642a1f96342ca72baf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f42544e893e3a156684db9eb00770d1') in 0.074278 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 13
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Prefabs/Buildings/SM_Bld_Ceiling_Pipes_Turn_L_01.prefab
-  artifactKey: Guid(272dfb7e4982c94439aed3e768760832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Prefabs/Buildings/SM_Bld_Ceiling_Pipes_Turn_L_01.prefab using Guid(272dfb7e4982c94439aed3e768760832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67f4ce7dc3c6f70b70f8ad97659a0a20') in 0.016632 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/SM_Bld_Ceiling_Pipes_Straight_Broken_01.fbx
-  artifactKey: Guid(9d645643659dd1e4bb7886e503a1d91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/SM_Bld_Ceiling_Pipes_Straight_Broken_01.fbx using Guid(9d645643659dd1e4bb7886e503a1d91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '963258a11cf3be4ebe6956cf9ccca337') in 0.019511 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Models/Convex/SM_Env_StormCanal_Pipe_End_01_Convex.asset
-  artifactKey: Guid(e1619b273e02d6f4eaa68d0ef34b353c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/Convex/SM_Env_StormCanal_Pipe_End_01_Convex.asset using Guid(e1619b273e02d6f4eaa68d0ef34b353c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '995959f3b8d1759a6cfd3d7e4a5fbac6') in 0.015625 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Models/Convex/SM_Prop_Pipe_Valve_02_Convex.asset
-  artifactKey: Guid(e9eb634528f5d244d9d0b1e590e63a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/Convex/SM_Prop_Pipe_Valve_02_Convex.asset using Guid(e9eb634528f5d244d9d0b1e590e63a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ddcf28b9dec22936e34de359ce2218e') in 0.009942 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Prefabs/Environment/SM_Env_StormCanal_Pipe_02.prefab
-  artifactKey: Guid(16285c9bf6d93d54ab97ccfa2359516b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Prefabs/Environment/SM_Env_StormCanal_Pipe_02.prefab using Guid(16285c9bf6d93d54ab97ccfa2359516b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ea549774f6c2f99b1bf4540bf40f76a') in 0.063854 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 13
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Env_StormCanal_Pipe_02.fbx
-  artifactKey: Guid(6b36107161e6e9a4f92b135e4d4c56de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Env_StormCanal_Pipe_02.fbx using Guid(6b36107161e6e9a4f92b135e4d4c56de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3b8ad8ce638c9c0574ab7c92da81c42') in 0.015954 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Prefabs/Buildings/SM_Bld_Ceiling_Pipe_Junction_01.prefab
-  artifactKey: Guid(8ee62f9f21f8a2b479defcf3f0cb7450) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Prefabs/Buildings/SM_Bld_Ceiling_Pipe_Junction_01.prefab using Guid(8ee62f9f21f8a2b479defcf3f0cb7450) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e696da74f640efc627f6a4431a70760') in 0.017793 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Scenes/Demo_City_Universal_RenderPipeline.unity
-  artifactKey: Guid(9ca7bdae70c06a546aa612594f2f6ace) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Scenes/Demo_City_Universal_RenderPipeline.unity using Guid(9ca7bdae70c06a546aa612594f2f6ace) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c87f748962531893ac3a420f2e10205') in 0.001259 seconds
+  Time since last request: 1994.420828 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a4fe85251aa2e89732c359432baa2c3') in 0.004475 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
+  Time since last request: 6.631348 seconds.
+  path: Assets/Cutscene
+  artifactKey: Guid(1659baa278a8d5f4cb2c1290b32c7592) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cutscene using Guid(1659baa278a8d5f4cb2c1290b32c7592) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '447a78075d9db86a21c4efc2513c6329') in 0.000504 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.744927 seconds.
+  path: Assets/Cutscene/LvL_4.unity
+  artifactKey: Guid(4f458165e339ef14dad43d50593d95dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cutscene/LvL_4.unity using Guid(4f458165e339ef14dad43d50593d95dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c63e25532f76167f32d343e6fd07ce89') in 0.000551 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 22.814243 seconds.
+  path: Assets/Cutscene/SC1.unity
+  artifactKey: Guid(4f458165e339ef14dad43d50593d95dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cutscene/SC1.unity using Guid(4f458165e339ef14dad43d50593d95dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f2cbb9b06dfd71b96a07e4546684a36') in 0.000535 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 118.376046 seconds.
+  path: Assets/Cutscene/FoldfoTimeLine
+  artifactKey: Guid(2c5eefec1bd5fc44e8462bedcf387023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cutscene/FoldfoTimeLine using Guid(2c5eefec1bd5fc44e8462bedcf387023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d1fec84f5181362d1296899025f776c') in 0.000671 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 10.585952 seconds.
+  path: Assets/Cutscene/FoldTime
+  artifactKey: Guid(2c5eefec1bd5fc44e8462bedcf387023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cutscene/FoldTime using Guid(2c5eefec1bd5fc44e8462bedcf387023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3c588b4a3135cc8ff5a84d103a86074') in 0.000489 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 168.178417 seconds.
+  path: Assets/Visual/Animation
+  artifactKey: Guid(217eb3f521669aa4faceea34e368c147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation using Guid(217eb3f521669aa4faceea34e368c147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4812ed89198e02762541f31cf375850') in 0.008708 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.574773 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims
+  artifactKey: Guid(83d132102039d25428e3bc390fd923b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims using Guid(83d132102039d25428e3bc390fd923b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1a39b7c2d455f85f902d9b087996ba6') in 0.000955 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.432215 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Prefabs
+  artifactKey: Guid(e31a9eb6bedb7c9478a8377554522309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Prefabs using Guid(e31a9eb6bedb7c9478a8377554522309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a4ffd0d06406c515f86ca3f19ff03c7') in 0.007690 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.068904 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Prefabs/Android.prefab
+  artifactKey: Guid(ac967e2b6e353294a865b8784e61a96c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Prefabs/Android.prefab using Guid(ac967e2b6e353294a865b8784e61a96c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c72585b7c56f4b4c9c94f8cc14d32068') in 0.114255 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 296
+========================================================================
+Received Import Request.
+  Time since last request: 7.153309 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art
+  artifactKey: Guid(eec3ced84f10db949bf607e0a70b8854) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art using Guid(eec3ced84f10db949bf607e0a70b8854) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbd2a90b79003a2ce0bf8bfcaceeeb0a') in 0.000696 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.861879 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations
+  artifactKey: Guid(5d3ce9e463569514f9a445029d358e20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations using Guid(5d3ce9e463569514f9a445029d358e20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a154db59e23823600bf9612fa0da56f2') in 0.000720 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.093387 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/T_pose.fbx
+  artifactKey: Guid(232c5f166caf4c347a0862a91c9dfa56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/T_pose.fbx using Guid(232c5f166caf4c347a0862a91c9dfa56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '983337ddf617d7e81adfb54a78474e12') in 0.008212 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 141
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Back_LoopFast.fbx
+  artifactKey: Guid(6d6737dbd44f2ae4a9b758bf524d7f80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Back_LoopFast.fbx using Guid(6d6737dbd44f2ae4a9b758bf524d7f80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a26158860a4afd87691d208715b1eba1') in 0.006371 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Forward_End.fbx
+  artifactKey: Guid(ae23574238109b440b6a928784049413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Forward_End.fbx using Guid(ae23574238109b440b6a928784049413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87d7f490e84edf605cb942d1f0195391') in 0.006367 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_KipUpIdle_DropDown_NextBar.fbx
+  artifactKey: Guid(476eedc4b3694fa469d498dc1860a1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_KipUpIdle_DropDown_NextBar.fbx using Guid(476eedc4b3694fa469d498dc1860a1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c32553888c95747c25013b2292092b89') in 0.008219 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_HangingIdle.fbx
+  artifactKey: Guid(4c423730d6154f24c985143a39aa806c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_HangingIdle.fbx using Guid(4c423730d6154f24c985143a39aa806c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25860b880258e6a5e74e79ada07a849a') in 0.007945 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_PreJump.fbx
+  artifactKey: Guid(fa4bfd1a78b141247a6099a5114ed960) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_PreJump.fbx using Guid(fa4bfd1a78b141247a6099a5114ed960) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9632680e4765498902e39ceaa5379597') in 0.007293 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_KipUpIdle_To_HangingIdle.fbx
+  artifactKey: Guid(6cff3408e09b5b44c86ae140fa58883a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_KipUpIdle_To_HangingIdle.fbx using Guid(6cff3408e09b5b44c86ae140fa58883a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd6da8a12d67450405e7435b2130cc0c') in 0.008072 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_KipUp_Idle.fbx
+  artifactKey: Guid(8e08a2372699e654186dcc7b5b8265b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_KipUp_Idle.fbx using Guid(8e08a2372699e654186dcc7b5b8265b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6a9d897bd0a21975ea955db4e4d35a0') in 0.006019 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
   Time since last request: 0.000025 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Prefabs/Props/SM_Prop_Detail_Pipes_03.prefab
-  artifactKey: Guid(6a45b09b669e4904a96655f7c0dc5f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Prefabs/Props/SM_Prop_Detail_Pipes_03.prefab using Guid(6a45b09b669e4904a96655f7c0dc5f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe50f85e79fc6b37ed186fe119bf0f7c') in 0.020617 seconds
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Hanging_Shimmy_Right.fbx
+  artifactKey: Guid(5400e57072dcaba418cb2237146b0d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Hanging_Shimmy_Right.fbx using Guid(5400e57072dcaba418cb2237146b0d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3603d216dbacc99298da88807fc0df2') in 0.006049 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
+Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
   Time since last request: 0.000020 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiCity/Models/SM_Prop_Pipes_01_Convex.asset
-  artifactKey: Guid(6205faf2ab320574fb3c99cdcd6b9163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiCity/Models/SM_Prop_Pipes_01_Convex.asset using Guid(6205faf2ab320574fb3c99cdcd6b9163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9475ab1a17b89f74a3ed5a60462f201d') in 0.009121 seconds
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_KipUpIdle_JumpUpTo_NextBar.fbx
+  artifactKey: Guid(1dfbf006e18e3384e8aa14d5412c43dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_KipUpIdle_JumpUpTo_NextBar.fbx using Guid(1dfbf006e18e3384e8aa14d5412c43dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdfc4ab8ab279a0e199273bc092e2f81') in 0.006802 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Bld_Ceiling_Pipes_Straight_Broken_01_Convex.asset
-  artifactKey: Guid(93b3dbb249766004facf23ad02c4e685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Bld_Ceiling_Pipes_Straight_Broken_01_Convex.asset using Guid(93b3dbb249766004facf23ad02c4e685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ede832639616948ca348f28afe1003f3') in 0.010888 seconds
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Idle.fbx
+  artifactKey: Guid(5b7cc80bc4bdf544e9c1ba0656dcf735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BalanceBeam_Idle.fbx using Guid(5b7cc80bc4bdf544e9c1ba0656dcf735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f1c9e905302d3eaede72e00dcfd92d') in 0.009520 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Prop_Pipe_Large_01.fbx
-  artifactKey: Guid(22b68ca34da57a847b7aeb55b40bbe57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Prop_Pipe_Large_01.fbx using Guid(22b68ca34da57a847b7aeb55b40bbe57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd53fb423be70c99daa409784cf3597c') in 0.026298 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Prop_Pipe_Valve_02.fbx
-  artifactKey: Guid(6f104d2c43fa2bf4fb406cf337953b0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Prop_Pipe_Valve_02.fbx using Guid(6f104d2c43fa2bf4fb406cf337953b0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '878fe7b3f538ddca3b90ae2249fc5125') in 0.015875 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Prop_Detail_Pipe_Broken_01_Convex.asset
-  artifactKey: Guid(8cd1f5ed74b8c2a40a9de6315b53370e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Prop_Detail_Pipe_Broken_01_Convex.asset using Guid(8cd1f5ed74b8c2a40a9de6315b53370e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88eff2cbd942fa05d308d344d75b7bd5') in 0.017599 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Models/Convex/SM_Wep_Pipe_01_Convex.asset
-  artifactKey: Guid(741314bf8a436ad4cb9283c2d9a369c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/Convex/SM_Wep_Pipe_01_Convex.asset using Guid(741314bf8a436ad4cb9283c2d9a369c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '105539d2b9c9046aaf104bf0de83322d') in 0.011728 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Models/Convex/SM_Prop_Pipes_Rusted_01_Convex.asset
-  artifactKey: Guid(ca4a8e7f5afa9e9498fe531998accefe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/Convex/SM_Prop_Pipes_Rusted_01_Convex.asset using Guid(ca4a8e7f5afa9e9498fe531998accefe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3513fdc72510f7ac50492559914b1ad8') in 0.017655 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
   Time since last request: 0.000019 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Prop_Detail_Pipe_Straight_01_Convex.asset
-  artifactKey: Guid(324d689aa012b7349b3ead8f6a863f4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/Collision/SM_Prop_Detail_Pipe_Straight_01_Convex.asset using Guid(324d689aa012b7349b3ead8f6a863f4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f68578c5943aeb5fb2fe0e422db1cacd') in 0.019367 seconds
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Hanging_To_SwingJump.fbx
+  artifactKey: Guid(bdedd56a4dcd69c41ad9834b2ec5998c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Hanging_To_SwingJump.fbx using Guid(bdedd56a4dcd69c41ad9834b2ec5998c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06d36b59895fc40c1a34333cecd45aeb') in 0.008696 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Visual/3D Models/PolygonSciFiSpace/Models/SM_Bld_Ceiling_Pipes_Turn_L_01.fbx
-  artifactKey: Guid(ab214fb2e49c01e4cb1799da9922790f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Models/SM_Bld_Ceiling_Pipes_Turn_L_01.fbx using Guid(ab214fb2e49c01e4cb1799da9922790f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5774ed41afba7f8dc56e25088d25b36') in 0.022756 seconds
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Land.fbx
+  artifactKey: Guid(7176d305216e9c34f85651ca8cdeffac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_Land.fbx using Guid(7176d305216e9c34f85651ca8cdeffac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b5954b966f202bc60542d971da27022') in 0.008729 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 5.302320 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_SwingJump.fbx
+  artifactKey: Guid(435feeb552966244dad88101a394aff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_SwingJump.fbx using Guid(435feeb552966244dad88101a394aff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '764007af760e3b09ac28bcf2246ac7b8') in 0.006462 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_WholeSequence.fbx
+  artifactKey: Guid(5c3df82b201af454db68046b8df4eaab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_BarSwing_ForwardAcross_WholeSequence.fbx using Guid(5c3df82b201af454db68046b8df4eaab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '512b89d9ed64261c2988b0ff777ea4d0') in 0.007291 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_BackIntoCliff_Recover_Hold.fbx
+  artifactKey: Guid(05de32c5185d7a540b9ff51696376922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_BackIntoCliff_Recover_Hold.fbx using Guid(05de32c5185d7a540b9ff51696376922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcf0c977f81dfa23dc108e8de9ef8f4a') in 0.007725 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.021233 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_EdgeHold_Walk_Left.fbx
+  artifactKey: Guid(815804798a85ea048a33e1177479e27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_EdgeHold_Walk_Left.fbx using Guid(815804798a85ea048a33e1177479e27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0133b96b414349a75803ca4b442bfb1e') in 0.006395 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Behind_Up.fbx
+  artifactKey: Guid(6247027663abc42418b2d8cba49ca5df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Behind_Up.fbx using Guid(6247027663abc42418b2d8cba49ca5df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ac8c8ca841af34a3e0db203cc1dc78d') in 0.007846 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Right.fbx
+  artifactKey: Guid(d902c748c97ab7044864aa8708eabd80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Right.fbx using Guid(d902c748c97ab7044864aa8708eabd80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b61edd4f1f8daa8976496db6d4bd1d6') in 0.006707 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Behind_Down.fbx
+  artifactKey: Guid(74a44d65d98d3ca429de8026f662b0ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Behind_Down.fbx using Guid(74a44d65d98d3ca429de8026f662b0ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da0891880042455d9846f77756a5a2b') in 0.005634 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_LeapForward_inTheAir_Loop.fbx
+  artifactKey: Guid(b3a3209f61af9d64abffffafc2fde273) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_LeapForward_inTheAir_Loop.fbx using Guid(b3a3209f61af9d64abffffafc2fde273) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86c250e5b0eabc920ed71d03bc266d1d') in 0.006945 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_LeapForward_fromSquat.fbx
+  artifactKey: Guid(c53b193ad1fa4524f925c2a4726f7e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_LeapForward_fromSquat.fbx using Guid(c53b193ad1fa4524f925c2a4726f7e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4575c10f77134deebf76384c16fff18f') in 0.006733 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_ReleaseGrip_Recover_Hold.fbx
+  artifactKey: Guid(c53bce89065b8d246b9e6aeea4ab6bda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_ReleaseGrip_Recover_Hold.fbx using Guid(c53bce89065b8d246b9e6aeea4ab6bda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a8bfa3a067382b761306b5d21ca3a8f') in 0.006616 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_RightHand_GripSlip_Loop.fbx
+  artifactKey: Guid(1c5178eb3c9c6024aa8af7e605790113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_RightHand_GripSlip_Loop.fbx using Guid(1c5178eb3c9c6024aa8af7e605790113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc455c55f421a1fc43c21883ec25eb18') in 0.008231 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_RightHand_GripSlip_Start.fbx
+  artifactKey: Guid(bbb95814e1d945f4bb2f8c81568010eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_RightHand_GripSlip_Start.fbx using Guid(bbb95814e1d945f4bb2f8c81568010eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df27604e269bf80a84e30a7bd76d997c') in 0.007492 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Squat_Idle.fbx
+  artifactKey: Guid(d9db1354341e74242b88adac7750b93b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Squat_Idle.fbx using Guid(d9db1354341e74242b88adac7750b93b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ed62e4a672d6ef61583621599fb6026') in 0.007642 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Right_InPlaceRoot.fbx
+  artifactKey: Guid(32ccf5971bdaa9146b128e325072e964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Right_InPlaceRoot.fbx using Guid(32ccf5971bdaa9146b128e325072e964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ffe6a3fa874114e4782d23959478609') in 0.008012 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Up.fbx
+  artifactKey: Guid(d3b3805cd59c05b4da3fb88d8df45143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Leap_Up.fbx using Guid(d3b3805cd59c05b4da3fb88d8df45143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf23d3fd64e5d9ca087746275facc10c') in 0.007165 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_RightHand_GripSlip_End.fbx
+  artifactKey: Guid(500823c8b99e83f4cbf0f8ce20338ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_RightHand_GripSlip_End.fbx using Guid(500823c8b99e83f4cbf0f8ce20338ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32f11903614ac1f6da8dd1ef12ea6ec2') in 0.007307 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Start_fromCliffTop.fbx
+  artifactKey: Guid(4f588dd01dde6874c8c55918f77e16e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Climb_Start_fromCliffTop.fbx using Guid(4f588dd01dde6874c8c55918f77e16e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b51bdb57930ffdbbb357f792af066597') in 0.007758 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 61.432702 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Door_KickDown_Unsuccessful_Loop.fbx
+  artifactKey: Guid(1e5b1c84a70a3864980e7324906bd9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Door_KickDown_Unsuccessful_Loop.fbx using Guid(1e5b1c84a70a3864980e7324906bd9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8938fff1f3850f5462fb130105e1eca5') in 0.015483 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_CatJump.fbx
+  artifactKey: Guid(3fa45ecb26697914ca49950245e3e5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_CatJump.fbx using Guid(3fa45ecb26697914ca49950245e3e5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9929609330455ce1e27db830d6016031') in 0.009281 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_SitSpin_fromRunToRun.fbx
+  artifactKey: Guid(939a138e604d4ee46a297e89e9f0a1ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_SitSpin_fromRunToRun.fbx using Guid(939a138e604d4ee46a297e89e9f0a1ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9050b6cb6e444a7da2189c908c2ab372') in 0.008687 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_JumpOver.fbx
+  artifactKey: Guid(58acc1209d1cb93419b300f8869389c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_JumpOver.fbx using Guid(58acc1209d1cb93419b300f8869389c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dac89c36d378c0fbd7b3131f7a41a7c') in 0.009177 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_Start.fbx
+  artifactKey: Guid(7fff2feede4e74942a2ad10d7e32c728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_Start.fbx using Guid(7fff2feede4e74942a2ad10d7e32c728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f604724192fdad5722b049c3ac4744b') in 0.007255 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_130cm_JumpOver_FromRunToRun.fbx
+  artifactKey: Guid(904aa70e908d97a43bbb49b970ae63dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_130cm_JumpOver_FromRunToRun.fbx using Guid(904aa70e908d97a43bbb49b970ae63dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef372d2528a8ecd8ce5f06f8c6dc4a7a') in 0.006629 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_End_toPlatform.fbx
+  artifactKey: Guid(5d29fd27a6523df4abf8ba003b67341b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_End_toPlatform.fbx using Guid(5d29fd27a6523df4abf8ba003b67341b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7b6a4e4d258d5749e20eb9f7494b787') in 0.006310 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_HangingIdle_To_4Limbs_Hold_Idle.fbx
+  artifactKey: Guid(a6d7a029d0a38c54e814fad0ad2e1384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_HangingIdle_To_4Limbs_Hold_Idle.fbx using Guid(a6d7a029d0a38c54e814fad0ad2e1384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c728a3e3722e33adcc507370bfbda043') in 0.005741 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Up_Start.fbx
+  artifactKey: Guid(0960338e76f908d439fc19a558e3cd27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Up_Start.fbx using Guid(0960338e76f908d439fc19a558e3cd27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e613ff780725a43a4f827131db65a72') in 0.006356 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Down_Loop.fbx
+  artifactKey: Guid(8ef8cd2fd7224d24fac31ff66cfe81a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Down_Loop.fbx using Guid(8ef8cd2fd7224d24fac31ff66cfe81a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'febf5d3417155164c7ea910098c095dc') in 0.007741 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Up_Cancel.fbx
+  artifactKey: Guid(3ea76b425d184d749915e3805222da8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Up_Cancel.fbx using Guid(3ea76b425d184d749915e3805222da8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0175ec7740bc88ecd7800d27c5713e85') in 0.007874 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_Left_InPlaceRoot.fbx
+  artifactKey: Guid(cc617488659721a45b78d115b0cb25f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_Left_InPlaceRoot.fbx using Guid(cc617488659721a45b78d115b0cb25f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff2f555768a35630b7ecee4e8b41fde9') in 0.008368 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_InwardCorner_Left.fbx
+  artifactKey: Guid(a3f3a2ec0e131ea4fbc285fef0ed5b87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_InwardCorner_Left.fbx using Guid(a3f3a2ec0e131ea4fbc285fef0ed5b87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74cff2f36b560d2f4f7a1ce07a3b2cfa') in 0.008306 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Slide_Down_End.fbx
+  artifactKey: Guid(b24af3f8f10e07045b38495aa196939f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Slide_Down_End.fbx using Guid(b24af3f8f10e07045b38495aa196939f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72a85a3f16a1751e9ca00bfe3f27e896') in 0.006274 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_345cm_ClimbOver.fbx
+  artifactKey: Guid(433c5d4fe208e6d4da878fd1b55fd9c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_345cm_ClimbOver.fbx using Guid(433c5d4fe208e6d4da878fd1b55fd9c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c306efbc2fca81d46995d4f2227a2921') in 0.007065 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_HangingIdle_InPlaceRoot.fbx
+  artifactKey: Guid(d320e00d7a185e04cbd570e17845a7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_HangingIdle_InPlaceRoot.fbx using Guid(d320e00d7a185e04cbd570e17845a7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9731507fbab6f700e6fc9b04fadf422') in 0.005060 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_JumpOver_to_Wall_Climb_HangingIdle.fbx
+  artifactKey: Guid(6027ac7a52699ff4597bb70229cd6adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_JumpOver_to_Wall_Climb_HangingIdle.fbx using Guid(6027ac7a52699ff4597bb70229cd6adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa360c69a6352e1919353077115ea202') in 0.007933 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_Left.fbx
+  artifactKey: Guid(98b3c9bedab41e241a80f15809095680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_Left.fbx using Guid(98b3c9bedab41e241a80f15809095680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d3d77cd3092a1bb71af077206579ccf') in 0.007378 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Down_Start.fbx
+  artifactKey: Guid(04be3975e88fc614cad33ad22f1d1da6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Down_Start.fbx using Guid(04be3975e88fc614cad33ad22f1d1da6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b6a6d786aba5c820757a993116994de') in 0.008021 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.153173 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_90Degrees_InsideCorner.fbx
+  artifactKey: Guid(3c3f8cf9bb3d5c448b8c20fed77d9e2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_90Degrees_InsideCorner.fbx using Guid(3c3f8cf9bb3d5c448b8c20fed77d9e2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a922c6a08cbed5a95c21a4a11d13422') in 0.007342 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_90Degrees_OutwardCorner.fbx
+  artifactKey: Guid(629e254930ebf504f9d35a5c20c15e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_90Degrees_OutwardCorner.fbx using Guid(629e254930ebf504f9d35a5c20c15e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96a88ce90ee70d07e36b634363d34652') in 0.008474 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Loop_Crouched.fbx
+  artifactKey: Guid(e1be8935a68572b489d7022efd13916c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Loop_Crouched.fbx using Guid(e1be8935a68572b489d7022efd13916c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25494510da9ae851699569d5d964e805') in 0.010042 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Loop.fbx
+  artifactKey: Guid(56d5b861a5717fc47a3f2229e45080d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Loop.fbx using Guid(56d5b861a5717fc47a3f2229e45080d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4eae753e85cc494b7b4d6cb6803e374') in 0.009676 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_End.fbx
+  artifactKey: Guid(b5442161692ee6e4581c3fb022f2bc78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_End.fbx using Guid(b5442161692ee6e4581c3fb022f2bc78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30eae32ba18d73332f6f848769571b94') in 0.006449 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Cancel_Crouched.fbx
+  artifactKey: Guid(0646ae804ff184c49951677bbcbd9880) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Cancel_Crouched.fbx using Guid(0646ae804ff184c49951677bbcbd9880) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03f6f7844b87a9dd7a86b13eacbbab5d') in 0.009617 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_90Degrees_InsideCorner_Crouched.fbx
+  artifactKey: Guid(1c982b4eb4f8ebe46a6c7029739b1b40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_90Degrees_InsideCorner_Crouched.fbx using Guid(1c982b4eb4f8ebe46a6c7029739b1b40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28c07f10d94164cbe5a82d3462602537') in 0.005694 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_End.fbx
+  artifactKey: Guid(4acc133323243e741af88e6d66d76be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_End.fbx using Guid(4acc133323243e741af88e6d66d76be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1178a2318810971b29f03ec3f6d479b8') in 0.004437 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_WholeSequence_Crouched.fbx
+  artifactKey: Guid(85a46d3df37ae8f46a82868406782e1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_WholeSequence_Crouched.fbx using Guid(85a46d3df37ae8f46a82868406782e1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '211c1a58c9cb4742e80bd9dfec6c9c13') in 0.008152 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Loop.fbx
+  artifactKey: Guid(d6692751e7ff19b4cb1be78bea3c75d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Loop.fbx using Guid(d6692751e7ff19b4cb1be78bea3c75d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79af4e5307cd186d09b49c8e86bb6e6e') in 0.008140 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_90Degrees_OutwardCorner_Crouched.fbx
+  artifactKey: Guid(0b34aff7fb8edc24dac7eb25ae7fe3ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_90Degrees_OutwardCorner_Crouched.fbx using Guid(0b34aff7fb8edc24dac7eb25ae7fe3ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '535ebfbd1e00595fb753f2e505efef57') in 0.006905 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Cancel_Crouched.fbx
+  artifactKey: Guid(0d2c1385dba3eb546a7ef8e4731fb739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Cancel_Crouched.fbx using Guid(0d2c1385dba3eb546a7ef8e4731fb739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c29585fd586a8135468f7f89ff4d1ce8') in 0.007736 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Idle.fbx
+  artifactKey: Guid(849893f383814034ba89b36a3174dda8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Idle.fbx using Guid(849893f383814034ba89b36a3174dda8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d7dc31506ddedb42275cae53f0d502f') in 0.008249 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_90Degrees_InsideCorner.fbx
+  artifactKey: Guid(8fd9184f559c6284c87d76e3d557e1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_90Degrees_InsideCorner.fbx using Guid(8fd9184f559c6284c87d76e3d557e1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25eebdcb9191d437cf928771e5d4b40c') in 0.005964 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.181951 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Start.fbx
+  artifactKey: Guid(82eb2a509e3db1a43be82f8f63a35ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Start.fbx using Guid(82eb2a509e3db1a43be82f8f63a35ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62ba78abf4de07def9a8248de8e68ebd') in 0.006914 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backflip.fbx
+  artifactKey: Guid(1ae2a516027d36d4197273b19727eca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backflip.fbx using Guid(1ae2a516027d36d4197273b19727eca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef4423ac20d09458c7c3ba14458d0d0f') in 0.007034 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Start_Crouched.fbx
+  artifactKey: Guid(58525fab7d4e5fb4fa5333582220d54b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Start_Crouched.fbx using Guid(58525fab7d4e5fb4fa5333582220d54b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e527a095009b5c8b9e707871fe249d1') in 0.008622 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backhandspring_Loop.fbx
+  artifactKey: Guid(668ae9041e943f94baf6fc2029a161ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backhandspring_Loop.fbx using Guid(668ae9041e943f94baf6fc2029a161ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71df443ef58a1c0b8a31acdbe4633327') in 0.007076 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backhandspring_Start.fbx
+  artifactKey: Guid(fd48b52083bb81240bb73d31e903488b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backhandspring_Start.fbx using Guid(fd48b52083bb81240bb73d31e903488b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b02dc6ff4249d283183888133dacab52') in 0.007592 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrogJump_91cmHeight_JumpForward.fbx
+  artifactKey: Guid(b781dcd8f9b870d498efffe043870f7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrogJump_91cmHeight_JumpForward.fbx using Guid(b781dcd8f9b870d498efffe043870f7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37c4026219b90708ce75453a4d1bd021') in 0.007892 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Landing.fbx
+  artifactKey: Guid(a367ea39edd43f3439978cb55fbc6309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Landing.fbx using Guid(a367ea39edd43f3439978cb55fbc6309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f3970584d970fcc18ad955f914a6034') in 0.009316 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_PreLanding.fbx
+  artifactKey: Guid(a3f4091f6e71efd4ca225e04a7ad3a0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_PreLanding.fbx using Guid(a3f4091f6e71efd4ca225e04a7ad3a0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66b35b4accd573b448c7e79c280c5f4d') in 0.010759 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Jump.fbx
+  artifactKey: Guid(121823cfff911a346b9d6c7118a30037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Jump.fbx using Guid(121823cfff911a346b9d6c7118a30037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab8be12128fdbb5171216d25602f16fe') in 0.008565 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_BackLeft.fbx
+  artifactKey: Guid(26f52dde9e06d1240a63cedd50682636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_BackLeft.fbx using Guid(26f52dde9e06d1240a63cedd50682636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b92c31adb57c8e2a9ec551730d16719c') in 0.008154 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrogJump_91cmHeight_runTo_SquatIdle.fbx
+  artifactKey: Guid(6e6f4fc7128b32f439613283d3009dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrogJump_91cmHeight_runTo_SquatIdle.fbx using Guid(6e6f4fc7128b32f439613283d3009dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3fc166a5afd2db6a4944d5273d1da7') in 0.007858 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backhandspring_WholeSequence.fbx
+  artifactKey: Guid(be287e4c289c8b9499b9ac54500b0253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backhandspring_WholeSequence.fbx using Guid(be287e4c289c8b9499b9ac54500b0253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5cf7ce4fcf31f2ded9ada2b4f0ff6af') in 0.008233 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Back.fbx
+  artifactKey: Guid(d59f0a1ca38a3694cb4acd3fca8081d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Back.fbx using Guid(d59f0a1ca38a3694cb4acd3fca8081d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b8e3e7ae0a7cdac8b684807ee034a15') in 0.007350 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_WholeSequence.fbx
+  artifactKey: Guid(66e26806a0269464b8b6acd41383958b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_WholeSequence.fbx using Guid(66e26806a0269464b8b6acd41383958b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '651c428c391e40f4371a43318f9c5774') in 0.009420 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Idle.fbx
+  artifactKey: Guid(901cf23cf51848c42ab846b25b070e6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Idle.fbx using Guid(901cf23cf51848c42ab846b25b070e6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13a28746cf791fc6a23e8557150ebdf1') in 0.008358 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrogJump_91cmHeight_JumpForward_toRun.fbx
+  artifactKey: Guid(826ebd495df62944ea3c40284098847d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrogJump_91cmHeight_JumpForward_toRun.fbx using Guid(826ebd495df62944ea3c40284098847d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca2a47be471990b79c1a4e591f8ef298') in 0.007197 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_LazyVault_Left.fbx
+  artifactKey: Guid(c0b957413f73ee0498924fde7b6a9bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_LazyVault_Left.fbx using Guid(c0b957413f73ee0498924fde7b6a9bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08b4b317e717c5fde98793210ab6449d') in 0.008139 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.126440 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Forward.fbx
+  artifactKey: Guid(e9e260d367470284ab7bc0c00b4c646a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Forward.fbx using Guid(e9e260d367470284ab7bc0c00b4c646a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96cc958be356cbf6b7dcfea7aad249a5') in 0.007272 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_ForwardLeft.fbx
+  artifactKey: Guid(c9641bb515a9e2c4b8a400b067468ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_ForwardLeft.fbx using Guid(c9641bb515a9e2c4b8a400b067468ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f3c5380b0043d795f4cc290273e3289') in 0.007853 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Loop.fbx
+  artifactKey: Guid(cb9004a65acf80f4aa0f128316c76241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Loop.fbx using Guid(cb9004a65acf80f4aa0f128316c76241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06f2ed79fb0fb2aabcf696be9f7dba57') in 0.009594 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.011545 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Pistol_Loop.fbx
+  artifactKey: Guid(48c679d2359ca514f9fbaed7f4e6bd16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Pistol_Loop.fbx using Guid(48c679d2359ca514f9fbaed7f4e6bd16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a887d131a83275d8d71d198e54aad9b2') in 0.006928 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Pistol_Start.fbx
+  artifactKey: Guid(c26035a126cb5464d8254b09f95d2106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Pistol_Start.fbx using Guid(c26035a126cb5464d8254b09f95d2106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d623cd78b264d029c1e67a7e8aaba1d') in 0.009564 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_WholeSequence.fbx
+  artifactKey: Guid(36ac1eec00d619849aaaa3e20403f3d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_WholeSequence.fbx using Guid(36ac1eec00d619849aaaa3e20403f3d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e71cebf1972f56bd91e07820eb5d0efa') in 0.008935 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_Slide_Loop.fbx
+  artifactKey: Guid(19e6b3618b55f5c40a87967c13025933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_Slide_Loop.fbx using Guid(19e6b3618b55f5c40a87967c13025933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78402068c54899dfe6f88b9477b3e6dc') in 0.007688 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Turn_180.fbx
+  artifactKey: Guid(de9c79bc41e5e38488aa0481d1b4279b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Turn_180.fbx using Guid(de9c79bc41e5e38488aa0481d1b4279b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef043cda98f57ef82b6b41d43e4f1262') in 0.008784 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_BackLeft.fbx
+  artifactKey: Guid(b54288abf24a0ca4aadbd3332c665bd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_BackLeft.fbx using Guid(b54288abf24a0ca4aadbd3332c665bd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd832f30c8c7980caf0e8d6cdedac58b6') in 0.008789 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_Slide_WholeSequence.fbx
+  artifactKey: Guid(2fe55b01c09b60e4eb049d662e32f1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_Slide_WholeSequence.fbx using Guid(2fe55b01c09b60e4eb049d662e32f1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b3916e90852883fe7a867b66c1a6637') in 0.008835 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Turn_Left90.fbx
+  artifactKey: Guid(6598efb80f336da469f2e388f6bd5408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Turn_Left90.fbx using Guid(6598efb80f336da469f2e388f6bd5408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aa149d4e7412acfd8aa89ee8059c0ea') in 0.008514 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Sprint.fbx
+  artifactKey: Guid(b3e48a6d2be5b6d458c285e25a5f4bf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Sprint.fbx using Guid(b3e48a6d2be5b6d458c285e25a5f4bf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a4396211d1c005936ef1e14a0267f0d') in 0.008958 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Start.fbx
+  artifactKey: Guid(9691d5368511e6047a9f5301a770077c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Start.fbx using Guid(9691d5368511e6047a9f5301a770077c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b7d15c11d18693784140e6717361b7f') in 0.008389 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 1.277407 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_ForwardRight.fbx
+  artifactKey: Guid(07926e9ea582639458b65e43146fe615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_ForwardRight.fbx using Guid(07926e9ea582639458b65e43146fe615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '350126f1b9df6f21e969bc1fe75aad8e') in 0.014445 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.039481 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Left_End.fbx
+  artifactKey: Guid(a85328236c3cd574697626bca0e443de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Left_End.fbx using Guid(a85328236c3cd574697626bca0e443de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a89f0a52bd8f57c2b40b8b87bcd7309') in 0.007670 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_End.fbx
+  artifactKey: Guid(5a047efb704f40342b961336db3928e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_End.fbx using Guid(5a047efb704f40342b961336db3928e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85eab039f0e0ec6e33b0caf258113ca2') in 0.006965 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Left_WholeSequence.fbx
+  artifactKey: Guid(f2181a86df801424e9c958ed29043f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Left_WholeSequence.fbx using Guid(f2181a86df801424e9c958ed29043f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71f3d298e398ae24234a7387f5a1bd35') in 0.007124 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.024530 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_WholeSequence.fbx
+  artifactKey: Guid(1600360aaa16a93458a67f0b00036c5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_WholeSequence.fbx using Guid(1600360aaa16a93458a67f0b00036c5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '845def67ce7b9721baab47369abd5757') in 0.007468 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_Loop.fbx
+  artifactKey: Guid(80c04a4b7b4c428468bb9fe3a9f2894b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_Loop.fbx using Guid(80c04a4b7b4c428468bb9fe3a9f2894b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ca01927c5c70a2fd4a508bfa61c2e34') in 0.006581 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_End.fbx
+  artifactKey: Guid(4d56d3a45feee034989b756f265d19d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_End.fbx using Guid(4d56d3a45feee034989b756f265d19d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e60d93b48c990ca836f11e359a29b4c8') in 0.006725 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.006227 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_WholeSequence.fbx
+  artifactKey: Guid(670d63b5dea12d94b8535e356df1480a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_WholeSequence.fbx using Guid(670d63b5dea12d94b8535e356df1480a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a1ec95ffaa2e4807ae5283815abb40d') in 0.007388 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_PreJump.fbx
+  artifactKey: Guid(c71eab4735b30504d91c8bbac145261c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_PreJump.fbx using Guid(c71eab4735b30504d91c8bbac145261c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c31566539da174ef3cac237c2cd1fff') in 0.006979 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_170cm_ClimbOver_fromRun.fbx
+  artifactKey: Guid(983cdef5ae9d41b48818ce28786ebf6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_170cm_ClimbOver_fromRun.fbx using Guid(983cdef5ae9d41b48818ce28786ebf6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a424a2e7450b413fab24fadfa85aee6e') in 0.008316 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 60.431361 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Down.fbx
+  artifactKey: Guid(3396bd9900ec77949b54a4b9c7b340f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Down.fbx using Guid(3396bd9900ec77949b54a4b9c7b340f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acc5991af26079657337b247cca161e4') in 0.014639 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 19.895496 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Idle.fbx
+  artifactKey: Guid(cab249c1e687db541a245cbec973a8e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Idle.fbx using Guid(cab249c1e687db541a245cbec973a8e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9873870864ba4831b158d23de49e6d94') in 0.014711 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.012426 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_End.fbx
+  artifactKey: Guid(79bf29b0fc4cfa44aabb801287255521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_End.fbx using Guid(79bf29b0fc4cfa44aabb801287255521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f8f1c73a0b0912e816b578caa0e58f2') in 0.011073 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LefttLeg_Turn_Left90.fbx
+  artifactKey: Guid(940d32c127441eb46a36b0c4d3e716f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LefttLeg_Turn_Left90.fbx using Guid(940d32c127441eb46a36b0c4d3e716f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e79af8298827576737e1ff74bbbb060') in 0.007430 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_Turn_Right90.fbx
+  artifactKey: Guid(44a04f94d199c7941b36b339fdba8a01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_Turn_Right90.fbx using Guid(44a04f94d199c7941b36b339fdba8a01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2321be616429a4590e4b5446ea3eec60') in 0.007747 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.002269 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_End.fbx
+  artifactKey: Guid(307123187797ddf41a788f89821bea3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_End.fbx using Guid(307123187797ddf41a788f89821bea3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abfee1fa3d494015728d071f961035f8') in 0.007964 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_Turn_Right90.fbx
+  artifactKey: Guid(802325940ddc2a447b5456b2f9b1b6df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_Turn_Right90.fbx using Guid(802325940ddc2a447b5456b2f9b1b6df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4524094883b9dd330cdeda15828110f6') in 0.009086 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_End.fbx
+  artifactKey: Guid(0654ef2f1a2d9434b949ec4b87118347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_End.fbx using Guid(0654ef2f1a2d9434b949ec4b87118347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55b624e0e4541737baca00c3d3214391') in 0.007984 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Start.fbx
+  artifactKey: Guid(317cbbc343bd7c346897b71cd231c679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Start.fbx using Guid(317cbbc343bd7c346897b71cd231c679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d5492f6f778108f06424bfb49e71c4d') in 0.006627 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_Idle.fbx
+  artifactKey: Guid(d9858870eea742044bfdb57672d50297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_Idle.fbx using Guid(d9858870eea742044bfdb57672d50297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4400377cacbb4c5a88f7751364b5662b') in 0.008061 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_Turn_Left90.fbx
+  artifactKey: Guid(f2dc845de82f9b147aaa826e245b3e58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_Turn_Left90.fbx using Guid(f2dc845de82f9b147aaa826e245b3e58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee7ebb69aa4a51b32b8f6d737b06f393') in 0.008749 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_WholeSequence.fbx
+  artifactKey: Guid(3840f77fa684cd54f9987e9b4b170f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_WholeSequence.fbx using Guid(3840f77fa684cd54f9987e9b4b170f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0d0df8a82dced70daab30941571deaf') in 0.008176 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.343838 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_Floor_Standing_End.fbx
+  artifactKey: Guid(bae1b01d3e76a634ca312fff61d18ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_Floor_Standing_End.fbx using Guid(bae1b01d3e76a634ca312fff61d18ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '948e4bdd7bbe25ddeccac177990e24a7') in 0.007155 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_TiltedCabinet_LiftUp.fbx
+  artifactKey: Guid(0a81227c1f65bb645a02b42436183714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_TiltedCabinet_LiftUp.fbx using Guid(0a81227c1f65bb645a02b42436183714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2e9c9ebffebf94d1a2dadfd9fe933ff') in 0.008809 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_Floor_Standing_Start.fbx
+  artifactKey: Guid(1caf20e686fef5744b2ef0e327f63aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_Floor_Standing_Start.fbx using Guid(1caf20e686fef5744b2ef0e327f63aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b66aec241fcea19fc8384649f40896d') in 0.006901 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.019488 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_4Limbs_Hold_Idle_To_Ledge_Climb_HangingIdle.fbx
+  artifactKey: Guid(856af5fede4a606488cc8e45c628fba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_4Limbs_Hold_Idle_To_Ledge_Climb_HangingIdle.fbx using Guid(856af5fede4a606488cc8e45c628fba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbacf5a8f5dbb425f684528637958857') in 0.005921 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DownLeft_HalfDistance.fbx
+  artifactKey: Guid(f4dc676ed7c7a36498239949f86e5eb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DownLeft_HalfDistance.fbx using Guid(f4dc676ed7c7a36498239949f86e5eb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7999363ae580b3977eb91eca88b9a60f') in 0.007441 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DeathFall_Loop.fbx
+  artifactKey: Guid(e466f2808597cd54692b6c6c6aa31d46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DeathFall_Loop.fbx using Guid(e466f2808597cd54692b6c6c6aa31d46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6de147624197bf9ac479e01a91d18d47') in 0.008121 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DeathFall_Start.fbx
+  artifactKey: Guid(4eed1e6477d64f14c8026352fba63391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DeathFall_Start.fbx using Guid(4eed1e6477d64f14c8026352fba63391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2441ad51087aa7f9601ce42cca57f7ea') in 0.006724 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_LookLeft_Loop.fbx
+  artifactKey: Guid(3178fbc581567aa46baace5e72a483a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_LookLeft_Loop.fbx using Guid(3178fbc581567aa46baace5e72a483a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbec32c81ebd409282ad7caa370120e2') in 0.007680 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Left.fbx
+  artifactKey: Guid(c25d59dff81c6174caaa5c32e4ead48e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Left.fbx using Guid(c25d59dff81c6174caaa5c32e4ead48e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ae0083f7e27591a44e8f8ad59154ef5') in 0.007218 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DownRight.fbx
+  artifactKey: Guid(2e7cdbaad8f7c704ba1ba47aeaf43666) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DownRight.fbx using Guid(2e7cdbaad8f7c704ba1ba47aeaf43666) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1970fe97270ffe670054b7e19b03fe1b') in 0.007291 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_InwardCorner_Right.fbx
+  artifactKey: Guid(101410b75acbb6143b0cc19bfcd275db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_InwardCorner_Right.fbx using Guid(101410b75acbb6143b0cc19bfcd275db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bf9634c208b50151d7045a286ef61c3') in 0.006911 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Down_RightHand_HalfDistance.fbx
+  artifactKey: Guid(6b4224a4e375d1d4094df8c32c7604fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Down_RightHand_HalfDistance.fbx using Guid(6b4224a4e375d1d4094df8c32c7604fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5979a5d5e1c01d8e08c799f71b3cfb12') in 0.007444 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Down_RightHand.fbx
+  artifactKey: Guid(4c25515bf596eef499301ec796be73b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Down_RightHand.fbx using Guid(4c25515bf596eef499301ec796be73b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4f9a4d8107ee1bd06a343eab0ca5fb8') in 0.009579 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 49.384422 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Updated Anims 1.1/Traversal_Fence_91cm_SitSpin_fromRunToRun.fbx
+  artifactKey: Guid(ed346769396133946b20dc229ca87eca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Updated Anims 1.1/Traversal_Fence_91cm_SitSpin_fromRunToRun.fbx using Guid(ed346769396133946b20dc229ca87eca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c353c1deecb724612e0d0220f40ef234') in 0.014533 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Updated Anims 1.1/Traversal_Gate_LiftUp.fbx
+  artifactKey: Guid(13eb712c544aa674da79c24916459ab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Updated Anims 1.1/Traversal_Gate_LiftUp.fbx using Guid(13eb712c544aa674da79c24916459ab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e27abda994a7745462c5e0575a4e16d8') in 0.007230 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 104.376658 seconds.
+  path: Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Bld_AutoRepair_01.fbx
+  artifactKey: Guid(6d9d40e4d0a2f4f43a91b68900f2cf3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Bld_AutoRepair_01.fbx using Guid(6d9d40e4d0a2f4f43a91b68900f2cf3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6d614436bcf26978bdc0913247d9af1') in 0.088340 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Bld_Bunker_Beam_End_Curved_Wood_01.fbx
+  artifactKey: Guid(fa88fbf3478796f4b9b393c7378da3df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Bld_Bunker_Beam_End_Curved_Wood_01.fbx using Guid(fa88fbf3478796f4b9b393c7378da3df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aecbe115104f9c99f77be8cd27850725') in 0.011508 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 7
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Prop_Pipes_Rusted_01.fbx
-  artifactKey: Guid(004c382475308f3428521115246ecbf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Prop_Pipes_Rusted_01.fbx using Guid(004c382475308f3428521115246ecbf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97855fe47d20424933fb3ecca12779b3') in 0.016156 seconds
+  Time since last request: 0.000033 seconds.
+  path: Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Bld_Bunker_Ceiling_Concrete_02.fbx
+  artifactKey: Guid(56fc5076e9b6f94479aec7ce70346106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonApocalypse/Models/SM_Bld_Bunker_Ceiling_Concrete_02.fbx using Guid(56fc5076e9b6f94479aec7ce70346106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05657e719ee8495ce7f42d3df204be87') in 0.015743 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 7
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
