@@ -1,26 +1,58 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]
+[RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private FixedJoystick _joystick;
-    [SerializeField] private Animator _animator;
+    [SerializeField] private Rigidbody rigidbody;
+    [SerializeField] private FixedJoystick joystick;
+    [SerializeField] private Animator animator;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpforce = 5f;
+    private JumpButton jumpButton;
+    private bool isJumping = false;
 
-    [SerializeField] private float _moveSpeed;
+
+    void Start()
+    {
+        jumpButton = GameObject.Find("BtnJump").GetComponent<JumpButton>();
+       
+    }
+
+    void Update()
+    {
+        
+        Jump();
+        
+    }
 
     private void FixedUpdate()
     {
-        _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _rigidbody.velocity.y, _joystick.Vertical * _moveSpeed);
+        rigidbody.velocity = new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed);
 
-        if (_joystick.Horizontal != 0 || _joystick.Vertical != 0)
+        if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
-            transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
-            _animator.SetBool("isRunning", true);
+            transform.rotation = Quaternion.LookRotation(rigidbody.velocity);
+            animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
         }
         else
-            _animator.SetBool("isRunning", false);
+            animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
+    }
+
+    public void Jump()
+    {
+        if (jumpButton.isPressed && !isJumping)
+        {
+            animator.SetTrigger("Jumping");
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
+            isJumping = true;
+         
+        }
+        
+        jumpButton.isPressed = false;
+        isJumping = false;
+
     }
 }

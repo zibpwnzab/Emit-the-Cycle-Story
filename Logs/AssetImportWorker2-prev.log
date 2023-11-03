@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.11f1 (d00248457e15) revision 13632072'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22000) 64bit CoreSingleLanguage' Language: 'ru' Physical Memory: 15715 MB
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'ru' Physical Memory: 6005 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.11f1\Editor\Unity.exe
 -name
 AssetImportWorker2
 -projectPath
-C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story
+C:/Users/Dima/EmitTheCycleStory
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-60327
-Successfully changed project path to: C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story
-C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story
+64214
+Successfully changed project path to: C:/Users/Dima/EmitTheCycleStory
+C:/Users/Dima/EmitTheCycleStory
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,68 +49,67 @@ C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [7248] Host "[IP] 192.168.0.107 [Port] 0 [Flags] 2 [Guid] 1691980904 [EditorId] 1691980904 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-5U3T1134) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [9296] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1716264651 [EditorId] 1716264651 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-OCFG9FG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [7248] Host "[IP] 192.168.0.107 [Port] 0 [Flags] 2 [Guid] 1691980904 [EditorId] 1691980904 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-5U3T1134) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [9296] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1716264651 [EditorId] 1716264651 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-OCFG9FG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 13.33 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 284.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.11f1 (d00248457e15)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/dimpr/Documents/GitHub/Emit-the-Cycle-Story/Assets
+[Subsystems] Discovering subsystems at path C:/Users/Dima/EmitTheCycleStory/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
-    Vendor:   NVIDIA
-    VRAM:     6010 MB
-    Driver:   31.0.15.4584
+    Renderer: AMD Radeon(TM) Graphics (ID=0x164c)
+    Vendor:   ATI
+    VRAM:     3002 MB
+    Driver:   31.0.14057.5006
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56952
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56592
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.010351 seconds.
-- Loaded All Assemblies, in  0.428 seconds
+Registered in 0.011929 seconds.
+- Loaded All Assemblies, in  0.984 seconds
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 223 ms
+Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.590 seconds
-Domain Reload Profiling: 1016ms
-	BeginReloadAssembly (124ms)
+- Finished resetting the current domain, in  0.264 seconds
+Domain Reload Profiling: 1246ms
+	BeginReloadAssembly (167ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (43ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (75ms)
-	LoadAllAssembliesAndSetupDomain (173ms)
-		LoadAssemblies (121ms)
+	RebuildCommonClasses (313ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (67ms)
+	LoadAllAssembliesAndSetupDomain (424ms)
+		LoadAssemblies (164ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (170ms)
-			TypeCache.Refresh (168ms)
-				TypeCache.ScanAssembly (154ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
+		AnalyzeDomain (422ms)
+			TypeCache.Refresh (420ms)
+				TypeCache.ScanAssembly (404ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (590ms)
+	FinalizeReload (264ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (526ms)
+		SetupLoadedEditorAssemblies (204ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (349ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (114ms)
-			ProcessInitializeOnLoadMethodAttributes (55ms)
+			ProcessInitializeOnLoadAttributes (129ms)
+			ProcessInitializeOnLoadMethodAttributes (56ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -119,62 +118,67 @@ Domain Reload Profiling: 1016ms
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.874 seconds
-Refreshing native plugins compatible for Editor in 5.52 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.391 seconds
+Refreshing native plugins compatible for Editor in 10.34 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.953 seconds
-Domain Reload Profiling: 1819ms
-	BeginReloadAssembly (171ms)
+- Finished resetting the current domain, in  1.142 seconds
+Domain Reload Profiling: 2531ms
+	BeginReloadAssembly (152ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (25ms)
-	RebuildCommonClasses (36ms)
+		CreateAndSetChildDomain (22ms)
+	RebuildCommonClasses (34ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (612ms)
-		LoadAssemblies (408ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (1160ms)
+		LoadAssemblies (702ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (297ms)
-			TypeCache.Refresh (254ms)
-				TypeCache.ScanAssembly (232ms)
-			ScanForSourceGeneratedMonoScriptInfo (28ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (954ms)
+		AnalyzeDomain (519ms)
+			TypeCache.Refresh (475ms)
+				TypeCache.ScanAssembly (387ms)
+			ScanForSourceGeneratedMonoScriptInfo (29ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1143ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (758ms)
+		SetupLoadedEditorAssemblies (942ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (28ms)
+			InitializePlatformSupportModulesInManaged (11ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (98ms)
-			ProcessInitializeOnLoadAttributes (536ms)
-			ProcessInitializeOnLoadMethodAttributes (84ms)
-			AfterProcessingInitializeOnLoad (9ms)
+			ProcessInitializeOnLoadAttributes (754ms)
+			ProcessInitializeOnLoadMethodAttributes (67ms)
+			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 6.84 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 4.59 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5789 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 207 unused Assets / (10.1 MB). Loaded Objects now: 6136.
-Memory consumption went from 241.2 MB to 231.1 MB.
-Total: 7.970300 ms (FindLiveObjects: 0.499100 ms CreateObjectMapping: 0.277700 ms MarkObjects: 3.649400 ms  DeleteObjects: 3.542500 ms)
+Unloading 5908 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (2.1 MB). Loaded Objects now: 6350.
+Memory consumption went from 240.8 MB to 238.7 MB.
+Total: 5.734800 ms (FindLiveObjects: 0.713700 ms CreateObjectMapping: 0.321400 ms MarkObjects: 3.818800 ms  DeleteObjects: 0.879000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
   custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -186,892 +190,1687 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2354.855627 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Demo
-  artifactKey: Guid(c6cc426d15523234bb66873ec229eb45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Demo using Guid(c6cc426d15523234bb66873ec229eb45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be95f66cf60142119ba5f463c4a64109') in 0.004514 seconds
+  Time since last request: 339669.338117 seconds.
+  path: Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/FX_Black.mat
+  artifactKey: Guid(52f54f8012454f74eaa7e9926f989372) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/FX_Black.mat using Guid(52f54f8012454f74eaa7e9926f989372) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e759e786088107c3c476377e1d686853') in 0.274844 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 44.614911 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/AnimationControllers
-  artifactKey: Guid(0ee57377c04dcf94e8ce8e9d3775ed7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/AnimationControllers using Guid(0ee57377c04dcf94e8ce8e9d3775ed7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06724038c0e7a3a43d438b93a25fb683') in 0.000626 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.644544 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Door_KickDown_Successful.fbx
-  artifactKey: Guid(3b136510633d01545b2582983ec67292) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Door_KickDown_Successful.fbx using Guid(3b136510633d01545b2582983ec67292) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc9922f3a669a4f35623cc02804f624a') in 0.049468 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_FallLoop.fbx
-  artifactKey: Guid(1ce44a41685774b4f885ea9ca58947f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_FallLoop.fbx using Guid(1ce44a41685774b4f885ea9ca58947f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b9aa76bb155f1ae13872998d1479f67') in 0.006793 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_End.fbx
-  artifactKey: Guid(b7daf470fe2fe7b48aa396a0162fa57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_End.fbx using Guid(b7daf470fe2fe7b48aa396a0162fa57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9b03e2a2dc812af6ac2694343b2ddfe') in 0.006372 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Idle.fbx
-  artifactKey: Guid(c9c543c5d7496ff4ea4f31e1f6c9f4b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Idle.fbx using Guid(c9c543c5d7496ff4ea4f31e1f6c9f4b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c74cc7adc7b94d4dbea0f210d1afccb') in 0.006345 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Slide_Down_Loop.fbx
-  artifactKey: Guid(15507683ef63fb34683a0080747b06c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Slide_Down_Loop.fbx using Guid(15507683ef63fb34683a0080747b06c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba324576b48f63d8470ce659cb786128') in 0.007154 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_WholeSequence.fbx
-  artifactKey: Guid(0f20653d721da4c4bb1edde5aa98a24d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Hole_JumpDown_WholeSequence.fbx using Guid(0f20653d721da4c4bb1edde5aa98a24d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbb88e224e855a0c18dd5377a0291e7d') in 0.007495 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_HangingIdle.fbx
-  artifactKey: Guid(20cb0aaa618991a4096e04d5ab772c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_HangingIdle.fbx using Guid(20cb0aaa618991a4096e04d5ab772c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '788d35ca87dc61ff44700a5892b59d45') in 0.007386 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_345cm_ClimbOver_Normal.fbx
-  artifactKey: Guid(4205c330c7cd6a64589732566dc2e6db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_345cm_ClimbOver_Normal.fbx using Guid(4205c330c7cd6a64589732566dc2e6db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d7d9de9d193ce7c52d3bb2aedb7173a') in 0.008178 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_InwardCorner_Right.fbx
-  artifactKey: Guid(a4255a7b1ac02af48998ffb390987af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_InwardCorner_Right.fbx using Guid(a4255a7b1ac02af48998ffb390987af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b676dacfde10fc1b638601d1f1148f22') in 0.006780 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_OutwardCorner_Left.fbx
-  artifactKey: Guid(56cc8655685a7b0438e5f58645d2513a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_OutwardCorner_Left.fbx using Guid(56cc8655685a7b0438e5f58645d2513a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da84312a24e306a3024bab0ef543eb94') in 0.006262 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_OutwardCorner_Right.fbx
-  artifactKey: Guid(6a62a9a1e0cade94ebe1eb9369653920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_OutwardCorner_Right.fbx using Guid(6a62a9a1e0cade94ebe1eb9369653920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18c1fb31512a5b0212336234ad22554') in 0.006512 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_JumpOver_FromRunToRun.fbx
-  artifactKey: Guid(63f20cc1f2b82824eb33d0289b06ed54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Fence_91cm_JumpOver_FromRunToRun.fbx using Guid(63f20cc1f2b82824eb33d0289b06ed54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8292db68a127c999b335930cf6c08976') in 0.006869 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Up_Loop.fbx
-  artifactKey: Guid(3b7ac1793fc8f2d4a8155dcc552619d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Climb_Up_Loop.fbx using Guid(3b7ac1793fc8f2d4a8155dcc552619d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4521f02003b1568d774b4b2e15492067') in 0.007323 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Slide_Down_Start.fbx
-  artifactKey: Guid(ac7a1865f0a645d49a20b6233b2466fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ladder_Slide_Down_Start.fbx using Guid(ac7a1865f0a645d49a20b6233b2466fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8976bdbb41f92d3f1ef6ed5d9e43d48d') in 0.007055 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Gate_LiftUp.fbx
-  artifactKey: Guid(21a12fa6861f8154c9c88648181d6378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Gate_LiftUp.fbx using Guid(21a12fa6861f8154c9c88648181d6378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77121844dac811c2b8972d81bf7fbc6c') in 0.007152 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_Right.fbx
-  artifactKey: Guid(55e0928eb900d504e9260f4f63336e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_Right.fbx using Guid(55e0928eb900d504e9260f4f63336e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f1c3b5e35dca4d3581713f2da50be3b') in 0.006210 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.154811 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_Right_InPlaceRoot.fbx
-  artifactKey: Guid(9aa0949890d7b58458b9d73cc48fab56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Ledge_Climb_Right_InPlaceRoot.fbx using Guid(9aa0949890d7b58458b9d73cc48fab56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d060f46a3835b08989d3dfbf1075bb8') in 0.006565 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_90Degrees_InsideCorner_Crouched.fbx
-  artifactKey: Guid(4af3d8b324d061340821aaf364043986) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_90Degrees_InsideCorner_Crouched.fbx using Guid(4af3d8b324d061340821aaf364043986) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '535095c85e7dfd5e3335993783e539e6') in 0.006828 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Idle_Crouched.fbx
-  artifactKey: Guid(f315bde7be4a07347b0e222c0d172331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Idle_Crouched.fbx using Guid(f315bde7be4a07347b0e222c0d172331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22689dda9fa41cc02dc80321dbfd73de') in 0.009359 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_End_Crouched.fbx
-  artifactKey: Guid(cddd3ba920114a8418dfbee5a31d273b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_End_Crouched.fbx using Guid(cddd3ba920114a8418dfbee5a31d273b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '040e991aa7d74c62da358ed2921be224') in 0.009337 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Start.fbx
-  artifactKey: Guid(960711c3afbfa6446906fcc4984aa625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Start.fbx using Guid(960711c3afbfa6446906fcc4984aa625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a7eaa574353c75d2ea5a8757150bd2d') in 0.005930 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Cancel.fbx
-  artifactKey: Guid(44be315e60cc00140a538602e99ca74e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Cancel.fbx using Guid(44be315e60cc00140a538602e99ca74e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2030b66ec13f1beeb2a5acbc88ee4a3d') in 0.007030 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_90Degrees_OutwardCorner_Crouched.fbx
-  artifactKey: Guid(c39828b2146699f44ad3a5a24cddee24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_90Degrees_OutwardCorner_Crouched.fbx using Guid(c39828b2146699f44ad3a5a24cddee24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '754c926cb4de46b0cefe0bb103abd3f6') in 0.006835 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_WholeSequence.fbx
-  artifactKey: Guid(066ff0377adb5f044a453f24d05a1d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_WholeSequence.fbx using Guid(066ff0377adb5f044a453f24d05a1d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f5072b7fd40a8328b936bf08838f54e') in 0.006645 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Idle_Crouched.fbx
-  artifactKey: Guid(e5069899b1379484eb14df2b780e4d1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Idle_Crouched.fbx using Guid(e5069899b1379484eb14df2b780e4d1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d419248a1f6e4eaec3a77ee27fb72c3') in 0.006470 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000041 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_End_Crouched.fbx
-  artifactKey: Guid(320cd671a6f5c3c4d9451425904f4dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_End_Crouched.fbx using Guid(320cd671a6f5c3c4d9451425904f4dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24a0d138fc7e62314e4efab3f0bcfdb0') in 0.007355 seconds
+  path: Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/PolygonSciFi_Halo_D 1.mat
+  artifactKey: Guid(ccabe2f6d0ff0b34ea4c6ad84a5748de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/PolygonSciFi_Halo_D 1.mat using Guid(ccabe2f6d0ff0b34ea4c6ad84a5748de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d7dba203bd37ad3a9547b816590649c') in 0.044146 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_90Degrees_OutwardCorner.fbx
-  artifactKey: Guid(6fa66837aed01114d85b7eb238b2ff77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_90Degrees_OutwardCorner.fbx using Guid(6fa66837aed01114d85b7eb238b2ff77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b6f97441732144e51612418ba266596') in 0.006866 seconds
+  Time since last request: 0.000041 seconds.
+  path: Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/Planet_Material_01.mat
+  artifactKey: Guid(14321f2505b1d9d4ca2585c0ea713358) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/Planet_Material_01.mat using Guid(14321f2505b1d9d4ca2585c0ea713358) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55cfd02091005cf3c84ed60fef8dc573') in 0.275325 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Start_Crouched.fbx
-  artifactKey: Guid(dd357a49f8adc884f8fc8957ac43e7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Left_Start_Crouched.fbx using Guid(dd357a49f8adc884f8fc8957ac43e7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bf23823865556b094ca155187f61d36') in 0.007971 seconds
+  Time since last request: 0.000238 seconds.
+  path: Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/Planet_Material_02.mat
+  artifactKey: Guid(cd8449355422c3d4f825d47e550f0dab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/Planet_Material_02.mat using Guid(cd8449355422c3d4f825d47e550f0dab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0448d368525cabaebf82caf1ec0598aa') in 0.046531 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Idle.fbx
-  artifactKey: Guid(b1ff4017f8a333a469f6f84fe85dc87f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Idle.fbx using Guid(b1ff4017f8a333a469f6f84fe85dc87f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3569412a8974e1a56637396c4f9ce30') in 0.006776 seconds
+  Time since last request: 0.000032 seconds.
+  path: Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/PolygonSciFi_Buildings_Background 2.mat
+  artifactKey: Guid(053c416ba85a9124a840416db9ce7765) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/PolygonSciFi_Buildings_Background 2.mat using Guid(053c416ba85a9124a840416db9ce7765) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4840a4c544cccf803e34c2de22a24db7') in 0.048991 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Cancel.fbx
-  artifactKey: Guid(981ec8326d9b01d4fbf33a792c5a5a6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Cancel.fbx using Guid(981ec8326d9b01d4fbf33a792c5a5a6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acf0e738f0fb0b7af9ed7acd2aa03ab5') in 0.006827 seconds
+  Time since last request: 0.000044 seconds.
+  path: Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/PolygonSciFi_Billboards_Non_Emissive.mat
+  artifactKey: Guid(2e709aec687010148bd7e116471c0d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/PolygonSciFi_Billboards_Non_Emissive.mat using Guid(2e709aec687010148bd7e116471c0d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83cfb700ae7fc73909a76e51953760e4') in 0.031127 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.186743 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Loop_Crouched.fbx
-  artifactKey: Guid(05b0456e91738d74c98c16bf41594634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_Loop_Crouched.fbx using Guid(05b0456e91738d74c98c16bf41594634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '791b272c6219a56bbf364bba47362f08') in 0.006416 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_WholeSequence.fbx
-  artifactKey: Guid(e09631a91b1046346bfc65c4b75ddaf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_WholeSequence.fbx using Guid(e09631a91b1046346bfc65c4b75ddaf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1caf9ad3b528b2d255727559dfa93805') in 0.006643 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_WholeSequence_Crouched.fbx
-  artifactKey: Guid(9ba32b0a2a37e014996729c2c6d91085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_LedgeWalk_Right_WholeSequence_Crouched.fbx using Guid(9ba32b0a2a37e014996729c2c6d91085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c68a07a9c21912d6e6d7733e6c0444c') in 0.007150 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backhandspring_End.fbx
-  artifactKey: Guid(6f4b1c1854568704bb1994ccb072e82b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Backhandspring_End.fbx using Guid(6f4b1c1854568704bb1994ccb072e82b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88af99340becd10e4b2677324059c8d3') in 0.008178 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_CartWheelRight.fbx
-  artifactKey: Guid(b04692e42d4877746849289bb96e9e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_CartWheelRight.fbx using Guid(b04692e42d4877746849289bb96e9e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6cb75d61497b9ac8893fb7812bf01f8') in 0.006453 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_CartWheelLeft.fbx
-  artifactKey: Guid(7bdd1588da288d14b8f17a36ac2537fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_CartWheelLeft.fbx using Guid(7bdd1588da288d14b8f17a36ac2537fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1efbed63f48df7d5562d0d8a6e5e3a08') in 0.006077 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_DiveForwardRoll_fromRun_toRun.fbx
-  artifactKey: Guid(5fa2ee507fe2d8649a39948d766decee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_DiveForwardRoll_fromRun_toRun.fbx using Guid(5fa2ee507fe2d8649a39948d766decee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48c2f4417feab0325f62ceb26e90a37d') in 0.008469 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Pole_Climb_Idle.fbx
-  artifactKey: Guid(7630c686813b690439e3a16db0102a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Pole_Climb_Idle.fbx using Guid(7630c686813b690439e3a16db0102a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91c0bb294990689334fbe039a855104b') in 0.008211 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrontCartwheelFlip.fbx
-  artifactKey: Guid(2a385367d7a82e34a906a56af58e5abd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrontCartwheelFlip.fbx using Guid(2a385367d7a82e34a906a56af58e5abd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9814b8cce993d14fc921223a2c719d3f') in 0.007280 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_fromRun_toRun.fbx
-  artifactKey: Guid(69ae6502a6c2e964c8ca34e0731deb0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_fromRun_toRun.fbx using Guid(69ae6502a6c2e964c8ca34e0731deb0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6921dd20bf78018eaa13e7654cf987fa') in 0.007001 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_QuickDropDownBelow_fromRunToRun.fbx
-  artifactKey: Guid(0f865af68c007a64eb9d3fb3d052f212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_QuickDropDownBelow_fromRunToRun.fbx using Guid(0f865af68c007a64eb9d3fb3d052f212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a13764b7d2a8af4257db60a978ce9b3') in 0.008687 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_PreJump.fbx
-  artifactKey: Guid(9b60159da7db16944895c50f4ccd0f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_PreJump.fbx using Guid(9b60159da7db16944895c50f4ccd0f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c817d76b2e45147caf810c7863268608') in 0.007229 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000030 seconds.
+  path: Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/PolygonSciFi_Buildings_Background.mat
+  artifactKey: Guid(ae6a742b683c7f74692dee45d6c17ff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/PolygonSciFi_Buildings_Background.mat using Guid(ae6a742b683c7f74692dee45d6c17ff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '391d4d7f414672772b67bea3fb2f72e7') in 0.026869 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/FX_LightRay.mat
+  artifactKey: Guid(91f21d47c2b9b7d4e946b81b5b39f0af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/FX_LightRay.mat using Guid(91f21d47c2b9b7d4e946b81b5b39f0af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fc4152ee8402b6657a5dd697779966a') in 0.066750 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/Glass_01_A.mat
+  artifactKey: Guid(65f3d62b6cede8e4ea3394211569fc6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonSciFiCity/Materials/Misc/Glass_01_A.mat using Guid(65f3d62b6cede8e4ea3394211569fc6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99b0046870e23f451d6b74dcd904c133') in 0.300469 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.897775 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Fonts/Roboto-Bold.ttf
+  artifactKey: Guid(4beb055f07aaff244873dec698d0363e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Fonts/Roboto-Bold.ttf using Guid(4beb055f07aaff244873dec698d0363e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdc56773670ad61665a1d1468320514c') in 0.038288 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Visual/3D Models/PolygonSciFiSpace/Materials/FX_Materials/FX_Bubbles.mat
+  artifactKey: Guid(eb9451ded980d934ba8a3465b8d4e4c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/3D Models/PolygonSciFiSpace/Materials/FX_Materials/FX_Bubbles.mat using Guid(eb9451ded980d934ba8a3465b8d4e4c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0439dc0d1dd18a5156d5741afde79d78') in 0.180692 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.724691 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset
+  artifactKey: Guid(dc36b3fdc14f47ebb36fd484a67e268a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset using Guid(dc36b3fdc14f47ebb36fd484a67e268a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e00e997cc78f392cccb879129465ee68') in 0.037315 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Models/Character/Android_SkeletalMesh.fbx
+  artifactKey: Guid(9d7ba799cab2c004bbeae0198d5522de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Models/Character/Android_SkeletalMesh.fbx using Guid(9d7ba799cab2c004bbeae0198d5522de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cc30fb171ac7bb945bdbdc178f99af1') in 0.208791 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 150
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Materials/Crate - Surface Shader Scene.mat
+  artifactKey: Guid(e6b9b44320f4448d9d5e0ee634259966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Materials/Crate - Surface Shader Scene.mat using Guid(e6b9b44320f4448d9d5e0ee634259966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f0d45662cb108b1d482a7cebf8a5532') in 0.200759 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF - Outline.mat
+  artifactKey: Guid(f629c6e43dba4bf38cb74d8860150664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF - Outline.mat using Guid(f629c6e43dba4bf38cb74d8860150664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0860774756e1be1711cfcabcf478247') in 0.083545 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat
+  artifactKey: Guid(f4e195ac1e204eff960149d1cb34e18c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat using Guid(f4e195ac1e204eff960149d1cb34e18c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bc5dd807bffceb5989bec43d09b4462') in 0.282977 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.779 seconds
+Refreshing native plugins compatible for Editor in 4.64 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.649 seconds
+Domain Reload Profiling: 4425ms
+	BeginReloadAssembly (177ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (52ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (518ms)
+		LoadAssemblies (577ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (23ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (3650ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1237ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (173ms)
+			ProcessInitializeOnLoadAttributes (914ms)
+			ProcessInitializeOnLoadMethodAttributes (115ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 11.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6416.
+Memory consumption went from 215.8 MB to 213.8 MB.
+Total: 13.277600 ms (FindLiveObjects: 1.300200 ms CreateObjectMapping: 0.708000 ms MarkObjects: 9.524200 ms  DeleteObjects: 1.741500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.599 seconds
+Refreshing native plugins compatible for Editor in 4.89 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.818 seconds
+Domain Reload Profiling: 2413ms
+	BeginReloadAssembly (170ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (344ms)
+		LoadAssemblies (406ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (24ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1818ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (952ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (141ms)
+			ProcessInitializeOnLoadAttributes (675ms)
+			ProcessInitializeOnLoadMethodAttributes (104ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 9.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6432.
+Memory consumption went from 217.7 MB to 215.7 MB.
+Total: 12.522700 ms (FindLiveObjects: 1.276600 ms CreateObjectMapping: 0.820300 ms MarkObjects: 8.037200 ms  DeleteObjects: 2.384600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.554 seconds
+Refreshing native plugins compatible for Editor in 4.88 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.702 seconds
+Domain Reload Profiling: 2253ms
+	BeginReloadAssembly (166ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (308ms)
+		LoadAssemblies (369ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1702ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (859ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (123ms)
+			ProcessInitializeOnLoadAttributes (626ms)
+			ProcessInitializeOnLoadMethodAttributes (82ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 8.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6448.
+Memory consumption went from 219.7 MB to 217.7 MB.
+Total: 16.564200 ms (FindLiveObjects: 1.782400 ms CreateObjectMapping: 1.376800 ms MarkObjects: 10.856700 ms  DeleteObjects: 2.542700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  3.263 seconds
+Refreshing native plugins compatible for Editor in 11.24 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  5.883 seconds
+Domain Reload Profiling: 9163ms
+	BeginReloadAssembly (544ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (19ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (244ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (2646ms)
+		LoadAssemblies (2718ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (88ms)
+			TypeCache.Refresh (38ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (2ms)
+			ResolveRequiredComponents (45ms)
+	FinalizeReload (5884ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1112ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (28ms)
+			SetLoadedEditorAssemblies (14ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (180ms)
+			ProcessInitializeOnLoadAttributes (803ms)
+			ProcessInitializeOnLoadMethodAttributes (78ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 10.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6464.
+Memory consumption went from 221.6 MB to 219.6 MB.
+Total: 7.842300 ms (FindLiveObjects: 0.931800 ms CreateObjectMapping: 0.269100 ms MarkObjects: 5.793800 ms  DeleteObjects: 0.845600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.844 seconds
+Refreshing native plugins compatible for Editor in 5.24 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.834 seconds
+Domain Reload Profiling: 4675ms
+	BeginReloadAssembly (200ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (1ms)
+		CreateAndSetChildDomain (48ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (553ms)
+		LoadAssemblies (642ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (3835ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1214ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (150ms)
+			ProcessInitializeOnLoadAttributes (874ms)
+			ProcessInitializeOnLoadMethodAttributes (158ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+Refreshing native plugins compatible for Editor in 15.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6480.
+Memory consumption went from 223.5 MB to 221.5 MB.
+Total: 8.393900 ms (FindLiveObjects: 1.162100 ms CreateObjectMapping: 0.275400 ms MarkObjects: 5.366800 ms  DeleteObjects: 1.575000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.653 seconds
+Refreshing native plugins compatible for Editor in 5.86 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.384 seconds
+Domain Reload Profiling: 3034ms
+	BeginReloadAssembly (173ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (396ms)
+		LoadAssemblies (459ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (26ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (2385ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (983ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (122ms)
+			ProcessInitializeOnLoadAttributes (721ms)
+			ProcessInitializeOnLoadMethodAttributes (104ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
+Refreshing native plugins compatible for Editor in 14.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6496.
+Memory consumption went from 225.5 MB to 223.5 MB.
+Total: 15.046700 ms (FindLiveObjects: 1.580500 ms CreateObjectMapping: 0.970700 ms MarkObjects: 10.756500 ms  DeleteObjects: 1.734900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.613 seconds
+Refreshing native plugins compatible for Editor in 5.31 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.173 seconds
+Domain Reload Profiling: 3783ms
+	BeginReloadAssembly (177ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (342ms)
+		LoadAssemblies (414ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (3173ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1064ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (125ms)
+			ProcessInitializeOnLoadAttributes (815ms)
+			ProcessInitializeOnLoadMethodAttributes (94ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 8.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6512.
+Memory consumption went from 227.4 MB to 225.4 MB.
+Total: 8.783300 ms (FindLiveObjects: 1.425600 ms CreateObjectMapping: 0.558800 ms MarkObjects: 5.394500 ms  DeleteObjects: 1.401500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.585 seconds
+Refreshing native plugins compatible for Editor in 4.48 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.407 seconds
+Domain Reload Profiling: 3989ms
+	BeginReloadAssembly (166ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (336ms)
+		LoadAssemblies (395ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (24ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (3408ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1101ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (148ms)
+			ProcessInitializeOnLoadAttributes (811ms)
+			ProcessInitializeOnLoadMethodAttributes (111ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (20ms)
+Refreshing native plugins compatible for Editor in 7.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6528.
+Memory consumption went from 229.4 MB to 227.3 MB.
+Total: 15.654900 ms (FindLiveObjects: 1.690500 ms CreateObjectMapping: 0.966700 ms MarkObjects: 10.636000 ms  DeleteObjects: 2.358000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.632 seconds
+Refreshing native plugins compatible for Editor in 4.71 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.873 seconds
+Domain Reload Profiling: 2502ms
+	BeginReloadAssembly (171ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (373ms)
+		LoadAssemblies (438ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1874ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (957ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (132ms)
+			ProcessInitializeOnLoadAttributes (701ms)
+			ProcessInitializeOnLoadMethodAttributes (95ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (26ms)
+Refreshing native plugins compatible for Editor in 10.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6544.
+Memory consumption went from 231.3 MB to 229.3 MB.
+Total: 14.503700 ms (FindLiveObjects: 1.487700 ms CreateObjectMapping: 0.651700 ms MarkObjects: 9.983900 ms  DeleteObjects: 2.375800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.570 seconds
+Refreshing native plugins compatible for Editor in 4.92 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.769 seconds
+Domain Reload Profiling: 2336ms
+	BeginReloadAssembly (184ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (53ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (302ms)
+		LoadAssemblies (369ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (25ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (1770ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (888ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (104ms)
+			ProcessInitializeOnLoadAttributes (667ms)
+			ProcessInitializeOnLoadMethodAttributes (94ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (26ms)
+Refreshing native plugins compatible for Editor in 8.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6560.
+Memory consumption went from 233.2 MB to 231.1 MB.
+Total: 14.634300 ms (FindLiveObjects: 2.174400 ms CreateObjectMapping: 1.381900 ms MarkObjects: 8.610200 ms  DeleteObjects: 2.463700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.624 seconds
+Refreshing native plugins compatible for Editor in 4.93 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.685 seconds
+Domain Reload Profiling: 4307ms
+	BeginReloadAssembly (188ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (47ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (346ms)
+		LoadAssemblies (419ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (24ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (3687ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1175ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (193ms)
+			ProcessInitializeOnLoadAttributes (834ms)
+			ProcessInitializeOnLoadMethodAttributes (110ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (29ms)
+Refreshing native plugins compatible for Editor in 14.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6576.
+Memory consumption went from 235.1 MB to 233.1 MB.
+Total: 15.838600 ms (FindLiveObjects: 1.778800 ms CreateObjectMapping: 1.584800 ms MarkObjects: 9.930300 ms  DeleteObjects: 2.538700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.542 seconds
+Refreshing native plugins compatible for Editor in 4.65 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.960 seconds
+Domain Reload Profiling: 2499ms
+	BeginReloadAssembly (164ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (296ms)
+		LoadAssemblies (354ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1961ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1163ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (907ms)
+			ProcessInitializeOnLoadMethodAttributes (130ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (29ms)
+Refreshing native plugins compatible for Editor in 11.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6592.
+Memory consumption went from 237.1 MB to 235.1 MB.
+Total: 16.130800 ms (FindLiveObjects: 1.799200 ms CreateObjectMapping: 0.492700 ms MarkObjects: 11.167700 ms  DeleteObjects: 2.666300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.515 seconds
+Refreshing native plugins compatible for Editor in 4.48 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.892 seconds
+Domain Reload Profiling: 2405ms
+	BeginReloadAssembly (158ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (279ms)
+		LoadAssemblies (335ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (21ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1894ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1047ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (157ms)
+			ProcessInitializeOnLoadAttributes (739ms)
+			ProcessInitializeOnLoadMethodAttributes (106ms)
+			AfterProcessingInitializeOnLoad (23ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (43ms)
+Refreshing native plugins compatible for Editor in 9.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6608.
+Memory consumption went from 239.0 MB to 237.0 MB.
+Total: 12.310600 ms (FindLiveObjects: 1.502200 ms CreateObjectMapping: 0.426000 ms MarkObjects: 7.954700 ms  DeleteObjects: 2.423400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.517 seconds
+Refreshing native plugins compatible for Editor in 4.54 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.842 seconds
+Domain Reload Profiling: 2356ms
+	BeginReloadAssembly (157ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (281ms)
+		LoadAssemblies (338ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (21ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1843ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1059ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (816ms)
+			ProcessInitializeOnLoadMethodAttributes (122ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (32ms)
+Refreshing native plugins compatible for Editor in 10.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6624.
+Memory consumption went from 240.9 MB to 238.9 MB.
+Total: 12.825600 ms (FindLiveObjects: 1.876600 ms CreateObjectMapping: 0.862200 ms MarkObjects: 8.388400 ms  DeleteObjects: 1.695500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.527 seconds
+Refreshing native plugins compatible for Editor in 5.17 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.037 seconds
+Domain Reload Profiling: 2562ms
+	BeginReloadAssembly (162ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (286ms)
+		LoadAssemblies (342ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (2038ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1262ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (103ms)
+			ProcessInitializeOnLoadAttributes (1012ms)
+			ProcessInitializeOnLoadMethodAttributes (124ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (27ms)
+Refreshing native plugins compatible for Editor in 8.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6640.
+Memory consumption went from 242.9 MB to 240.8 MB.
+Total: 14.589600 ms (FindLiveObjects: 2.180900 ms CreateObjectMapping: 0.647900 ms MarkObjects: 10.021300 ms  DeleteObjects: 1.735200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.509 seconds
+Refreshing native plugins compatible for Editor in 4.56 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.089 seconds
+Domain Reload Profiling: 2595ms
+	BeginReloadAssembly (157ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (273ms)
+		LoadAssemblies (330ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (20ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (2090ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1291ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (119ms)
+			ProcessInitializeOnLoadAttributes (1048ms)
+			ProcessInitializeOnLoadMethodAttributes (96ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (34ms)
+Refreshing native plugins compatible for Editor in 14.11 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6656.
+Memory consumption went from 244.7 MB to 242.7 MB.
+Total: 13.549000 ms (FindLiveObjects: 1.693500 ms CreateObjectMapping: 0.305300 ms MarkObjects: 9.221500 ms  DeleteObjects: 2.323700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.515 seconds
+Refreshing native plugins compatible for Editor in 4.51 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.873 seconds
+Domain Reload Profiling: 2385ms
+	BeginReloadAssembly (153ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (283ms)
+		LoadAssemblies (338ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (21ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1874ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1077ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (115ms)
+			ProcessInitializeOnLoadAttributes (860ms)
+			ProcessInitializeOnLoadMethodAttributes (78ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (29ms)
+Refreshing native plugins compatible for Editor in 11.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6672.
+Memory consumption went from 246.7 MB to 244.7 MB.
+Total: 14.543000 ms (FindLiveObjects: 1.846000 ms CreateObjectMapping: 0.383400 ms MarkObjects: 10.171200 ms  DeleteObjects: 2.138500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.507 seconds
+Refreshing native plugins compatible for Editor in 4.59 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.938 seconds
+Domain Reload Profiling: 2443ms
+	BeginReloadAssembly (154ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (273ms)
+		LoadAssemblies (329ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (20ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1939ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1133ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (174ms)
+			ProcessInitializeOnLoadAttributes (795ms)
+			ProcessInitializeOnLoadMethodAttributes (132ms)
+			AfterProcessingInitializeOnLoad (14ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (47ms)
+Refreshing native plugins compatible for Editor in 11.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6688.
+Memory consumption went from 248.7 MB to 246.6 MB.
+Total: 14.889200 ms (FindLiveObjects: 1.145300 ms CreateObjectMapping: 0.363700 ms MarkObjects: 10.960800 ms  DeleteObjects: 2.416300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2356.018245 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrontFlipJump_fromRuntoRun.fbx
+  artifactKey: Guid(ea23dbc1ceb252d4a971814c3b7fb015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrontFlipJump_fromRuntoRun.fbx using Guid(ea23dbc1ceb252d4a971814c3b7fb015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8707c92fd32060cc90a263cd6afdf749') in 1.684733 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.001304 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Landing.fbx
+  artifactKey: Guid(a367ea39edd43f3439978cb55fbc6309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Landing.fbx using Guid(a367ea39edd43f3439978cb55fbc6309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '409c0e66842f33810aa44d947666a5fa') in 0.044918 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Pole_Climb_Idle.fbx
+  artifactKey: Guid(7630c686813b690439e3a16db0102a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Pole_Climb_Idle.fbx using Guid(7630c686813b690439e3a16db0102a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed985c07a8fcac579f713c0aa3302a56') in 0.057393 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_PreLanding.fbx
+  artifactKey: Guid(a3f4091f6e71efd4ca225e04a7ad3a0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_PreLanding.fbx using Guid(a3f4091f6e71efd4ca225e04a7ad3a0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00ab35bab259f83e8fcf1674ff8248c1') in 0.046876 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_QuickDropDownBelow_fromRunToRun.fbx
+  artifactKey: Guid(0f865af68c007a64eb9d3fb3d052f212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_QuickDropDownBelow_fromRunToRun.fbx using Guid(0f865af68c007a64eb9d3fb3d052f212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fb31eb1f64b35f56fa15a0f302aa1c3') in 0.079361 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Jump.fbx
+  artifactKey: Guid(121823cfff911a346b9d6c7118a30037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Jump.fbx using Guid(121823cfff911a346b9d6c7118a30037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e66951ef897a0f2069679b3a5e6cd50') in 0.018119 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_fromRun_toRun.fbx
+  artifactKey: Guid(69ae6502a6c2e964c8ca34e0731deb0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_fromRun_toRun.fbx using Guid(69ae6502a6c2e964c8ca34e0731deb0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56f2da162e35c49f08079cab8739dda0') in 0.020631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_BackLeft.fbx
+  artifactKey: Guid(26f52dde9e06d1240a63cedd50682636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_BackLeft.fbx using Guid(26f52dde9e06d1240a63cedd50682636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd34001b6d3dc25d5ec64075310463953') in 0.016609 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_PreJump.fbx
+  artifactKey: Guid(9b60159da7db16944895c50f4ccd0f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_PreJump.fbx using Guid(9b60159da7db16944895c50f4ccd0f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42abb8479ab3a30a7a54363e120ee859') in 0.023085 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 139
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
   path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Ledge_Climb_HangingIdle.fbx
   artifactKey: Guid(668f2c6d0dbb2124ca98c611789f90ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Ledge_Climb_HangingIdle.fbx using Guid(668f2c6d0dbb2124ca98c611789f90ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5247aa6bee2a718d47ea4c2560cb7b43') in 0.008706 seconds
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Ledge_Climb_HangingIdle.fbx using Guid(668f2c6d0dbb2124ca98c611789f90ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '211d68b3c2b7362a430d65e0975d9bf3') in 0.017354 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_LazyVault_Right.fbx
-  artifactKey: Guid(668f126ab2376d949bff3c572cd85e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_LazyVault_Right.fbx using Guid(668f126ab2376d949bff3c572cd85e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63a090b867a4a3b6999697a823889a7a') in 0.007554 seconds
+  Time since last request: 0.000050 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_ForwardLeft.fbx
+  artifactKey: Guid(c9641bb515a9e2c4b8a400b067468ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_ForwardLeft.fbx using Guid(c9641bb515a9e2c4b8a400b067468ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f713796abb54ee30a3185b0eae3202') in 0.019290 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Loop.fbx
-  artifactKey: Guid(0108e343349b0cc4a99eccc881ee60fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Loop.fbx using Guid(0108e343349b0cc4a99eccc881ee60fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aa4a870490d9719fbc9e50eb3273c58') in 0.006532 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Landing_Roll_toRun.fbx
-  artifactKey: Guid(a957eeab6eef0b54eb0553a144806b54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Landing_Roll_toRun.fbx using Guid(a957eeab6eef0b54eb0553a144806b54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3049c65acb7d0f196504293b981692a4') in 0.008259 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Wall_Climb_4Limbs_Hold_Idle.fbx
-  artifactKey: Guid(cd83e396882dd9b4090669df587c98e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Wall_Climb_4Limbs_Hold_Idle.fbx using Guid(cd83e396882dd9b4090669df587c98e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83997cb6f29c4f018441ef612c0f3162') in 0.007992 seconds
+  Time since last request: 0.000129 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Back.fbx
+  artifactKey: Guid(d59f0a1ca38a3694cb4acd3fca8081d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Back.fbx using Guid(d59f0a1ca38a3694cb4acd3fca8081d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4e437022b860060f9a9a9a5e7c9e4ee') in 0.014435 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
   Time since last request: 0.000028 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrontFlipJump_fromRuntoRun.fbx
-  artifactKey: Guid(ea23dbc1ceb252d4a971814c3b7fb015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_FrontFlipJump_fromRuntoRun.fbx using Guid(ea23dbc1ceb252d4a971814c3b7fb015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '771f441c4379017ecbff37eb33d53ad5') in 0.008498 seconds
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_LazyVault_Right.fbx
+  artifactKey: Guid(668f126ab2376d949bff3c572cd85e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_LazyVault_Right.fbx using Guid(668f126ab2376d949bff3c572cd85e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f4daccb4c0cf93ba8d8317f0d076842') in 0.021542 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
-  Time since last request: 0.126191 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_BackRight.fbx
-  artifactKey: Guid(bf269fe569881d7438bba552fc87f46b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_BackRight.fbx using Guid(bf269fe569881d7438bba552fc87f46b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ce1d5d460f050663c00954467dfd1ba') in 0.008667 seconds
+  Time since last request: 0.000054 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_WholeSequence.fbx
+  artifactKey: Guid(66e26806a0269464b8b6acd41383958b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_WholeSequence.fbx using Guid(66e26806a0269464b8b6acd41383958b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76eefe0610368996789b131db7d7ec19') in 0.013419 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_ForwardRight.fbx
-  artifactKey: Guid(4ad64b675ac588d4e89733a24ae9b840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_ForwardRight.fbx using Guid(4ad64b675ac588d4e89733a24ae9b840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '432dd6ad075b39d9ca223cc3c6463c98') in 0.008290 seconds
+  Time since last request: 0.000048 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Loop.fbx
+  artifactKey: Guid(0108e343349b0cc4a99eccc881ee60fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_Loop.fbx using Guid(0108e343349b0cc4a99eccc881ee60fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '987fa95fbdd274e9999c7f5e81de2c65') in 0.013955 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Left.fbx
-  artifactKey: Guid(92ac1da328c01df49a5af0e8d5af83b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Left.fbx using Guid(92ac1da328c01df49a5af0e8d5af83b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec52408dbbf6d86198c5f525443a45a') in 0.009109 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_End.fbx
-  artifactKey: Guid(9049c44495392b74298d68ede6bc5d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_End.fbx using Guid(9049c44495392b74298d68ede6bc5d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c1a20c53e02c8a6968594ad37757be7') in 0.007108 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.002190 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Pistol_End.fbx
-  artifactKey: Guid(35b9112fbb2bd1f42a57a41baa5eea29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Pistol_End.fbx using Guid(35b9112fbb2bd1f42a57a41baa5eea29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f176e1bae960722d1cd2b7a87736346c') in 0.007183 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_Slide_End.fbx
-  artifactKey: Guid(037642b2ec4b9254aa7906bbe43b0fcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_Slide_End.fbx using Guid(037642b2ec4b9254aa7906bbe43b0fcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4158856a16280abf28c007bd4321a6f') in 0.007729 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Pistol_WholeSequence.fbx
-  artifactKey: Guid(a9bd5bfa7579e86439b92b1e31f6c530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_KneeSlide_Pistol_WholeSequence.fbx using Guid(a9bd5bfa7579e86439b92b1e31f6c530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02f7280947012854e2e69d168b11036a') in 0.009913 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_Slide_Start.fbx
-  artifactKey: Guid(733703ddbc9b3eb41ae8596add161a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_n_Slide_Start.fbx using Guid(733703ddbc9b3eb41ae8596add161a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd38e06cac7463f60797ab82c28867c05') in 0.008800 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Back.fbx
-  artifactKey: Guid(fe15681f79bfb2e4c9a2f2253838d7a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Back.fbx using Guid(fe15681f79bfb2e4c9a2f2253838d7a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8017e3adda3415450d539e3d090a8250') in 0.008550 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Forward.fbx
-  artifactKey: Guid(c42c1c3cdf09da44b8dc57c64ae76d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Forward.fbx using Guid(c42c1c3cdf09da44b8dc57c64ae76d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c378bc514708f6fd0afbea1c489c0b8b') in 0.010489 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Right.fbx
-  artifactKey: Guid(9a47a192006b4864d94aeada38e17d04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Right.fbx using Guid(9a47a192006b4864d94aeada38e17d04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f03dcdc52473d33aa33fdf25b10686d') in 0.008013 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Stop_InPlace.fbx
-  artifactKey: Guid(c0bf84f2412a8c448b07af5cadf79afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Stop_InPlace.fbx using Guid(c0bf84f2412a8c448b07af5cadf79afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '093c6186169e293ef08272120e093233') in 0.007807 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Stop.fbx
-  artifactKey: Guid(b8534fcda0fe32f40ae281317311a7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Stop.fbx using Guid(b8534fcda0fe32f40ae281317311a7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e2fbc4dd772166e470e19eb0b3d7a0a') in 0.008289 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_BackRight.fbx
-  artifactKey: Guid(86e990e6748e0a54b8b4c93a58fc5e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_BackRight.fbx using Guid(86e990e6748e0a54b8b4c93a58fc5e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2757af2815da4cad5ea7bb50ad3df5f') in 0.008557 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Turn_Right90.fbx
-  artifactKey: Guid(e848b41bb914c324595a1dcf59ae20fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Turn_Right90.fbx using Guid(e848b41bb914c324595a1dcf59ae20fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f265db5f152a6c1f01f4e61e7b8c09b') in 0.007083 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 1.268237 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_ForwardLeft.fbx
-  artifactKey: Guid(1d4fd1cc34ebd464794e67b70e35147c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_ForwardLeft.fbx using Guid(1d4fd1cc34ebd464794e67b70e35147c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '938537dffea6ff36be44a695e74ebd4d') in 0.006984 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Left.fbx
-  artifactKey: Guid(7d40560771911fd44877a6847cb1fe55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Left.fbx using Guid(7d40560771911fd44877a6847cb1fe55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb4bcdd9265d3b1fd5b49570181433c2') in 0.005757 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.032468 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Right.fbx
-  artifactKey: Guid(2c4efb9502f6542498d509b070bba2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Walk_Right.fbx using Guid(2c4efb9502f6542498d509b070bba2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b662bfbe460b74916266ed4f43b912f6') in 0.005743 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Left_Loop.fbx
-  artifactKey: Guid(ec9b3faf5e0ea864ea61076bc6d134b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Left_Loop.fbx using Guid(ec9b3faf5e0ea864ea61076bc6d134b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '700c38b398d2e8de73b68abe1c033f2c') in 0.006590 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Left_Start.fbx
-  artifactKey: Guid(cfde20097f53870408d07f1288577f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Left_Start.fbx using Guid(cfde20097f53870408d07f1288577f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abd04b1fc09bb5c918f91009e9edcc9e') in 0.006959 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_Loop.fbx
-  artifactKey: Guid(4bad54652cea33e41b8cc94ee6d86b74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_Loop.fbx using Guid(4bad54652cea33e41b8cc94ee6d86b74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95eeb63f894351d11adb310d1a3d94b7') in 0.006535 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.018422 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_Start.fbx
-  artifactKey: Guid(1d8348b8061e6344ab95a56050f191c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_WallRun_Right_Start.fbx using Guid(1d8348b8061e6344ab95a56050f191c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2d4f70cec919ce02a0bb4145487d883') in 0.008141 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_BackwardLoop.fbx
-  artifactKey: Guid(10a2e307917696d498f7c46fdcd48794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_BackwardLoop.fbx using Guid(10a2e307917696d498f7c46fdcd48794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26e656eca75e3f8f8769802f250acba5') in 0.005969 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_Cancel.fbx
-  artifactKey: Guid(1fd81e96fb350914fbe4b49623e158b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_Cancel.fbx using Guid(1fd81e96fb350914fbe4b49623e158b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26b4351afd1b509cb3e06700c3ec4bac') in 0.005847 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_Start.fbx
-  artifactKey: Guid(47d7bf932e27c63489948832e0e85881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_NarrowSpace_SideStep_Start.fbx using Guid(47d7bf932e27c63489948832e0e85881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ad174cafb1ee579fff8a43835fa24e9') in 0.007662 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_PostLanding.fbx
-  artifactKey: Guid(11191c8697ef6184785e50d3cb96d9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_PostLanding.fbx using Guid(11191c8697ef6184785e50d3cb96d9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b05551fff0c7287d7b1f2751e2f6888f') in 0.007335 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_Jump.fbx
-  artifactKey: Guid(a1e0879a5739df2429c751b4d62ea880) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_Jump.fbx using Guid(a1e0879a5739df2429c751b4d62ea880) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '278eeaa8f4c6649fa38cdbce374b2f30') in 0.006382 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_Landing.fbx
-  artifactKey: Guid(6ccf316b52e4a4c47bf38bd51fdee8fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_Landing.fbx using Guid(6ccf316b52e4a4c47bf38bd51fdee8fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f765a3afd15f75dda1471c00db096c69') in 0.006265 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_InTheAir_Loop.fbx
-  artifactKey: Guid(ecfb1678712f6a74bb8c8a50e0fd2f41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_InTheAir_Loop.fbx using Guid(ecfb1678712f6a74bb8c8a50e0fd2f41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7a017b8f39d18fed2fbfb1aaac7bc93') in 0.005790 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 58.561920 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_WholeSequence.fbx
-  artifactKey: Guid(ab1e721647634e8489c7689614585abe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_JumpAcross_WholeSequence.fbx using Guid(ab1e721647634e8489c7689614585abe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ca8e41077567b593c9bf73abcf847fe') in 0.014522 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 1.845245 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_StepAcross.fbx
-  artifactKey: Guid(5cebd0756cbf60d4cad955a2529cda30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Platform_StepAcross.fbx using Guid(5cebd0756cbf60d4cad955a2529cda30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7639da9d3c82252dc1dc14d3d07d952c') in 0.015105 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Enter.fbx
-  artifactKey: Guid(3bbcfe60790b8f642bdbbeeb7ae89ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Enter.fbx using Guid(3bbcfe60790b8f642bdbbeeb7ae89ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ed4f2e9f3cd4b5a51748c3eb08fd7dd') in 0.007295 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 19.886424 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Exit_StepBack.fbx
-  artifactKey: Guid(f039198b931cbb940a9fa621a6710df1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Exit_StepBack.fbx using Guid(f039198b931cbb940a9fa621a6710df1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c3c10518110e308b62ec1814c2e7857') in 0.015050 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_SlideDown_Loop.fbx
-  artifactKey: Guid(3e19a62e9e4af354fa3ea07371d8ae4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_SlideDown_Loop.fbx using Guid(3e19a62e9e4af354fa3ea07371d8ae4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2957d1d861c9e8b4bd48daf49c2f89c0') in 0.005549 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.005373 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Up.fbx
-  artifactKey: Guid(a2494ee4c41a9614b8dc3a78f2fd1028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Pole_Climb_Up.fbx using Guid(a2494ee4c41a9614b8dc3a78f2fd1028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e3c79890fe47d5ce54beb0b571dc83') in 0.005559 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000074 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_JumpForward_RightLegLand.fbx
-  artifactKey: Guid(655bcf5aad876034ebd028e83ea3c0d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_JumpForward_RightLegLand.fbx using Guid(655bcf5aad876034ebd028e83ea3c0d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22e03e4eaaf1a825b09cc93384cf430e') in 0.008056 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_Start.fbx
-  artifactKey: Guid(9c6e2e41c3784dc4698128f18e9ca17e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_Start.fbx using Guid(9c6e2e41c3784dc4698128f18e9ca17e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4acd9ea77551a0a4035f85c550999819') in 0.007430 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_Idle.fbx
-  artifactKey: Guid(87be37985f77d8143ba3d150acaf91b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_LeftLeg_Idle.fbx using Guid(87be37985f77d8143ba3d150acaf91b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adb5d1239b87fcc223ba444ef0908ee6') in 0.007215 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_JumpForward_LeftLegLand.fbx
-  artifactKey: Guid(1b84a93ae42c21642a915837da3481d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_JumpForward_LeftLegLand.fbx using Guid(1b84a93ae42c21642a915837da3481d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b942f427d0394432fc55327ca2a0525f') in 0.008581 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Loop.fbx
-  artifactKey: Guid(4c4868fa71b3ffb4f8655cd23f3ec1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Loop.fbx using Guid(4c4868fa71b3ffb4f8655cd23f3ec1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebb88b6c2a04ebd3d72b0fe087e2238a') in 0.008502 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_Loop.fbx
-  artifactKey: Guid(f133ecc32ace0904e9cca2a369391cd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_Loop.fbx using Guid(f133ecc32ace0904e9cca2a369391cd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a16e7c2b16de4960f6d126da0c0bd8f') in 0.008404 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_Start.fbx
-  artifactKey: Guid(2089777f4416afc4d966591c98b9b605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_Start.fbx using Guid(2089777f4416afc4d966591c98b9b605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '600b47fef266f63e8cbd2cd7288cd053') in 0.007324 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_Start.fbx
-  artifactKey: Guid(88d1d833357db8d4c9ff70fa2bbe942b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_SingleLegJumps_RightLeg_Start.fbx using Guid(88d1d833357db8d4c9ff70fa2bbe942b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72f2b46b36f28a7a6bc27cd72c5994fa') in 0.007515 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_Loop_FacingRight.fbx
-  artifactKey: Guid(7fdbaec4d8352f648ab63df2e67c1c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_Sitting_Loop_FacingRight.fbx using Guid(7fdbaec4d8352f648ab63df2e67c1c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54d971fdb69f7ee5272a41e522aae400') in 0.005850 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_End.fbx
-  artifactKey: Guid(b075d3c7756ad6e45aa72187e29e22ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_End.fbx using Guid(b075d3c7756ad6e45aa72187e29e22ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48a7201fa3147fe20d5908fe1323dbf5') in 0.008609 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.343062 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_WholeSequence.fbx
-  artifactKey: Guid(30deb2a657024f642a463ddb5d37c056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_45Degree_Slope_WholeSequence.fbx using Guid(30deb2a657024f642a463ddb5d37c056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65be5fb53b030ff76a345c71967818a6') in 0.007647 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_Floor_Standing_Loop.fbx
-  artifactKey: Guid(b3260655d304c904f8fa7fcafc5c185e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_Floor_Standing_Loop.fbx using Guid(b3260655d304c904f8fa7fcafc5c185e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c87347886eca5749137145f0152881b2') in 0.007642 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_4Limbs_Hold_Idle.fbx
-  artifactKey: Guid(cf7564ddb001e1c4db0eeb7653fdb3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_4Limbs_Hold_Idle.fbx using Guid(cf7564ddb001e1c4db0eeb7653fdb3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df21a549569017668a68753c5cd8739a') in 0.006213 seconds
+  Time since last request: 0.000040 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Landing_Roll_toRun.fbx
+  artifactKey: Guid(a957eeab6eef0b54eb0553a144806b54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Landing_Roll_toRun.fbx using Guid(a957eeab6eef0b54eb0553a144806b54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc91f2423d6474f71cefad8c9f7d5a19') in 0.013194 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
   Time since last request: 0.000025 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_Floor_Standing_WholeSequence.fbx
-  artifactKey: Guid(7eb893397d8a17648bbd09c112af0126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Slide_Floor_Standing_WholeSequence.fbx using Guid(7eb893397d8a17648bbd09c112af0126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb23592b8739c9a5612c8511d43face7') in 0.006929 seconds
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_BackRight.fbx
+  artifactKey: Guid(bf269fe569881d7438bba552fc87f46b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_BackRight.fbx using Guid(bf269fe569881d7438bba552fc87f46b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23bfc66867132d429ed86914689ce234') in 0.012000 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
-  Time since last request: 0.011634 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_4Limbs_Hold_Idle_InPlaceRoot.fbx
-  artifactKey: Guid(275134979551e11499d019b61447de50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_4Limbs_Hold_Idle_InPlaceRoot.fbx using Guid(275134979551e11499d019b61447de50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36440e6281b3c819aba2f553cb30478c') in 0.008519 seconds
+  Time since last request: 0.000032 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Idle.fbx
+  artifactKey: Guid(901cf23cf51848c42ab846b25b070e6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Idle.fbx using Guid(901cf23cf51848c42ab846b25b070e6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b14a6f836a82d92fae2a33c972ec892a') in 0.017231 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Down_LeftHand_HalfDistance.fbx
-  artifactKey: Guid(0fd74bce728ce0943a6aa31c4c307080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Down_LeftHand_HalfDistance.fbx using Guid(0fd74bce728ce0943a6aa31c4c307080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '100faa664e1e112f74aeb67ec9f38ba2') in 0.007544 seconds
+  Time since last request: 0.000041 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Wall_Climb_4Limbs_Hold_Idle.fbx
+  artifactKey: Guid(cd83e396882dd9b4090669df587c98e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Jump_InPlace_to_Wall_Climb_4Limbs_Hold_Idle.fbx using Guid(cd83e396882dd9b4090669df587c98e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18a1fc1a8cf0b2470eef71fdf9c569a2') in 0.012586 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_End_toStanding.fbx
-  artifactKey: Guid(570c4249c8e45cf4a8276ab496886017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_End_toStanding.fbx using Guid(570c4249c8e45cf4a8276ab496886017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2329a5e5d07d9db630a5a1a33e8860a') in 0.007083 seconds
+  Time since last request: 0.000244 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_LazyVault_Left.fbx
+  artifactKey: Guid(c0b957413f73ee0498924fde7b6a9bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_LazyVault_Left.fbx using Guid(c0b957413f73ee0498924fde7b6a9bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ee5ad85ea18a3aac4e60ee3cdcfa665') in 0.010234 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 139
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_InwardCorner_Left.fbx
-  artifactKey: Guid(d54cc14d6561336479084e36f1ccecd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_InwardCorner_Left.fbx using Guid(d54cc14d6561336479084e36f1ccecd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '007419d58689e2f40f7a756a3ed76702') in 0.007643 seconds
+  Time since last request: 0.000024 seconds.
+  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Forward.fbx
+  artifactKey: Guid(e9e260d367470284ab7bc0c00b4c646a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Movement_Run_Forward.fbx using Guid(e9e260d367470284ab7bc0c00b4c646a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '731de55cc6a8c33748b7772b8c380d3c') in 0.011365 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 139
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Left_InPlaceRoot.fbx
-  artifactKey: Guid(5901c1c9b63f653499b8b2375aebb415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Left_InPlaceRoot.fbx using Guid(5901c1c9b63f653499b8b2375aebb415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f24452ad564024666bf57e36c81c5ca') in 0.006318 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_LookLeft_Start.fbx
-  artifactKey: Guid(89dbcd32dcc57e449bd493093ccc0032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_LookLeft_Start.fbx using Guid(89dbcd32dcc57e449bd493093ccc0032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e62e30fd752e4d90b5fb5d0cb359cc2c') in 0.006816 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Left_HalfDistance.fbx
-  artifactKey: Guid(7cb9fb35c458b554a9cf588217224aaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Left_HalfDistance.fbx using Guid(7cb9fb35c458b554a9cf588217224aaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7796e814b9c92a4f80723870bb28ae23') in 0.006900 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Down_LeftHand.fbx
-  artifactKey: Guid(fb035f8aaf4a0c94fba30ceb34f41156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_Down_LeftHand.fbx using Guid(fb035f8aaf4a0c94fba30ceb34f41156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7baae34122793892d6abf721037969e7') in 0.008115 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DownLeft.fbx
-  artifactKey: Guid(433954551e25a204fb4705e559b98c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DownLeft.fbx using Guid(433954551e25a204fb4705e559b98c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3756dddd542db574e4e95556cad5f2fe') in 0.006875 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DownRight_HalfDistance.fbx
-  artifactKey: Guid(cee0a45ca1e7b5a47a4c44a9310b117f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_DownRight_HalfDistance.fbx using Guid(cee0a45ca1e7b5a47a4c44a9310b117f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a126e6f3744075c3aacfbe5f7a4e0f0f') in 0.008205 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_LookLeft_End.fbx
-  artifactKey: Guid(e506fd27034976b4caba752a768f2f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Traversal_Wall_Climb_LookLeft_End.fbx using Guid(e506fd27034976b4caba752a768f2f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd508ed1da2288f8faf5949de55034039') in 0.005131 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
-========================================================================
-Received Import Request.
-  Time since last request: 49.377993 seconds.
-  path: Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Updated Anims 1.1/Traversal_BalanceBeam_Forward_WholeSequence.fbx
-  artifactKey: Guid(24223cb5143f9314fb9aa091d290c8d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Animation/Universal_Traversal_Anims/Art/Animations/Updated Anims 1.1/Traversal_BalanceBeam_Forward_WholeSequence.fbx using Guid(24223cb5143f9314fb9aa091d290c8d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '263517547b82a1101f4dfea872008429') in 0.015681 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 139
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  4.472 seconds
+Refreshing native plugins compatible for Editor in 14.45 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-EM
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  5.087 seconds
+Domain Reload Profiling: 9618ms
+	BeginReloadAssembly (1687ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (60ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (2ms)
+		CreateAndSetChildDomain (817ms)
+	RebuildCommonClasses (77ms)
+	RebuildNativeTypeToScriptingClass (41ms)
+	initialDomainReloadingComplete (90ms)
+	LoadAllAssembliesAndSetupDomain (2635ms)
+		LoadAssemblies (2905ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (168ms)
+			TypeCache.Refresh (103ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (2ms)
+			ResolveRequiredComponents (61ms)
+	FinalizeReload (5089ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1698ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (34ms)
+			SetLoadedEditorAssemblies (11ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (222ms)
+			ProcessInitializeOnLoadAttributes (1251ms)
+			ProcessInitializeOnLoadMethodAttributes (167ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (2ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (42ms)
+Refreshing native plugins compatible for Editor in 11.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (2.0 MB). Loaded Objects now: 6704.
+Memory consumption went from 250.8 MB to 248.7 MB.
+Total: 22.845200 ms (FindLiveObjects: 2.115600 ms CreateObjectMapping: 0.892000 ms MarkObjects: 17.531700 ms  DeleteObjects: 2.301100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/slide.cs: fb7692c5d21b700d82288bd077ed9d09 -> 
+  custom:scripting/monoscript/fileName/Btncooldown.cs: 960f3b71865de827f35ea8e9edb2cf51 -> 
+  custom:scripting/monoscript/fileName/cooldown.cs: dd86686e1e61b62f476838352ba44f4b -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: ќпераци€ ввода/вывода была прервана из-за завершени€ потока команд или по запросу приложени€.
 AssetImportWorker is now disconnected from the server

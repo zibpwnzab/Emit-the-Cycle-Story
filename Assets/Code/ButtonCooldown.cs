@@ -2,66 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+using UnityEngine.EventSystems;
 
-public class ButtonCooldown : MonoBehaviour
+public class Buttoncooldown : MonoBehaviour
 {
-    [SerializeField]
-    private Image imageCooldown;
-    [SerializeField]
-    private TMP_Text textCooldown;
-    private bool isCooldown = false;
-    private float cooldowntTime = 10.0f;
-    private float cooldownTimer = 0.0f;
-    public Light Light;
+    public Image imageCooldown;
+    public float cooldown = 10;
+    bool isCooldown;
+    bool isCliked;
+    public Light light;
 
-    void Start()
+
+    public void TaskOnClick()
     {
-        textCooldown.gameObject.SetActive(false);
-        imageCooldown.fillAmount = 0.0f;
+        isCliked = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (isCooldown)
-        { 
-        ApplyCooldown();
-        }
-    }
 
-    void ApplyCooldown()
-    {
-        cooldownTimer -= Time.deltaTime;
-
-        if (cooldownTimer < 0.0f)
+        if (isCliked)
         {
-            isCooldown = false;
-            textCooldown.gameObject.SetActive(false);
-            imageCooldown.fillAmount = 0.0f;
+            isCooldown = true;
+            light.enabled = true;
         }
-        else
-        { 
-        textCooldown.text = Mathf.RoundToInt(cooldownTimer).ToString();
-            imageCooldown.fillAmount = cooldownTimer / cooldowntTime;
-        }
-    }
 
-    public bool isActive()
-    {
         if (isCooldown)
         {
             
-            return false;
-        }
-        else 
-        {
-            isCooldown = true;
-           Light.gameObject.SetActive(false);
-            return true;
+            imageCooldown.fillAmount += 1 / cooldown * Time.deltaTime;
 
-        
+            if (imageCooldown.fillAmount >= 0.02) 
+            { 
+            light.enabled = false;      
+            }
+
+            if (imageCooldown.fillAmount >= 1) 
+            {
+                imageCooldown.fillAmount = 0;
+                isCooldown = false;
+            }
+
+            isCliked= false; 
         }
-    
+
     }
+
+
 }

@@ -2,23 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JoystickController : MonoBehaviour
+public class Joystick_Controller : MonoBehaviour
 {
     public float speed;
-
-    Rigidbody2D rb;
-
+    public Joystick Joystick;
+    public Rigidbody2D rb;
     public Joystick joystick;
-
     private Vector2 MoveVelocity;
 
-    // Start is called before the first frame update
     void Start()
     {
         GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (joystick.Horizontal > 0) ;
@@ -37,8 +33,10 @@ public class JoystickController : MonoBehaviour
         MoveVelocity = moveInput.normalized * speed;
     }
 
-    private void FixedUodate()
+    public void FixedUpdate()
     {
-        rb.MovePosition(rb.position + MoveVelocity * Time.deltaTime);
+        Vector3 direction = Vector3.forward * Joystick.Vertical + Vector3.right * Joystick.Horizontal;
+        rb.AddForce(direction * speed * Time.fixedDeltaTime);
+
     }
 }
