@@ -10,9 +10,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private FixedJoystick joystick;
     [SerializeField] private Animator animator;
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float jumpforce = 5f;
+    [SerializeField] private float jumpforce = 5;
     private JumpButton jumpButton;
     private bool isJumping = false;
+    
 
 
     void Start()
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         
         Jump();
+        rigidbody.angularVelocity = Vector3.zero;
         
     }
 
@@ -47,12 +49,21 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("Jumping");
             rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
+            
             isJumping = true;
-         
         }
-        
         jumpButton.isPressed = false;
-        isJumping = false;
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
+        }
+
 
     }
 }
