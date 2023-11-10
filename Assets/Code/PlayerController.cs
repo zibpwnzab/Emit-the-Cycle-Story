@@ -18,7 +18,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         jumpButton = GameObject.Find("BtnJump").GetComponent<JumpButton>();
-       
+#if UNITY_EDITOR
+        UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
+#endif
     }
 
     void Update()
