@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using Microsoft.Win32.SafeHandles;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
 public class PlayerController : MonoBehaviour
@@ -13,12 +15,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpforce = 5;
     private JumpButton jumpButton;
     private bool isJumping = false;
+    private Interaction_Object interactionAnim;
     
 
 
     void Start()
     {
-        jumpButton = GameObject.Find("BtnJump").GetComponent<JumpButton>();
+        
+        jumpButton = GameObject.Find("JumpButton").GetComponent<JumpButton>();
+        interactionAnim = GameObject.Find("SM_Wep_Crowbar_01").GetComponent<Interaction_Object>();
+        animator = GetComponent<Animator>();
        
     }
 
@@ -26,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         
         Jump();
+        Interaction();
         rigidbody.angularVelocity = Vector3.zero;
         
     }
@@ -43,7 +50,7 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
     }
 
-    public void Jump()
+    void Jump()
     {
         if (jumpButton.isPressed && !isJumping)
         {
@@ -66,4 +73,18 @@ public class PlayerController : MonoBehaviour
 
 
     }
+
+    void Interaction()
+    {
+        if (interactionAnim.interactionEnabled)
+        {
+            animator.SetTrigger("Gather");
+            //rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
+
+
+        }
+        interactionAnim.interactionEnabled = false;
+
+    }
+
 }

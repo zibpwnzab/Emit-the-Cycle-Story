@@ -4,16 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class JumpButton : MonoBehaviour, IPointerClickHandler
+public class InteractionButton : MonoBehaviour
 {
-
-    [SerializeField] private Rigidbody rigidbody;
     public bool isPressed = false;
-    
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void Click()
     {
         isPressed = true;
     }
+
 
 }
