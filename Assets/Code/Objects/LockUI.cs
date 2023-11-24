@@ -12,6 +12,8 @@ public class LockUI : MonoBehaviour
     [SerializeField] Button enterButton;
     [SerializeField] TMPro.TMP_Text passwordField;
     [SerializeField] int passwordMaxLength;
+    [SerializeField] string wrongMessege = "WRONG";
+    [SerializeField] string correctMessege = "CORRECT";
 
     [SerializeField]  private string password;
     private string _currentAttempt;
@@ -19,6 +21,7 @@ public class LockUI : MonoBehaviour
     void Start()
     {
         _currentAttempt = "";
+        passwordField.text = _currentAttempt;
         for (int i = 0; i < numbers.Count; i++)
         {
             int c = 0 + i;
@@ -31,7 +34,6 @@ public class LockUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        passwordField.text = _currentAttempt;
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.E)) ShowPanel();
 #endif
@@ -60,19 +62,28 @@ public class LockUI : MonoBehaviour
     private void ResetPassword()
     {
         _currentAttempt = "";
+        passwordField.text = _currentAttempt;
+
     }
 
     public void EnterPassword()
     {
+        if (_currentAttempt.Length == 0)
+        {
+            passwordField.text = _currentAttempt;
+        }
+        else
         if (_currentAttempt.Equals(password))
         {
             Debug.Log("PASSWORD: "+ _currentAttempt + " IS CORRECT!");
             _isCorrect = true;
+            passwordField.text = correctMessege;
         }
         else
         {
             
             Debug.Log("PASSWORD: " + _currentAttempt + " IS WRONG!");
+            passwordField.text = wrongMessege;
         }
         _currentAttempt = "";
     }
@@ -82,6 +93,7 @@ public class LockUI : MonoBehaviour
         {
             _currentAttempt += digit.ToString();
         }
+        passwordField.text = _currentAttempt;
     }
 
     public void ShowPanel()

@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 1856653832442654069}
   - component: {fileID: 569155119059471266}
   m_Layer: 5
-  m_Name: Lock
+  m_Name: LockUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -702,7 +702,7 @@ MonoBehaviour:
   enterButton: {fileID: 7414097397427615649}
   passwordField: {fileID: 7309314418448260099}
   passwordMaxLength: 6
-  password: 435230
+  password: 000000
 --- !u!1 &1487892224044656174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,6 +2704,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7317797415579617899}
+  - component: {fileID: 5177752706776451163}
+  - component: {fileID: 177255626250701406}
+  - component: {fileID: 8163191221168830022}
   m_Layer: 0
   m_Name: Lock
   m_TagString: Untagged
@@ -2728,6 +2731,56 @@ Transform:
   - {fileID: 4041540511349355258}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5177752706776451163
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122107653803591722}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7111068, y: 1.0869002, z: 0.6827676}
+  m_Center: {x: 0.0010063648, y: 0.56854, z: -0.4024366}
+--- !u!114 &177255626250701406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122107653803591722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9126d4b3cb6063543bc77b8ba350951c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTrigger: 0
+  interactableObject: {fileID: 0}
+  button: {fileID: 0}
+  interactionEnabled: 0
+--- !u!114 &8163191221168830022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122107653803591722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da79458bdd6e1ae4bb7208674e88f08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockUI: {fileID: 569155119059471266}
 --- !u!1 &6623804939968231473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3811,7 +3864,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1828286271634680, guid: 9d4fe4d1b75f5c34b88886dacb4ed20e, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Detail_Panel_01
+      value: model
       objectReference: {fileID: 0}
     - target: {fileID: 4748541382146634, guid: 9d4fe4d1b75f5c34b88886dacb4ed20e, type: 3}
       propertyPath: m_LocalPosition.x
