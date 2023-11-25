@@ -702,6 +702,8 @@ MonoBehaviour:
   enterButton: {fileID: 7414097397427615649}
   passwordField: {fileID: 7309314418448260099}
   passwordMaxLength: 6
+  wrongMessege: WRONG
+  correctMessege: CORRECT
   password: 000000
 --- !u!1 &1487892224044656174
 GameObject:
@@ -2705,7 +2707,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7317797415579617899}
   - component: {fileID: 5177752706776451163}
-  - component: {fileID: 177255626250701406}
   - component: {fileID: 8163191221168830022}
   m_Layer: 0
   m_Name: Lock
@@ -2752,22 +2753,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7111068, y: 1.0869002, z: 0.6827676}
   m_Center: {x: 0.0010063648, y: 0.56854, z: -0.4024366}
---- !u!114 &177255626250701406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122107653803591722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9126d4b3cb6063543bc77b8ba350951c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTrigger: 0
-  interactableObject: {fileID: 0}
-  button: {fileID: 0}
-  interactionEnabled: 0
 --- !u!114 &8163191221168830022
 MonoBehaviour:
   m_ObjectHideFlags: 0

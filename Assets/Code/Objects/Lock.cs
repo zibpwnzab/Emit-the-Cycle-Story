@@ -5,7 +5,7 @@ using UnityEngine;
 public class Lock : MonoBehaviour, IInteractable
 {
     [SerializeField] LockUI lockUI;
-    public bool Interact()
+    public bool Interact(GameObject gameObject, Animator animator)
     {
         lockUI.ShowPanel();
         return true;

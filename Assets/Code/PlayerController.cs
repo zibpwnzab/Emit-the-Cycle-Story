@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
 public class PlayerController : MonoBehaviour
@@ -13,17 +13,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpforce = 5;
+    [SerializeField] private Button interactButton;
     private JumpButton jumpButton;
     private bool isJumping = false;
     private Interaction_Object interactionAnim;
-    
+    private List<IInteractable> interactables;
 
 
     void Start()
     {
-        
-        jumpButton = GameObject.Find("JumpButton").GetComponent<JumpButton>();
-        interactionAnim = GameObject.Find("SM_Wep_Crowbar_01").GetComponent<Interaction_Object>();
+        interactables = new();
+        jumpButton = GameObject.FindObjectOfType<JumpButton>();
+        //interactionAnim = GameObject.Find("SM_Wep_Crowbar_01").GetComponent<Interaction_Object>();
         animator = GetComponent<Animator>();
        
     }
@@ -32,7 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         
         Jump();
-        Interaction();
+        //Interaction();
         rigidbody.angularVelocity = Vector3.zero;
         
     }
@@ -87,4 +88,42 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        IInteractable obj;
+        if (!other.TryGetComponent(out obj))
+            return;
+
+        if (interactables.Contains(obj))
+            return;
+
+        interactables.Add(obj);
+        ResolveInteraction();
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        IInteractable obj;
+        if (!other.TryGetComponent(out obj))
+            return;
+
+        if (!interactables.Contains(obj))
+            return;
+
+        interactables.Remove(obj);
+        ResolveInteraction();
+    }
+
+    void ResolveInteraction()
+    {
+        interactButton.onClick.RemoveAllListeners();
+        if (interactables.Count == 0)
+        {
+
+        }
+        else
+        {
+            interactButton.onClick.AddListener(delegate { interactables[0].Interact(gameObject, animator); });
+        }
+    }
 }

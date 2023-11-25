@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour
         if (locks == null) return;
         if (locks.Count == 0) return;
         passwords = new();
-        for (int i = 0; i <= locks.Count; i++)
+        for (int i = 0; i < locks.Count; i++)
         {
             string password = "";
             for (int j = 0; j < passwordLength; j++)
