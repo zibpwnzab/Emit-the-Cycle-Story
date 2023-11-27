@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody rigidbody;
     [SerializeField] private FixedJoystick joystick;
     [SerializeField] private Animator animator;
-    [SerializeField] private float moveSpeed;
+    [SerializeField] public float moveSpeed;
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
     private JumpButton jumpButton;
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-        Jump();
+        //Jump();
         //Interaction();
         rigidbody.angularVelocity = Vector3.zero;
         

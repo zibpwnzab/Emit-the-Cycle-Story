@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lock : MonoBehaviour, IInteractable
+public class Lock : MonoBehaviour, IInteractable, ISignal
 {
     [SerializeField] LockUI lockUI;
     public bool Interact(GameObject gameObject, Animator animator)
@@ -21,5 +21,10 @@ public class Lock : MonoBehaviour, IInteractable
     public bool SetPassword(string password)
     {
         return lockUI.SetPassword(password);
+    }
+
+    public bool Signal()
+    {
+        return lockUI.IsCorrect();
     }
 }
