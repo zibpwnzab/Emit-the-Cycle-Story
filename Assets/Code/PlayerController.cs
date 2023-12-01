@@ -12,9 +12,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private FixedJoystick joystick;
     [SerializeField] private Animator animator;
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float jumpforce = 5;
+    [SerializeField] private float jumpforce = 4;
     private JumpButton jumpButton;
     private bool isJumping = false;
+    public int Lifes = 3;
     private Interaction_Object interactionAnim;
     
 
@@ -23,16 +24,15 @@ public class PlayerController : MonoBehaviour
     {
         
         jumpButton = GameObject.Find("JumpButton").GetComponent<JumpButton>();
-        interactionAnim = GameObject.Find("SM_Wep_Crowbar_01").GetComponent<Interaction_Object>();
+        //interactionAnim = GameObject.Find("SM_Wep_Crowbar_01").GetComponent<Interaction_Object>();
         animator = GetComponent<Animator>();
        
     }
 
     void Update()
     {
-        
-        Jump();
-        Interaction();
+        StartCoroutine(Jump());
+        //Interaction();
         rigidbody.angularVelocity = Vector3.zero;
         
     }
@@ -50,8 +50,9 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
     }
 
-    void Jump()
+    private IEnumerator Jump()
     {
+        yield return new WaitForSeconds(1f);
         if (jumpButton.isPressed && !isJumping)
         {
             animator.SetTrigger("Jumping");
@@ -74,17 +75,24 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void Interaction()
+    /*void Interaction()
     {
         if (interactionAnim.interactionEnabled)
         {
             animator.SetTrigger("Gather");
             //rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
-
+            Debug.Log("hh");
 
         }
         interactionAnim.interactionEnabled = false;
 
-    }
+    }*/
 
+    private void PlayerDie() 
+    {
+        if (Lifes == 0) 
+        {
+        
+        }
+    }
 }

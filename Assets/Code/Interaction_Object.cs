@@ -20,7 +20,7 @@ public class Interaction_Object: MonoBehaviour
 
     private void Update()
     {
-        //Interact();
+        Interact();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -36,14 +36,15 @@ public class Interaction_Object: MonoBehaviour
         onTrigger = false;
     }
 
-    /*public void Interact() 
+    public void Interact() 
     {
         if (interactionButton.isPressed && onTrigger)
         {
             interactionEnabled = true;
+            Debug.Log("mmmm");
             
         }
         interactionButton.isPressed = false;
-    }*/
+    }
 
 }

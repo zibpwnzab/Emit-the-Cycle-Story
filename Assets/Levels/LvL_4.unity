@@ -4318,7 +4318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a50474c6a547345b7440b2c27111d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isClicked: 0
+  isPressed: 0
 --- !u!114 &1035971981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4906,7 +4906,7 @@ GameObject:
   - component: {fileID: 1213176912}
   - component: {fileID: 1213176911}
   m_Layer: 5
-  m_Name: BtnJump
+  m_Name: JumpButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4944,7 +4944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a98c9745dfd144daa2817da4518c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 722094112}
   isPressed: 0
 --- !u!114 &1213176912
 MonoBehaviour:
@@ -6085,7 +6084,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12fe4e01c4879b648ad76a52c598e4f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTrigger: 0
 --- !u!33 &1694531882
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7344,19 +7342,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2008637987}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1035971980}
-        m_TargetAssemblyTypeName: InteractionButton, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2008637987
 MonoBehaviour:
   m_ObjectHideFlags: 0

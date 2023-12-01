@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class DialogSystem : MonoBehaviour
 {
-    public string[] lines;
+    public string[] lines1;
+    public string[] lines2;
+    public string[] lines3;
     public float speedText;
     public Text dialogText;
     private int index;
@@ -32,11 +34,11 @@ public class DialogSystem : MonoBehaviour
     }
     private void TaskOnClickTwo()
     {
-        skipText();
+        skipText2();
     }
     private void TaskOnClickThree()
     {
-        skipText();
+        skipText3();
         count--;
     }
 
@@ -48,7 +50,7 @@ public class DialogSystem : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        foreach (char c in lines[index].ToCharArray()) {
+        foreach (char c in lines1[index].ToCharArray()) {
         dialogText.text += c;
             yield return new WaitForSeconds(speedText);
         }
@@ -56,26 +58,104 @@ public class DialogSystem : MonoBehaviour
 
     public void skipText()
     {
-        if (dialogText.text == lines[index])
+        index++;
+        if (dialogText.text == lines1[index])
         {
+            index++;
             NextLine();
         }
         else 
         {
         StopAllCoroutines();
-            dialogText.text = lines[index]; 
+            dialogText.text = lines1[index]; 
         }
     }
 
     private void NextLine()
     {
-        if (index < lines.Length - 1)
+        if (index < lines1.Length - 1)
         {
-            index++;
+            
             dialogText.text = string.Empty;
             StartCoroutine(TypeLine());
         }
         else 
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    IEnumerator TypeLine2()
+    {
+        foreach (char c in lines2[index].ToCharArray())
+        {
+            dialogText.text += c;
+            yield return new WaitForSeconds(speedText);
+        }
+    }
+
+    public void skipText2()
+    {
+        index++;
+        if (dialogText.text == lines2[index])
+        {
+            index++;
+            NextLine2();
+        }
+        else
+        {
+            StopAllCoroutines();
+            dialogText.text = lines2[index];
+        }
+    }
+
+    private void NextLine2()
+    {
+        if (index < lines2.Length - 1)
+        {
+           
+            dialogText.text = string.Empty;
+            StartCoroutine(TypeLine2());
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    IEnumerator TypeLine3()
+    {
+        foreach (char c in lines3[index].ToCharArray())
+        {
+            dialogText.text += c;
+            yield return new WaitForSeconds(speedText);
+        }
+    }
+
+    public void skipText3()
+    {
+        index++;
+        if (dialogText.text == lines3[index])
+        {
+           
+            NextLine3();
+        }
+        else
+        {
+            StopAllCoroutines();
+            dialogText.text = lines3[index];
+        }
+    }
+
+    private void NextLine3()
+    {
+        if (index < lines3.Length - 1)
+        {
+            
+            dialogText.text = string.Empty;
+            StartCoroutine(TypeLine3());
+        }
+        else
         {
             gameObject.SetActive(false);
         }

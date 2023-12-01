@@ -2,19 +2,36 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QTE : MonoBehaviour
 {
-    private ValueType value;
+    public Slider slider;
+    
+    
     
     void Start()
     {
-        value = GameObject.Find("Slider").GetComponent<ValueType>();
+         slider.value = 0f;
     }
 
-    
-    void Update()
+    private void Update()
     {
-        
+        StartCoroutine(ValueMinus());
+    }
+    public void ValueChange()
+    {
+         slider.value += 1;
+    }
+
+    private IEnumerator ValueMinus() 
+    {
+        yield return new WaitForSeconds(2);
+
+        if (slider.value != 10 && slider.value !=0)
+        {
+            slider.value -= 0.01f;
+        }
+
     }
 }
