@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MovableObject : MonoBehaviour, IInteractable
 {
-    private float _originalSpeed;
-    [SerializeField] float slowDown;
     [SerializeField] List<Transform> grabPoints;
     private bool _connected;
 
@@ -16,20 +14,23 @@ public class MovableObject : MonoBehaviour, IInteractable
         if (_connected)
         {
             transform.parent = null;
-            controller.moveSpeed = _originalSpeed;
+            controller.movingObject = false;
         }
         else
         {
-            var c_p = otherObject.transform.position;
-            c_p.y = 0;
-            var b_wr_c = transform.position - c_p;
-            b_wr_c.y = 0;
-            float angle = Vector3.Angle(otherObject.transform.forward, b_wr_c);
+            controller.movingObject = true;
+            var dir = transform.position - otherObject.transform.position;
+            dir.y = 0;
+            dir = dir.normalized;
+
+            var currentForward = otherObject.transform.forward;
+            currentForward.y = 0;
+            currentForward = currentForward.normalized;
+
+            float angle = Vector3.SignedAngle(dir, currentForward, Vector3.up);
 
             otherObject.transform.Rotate(Vector3.down, angle);
             transform.parent = otherObject.transform;
-            _originalSpeed = controller.moveSpeed;
-            controller.moveSpeed *= slowDown;
         }
         _connected = !_connected;
         

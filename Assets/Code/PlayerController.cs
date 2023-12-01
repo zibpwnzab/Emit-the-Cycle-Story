@@ -12,12 +12,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private FixedJoystick joystick;
     [SerializeField] private Animator animator;
     [SerializeField] public float moveSpeed;
+    [SerializeField] public float movingObjectModifier;
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
     private JumpButton jumpButton;
     private bool isJumping = false;
     private Interaction_Object interactionAnim;
     private List<IInteractable> interactables;
+
+    public bool movingObject;
 
 
     void Start()
@@ -40,11 +43,31 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (movingObject)
+            MoveWithObject();
+        else
+            Move();
+    }
+
+    void Move()
+    {
         rigidbody.velocity = new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed);
 
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
             transform.rotation = Quaternion.LookRotation(rigidbody.velocity);
+            animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
+        }
+        else
+            animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
+    }
+    
+    void MoveWithObject()
+    {
+        rigidbody.velocity = new Vector3(joystick.Horizontal * moveSpeed * movingObjectModifier, rigidbody.velocity.y, joystick.Vertical * moveSpeed * movingObjectModifier);
+
+        if (joystick.Horizontal != 0 || joystick.Vertical != 0)
+        {
             animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
         }
         else
