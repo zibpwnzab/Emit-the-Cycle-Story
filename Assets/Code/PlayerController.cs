@@ -13,14 +13,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] public float moveSpeed;
     [SerializeField] public float movingObjectModifier;
+    [SerializeField] public float rotateObjectSpeed;
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
+    
     private JumpButton jumpButton;
     private bool isJumping = false;
     private Interaction_Object interactionAnim;
     private List<IInteractable> interactables;
+    private GameObject lastInteracteble;
 
-    public bool movingObject;
+    public PlayerState playerState = PlayerState.Walking;
 
 
     void Start()
@@ -43,12 +46,32 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (movingObject)
-            MoveWithObject();
-        else
-            Move();
+        switch (playerState) {
+            case PlayerState.Walking:
+                Move();
+                break;
+            case PlayerState.MovingObject:
+                MoveWithObject();
+                break;
+             case PlayerState.RotatingObject:
+                RotateObject();
+                break;
+
+            }
     }
 
+    void RotateObject()
+    {
+        if (Mathf.Abs(joystick.Horizontal) > Mathf.Abs(joystick.Vertical))
+        {
+            Debug.Log(lastInteracteble.name + " Rotate");
+            lastInteracteble.transform.Rotate(Vector3.up, Time.deltaTime * joystick.Horizontal * rotateObjectSpeed);
+        }
+        else
+        {
+
+        }
+    }
     void Move()
     {
         rigidbody.velocity = new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed);
@@ -119,7 +142,8 @@ public class PlayerController : MonoBehaviour
 
         if (interactables.Contains(obj))
             return;
-
+        if (lastInteracteble == null)
+            lastInteracteble = other.gameObject;
         interactables.Add(obj);
         ResolveInteraction();
     }
@@ -133,6 +157,8 @@ public class PlayerController : MonoBehaviour
         if (!interactables.Contains(obj))
             return;
 
+        if (other.gameObject == lastInteracteble)
+            lastInteracteble = null;
         interactables.Remove(obj);
         ResolveInteraction();
     }
@@ -149,4 +175,12 @@ public class PlayerController : MonoBehaviour
             interactButton.onClick.AddListener(delegate { interactables[0].Interact(gameObject, animator); });
         }
     }
+}
+
+public enum PlayerState
+{
+    Walking,
+    Dead,
+    MovingObject,
+    RotatingObject,
 }

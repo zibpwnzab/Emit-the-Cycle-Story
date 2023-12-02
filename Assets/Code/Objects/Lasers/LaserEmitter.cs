@@ -10,9 +10,14 @@ public class LaserEmitter : MonoBehaviour
     [SerializeField] Transform laserStart;
     [SerializeField] int maxBounces;
     List<Vector3> laserPositions;
+    [SerializeField] int mirrorLayer;
+    [SerializeField] GameObject signalSource;
+    ISignal signal;
     void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
+        if (signalSource != null)
+            signal = signalSource.GetComponent<ISignal>();
     }
 
     // Update is called once per frame
@@ -20,7 +25,16 @@ public class LaserEmitter : MonoBehaviour
     {
         laserPositions = new();
         laserPositions.Add(laserStart.position);
-        EmitLaser(laserStart.position, laserDirection.forward, 0);
+        if (signal != null)
+        {
+            if (signal.Signal())
+                EmitLaser(laserStart.position, laserDirection.forward, 0);
+        }
+        else
+        {
+            EmitLaser(laserStart.position, laserDirection.forward, 0);
+        }
+
         DrawLaser();
     }
 
@@ -34,7 +48,7 @@ public class LaserEmitter : MonoBehaviour
         if (!Physics.Raycast(position, direction.normalized, out hit))
             return;
         laserPositions.Add(hit.point);
-        if (hit.collider.gameObject.layer == 15)
+        if (hit.collider.gameObject.layer == mirrorLayer)
         {
             var in_ray = hit.point - position;
             var out_ray = in_ray - 2 * Vector3.Dot(in_ray, hit.normal.normalized) * hit.normal.normalized;

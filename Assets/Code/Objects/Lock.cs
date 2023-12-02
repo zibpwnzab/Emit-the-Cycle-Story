@@ -7,6 +7,8 @@ public class Lock : MonoBehaviour, IInteractable, ISignal
     [SerializeField] LockUI lockUI;
     public bool Interact(GameObject gameObject, Animator animator)
     {
+        if (lockUI.IsCorrect())
+            return true;
         lockUI.ShowPanel();
         return true;
     }

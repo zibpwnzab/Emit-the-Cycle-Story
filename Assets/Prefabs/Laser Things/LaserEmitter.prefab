@@ -253,7 +253,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.3
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -319,6 +319,8 @@ MonoBehaviour:
   laserDirection: {fileID: 2669459725428454526}
   laserStart: {fileID: 2669459725428454526}
   maxBounces: 3
+  mirrorLayer: 15
+  signalSource: {fileID: 0}
 --- !u!1 &5059300210344523541
 GameObject:
   m_ObjectHideFlags: 0

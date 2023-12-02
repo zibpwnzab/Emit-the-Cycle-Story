@@ -14,7 +14,7 @@ public class LockUI : MonoBehaviour
     [SerializeField] int passwordMaxLength;
     [SerializeField] string wrongMessege = "WRONG";
     [SerializeField] string correctMessege = "CORRECT";
-
+    [SerializeField] float timeAfterCorrect;
     [SerializeField]  private string password;
     private string _currentAttempt;
     private bool _isCorrect = false;
@@ -66,6 +66,11 @@ public class LockUI : MonoBehaviour
 
     }
 
+    IEnumerator CloseAfterCorrect()
+    {
+        yield return new WaitForSeconds(timeAfterCorrect);
+        HidePanel();
+    }
     public void EnterPassword()
     {
         if (_currentAttempt.Length == 0)
@@ -77,6 +82,7 @@ public class LockUI : MonoBehaviour
         {
             Debug.Log("PASSWORD: "+ _currentAttempt + " IS CORRECT!");
             _isCorrect = true;
+            StartCoroutine(CloseAfterCorrect());
             passwordField.text = correctMessege;
         }
         else

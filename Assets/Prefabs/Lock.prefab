@@ -704,6 +704,7 @@ MonoBehaviour:
   passwordMaxLength: 6
   wrongMessege: WRONG
   correctMessege: CORRECT
+  timeAfterCorrect: 2
   password: 000000
 --- !u!1 &1487892224044656174
 GameObject:

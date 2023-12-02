@@ -2,23 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovableObject : MonoBehaviour, IInteractable
+public class RotatableObjects : MonoBehaviour, IInteractable
 {
+    // Start is called before the first frame update
     [SerializeField] List<Transform> grabPoints;
     private bool _connected;
 
     public bool Interact(GameObject otherObject, Animator animator)
     {
 
+
         var controller = otherObject.GetComponent<PlayerController>();
         if (_connected)
         {
-            transform.parent = null;
             controller.playerState = PlayerState.Walking;
         }
         else
         {
-            controller.playerState = PlayerState.MovingObject;
+            controller.playerState = PlayerState.RotatingObject;
             var dir = transform.position - otherObject.transform.position;
             dir.y = 0;
             dir = dir.normalized;
@@ -30,22 +31,9 @@ public class MovableObject : MonoBehaviour, IInteractable
             float angle = Vector3.SignedAngle(dir, currentForward, Vector3.up);
 
             otherObject.transform.Rotate(Vector3.down, angle);
-            transform.parent = otherObject.transform;
         }
         _connected = !_connected;
-        
+
         return true;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
