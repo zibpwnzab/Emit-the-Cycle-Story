@@ -8,14 +8,16 @@ using UnityEngine.UI;
 public class Interaction_Object: MonoBehaviour
 {
     [SerializeField] private bool onTrigger = false;
+    [SerializeField] GameObject interactableObject;
     public Button button;
     private InteractionButton interactionButton;
     public bool interactionEnabled = false;
+    private IInteractable interactable;
 
     void Start() 
     {
         interactionButton = GameObject.Find("InteractionButton").GetComponent<InteractionButton>();
-
+        interactable = interactableObject.GetComponent<IInteractable>();
     }
 
     private void Update()
