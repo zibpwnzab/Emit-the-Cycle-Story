@@ -514,6 +514,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minWaitTime: 0
   maxWaitTime: 3.5
+--- !u!1 &122597202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
+  m_PrefabInstance: {fileID: 1705170265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &158455457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2334,7 +2339,7 @@ Light:
   m_BounceIntensity: 11.13
   m_ColorTemperature: 6745
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.63e-43, y: -6.563171e-37, z: 6.63e-43, w: 1.8470173e+25}
+  m_BoundingSphereOverride: {x: 0, y: 5.2023463e-38, z: 6.84e-43, w: 1.5532798e-36}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 8.1
@@ -2943,8 +2948,11 @@ MonoBehaviour:
   joystick: {fileID: 1463931407}
   animator: {fileID: 703115619}
   moveSpeed: 5
+  movingObjectModifier: 0
+  rotateObjectSpeed: 0
   jumpforce: 5
   interactButton: {fileID: 612738422}
+  playerState: 0
 --- !u!136 &703115617
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3005,6 +3013,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4623880327411890, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
   m_PrefabInstance: {fileID: 1705170265}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &768655450
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122597202}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.6386175, y: 2.999999, z: 1.6600558}
+  m_Center: {x: -3.6174796, y: 1.4999995, z: -0.17960657}
+--- !u!114 &768655451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122597202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994af4a25bad8f245bf5326ff89cb942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signalObject: {fileID: 0}
+  lightSource: {fileID: 0}
+  SceneNumber: 2
+  needsSignal: 0
 --- !u!1 &792579626 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1750927141268108, guid: 8775c006a5395ff488d9315934a2a901, type: 3}
@@ -5521,7 +5566,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 768655451}
+    - targetCorrespondingSourceObject: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 768655450}
   m_SourcePrefab: {fileID: 100100000, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
 --- !u!4 &1712449694 stripped
 Transform:
@@ -7496,7 +7547,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0.0001661185, z: 1.3555853e-19, w: 1.4664258e-19}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 1.02e-43, w: 1e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
