@@ -1100,6 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a98c9745dfd144daa2817da4518c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPressed: 0
 --- !u!114 &360201595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2328,7 +2329,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 11.13
@@ -2366,13 +2367,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafc90245bfe9e2408e358f71deace2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SampleCount: 8
-  ScatteringCoef: 0.0003
-  ExtinctionCoef: 0.005
-  SkyboxExtinctionCoef: 0.9
-  MieG: 0.1
+  SampleCount: 6
+  ScatteringCoef: 0.059
+  ExtinctionCoef: 0.0171
+  SkyboxExtinctionCoef: 0.211
+  MieG: 0.979
   HeightFog: 0
-  HeightScale: 0.1
+  HeightScale: 0.036
   GroundLevel: 0
   Noise: 0
   NoiseScale: 0.015
@@ -2943,8 +2944,11 @@ MonoBehaviour:
   joystick: {fileID: 1463931407}
   animator: {fileID: 703115619}
   moveSpeed: 5
+  movingObjectModifier: 0
+  rotateObjectSpeed: 0
   jumpforce: 5
   interactButton: {fileID: 612738422}
+  playerState: 0
 --- !u!136 &703115617
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3623,6 +3627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a50474c6a547345b7440b2c27111d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPressed: 0
 --- !u!114 &937105127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5935,100 +5940,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1748973549
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1748973551}
-  - component: {fileID: 1748973550}
-  m_Layer: 0
-  m_Name: Point Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &1748973550
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1748973549}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 2
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 117.5
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &1748973551
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1748973549}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.81168, y: 13.4, z: -7.519117}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1752009702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4712475898776088, guid: 8feb2335a05b64642a1d35a6a73cb21c, type: 3}
@@ -7831,4 +7742,3 @@ SceneRoots:
   - {fileID: 1172501152}
   - {fileID: 985866877}
   - {fileID: 453269801}
-  - {fileID: 1748973551}
