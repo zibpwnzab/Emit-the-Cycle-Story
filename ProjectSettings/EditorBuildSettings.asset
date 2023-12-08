@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Kate scene.unity
     guid: c696e3136c5dca1418105e0a029d29c4
+  - enabled: 1
+    path: Assets/Levels/LvL_1.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Levels/LvL_2.unity
+    guid: 18fd391d84037c8428dc1734b85476f4
+  - enabled: 1
+    path: Assets/Levels/LvL_3.unity
+    guid: 041431e3624fc954ea4456c16842b52e
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: ae838b1c970aab641bb8e4643590df24, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: ce68c4c37abec5347801e4204a280574, type: 2}
