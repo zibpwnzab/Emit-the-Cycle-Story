@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ISignal
+public abstract class ISignal : MonoBehaviour
 {
-    public bool Signal();
+    abstract public bool Signal();
 }
