@@ -6471,6 +6471,10 @@ PrefabInstance:
       propertyPath: signalObject
       value: 
       objectReference: {fileID: 889838008}
+    - target: {fileID: 3970411308302101316, guid: 5cfb16874230c65499430973351cbe1b, type: 3}
+      propertyPath: signalSource
+      value: 
+      objectReference: {fileID: 399085487}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6584,8 +6588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994af4a25bad8f245bf5326ff89cb942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signalObject: {fileID: 2137279428}
-  lightSource: {fileID: 0}
+  signalSource: {fileID: 0}
   SceneNumber: 1
   needsSignal: 1
 --- !u!65 &1710700825
@@ -6921,6 +6924,22 @@ PrefabInstance:
     - target: {fileID: 4877242044396791524, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096187331321207553, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
+      propertyPath: spiralSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096187331321207553, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
+      propertyPath: spiralRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096187331321207553, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
+      propertyPath: spiralStrength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096187331321207553, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
+      propertyPath: LengthPerSegment
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8231,6 +8250,10 @@ PrefabInstance:
       propertyPath: signalObject
       value: 
       objectReference: {fileID: 2137279428}
+    - target: {fileID: 3970411308302101316, guid: 5cfb16874230c65499430973351cbe1b, type: 3}
+      propertyPath: signalSource
+      value: 
+      objectReference: {fileID: 2137279429}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
