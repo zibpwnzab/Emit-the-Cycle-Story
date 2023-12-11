@@ -30,7 +30,7 @@ public class QTE : MonoBehaviour
 
         if (slider.value != 10 && slider.value !=0)
         {
-            slider.value -= 0.01f;
+            slider.value -= 0.02f;
         }
 
     }

@@ -11,7 +11,7 @@ public class DialogSystem : MonoBehaviour
     public string[] lines3;
     public float speedText;
     public Text dialogText;
-    private int index;
+    private int index = 0;
     public Button buttonOne;
     public Button buttonTwo;
     public Button buttonThree;
@@ -29,22 +29,25 @@ public class DialogSystem : MonoBehaviour
 
     private void TaskOnClickOne()
     {
+        index++;
         skipText();
         count++;
     }
     private void TaskOnClickTwo()
     {
+        index++;
         skipText2();
     }
     private void TaskOnClickThree()
     {
+        index++;
         skipText3();
         count--;
     }
 
     void StartDialog()
     {
-        index = 0;
+        //index = 0;
         StartCoroutine(TypeLine());
     }
 
@@ -58,10 +61,10 @@ public class DialogSystem : MonoBehaviour
 
     public void skipText()
     {
-        index++;
+        
         if (dialogText.text == lines1[index])
         {
-            index++;
+            
             NextLine();
         }
         else 
@@ -96,10 +99,10 @@ public class DialogSystem : MonoBehaviour
 
     public void skipText2()
     {
-        index++;
+         
         if (dialogText.text == lines2[index])
         {
-            index++;
+           
             NextLine2();
         }
         else
@@ -134,10 +137,10 @@ public class DialogSystem : MonoBehaviour
 
     public void skipText3()
     {
-        index++;
+       
         if (dialogText.text == lines3[index])
         {
-           
+            
             NextLine3();
         }
         else

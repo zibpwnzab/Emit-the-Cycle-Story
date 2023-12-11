@@ -4788,6 +4788,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 768655449}
   - {fileID: 1538258737}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5726,7 +5727,6 @@ Transform:
   m_Children:
   - {fileID: 1752009702}
   - {fileID: 1339992057}
-  - {fileID: 768655449}
   - {fileID: 1187869984}
   - {fileID: 649043940}
   - {fileID: 1429288261}
@@ -6471,6 +6471,10 @@ PrefabInstance:
       propertyPath: signalObject
       value: 
       objectReference: {fileID: 889838008}
+    - target: {fileID: 3970411308302101316, guid: 5cfb16874230c65499430973351cbe1b, type: 3}
+      propertyPath: signalSource
+      value: 
+      objectReference: {fileID: 399085487}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6482,7 +6486,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1538258737}
+    m_TransformParent: {fileID: 1172501152}
     m_Modifications:
     - target: {fileID: 1157765589055540, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6490,7 +6494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Bank_Door_01
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6559,8 +6563,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1710700818}
+    - targetCorrespondingSourceObject: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1710700825}
   m_SourcePrefab: {fileID: 100100000, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
+--- !u!1 &1710700817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
+  m_PrefabInstance: {fileID: 1705170265}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1710700818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710700817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994af4a25bad8f245bf5326ff89cb942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signalSource: {fileID: 0}
+  SceneNumber: 1
+  needsSignal: 1
+--- !u!65 &1710700825
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710700817}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.6386151, y: 2.999999, z: 1.911927}
+  m_Center: {x: -3.6174772, y: 1.4999995, z: -0.053670265}
 --- !u!1001 &1714283632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6873,6 +6924,22 @@ PrefabInstance:
     - target: {fileID: 4877242044396791524, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096187331321207553, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
+      propertyPath: spiralSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096187331321207553, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
+      propertyPath: spiralRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096187331321207553, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
+      propertyPath: spiralStrength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096187331321207553, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
+      propertyPath: LengthPerSegment
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8183,6 +8250,10 @@ PrefabInstance:
       propertyPath: signalObject
       value: 
       objectReference: {fileID: 2137279428}
+    - target: {fileID: 3970411308302101316, guid: 5cfb16874230c65499430973351cbe1b, type: 3}
+      propertyPath: signalSource
+      value: 
+      objectReference: {fileID: 2137279429}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

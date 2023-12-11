@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserReceiver : MonoBehaviour, ISignal
+public class LaserReceiver : ISignal
 {
 
     public bool powered;
     Queue<bool> prevStates = new Queue<bool>();
     private int queueCapacity = 10;
-    public bool Signal()
+    override public bool Signal()
     {
         foreach (bool b in prevStates)
             if (b) return true;

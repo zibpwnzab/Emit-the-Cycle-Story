@@ -5,13 +5,9 @@ using UnityEngine;
 
 public class Bulb : MonoBehaviour
 {
-    [SerializeField] GameObject signalObject;
+    [SerializeField] ISignal signalSource;
     [SerializeField] Light lightSource;
-    ISignal signal;
-    void Start()
-    {
-        signal = signalObject.GetComponent<ISignal>();
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -21,6 +17,6 @@ public class Bulb : MonoBehaviour
 
     void Activate()
     {
-        lightSource.gameObject.SetActive(signal.Signal());
+        lightSource.gameObject.SetActive(signalSource.Signal());
     }
 }

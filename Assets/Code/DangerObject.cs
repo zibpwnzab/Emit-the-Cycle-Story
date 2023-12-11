@@ -12,11 +12,11 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        player.Lifes -= 1;
+        //player.Lifes -= 1;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log(player.Lifes);
+        //Debug.Log(player.Lifes);
     }
 }

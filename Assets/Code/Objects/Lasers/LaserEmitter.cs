@@ -11,13 +11,12 @@ public class LaserEmitter : MonoBehaviour
     [SerializeField] int maxBounces;
     List<Vector3> laserPositions;
     [SerializeField] int mirrorLayer;
-    [SerializeField] GameObject signalSource;
-    ISignal signal;
+    [SerializeField] int positionsPerSegment;
+    [SerializeField] bool NeedSignal;
+    [SerializeField] ISignal signalSource;
     void Start()
     {
-        _lineRenderer = GetComponent<LineRenderer>();
-        if (signalSource != null)
-            signal = signalSource.GetComponent<ISignal>();
+
     }
 
     // Update is called once per frame
@@ -25,9 +24,9 @@ public class LaserEmitter : MonoBehaviour
     {
         laserPositions = new();
         laserPositions.Add(laserStart.position);
-        if (signal != null)
+        if (NeedSignal)
         {
-            if (signal.Signal())
+            if (signalSource.Signal())
                 EmitLaser(laserStart.position, laserDirection.forward, 0);
         }
         else
@@ -56,8 +55,7 @@ public class LaserEmitter : MonoBehaviour
             EmitLaser(hit.point, out_ray, currentCount + 1);
         }
 
-        LaserReceiver laserReceiver;
-        if (hit.collider.gameObject.TryGetComponent(out laserReceiver))
+        if (hit.collider.gameObject.TryGetComponent(out LaserReceiver laserReceiver))
         {
             laserReceiver.Power(true);
         }
@@ -70,10 +68,19 @@ public class LaserEmitter : MonoBehaviour
 
     void DrawLaser()
     {
-        _lineRenderer.positionCount = laserPositions.Count;
-        for (int i = 0; i < laserPositions.Count; i++)
+        var previousPos = laserPositions[0];
+
+        _lineRenderer.positionCount = (laserPositions.Count - 1) * positionsPerSegment + 1;
+
+        for (int i = 0; i < laserPositions.Count - 1; i++)
         {
-            _lineRenderer.SetPosition(i, laserPositions[i]);
+            var dir = laserPositions[i + 1] - laserPositions[i];
+            for (int j = 0; j < positionsPerSegment; j++)
+            {
+                var pos = laserPositions[i] + dir * ((float)j/(float)positionsPerSegment);
+                _lineRenderer.SetPosition(i * positionsPerSegment + j, pos);
+            }
         }
+        _lineRenderer.SetPosition((laserPositions.Count - 1) * positionsPerSegment, laserPositions[laserPositions.Count-1]);
     }
 }
