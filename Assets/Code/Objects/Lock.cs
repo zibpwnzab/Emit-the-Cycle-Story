@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lock : MonoBehaviour, IInteractable, ISignal
+public class Lock : ISignal
 {
     [SerializeField] LockUI lockUI;
     public bool Interact(GameObject gameObject, Animator animator)
@@ -25,7 +25,7 @@ public class Lock : MonoBehaviour, IInteractable, ISignal
         return lockUI.SetPassword(password);
     }
 
-    public bool Signal()
+    override public bool Signal()
     {
         return lockUI.IsCorrect();
     }

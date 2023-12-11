@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogicAnd : MonoBehaviour, ISignal
+public class LogicAnd : ISignal
 {
     [SerializeField] GateType gate;
     [SerializeField] List<GameObject> sources;
-    public bool Signal()
+    override public bool Signal()
     {
         switch (gate){
             case GateType.AND:

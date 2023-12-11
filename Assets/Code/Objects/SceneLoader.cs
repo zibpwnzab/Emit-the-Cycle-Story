@@ -4,27 +4,18 @@ using UnityEngine;
 
 public class SceneLoader : MonoBehaviour, IInteractable
 {
-    [SerializeField] GameObject signalObject;
-    [SerializeField] Light lightSource;
+    [SerializeField] ISignal signalSource;
     [SerializeField] int SceneNumber;
-    ISignal signal;
     [SerializeField] bool needsSignal;
-    void Start()
-    {
-        if (needsSignal)
-        signal = signalObject.GetComponent<ISignal>();
-    }
+    
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public bool Interact(GameObject gameObject, Animator animator)
     {
         if (needsSignal)
         {
-            if (!signal.Signal()) return false;
+            if (!signalSource.Signal()) return false;
         }
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(SceneNumber);
