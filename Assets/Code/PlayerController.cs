@@ -177,6 +177,11 @@ public class PlayerController : MonoBehaviour
             interactButton.onClick.AddListener(delegate { interactables[0].Interact(gameObject, animator); });
         }
     }
+
+    public void Die()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
 }
 
 public enum PlayerState
