@@ -739,8 +739,12 @@ MonoBehaviour:
   laserStart: {fileID: 3679098799335448727}
   maxBounces: 4
   mirrorLayer: 15
+  collideLayer:
+    serializedVersion: 2
+    m_Bits: 65517
   positionsPerSegment: 2
-  signalSource: {fileID: 6836883759212860739}
+  NeedSignal: 0
+  signalSource: {fileID: 938280637080535388}
 --- !u!114 &938280637080535388
 MonoBehaviour:
   m_ObjectHideFlags: 0

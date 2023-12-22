@@ -320,6 +320,11 @@ MonoBehaviour:
   laserStart: {fileID: 2669459725428454526}
   maxBounces: 3
   mirrorLayer: 15
+  collideLayer:
+    serializedVersion: 2
+    m_Bits: 65517
+  positionsPerSegment: 1
+  NeedSignal: 0
   signalSource: {fileID: 0}
 --- !u!1 &5059300210344523541
 GameObject:

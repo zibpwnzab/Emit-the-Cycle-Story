@@ -11,6 +11,7 @@ public class LaserEmitter : MonoBehaviour
     [SerializeField] int maxBounces;
     List<Vector3> laserPositions;
     [SerializeField] int mirrorLayer;
+    [SerializeField] LayerMask collideLayer;
     [SerializeField] int positionsPerSegment;
     [SerializeField] bool NeedSignal;
     [SerializeField] ISignal signalSource;
@@ -44,8 +45,12 @@ public class LaserEmitter : MonoBehaviour
         Ray ray;
         RaycastHit hit;
 
-        if (!Physics.Raycast(position, direction.normalized, out hit))
+        if (!Physics.Raycast(position, direction.normalized, out hit, float.MaxValue, collideLayer))
+        {
+            laserPositions.Add(position + direction * 100);
             return;
+        }
+
         laserPositions.Add(hit.point);
         if (hit.collider.gameObject.layer == mirrorLayer)
         {
@@ -54,6 +59,8 @@ public class LaserEmitter : MonoBehaviour
             Debug.Log("Mirror Hit");
             EmitLaser(hit.point, out_ray, currentCount + 1);
         }
+        
+
 
         if (hit.collider.gameObject.TryGetComponent(out LaserReceiver laserReceiver))
         {
