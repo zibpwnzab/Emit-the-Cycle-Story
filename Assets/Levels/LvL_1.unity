@@ -1469,7 +1469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a98c9745dfd144daa2817da4518c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPressed: 0
 --- !u!114 &360201595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2056,7 +2055,7 @@ GameObject:
   - component: {fileID: 487465760}
   - component: {fileID: 487465759}
   - component: {fileID: 487465758}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2238,7 +2237,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -2.004126e-36, z: 6.87e-43, w: -9.393749e-38}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -3702,7 +3701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 703115618}
-  joystick: {fileID: 0}
+  joystick: {fileID: 1463931407}
   animator: {fileID: 703115619}
   moveSpeed: 5
   movingObjectModifier: 0
@@ -4025,7 +4024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &853023963
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4063,9 +4062,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e46f8dba591686a4e85f678072ae36f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lines1: []
-  lines2: []
-  lines3: []
+  lines1:
+  - fsdf
+  lines2:
+  - sfdfs
+  lines3:
+  - sfsdfs
   speedText: 0.06
   dialogText: {fileID: 2134815622}
   buttonOne: {fileID: 1855950976}
@@ -4630,7 +4632,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a50474c6a547345b7440b2c27111d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPressed: 0
 --- !u!114 &937105127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9560,7 +9561,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 2.3509887e-38, z: 33555456, w: -3.32307e+35}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
