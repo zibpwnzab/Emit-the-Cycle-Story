@@ -16,7 +16,7 @@ public class LaserEmitter : MonoBehaviour
     [SerializeField] ISignal signalSource;
     void Start()
     {
-
+        _lineRenderer = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
