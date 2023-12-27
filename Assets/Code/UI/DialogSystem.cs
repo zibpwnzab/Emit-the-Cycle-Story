@@ -11,7 +11,7 @@ public class DialogSystem : MonoBehaviour
     public string[] lines3;
     public float speedText;
     public Text dialogText;
-    private int index = 0;
+    private int index;
     public Button buttonOne;
     public Button buttonTwo;
     public Button buttonThree;
@@ -29,25 +29,25 @@ public class DialogSystem : MonoBehaviour
 
     private void TaskOnClickOne()
     {
-        index++;
+        
         skipText();
         count++;
     }
     private void TaskOnClickTwo()
     {
-        index++;
+        
         skipText2();
     }
     private void TaskOnClickThree()
     {
-        index++;
+        
         skipText3();
         count--;
     }
 
     void StartDialog()
     {
-        //index = 0;
+        index = 0;
         StartCoroutine(TypeLine());
     }
 
@@ -61,7 +61,7 @@ public class DialogSystem : MonoBehaviour
 
     public void skipText()
     {
-        
+        index++;
         if (dialogText.text == lines1[index])
         {
             
@@ -76,7 +76,7 @@ public class DialogSystem : MonoBehaviour
 
     private void NextLine()
     {
-        if (index < lines1.Length - 1)
+        if (index < lines1.Length)
         {
             
             dialogText.text = string.Empty;
@@ -99,10 +99,10 @@ public class DialogSystem : MonoBehaviour
 
     public void skipText2()
     {
-         
+         index++;
         if (dialogText.text == lines2[index])
         {
-           
+            
             NextLine2();
         }
         else
@@ -114,7 +114,7 @@ public class DialogSystem : MonoBehaviour
 
     private void NextLine2()
     {
-        if (index < lines2.Length - 1)
+        if (index < lines2.Length)
         {
            
             dialogText.text = string.Empty;
@@ -137,7 +137,7 @@ public class DialogSystem : MonoBehaviour
 
     public void skipText3()
     {
-       
+        index++;
         if (dialogText.text == lines3[index])
         {
             
@@ -152,7 +152,7 @@ public class DialogSystem : MonoBehaviour
 
     private void NextLine3()
     {
-        if (index < lines3.Length - 1)
+        if (index < lines3.Length)
         {
             
             dialogText.text = string.Empty;
