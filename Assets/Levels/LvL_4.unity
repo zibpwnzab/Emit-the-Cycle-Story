@@ -5709,18 +5709,6 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.y
       value: 0.9182755
       objectReference: {fileID: 0}
-    - target: {fileID: 4844121382618032141, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
-      propertyPath: joystick
-      value: 
-      objectReference: {fileID: 289427632}
-    - target: {fileID: 4844121382618032141, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
-      propertyPath: rigidbody
-      value: 
-      objectReference: {fileID: 722094112}
-    - target: {fileID: 4844121382618032141, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
-      propertyPath: interactButton
-      value: 
-      objectReference: {fileID: 2008637986}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

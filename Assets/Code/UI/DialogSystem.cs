@@ -1,127 +1,94 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
-using static System.Collections.Specialized.BitVector32;
+
 
 public class DialogSystem : MonoBehaviour
 {
+    public string[] lines1;
+    public string[] lines2;
+    public string[] lines3;
     public float speedText;
     public Text dialogText;
-    private int index = 0;
-    private int section = 0;
+    private int index;
     public Button buttonOne;
     public Button buttonTwo;
     public Button buttonThree;
     public int count = 0;
-    [SerializeField] private DialogueTree text;
-    bool skipLineTriggered;
-    [SerializeField] Button[] answerObjects;
-    [SerializeField] GameObject answerBox;
-    [SerializeField] GameObject dialogueBox;
-    bool answerTriggered;
-    int answerIndex;
 
     private void Start()
     {
         dialogText.text = string.Empty;
-        
+        StartDialog();
         buttonOne.onClick.AddListener(TaskOnClickOne);
+        buttonTwo.onClick.AddListener(TaskOnClickTwo);
+        buttonThree.onClick.AddListener(TaskOnClickThree);
+
     }
 
     private void TaskOnClickOne()
     {
-        StartCoroutine(TypeLine());
+        
+        skipText();
         count++;
     }
-
     private void TaskOnClickTwo()
     {
-
-        //skipText2();
+        
+        skipText2();
     }
     private void TaskOnClickThree()
     {
-
-        //skipText3();
+        
+        skipText3();
         count--;
     }
 
     void StartDialog()
     {
+        index = 0;
         StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
     {
-        foreach (char c in text.sections[section].dialogue[index])
-        {
-            dialogText.text += c;
+        foreach (char c in lines1[index].ToCharArray()) {
+        dialogText.text += c;
             yield return new WaitForSeconds(speedText);
         }
-        index++;
-        
     }
 
     public void skipText()
     {
         index++;
-        if (dialogText.text.Length == text.sections[section].dialogue.Length)
+        if (dialogText.text == lines1[index])
         {
-
+            
             NextLine();
         }
-        else
+        else 
         {
-            StopAllCoroutines();
-            dialogueBox.SetActive(false);
-            dialogText.text = text.sections[section].branchPoint.question;
-            ShowAnswers(text.sections[section].branchPoint);
-            dialogText.text = text.sections[section].dialogue[index];
+        StopAllCoroutines();
+            dialogText.text = lines1[index]; 
         }
     }
 
     private void NextLine()
     {
-        
-        if (index < text.sections[section].dialogue[index].Length)
+        if (index < lines1.Length)
         {
-
+            
             dialogText.text = string.Empty;
             StartCoroutine(TypeLine());
         }
-        else
+        else 
         {
             gameObject.SetActive(false);
         }
     }
 
-    void ShowAnswers(BranchPoint branchPoint)
-    {
-        
-        answerBox.SetActive(true);
-        for (int i = 0; i < branchPoint.answers.Length; i++)
-        {
-            if (i < branchPoint.answers.Length)
-            {
-                answerObjects[i].GetComponentInChildren<TextMeshProUGUI>().text = branchPoint.answers[i].answerLabel;
-                answerObjects[i].gameObject.SetActive(true);
-            }
-            else
-            {
-                answerBox.SetActive(false);
-            }
-        }
-    }
-    public void AnswerQuestion(int answer)
-    {
-        answerIndex = answer;
-        answerTriggered = true;
-    }
-
-    /*IEnumerator TypeLine2()
+    IEnumerator TypeLine2()
     {
         foreach (char c in lines2[index].ToCharArray())
         {
@@ -132,10 +99,10 @@ public class DialogSystem : MonoBehaviour
 
     public void skipText2()
     {
-        index++;
+         index++;
         if (dialogText.text == lines2[index])
         {
-
+            
             NextLine2();
         }
         else
@@ -149,7 +116,7 @@ public class DialogSystem : MonoBehaviour
     {
         if (index < lines2.Length)
         {
-
+           
             dialogText.text = string.Empty;
             StartCoroutine(TypeLine2());
         }
@@ -173,7 +140,7 @@ public class DialogSystem : MonoBehaviour
         index++;
         if (dialogText.text == lines3[index])
         {
-
+            
             NextLine3();
         }
         else
@@ -187,7 +154,7 @@ public class DialogSystem : MonoBehaviour
     {
         if (index < lines3.Length)
         {
-
+            
             dialogText.text = string.Empty;
             StartCoroutine(TypeLine3());
         }
@@ -195,6 +162,5 @@ public class DialogSystem : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-    }*/
-
+    }
 }
