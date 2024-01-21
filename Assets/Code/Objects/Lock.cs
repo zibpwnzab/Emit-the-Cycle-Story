@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lock : ISignal, IInteractable
+public class Lock : ISignal
 {
     [SerializeField] LockUI lockUI;
     public bool Interact(GameObject gameObject, Animator animator)

@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
 
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
-            transform.rotation = Quaternion.LookRotation(rigidbody.velocity - Vector3.up * rigidbody.velocity.y);
+            transform.rotation = Quaternion.LookRotation(rigidbody.velocity);
             animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
         }
         else
