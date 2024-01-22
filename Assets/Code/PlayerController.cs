@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float rotateObjectSpeed;
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
-    public int Lifes = 5;
+    public int Lifes = 3;
 
     private JumpButton jumpButton;
     private bool isJumping = false;
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        //Jump();
+        Jump();
         //Interaction();
         rigidbody.angularVelocity = Vector3.zero;
 
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
 
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
-            transform.rotation = Quaternion.LookRotation(rigidbody.velocity);
+            transform.rotation = Quaternion.LookRotation(rigidbody.velocity - Vector3.up * rigidbody.velocity.y);
             animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
         }
         else
