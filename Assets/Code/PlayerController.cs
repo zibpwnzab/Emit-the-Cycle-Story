@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float rotateObjectSpeed;
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
+    [SerializeField] private Camera camera;
     public int Lifes = 3;
 
     private JumpButton jumpButton;
