@@ -16,20 +16,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float rotateObjectSpeed;
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
-    [SerializeField] private Camera camera;
     public int Lifes = 3;
-
     private JumpButton jumpButton;
     private bool isJumping = false;
     private Interaction_Object interactionAnim;
     private List<IInteractable> interactables;
     private GameObject lastInteracteble;
-
     public PlayerState playerState = PlayerState.Walking;
+
 
 
     void Start()
     {
+        rigidbody = GetComponent<Rigidbody>();
         interactables = new();
         jumpButton = GameObject.FindObjectOfType<JumpButton>();
         //interactionAnim = GameObject.Find("SM_Wep_Crowbar_01").GetComponent<Interaction_Object>();
@@ -61,6 +60,41 @@ public class PlayerController : MonoBehaviour
                 break;
 
         }
+
+        void Move()
+        {
+            Vector3 forward = Camera.main.transform.forward;
+            Vector3 right = Camera.main.transform.right;
+            Vector3 forwardDir = new Vector3(forward.x, 0, forward.z).normalized;
+            Vector3 rightDir = new Vector3(right.x, 0, right.z).normalized;
+
+            if (joystick.Vertical > 0)
+            {
+                rigidbody.AddForce(forwardDir * moveSpeed * Time.deltaTime,ForceMode.VelocityChange);
+            }
+
+            if (joystick.Horizontal < 0)
+            {
+                rigidbody.AddForce(rightDir * -moveSpeed * Time.deltaTime,ForceMode.VelocityChange);
+            }
+            if (joystick.Vertical < 0)
+            {
+                rigidbody.AddForce(forwardDir * -moveSpeed * Time.deltaTime,ForceMode.VelocityChange);
+            }
+
+            if (joystick.Horizontal > 0)
+            {
+                rigidbody.AddForce(rightDir * moveSpeed * Time.deltaTime,ForceMode.VelocityChange);
+            }
+
+            if (joystick.Horizontal != 0 || joystick.Vertical != 0)
+            {
+                transform.rotation = Quaternion.LookRotation(rigidbody.velocity - Vector3.up * rigidbody.velocity.y);
+                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
+            }
+            else
+                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
+        }
     }
 
     void RotateObject()
@@ -76,8 +110,9 @@ public class PlayerController : MonoBehaviour
         }
     }
     void Move()
-    {
-        rigidbody.velocity = new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed);
+    {     
+          rigidbody.AddForce(joystick.Horizontal * moveSpeed, 0f, joystick.Vertical * moveSpeed);
+        
 
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {

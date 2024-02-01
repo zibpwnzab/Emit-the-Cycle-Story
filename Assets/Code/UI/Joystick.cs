@@ -17,7 +17,7 @@ public class Joystick_Controller : MonoBehaviour
 
     void Update()
     {
-        if (joystick.Horizontal > 0) ;
+        if (joystick.Horizontal > 0)
         {
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
