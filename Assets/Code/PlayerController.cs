@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
     public int Lifes = 3;
-    private JumpButton jumpButton;
+    [SerializeField] JumpButton jumpButton;
     private bool isJumping = false;
     private Interaction_Object interactionAnim;
     private List<IInteractable> interactables;

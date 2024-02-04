@@ -9445,8 +9445,9 @@ MonoBehaviour:
   movingObjectModifier: 0
   rotateObjectSpeed: 0
   jumpforce: 5
-  interactButton: {fileID: 0}
+  interactButton: {fileID: 1211264031}
   Lifes: 3
+  jumpButton: {fileID: 0}
   playerState: 0
 --- !u!1001 &1978773321
 PrefabInstance:

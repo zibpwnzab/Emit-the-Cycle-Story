@@ -6561,6 +6561,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1414297681}
     - target: {fileID: 4844121382618032141, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 248459058}
+    - target: {fileID: 4844121382618032141, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 1354219902}
