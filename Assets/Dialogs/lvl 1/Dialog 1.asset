@@ -16,16 +16,16 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 625
-    y: 242
+    x: 657
+    y: 248
     width: 170
     height: 115
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: light
+    characterName: 911
     text: Do you have any source of light near you? Phone, flashlight, matches?
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 21300000, guid: e673adce559c85b4b892e892fe7fd1e9, type: 3}
   parentNode: {fileID: 1331730709313236382}
   childNode: {fileID: 3120032963243796129}
 --- !u!114 &-1767720787360064889
@@ -44,16 +44,16 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 439
-    y: 95
+    x: 456
+    y: 106
     width: 170
     height: 115
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: 
+    characterName: 911
     text: Can you describe your surroungs?
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 21300000, guid: e673adce559c85b4b892e892fe7fd1e9, type: 3}
   parentNode: {fileID: 1331730709313236382}
   childNode: {fileID: 1331730709313236382}
 --- !u!114 &-1448582281501583994
@@ -72,7 +72,7 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 240
+    x: 257
     y: 231
     width: 170
     height: 115
@@ -81,7 +81,7 @@ MonoBehaviour:
   sentence:
     characterName: 911
     text: yes, what's your emergency?
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 21300000, guid: e673adce559c85b4b892e892fe7fd1e9, type: 3}
   parentNode: {fileID: 4169396131992112463}
   childNode: {fileID: 1331730709313236382}
 --- !u!114 &11400000
@@ -123,10 +123,10 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 422
-    y: 219
+    x: 439
+    y: 230
     width: 190
-    height: 155
+    height: 115
   isDragging: 0
   isSelected: 0
   answers:
@@ -154,8 +154,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 827
-    y: 253
+    x: 838
+    y: 254
     width: 190
     height: 115
   isDragging: 0
@@ -181,16 +181,16 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1036
-    y: 253
+    x: 1054
+    y: 264
     width: 170
     height: 115
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: end
+    characterName: 911
     text: Try to use it
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 21300000, guid: e673adce559c85b4b892e892fe7fd1e9, type: 3}
   parentNode: {fileID: 3120032963243796129}
   childNode: {fileID: 0}
 --- !u!114 &4169396131992112463
@@ -209,16 +209,16 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 66
-    y: 223
+    x: 83
+    y: 233
     width: 170
     height: 115
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Intro
+    characterName: Emit
     text: Hello? Can you hear me?
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
   parentNode: {fileID: 0}
   childNode: {fileID: -1448582281501583994}
 --- !u!114 &8765121741257961374
@@ -237,15 +237,15 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 484
-    y: 384
+    x: 502
+    y: 395
     width: 170
     height: 115
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: end
+    characterName: 911
     text: goodbye
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 21300000, guid: e673adce559c85b4b892e892fe7fd1e9, type: 3}
   parentNode: {fileID: 1331730709313236382}
   childNode: {fileID: 0}

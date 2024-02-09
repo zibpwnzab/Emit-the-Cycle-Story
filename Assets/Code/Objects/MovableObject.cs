@@ -5,14 +5,17 @@ using UnityEngine;
 public class MovableObject : MonoBehaviour, IInteractable
 {
     [SerializeField] List<Transform> grabPoints;
+    [SerializeField] Collider ColliderToTurnOff;
     private bool _connected;
+
 
     public bool Interact(GameObject otherObject, Animator animator)
     {
-
+        ColliderToTurnOff.enabled = _connected;
         var controller = otherObject.GetComponent<PlayerController>();
         if (_connected)
         {
+             
             transform.parent = null;
             controller.playerState = PlayerState.Walking;
         }
