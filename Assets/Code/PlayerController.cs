@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private GameObject lastInteracteble;
     public PlayerState playerState = PlayerState.Walking;
 
+    public static string PLAYER_CARMA_KEY = "PLAYER_CARMA_KEY";
 
 
     void Start()

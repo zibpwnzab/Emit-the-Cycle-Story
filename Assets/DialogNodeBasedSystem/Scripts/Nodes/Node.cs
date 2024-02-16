@@ -13,6 +13,8 @@ namespace cherrydev
         [HideInInspector] public bool isDragging;
         [HideInInspector] public bool isSelected;
 
+        public int answerCarmaValue = 0;
+
 #if UNITY_EDITOR
 
         /// <summary>

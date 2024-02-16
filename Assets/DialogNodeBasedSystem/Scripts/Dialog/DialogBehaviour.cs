@@ -17,7 +17,7 @@ namespace cherrydev
         [SerializeField] private UnityEvent onDialogFinished;
 
         private DialogNodeGraph currentNodeGraph;
-        private Node currentNode;
+        public Node currentNode;
 
         private int maxAmountOfAnswerButtons;
 
@@ -277,6 +277,7 @@ namespace cherrydev
         /// <returns></returns>
         private bool CheckNextSentenceKeyCodes()
         {
+            //if (Input.GetTouch(0).type == TouchType.Direct) return true;
             for (int i = 0; i < nextSentenceKeyCodes.Count; i++)
             { 
                 if (Input.GetKeyDown(nextSentenceKeyCodes[i]))
