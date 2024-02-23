@@ -17,6 +17,11 @@ public class TouchButton : ISignal, IInteractable
         return power;
     }
 
+    public bool StopInteraction(GameObject gameObject, Animator animator)
+    {
+        return false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

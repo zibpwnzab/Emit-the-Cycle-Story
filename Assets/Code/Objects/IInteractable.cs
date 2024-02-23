@@ -5,4 +5,5 @@ using UnityEngine;
 public interface IInteractable
 {
     public bool Interact(GameObject gameObject, Animator animator);
+    public bool StopInteraction(GameObject gameObject, Animator animator);
 }

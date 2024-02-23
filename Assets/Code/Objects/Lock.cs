@@ -29,4 +29,10 @@ public class Lock : ISignal, IInteractable
     {
         return lockUI.IsCorrect();
     }
+
+    public bool StopInteraction(GameObject gameObject, Animator animator)
+    {
+        lockUI.HidePanel();
+        return false;
+    }
 }

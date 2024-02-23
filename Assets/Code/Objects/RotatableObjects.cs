@@ -36,4 +36,11 @@ public class RotatableObjects : MonoBehaviour, IInteractable
 
         return true;
     }
+
+    public bool StopInteraction(GameObject gameObject, Animator animator)
+    {
+        if (_connected)
+            return Interact(gameObject, animator);
+        else return true;
+    }
 }

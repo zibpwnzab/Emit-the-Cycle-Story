@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float rotateObjectSpeed;
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
+
     public int Lifes = 3;
     [SerializeField] JumpButton jumpButton;
     private bool isJumping = false;
@@ -45,13 +46,35 @@ public class PlayerController : MonoBehaviour
         rigidbody.angularVelocity = Vector3.zero;
 
     }
+    public void ForceKick(Vector3 direction, float stunTime)
+    {
+        
+        if (lastInteracteble) if (lastInteracteble.TryGetComponent(out IInteractable interactable))
+        {
+            interactable.StopInteraction(gameObject, animator);
+        }
+        
+        StartCoroutine(StunRecover(stunTime));
+        
+        rigidbody.velocity = direction;
+    }
+    public void ForceKick(Vector3 direction)
+    {
+        ForceKick(direction, 1);
+    }
+    IEnumerator StunRecover(float stun)
+    {
+        playerState = PlayerState.Stunned;
+        yield return new WaitForSeconds(stun);
+        playerState = PlayerState.Walking;
+    }
 
     private void FixedUpdate()
     {
         switch (playerState)
         {
             case PlayerState.Walking:
-                Move();
+                MoveOld();
                 break;
             case PlayerState.MovingObject:
                 MoveWithObject();
@@ -61,7 +84,7 @@ public class PlayerController : MonoBehaviour
                 break;
 
         }
-
+        
         void Move()
         {
             Vector3 forward = Camera.main.transform.forward;
@@ -69,7 +92,7 @@ public class PlayerController : MonoBehaviour
             Vector3 forwardDir = new Vector3(forward.x, 0, forward.z).normalized;
             Vector3 rightDir = new Vector3(right.x, 0, right.z).normalized;
 
-            if (joystick.Vertical > 0)
+            if (joystick.Vertical > 0)  
             {
                 rigidbody.AddForce(forwardDir * moveSpeed * Time.deltaTime, ForceMode.Force);
             }
@@ -110,18 +133,19 @@ public class PlayerController : MonoBehaviour
 
         }
     }
-    void Move()
+    void MoveOld()
     {     
-          rigidbody.AddForce(joystick.Horizontal * moveSpeed, 0f, joystick.Vertical * moveSpeed);
+          rigidbody.velocity = new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed);
         
 
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
             transform.rotation = Quaternion.LookRotation(rigidbody.velocity - Vector3.up * rigidbody.velocity.y);
+            if (!isJumping)
             animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
         }
         else
-            animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
+            if (!isJumping) animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
     }
 
     void MoveWithObject()
@@ -138,6 +162,17 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        {
+            animator.Play("Jump");
+            animator.SetTrigger("Jumping");
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
+
+            isJumping = true;
+        }
+        jumpButton.isPressed = false;
+#endif
         if (jumpButton.isPressed && !isJumping)
         {
             animator.SetTrigger("Jumping");
@@ -227,4 +262,5 @@ public enum PlayerState
     Dead,
     MovingObject,
     RotatingObject,
+    Stunned,
 }

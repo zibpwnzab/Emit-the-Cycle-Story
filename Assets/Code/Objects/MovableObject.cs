@@ -8,10 +8,16 @@ public class MovableObject : MonoBehaviour, IInteractable
     [SerializeField] Collider ColliderToTurnOff;
     private bool _connected;
 
+    public bool StopInteraction(GameObject gameObject, Animator animator)
+    {
+        if (_connected)
+            return Interact(gameObject, animator);
+        else return true;
+    }
 
     public bool Interact(GameObject otherObject, Animator animator)
     {
-        ColliderToTurnOff.enabled = _connected;
+        if (ColliderToTurnOff)ColliderToTurnOff.enabled = _connected;
         var controller = otherObject.GetComponent<PlayerController>();
         if (_connected)
         {

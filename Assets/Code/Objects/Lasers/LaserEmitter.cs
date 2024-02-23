@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LaserEmitter : MonoBehaviour
 {
+    [SerializeField] float LaserKickForce;
+    [SerializeField] float LaserStunTime;
+
     LineRenderer _lineRenderer;
     [SerializeField] Transform laserDirection;
     [SerializeField] Transform laserStart;
@@ -65,6 +68,18 @@ public class LaserEmitter : MonoBehaviour
         if (hit.collider.gameObject.TryGetComponent(out LaserReceiver laserReceiver))
         {
             laserReceiver.Power(true);
+        }
+
+        if (hit.collider.gameObject.TryGetComponent(out PlayerController player))
+        {
+            var dir = player.transform.position - hit.point;
+            dir.y = 0;
+            dir = dir.normalized * LaserKickForce;
+            if (player.playerState == PlayerState.Stunned) return;
+            player.ForceKick(dir, LaserStunTime);
+            player.Lifes--;
+            if (player.Lifes <= 0)
+                player.Die();
         }
     }
 
