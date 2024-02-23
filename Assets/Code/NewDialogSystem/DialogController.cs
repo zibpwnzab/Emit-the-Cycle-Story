@@ -9,6 +9,7 @@ public class DialogController : MonoBehaviour
 
     [SerializeField] DialogBehaviour dialogBehaviour;
     [SerializeField] DialogNodeGraph graph;
+    [SerializeField] Vector2 carmaBorders;
     [SerializeField] bool needSignal;
     [SerializeField] ISignal signal;
     [SerializeField] TMPro.TMP_Text carmaText;
@@ -25,6 +26,8 @@ public class DialogController : MonoBehaviour
     {
         if (carmaText) carmaText.text = $"CURRENT CARMA: {PlayerPrefs.GetInt(PlayerController.PLAYER_CARMA_KEY)}";
         if (_dialogDone) return;
+        var carma = PlayerPrefs.GetInt(PlayerController.PLAYER_CARMA_KEY);
+        if (!(carmaBorders.x <= carma && carma <= carmaBorders.y)) return;
         if (needSignal)
         {
             if (signal.Signal())
