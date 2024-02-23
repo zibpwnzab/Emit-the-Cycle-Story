@@ -71,21 +71,21 @@ public class PlayerController : MonoBehaviour
 
             if (joystick.Vertical > 0)
             {
-                rigidbody.AddForce(forwardDir * moveSpeed * Time.deltaTime,ForceMode.VelocityChange);
+                rigidbody.AddForce(forwardDir * moveSpeed * Time.deltaTime, ForceMode.Force);
             }
 
             if (joystick.Horizontal < 0)
             {
-                rigidbody.AddForce(rightDir * -moveSpeed * Time.deltaTime,ForceMode.VelocityChange);
+                rigidbody.AddForce(rightDir * -moveSpeed * Time.deltaTime, ForceMode.Force);
             }
             if (joystick.Vertical < 0)
             {
-                rigidbody.AddForce(forwardDir * -moveSpeed * Time.deltaTime,ForceMode.VelocityChange);
+                rigidbody.AddForce(forwardDir * -moveSpeed * Time.deltaTime, ForceMode.Force);
             }
 
             if (joystick.Horizontal > 0)
             {
-                rigidbody.AddForce(rightDir * moveSpeed * Time.deltaTime,ForceMode.VelocityChange);
+                rigidbody.AddForce(rightDir * moveSpeed * Time.deltaTime,ForceMode.Force);
             }
 
             if (joystick.Horizontal != 0 || joystick.Vertical != 0)

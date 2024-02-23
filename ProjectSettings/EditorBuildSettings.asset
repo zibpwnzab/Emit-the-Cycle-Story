@@ -14,4 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/LvL_2.unity
     guid: 18fd391d84037c8428dc1734b85476f4
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 5cf7671e24e64b542b43bddda7d38a68, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: a7642575f6aae814ba84996644306549, type: 2}

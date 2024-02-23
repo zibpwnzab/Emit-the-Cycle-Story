@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: New Table Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: New Table
+  m_TableCollectionNameGuidString: fbae2da662e92574d9ae64d0516a7351
+  m_Entries:
+  - m_Id: 694989864960
+    m_Key: Level1_Dialog1_Phrase1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695031808000
+    m_Key: Level1_Dialog1_Phrase2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002304
+    m_Key: Level1_Dialog1_Phrase3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002305
+    m_Key: Level1_Dialog1_Phrase4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002306
+    m_Key: Level1_Dialog1_Phrase5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002307
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002308
+    m_Key: UI_Element_Choice1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002309
+    m_Key: UI_Element_Choice2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002310
+    m_Key: New Entry 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002311
+    m_Key: Level1_Dialog2_Phrase1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002312
+    m_Key: Level1_Dialog2_Phrase2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002313
+    m_Key: Level1_Dialog2_Phrase3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002314
+    m_Key: Level1_Dialog2_Phrase4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002315
+    m_Key: New Entry 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002316
+    m_Key: Level1_Dialog3_Phrase1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002317
+    m_Key: Level1_Dialog3_Phrase2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002318
+    m_Key: Level1_Dialog3_Phrase3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002319
+    m_Key: Level1_Dialog3_Phrase4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002320
+    m_Key: New Entry 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002321
+    m_Key: Level1_Dialog4_Phrase1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002322
+    m_Key: Level1_Dialog4_Phrase2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002323
+    m_Key: Level1_Dialog4_Phrase3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002324
+    m_Key: Level1_Dialog4_Phrase4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002325
+    m_Key: Level1_Dialog4_Phrase5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002326
+    m_Key: Level1_Dialog4_Phrase6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695036002327
+    m_Key: Level1_Dialog4_Phrase7
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 927315312789159960
+  references:
+    version: 2
+    RefIds:
+    - rid: 927315312789159960
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1708185715112

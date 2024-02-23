@@ -12,6 +12,7 @@ public class DialogController : MonoBehaviour
     [SerializeField] bool needSignal;
     [SerializeField] ISignal signal;
     [SerializeField] TMPro.TMP_Text carmaText;
+    [SerializeField] GameObject blackScreen;
     bool _dialogDone = false;
 
     void Start()
@@ -29,6 +30,7 @@ public class DialogController : MonoBehaviour
             if (signal.Signal())
             {
                 dialogBehaviour.StartDialog(graph);
+                blackScreen.SetActive(true);
                 _dialogDone = true;
             }
         }
@@ -36,12 +38,14 @@ public class DialogController : MonoBehaviour
         {
             _dialogDone = true;
             dialogBehaviour.StartDialog(graph);
+            blackScreen.SetActive(true);
         }
         
     }
 
     public void FinishDialog()
     {
+        blackScreen.SetActive(false);
         PlayerPrefs.SetInt(PlayerController.PLAYER_CARMA_KEY, PlayerPrefs.GetInt(PlayerController.PLAYER_CARMA_KEY) + dialogBehaviour.currentNode.answerCarmaValue);
     }
 
