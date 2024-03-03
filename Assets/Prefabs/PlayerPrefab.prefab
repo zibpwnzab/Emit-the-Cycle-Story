@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 95208774547029062}
   - component: {fileID: 6135288042736635346}
   - component: {fileID: 7786091904276199120}
-  - component: {fileID: 7810453045046048682}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -110,30 +109,6 @@ CapsuleCollider:
   m_Height: 1.815226
   m_Direction: 1
   m_Center: {x: -0.002574364, y: 0.91422015, z: 0.0047166273}
---- !u!114 &7810453045046048682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501362172476174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07e6d22bd1764f544918b93a66aaed9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidbody: {fileID: 6135288042736635346}
-  joystick: {fileID: 0}
-  animator: {fileID: 95208774547029062}
-  moveSpeed: 4
-  movingObjectModifier: 0.5
-  rotateObjectSpeed: 45
-  jumpforce: 5
-  interactButton: {fileID: 0}
-  Lifes: 3
-  jumpButton: {fileID: 0}
-  playerState: 0
-  VelocityText: {fileID: 0}
 --- !u!1 &235611392239149135
 GameObject:
   m_ObjectHideFlags: 0

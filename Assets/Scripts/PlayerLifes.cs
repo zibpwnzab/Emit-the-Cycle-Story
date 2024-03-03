@@ -8,9 +8,12 @@ public class PlayerLifes : MonoBehaviour
     [SerializeField] private GameObject heartImage1;
     [SerializeField] private GameObject heartImage2;
     [SerializeField] private GameObject heartImage3;
+    [SerializeField] private GameObject gameoverImage;
     void Start()
     {
-        player = GameObject.FindAnyObjectByType<PlayerController>();
+
+        player = GameObject.Find("PlayerPrefab").GetComponent<PlayerController>();
+
     }
 
     
@@ -25,5 +28,6 @@ public class PlayerLifes : MonoBehaviour
         { 
         heartImage2.SetActive(false);
         }
+
     }
 }

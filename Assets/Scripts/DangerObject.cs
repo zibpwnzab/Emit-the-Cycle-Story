@@ -6,7 +6,6 @@ public class NewBehaviourScript : MonoBehaviour
 {
     public bool triger;
     private PlayerController player;
-    [SerializeField] private GameObject gameoverImage;
     private void Start()
     {
       player = GameObject.Find("Player").GetComponent<PlayerController>();
@@ -15,15 +14,12 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void Update()
     {
-        if (player.Lifes == 0)
-        {
-            gameoverImage.SetActive(true);
-        }
+       
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        player.Lifes -= 1;
+        
         
     }
         
