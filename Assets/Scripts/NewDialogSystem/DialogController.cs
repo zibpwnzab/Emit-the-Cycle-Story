@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using cherrydev;
 
-public class DialogController : MonoBehaviour
+public class DialogController : ISignal
 {
     // Start is called before the first frame update
 
@@ -57,5 +57,10 @@ public class DialogController : MonoBehaviour
     {
         LevelManager.Instance.SetCarma(0);
         LevelManager.Instance.Save();
+    }
+
+    public override bool Signal()
+    {
+        return _dialogDone;
     }
 }
