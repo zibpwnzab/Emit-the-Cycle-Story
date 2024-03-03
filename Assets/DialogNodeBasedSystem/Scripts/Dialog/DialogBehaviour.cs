@@ -277,7 +277,8 @@ namespace cherrydev
         /// <returns></returns>
         private bool CheckNextSentenceKeyCodes()
         {
-            //if (Input.GetTouch(0).type == TouchType.Direct) return true;
+            if (Input.touchCount > 0)
+            if (Input.GetTouch(0).phase == TouchPhase.Ended) return true;
             for (int i = 0; i < nextSentenceKeyCodes.Count; i++)
             { 
                 if (Input.GetKeyDown(nextSentenceKeyCodes[i]))
