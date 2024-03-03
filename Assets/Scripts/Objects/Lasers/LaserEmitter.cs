@@ -77,6 +77,7 @@ public class LaserEmitter : MonoBehaviour
             dir = dir.normalized * LaserKickForce;
             if (player.playerState == PlayerState.Stunned) return;
             player.ForceKick(dir, LaserStunTime);
+            Debug.Log(dir);
             player.Lifes--;
             if (player.Lifes <= 0)
                 player.Die();

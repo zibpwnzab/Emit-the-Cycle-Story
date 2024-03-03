@@ -232,8 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e596d9f93ce734699139e8f73ee247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LaserKickForce: 0
-  LaserStunTime: 0
+  LaserKickForce: 8
+  LaserStunTime: 0.2
   laserDirection: {fileID: 2669459725428454526}
   laserStart: {fileID: 2669459725428454526}
   maxBounces: 3

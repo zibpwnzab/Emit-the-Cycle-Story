@@ -10,7 +10,7 @@ public class PlayerLifes : MonoBehaviour
     [SerializeField] private GameObject heartImage3;
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        player = GameObject.FindAnyObjectByType<PlayerController>();
     }
 
     

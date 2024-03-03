@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager2 : MonoBehaviour
 {
     [Header("Locks info")]
     [SerializeField] List<Lock> locks;

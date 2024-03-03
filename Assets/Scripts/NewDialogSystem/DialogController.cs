@@ -24,9 +24,10 @@ public class DialogController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (carmaText) carmaText.text = $"CURRENT CARMA: {PlayerPrefs.GetInt(PlayerController.PLAYER_CARMA_KEY)}";
+        var carma = LevelManager.Instance.GetCarma();
+        if (carmaText) carmaText.text = $"CURRENT CARMA: {carma}";
         if (_dialogDone) return;
-        var carma = PlayerPrefs.GetInt(PlayerController.PLAYER_CARMA_KEY);
+        
         if (!(carmaBorders.x <= carma && carma <= carmaBorders.y)) return;
         if (needSignal)
         {
@@ -49,11 +50,12 @@ public class DialogController : MonoBehaviour
     public void FinishDialog()
     {
         blackScreen.SetActive(false);
-        PlayerPrefs.SetInt(PlayerController.PLAYER_CARMA_KEY, PlayerPrefs.GetInt(PlayerController.PLAYER_CARMA_KEY) + dialogBehaviour.currentNode.answerCarmaValue);
+        LevelManager.Instance.AddCarma(dialogBehaviour.currentNode.answerCarmaValue);
     }
 
     public void ResetDialogCarma()
     {
-        PlayerPrefs.SetInt(PlayerController.PLAYER_CARMA_KEY, 0);
+        LevelManager.Instance.SetCarma(0);
+        LevelManager.Instance.Save();
     }
 }

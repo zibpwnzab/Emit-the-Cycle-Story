@@ -26,21 +26,27 @@ public class PlayerController : MonoBehaviour
     public PlayerState playerState = PlayerState.Walking;
 
     public static string PLAYER_CARMA_KEY = "PLAYER_CARMA_KEY";
+    public static string NEXT_LEVEL_KEY = "NEXT_LEVEL_KEY";
+    public static string TOTAL_GAME_TIME = "TOTAL_GAME_TIME";
 
-
+#if UNITY_EDITOR
+    [SerializeField] private TMPro.TMP_Text VelocityText;
+#endif
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         interactables = new();
         jumpButton = GameObject.FindObjectOfType<JumpButton>();
         //interactionAnim = GameObject.Find("SM_Wep_Crowbar_01").GetComponent<Interaction_Object>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
 
     }
 
     void Update()
     {
-
+#if UNITY_EDITOR
+        VelocityText.text = rigidbody.velocity.ToString("F2");
+#endif
         Jump();
         //Interaction();
         rigidbody.angularVelocity = Vector3.zero;
@@ -53,10 +59,11 @@ public class PlayerController : MonoBehaviour
         {
             interactable.StopInteraction(gameObject, animator);
         }
-        
+
+        rigidbody.velocity = direction;
         StartCoroutine(StunRecover(stunTime));
         
-        rigidbody.velocity = direction;
+        
     }
     public void ForceKick(Vector3 direction)
     {
@@ -82,7 +89,8 @@ public class PlayerController : MonoBehaviour
             case PlayerState.RotatingObject:
                 RotateObject();
                 break;
-
+            case PlayerState.Stunned:
+                break;
         }
         
         void Move()
@@ -134,8 +142,10 @@ public class PlayerController : MonoBehaviour
         }
     }
     void MoveOld()
-    {     
-          rigidbody.velocity = new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed);
+    {
+        if (playerState == PlayerState.Stunned) return;
+
+         rigidbody.velocity = new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed);
         
 
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
