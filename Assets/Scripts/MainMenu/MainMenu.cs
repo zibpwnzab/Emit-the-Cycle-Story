@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject ContinueButton;
     [SerializeField] TMPro.TMP_Text ContinueButtonText;
+    [SerializeField] string FirstCutSceneName;
     int nextLevel;
     private void Start()
     {
@@ -33,7 +34,7 @@ public class MainMenu : MonoBehaviour
         
     }
     public void NewGame() {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(FirstCutSceneName);
     }
 
     public void ContinueGame() {

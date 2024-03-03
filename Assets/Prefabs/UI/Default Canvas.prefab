@@ -3030,6 +3030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ca176c81bb5094bbfbdc1c76b2d5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeathCutSceneName: GameOver
   LosePanel: {fileID: 1804131788214663504}
   WinPanel: {fileID: 8226328764408932154}
   OnDeathA:

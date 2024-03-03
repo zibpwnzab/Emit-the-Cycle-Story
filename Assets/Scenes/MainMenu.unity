@@ -230,10 +230,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1961929813664254, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 560450170}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
 --- !u!4 &62194373 stripped
 Transform:
@@ -1260,32 +1257,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &560450168 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1961929813664254, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
-  m_PrefabInstance: {fileID: 51705742}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &560450170
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560450168}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 32cb5f56e27f94047a5fcfb7d52e9fe3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &570680094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2275,6 +2246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ca176c81bb5094bbfbdc1c76b2d5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeathCutSceneName: 
+  LosePanel: {fileID: 0}
+  WinPanel: {fileID: 0}
   OnDeathA:
     m_PersistentCalls:
       m_Calls: []
@@ -3204,6 +3178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ContinueButton: {fileID: 1273892379}
   ContinueButtonText: {fileID: 0}
+  FirstCutSceneName: SC1
 --- !u!1 &1429010966 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1665593956161272, guid: 5e4bdc96038d5424fbd9029b5ecaea9f, type: 3}
