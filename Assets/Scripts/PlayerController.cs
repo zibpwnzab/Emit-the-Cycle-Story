@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviour
 
             isJumping = true;
         }
-        jumpButton.isPressed = false;
+        
 #endif
         if (jumpButton.isPressed && !isJumping)
         {
