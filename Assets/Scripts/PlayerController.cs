@@ -34,18 +34,18 @@ public class PlayerController : MonoBehaviour
 #endif
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        if (!rigidbody)rigidbody = GetComponent<Rigidbody>();
         interactables = new();
         jumpButton = GameObject.FindObjectOfType<JumpButton>();
         //interactionAnim = GameObject.Find("SM_Wep_Crowbar_01").GetComponent<Interaction_Object>();
-        //animator = GetComponent<Animator>();
+        if (!animator) animator = GetComponent<Animator>();
 
     }
 
     void Update()
     {
 #if UNITY_EDITOR
-        VelocityText.text = rigidbody.velocity.ToString("F2");
+        if (VelocityText) VelocityText.text = rigidbody.velocity.ToString("F2");
 #endif
         Jump();
         //Interaction();
@@ -262,7 +262,7 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        LevelManager.Instance.FinishLevel(false);
     }
 }
 

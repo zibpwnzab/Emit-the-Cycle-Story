@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] GameObject LosePanel;
+    [SerializeField] GameObject WinPanel;
     public static LevelManager Instance;
     private int currentCarma;
     private float currentTime;
@@ -42,18 +44,25 @@ public class LevelManager : MonoBehaviour
         {
             Save();
             PlayerPrefs.SetInt(PlayerController.NEXT_LEVEL_KEY, UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+            WinPanel.SetActive(true);
         }
         else
         {
             PlayerPrefs.SetInt(PlayerController.PLAYER_CARMA_KEY, 0);
             PlayerPrefs.SetInt(PlayerController.NEXT_LEVEL_KEY, 1);
             PlayerPrefs.SetInt(PlayerController.PLAYER_CARMA_KEY, 0);
+            LosePanel.SetActive(true);
         }
     }
 
     public void Exit()
     {
+        Application.Quit();
+    }
 
+    public void Continue()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(PlayerPrefs.GetInt(PlayerController.NEXT_LEVEL_KEY));
     }
 
     public void Save()

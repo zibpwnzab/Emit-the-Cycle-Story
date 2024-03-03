@@ -129,9 +129,10 @@ MonoBehaviour:
   rotateObjectSpeed: 45
   jumpforce: 5
   interactButton: {fileID: 0}
-  Lifes: 5
+  Lifes: 3
   jumpButton: {fileID: 0}
   playerState: 0
+  VelocityText: {fileID: 0}
 --- !u!1 &235611392239149135
 GameObject:
   m_ObjectHideFlags: 0

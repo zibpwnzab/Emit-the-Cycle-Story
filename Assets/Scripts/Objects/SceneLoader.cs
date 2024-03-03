@@ -21,7 +21,7 @@ public class SceneLoader : MonoBehaviour, IInteractable
             if (!signalSource.Signal()) return false;
         }
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene(SceneNumber);
+        LevelManager.Instance.FinishLevel(true);
         return true;
     }
 }
