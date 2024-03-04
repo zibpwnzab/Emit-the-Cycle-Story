@@ -154,6 +154,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7471451548712146190}
     m_Modifications:
+    - target: {fileID: -9047699269014123288, guid: 0d386fe159d375244a852f360a4fcc35, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1beb6d2c86cd89a4e8531d469b75cfef, type: 2}
     - target: {fileID: -8679921383154817045, guid: 0d386fe159d375244a852f360a4fcc35, type: 3}
       propertyPath: m_LocalScale.x
       value: 14
@@ -218,6 +222,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5325086944118700539, guid: 0d386fe159d375244a852f360a4fcc35, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1beb6d2c86cd89a4e8531d469b75cfef, type: 2}
+    - target: {fileID: -3532034418158883828, guid: 0d386fe159d375244a852f360a4fcc35, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1beb6d2c86cd89a4e8531d469b75cfef, type: 2}
+    - target: {fileID: -3309225401265000133, guid: 0d386fe159d375244a852f360a4fcc35, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1beb6d2c86cd89a4e8531d469b75cfef, type: 2}
+    - target: {fileID: -3157571730250111850, guid: 0d386fe159d375244a852f360a4fcc35, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1beb6d2c86cd89a4e8531d469b75cfef, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d386fe159d375244a852f360a4fcc35, type: 3}
       propertyPath: m_Name
       value: Rotatable_Mirror
