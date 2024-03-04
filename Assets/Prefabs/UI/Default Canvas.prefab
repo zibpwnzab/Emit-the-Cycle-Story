@@ -3402,9 +3402,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96649e165442e2c439159e612eba5848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartImage1: {fileID: 0}
-  heartImage2: {fileID: 0}
-  heartImage3: {fileID: 0}
+  heartImage1: {fileID: 3321251761788129635}
+  heartImage2: {fileID: 7973135166763756000}
+  heartImage3: {fileID: 5138286687014438029}
+  gameoverImage: {fileID: 0}
 --- !u!1 &5588727078238608076
 GameObject:
   m_ObjectHideFlags: 0

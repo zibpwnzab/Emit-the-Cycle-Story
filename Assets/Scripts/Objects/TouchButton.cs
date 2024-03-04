@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class TouchButton : ISignal, IInteractable
 {
+    [SerializeField] bool onCollider;
     private bool power;
+    
     private Collider triger;
     public bool Interact(GameObject gameObject, Animator animator)
     {
@@ -37,6 +39,6 @@ public class TouchButton : ISignal, IInteractable
     // Update is called once per frame
     void Update()
     {
-        triger.enabled = !power;
+        triger.enabled = !power || onCollider;
     }
 }
