@@ -7,8 +7,11 @@ public class DeadlyObject : MonoBehaviour
     [SerializeField]Transform stunDirection;
     [SerializeField]float stunForce;
     [SerializeField]float stunTime;
+    [SerializeField] bool needSignal;
+    [SerializeField] ISignal signal;
     private void OnTriggerEnter(Collider other)
     {
+        if (needSignal) if (!signal.Signal()) return;
         if ((!other.isTrigger) && other.TryGetComponent(out PlayerController player))
         {
             if (player.playerState == PlayerState.Stunned) return;
