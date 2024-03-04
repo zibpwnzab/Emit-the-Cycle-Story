@@ -1723,6 +1723,7 @@ Transform:
   - {fileID: 590897068}
   - {fileID: 492527170}
   - {fileID: 593039785}
+  - {fileID: 1705170266}
   m_Father: {fileID: 1733067434}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &388027814 stripped
@@ -4403,7 +4404,6 @@ Transform:
   - {fileID: 658866965}
   - {fileID: 914042213}
   - {fileID: 572750545}
-  - {fileID: 1705170266}
   - {fileID: 1747571355}
   - {fileID: 702516321}
   - {fileID: 1325256129}
@@ -6303,11 +6303,11 @@ PrefabInstance:
     - target: {fileID: 7810453045046048682, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: joystick
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1682576473}
     - target: {fileID: 7810453045046048682, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: jumpButton
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1682576472}
     - target: {fileID: 7810453045046048682, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: interactButton
       value: 
@@ -8358,6 +8358,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1682576472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9140681752229652849, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 1682576470}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a98c9745dfd144daa2817da4518c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1682576473 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8477985045965588525, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 1682576470}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1686049186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8446,11 +8468,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 733146609}
+    m_TransformParent: {fileID: 375333512}
     m_Modifications:
     - target: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Bank_Door_01
+      value: EXIT
       objectReference: {fileID: 0}
     - target: {fileID: 4623880327411890, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
       propertyPath: m_RootOrder
@@ -8511,13 +8533,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1705170269}
+    - targetCorrespondingSourceObject: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1705170268}
   m_SourcePrefab: {fileID: 100100000, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
 --- !u!4 &1705170266 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4623880327411890, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
   m_PrefabInstance: {fileID: 1705170265}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1705170267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
+  m_PrefabInstance: {fileID: 1705170265}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1705170268
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705170267}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.6386154, y: 2.999999, z: 1.796178}
+  m_Center: {x: -3.617479, y: 1.4999995, z: -0.11154554}
+--- !u!114 &1705170269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705170267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994af4a25bad8f245bf5326ff89cb942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signalSource: {fileID: 0}
+  SceneNumber: 0
+  needsSignal: 0
 --- !u!1001 &1714283632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8956,6 +9025,10 @@ PrefabInstance:
     - target: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Bank_Door_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291294226849262, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4623880327411890, guid: 38b38aed3140a8f4aac8bab6dace13da, type: 3}
       propertyPath: m_RootOrder
@@ -10384,7 +10457,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1970865458
 Transform:
   m_ObjectHideFlags: 0

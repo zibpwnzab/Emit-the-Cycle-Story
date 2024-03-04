@@ -59,7 +59,7 @@ MonoBehaviour:
   mirrorLayer: 15
   collideLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 65481
   positionsPerSegment: 10
   NeedSignal: 1
   signalSource: {fileID: 5824515020977165286}

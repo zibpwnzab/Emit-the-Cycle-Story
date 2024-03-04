@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LvL_4.unity
     guid: 3591acde1a6600442a846012fa7aecfb
   - enabled: 1
+    path: Assets/Scenes/ToBeContinue.unity
+    guid: d52d57e85a6eb294d96713c1f09c96d2
+  - enabled: 1
     path: Assets/Cutscene/GameOver.unity
     guid: cfd34bdfea3ba4848b199a93185c4ff3
   - enabled: 1

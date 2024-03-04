@@ -29,9 +29,9 @@ public class PlayerController : MonoBehaviour
     public static string NEXT_LEVEL_KEY = "NEXT_LEVEL_KEY";
     public static string TOTAL_GAME_TIME = "TOTAL_GAME_TIME";
 
-#if UNITY_EDITOR
+
     [SerializeField] private TMPro.TMP_Text VelocityText;
-#endif
+
     void Start()
     {
         if (!rigidbody)rigidbody = GetComponent<Rigidbody>();
