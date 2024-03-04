@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8532581973078955259}
   - component: {fileID: 6140741979051011611}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RecieverColliderBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
