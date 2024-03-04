@@ -13,7 +13,7 @@ public class CameraChange : MonoBehaviour
     int _currentCamera = 0;
     void Start()
     {
-        
+        if (!player) player = FindAnyObjectByType<PlayerController>();
     }
 
     // Update is called once per frame

@@ -12,7 +12,7 @@ public class PlayerLifes : MonoBehaviour
     void Start()
     {
 
-        player = GameObject.Find("PlayerPrefab").GetComponent<PlayerController>();
+        player = GameObject.FindAnyObjectByType<PlayerController>();
 
     }
 

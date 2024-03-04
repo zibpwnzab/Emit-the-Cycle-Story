@@ -82,6 +82,11 @@ public class LaserEmitter : MonoBehaviour
             if (player.Lifes <= 0)
                 player.Die();
         }
+
+        if (hit.collider.gameObject.TryGetComponent(out DestroyableObject destroyableObject))
+        {
+            destroyableObject.TakeDamage(1 * Time.deltaTime);
+        }
     }
 
     void MirrorLaser()

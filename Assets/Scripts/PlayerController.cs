@@ -174,22 +174,22 @@ public class PlayerController : MonoBehaviour
 
 void Jump()
     {
-        /*#if UNITY_EDITOR
-                if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
-                {
-                    animator.Play("Jump");
-                    animator.SetTrigger("Jumping");
-                    rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        {
+            animator.Play("Jump");
+            animator.SetTrigger("Jumping");
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
 
-                    isJumping = true;
-                }
+            isJumping = true;
+        }
 
-        #endif*/
-
+#endif
+        timer += Time.deltaTime;
         if (jumpButton.isPressed && !isJumping)
             {
-               //animator.SetTrigger("Jumping");
-            timer += Time.deltaTime;
+            animator.SetTrigger("Jumping");
+            
             if (timer > delay)
             {
 
