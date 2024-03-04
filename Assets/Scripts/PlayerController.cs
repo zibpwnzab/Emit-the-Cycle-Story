@@ -147,7 +147,7 @@ public class PlayerController : MonoBehaviour
     {
         if (playerState == PlayerState.Stunned) return;
 
-         rigidbody.velocity = new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed);
+         rigidbody.velocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed));
         
 
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
 
     void MoveWithObject()
     {
-        rigidbody.velocity = new Vector3(joystick.Horizontal * moveSpeed * movingObjectModifier, rigidbody.velocity.y, joystick.Vertical * moveSpeed * movingObjectModifier);
+        rigidbody.velocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed * movingObjectModifier, rigidbody.velocity.y, joystick.Vertical * moveSpeed * movingObjectModifier));
 
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
@@ -172,6 +172,27 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
     }
 
+    Vector3 ChangeVectorWRTCamera(Vector3 direction)
+    {
+
+        //assuming we only using the single camera:
+        var camera = Camera.main;
+
+        //camera forward and right vectors:
+        var forward = camera.transform.forward;
+        var right = camera.transform.right;
+
+        //project forward and right vectors on the horizontal plane (y = 0)
+        forward.y = 0f;
+        right.y = 0f;
+        forward.Normalize();
+        right.Normalize();
+
+        //this is the direction in the world space we want to move:
+        var desiredMoveDirection = forward * direction.z + right * direction.x;
+        desiredMoveDirection.y = direction.y;
+        return desiredMoveDirection;
+    }
 void Jump()
     {
 #if UNITY_EDITOR
