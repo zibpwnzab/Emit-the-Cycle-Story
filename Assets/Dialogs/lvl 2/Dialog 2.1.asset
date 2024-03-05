@@ -17,7 +17,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 333
-    y: 359
+    y: 357
     width: 170
     height: 115
   isDragging: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 563
-    y: 200
+    y: 198
     width: 170
     height: 115
   isDragging: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 328
-    y: 211
+    y: 209
     width: 170
     height: 115
   isDragging: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 763
-    y: 278
+    y: 276
     width: 170
     height: 115
   isDragging: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 340
-    y: 78
+    y: 76
     width: 170
     height: 115
   isDragging: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 553
-    y: 363
+    y: 361
     width: 170
     height: 115
   isDragging: 0

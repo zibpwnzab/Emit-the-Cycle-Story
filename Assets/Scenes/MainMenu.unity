@@ -1534,6 +1534,7 @@ GameObject:
   - component: {fileID: 599133500}
   - component: {fileID: 599133499}
   - component: {fileID: 599133501}
+  - component: {fileID: 599133502}
   m_Layer: 0
   m_Name: Area Light (1)
   m_TagString: Untagged
@@ -1644,6 +1645,23 @@ MonoBehaviour:
   NoiseIntensityOffset: 0.3
   NoiseVelocity: {x: 3, y: 3}
   MaxRayLength: 400
+--- !u!114 &599133502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599133498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0ac4e37ed9b0a42b5c1f40d2f47aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minWaitTime: 0
+  maxWaitTime: 3
+  turnOff: 1
+  intensityRanges: {x: 20, y: 1}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!224 &608529614 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8743124262264935861, guid: 2f64764278885e3438c7e7e3ebb84335, type: 3}
