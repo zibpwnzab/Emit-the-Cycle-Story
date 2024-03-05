@@ -15,6 +15,7 @@ public class DialogController : ISignal
     [SerializeField] TMPro.TMP_Text carmaText;
     [SerializeField] GameObject blackScreen;
     bool _dialogDone = false;
+    bool _dialogFinished = false;
 
     void Start()
     {
@@ -49,6 +50,7 @@ public class DialogController : ISignal
 
     public void FinishDialog()
     {
+        _dialogFinished = true;
         blackScreen.SetActive(false);
         LevelManager.Instance.AddCarma(dialogBehaviour.currentNode.answerCarmaValue);
     }
@@ -61,6 +63,6 @@ public class DialogController : ISignal
 
     public override bool Signal()
     {
-        return _dialogDone;
+        return _dialogFinished;
     }
 }

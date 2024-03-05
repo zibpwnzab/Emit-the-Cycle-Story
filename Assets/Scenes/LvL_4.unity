@@ -1179,11 +1179,11 @@ Transform:
   m_GameObject: {fileID: 67761371}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.53175974, y: 5.7292976, z: -11.340657}
+  m_LocalPosition: {x: 0.25, y: 3.0699997, z: -10.14}
   m_LocalScale: {x: 18.891098, y: 15.12, z: 0.66745}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1538258737}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &69902397
 PrefabInstance:
@@ -3590,14 +3590,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237668291}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.041405085, y: -0, z: -0, w: 0.99914247}
-  m_LocalPosition: {x: 18.69, y: -2.95, z: -2.41}
+  m_LocalRotation: {x: 0.0228215, y: -0, z: -0, w: 0.9997396}
+  m_LocalPosition: {x: 18.69, y: -2.51, z: -2.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1084366631}
   m_Father: {fileID: 1197178201}
-  m_LocalEulerAnglesHint: {x: -4.746, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.615, y: 0, z: 0}
 --- !u!114 &237668293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9716,9 +9716,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994af4a25bad8f245bf5326ff89cb942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signalSource: {fileID: 0}
+  signalSource: {fileID: 810513263}
   SceneNumber: 0
-  needsSignal: 0
+  needsSignal: 1
 --- !u!65 &768655451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10497,6 +10497,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8549552927009357024, guid: 074e049b761379e4095e214d7d6720fd, type: 3}
   m_PrefabInstance: {fileID: 806919598}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &810513263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6140741979051011611, guid: badcf7b6cb6f2004cb7179e6eecc0b39, type: 3}
+  m_PrefabInstance: {fileID: 1174057764}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93207bfed4f33cf4d98d5024013f7b70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &812628029
 GameObject:
   m_ObjectHideFlags: 0
@@ -11373,7 +11384,7 @@ GameObject:
   - component: {fileID: 864121815}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21441,7 +21452,6 @@ Transform:
   - {fileID: 1962048471}
   - {fileID: 1913048593}
   - {fileID: 976177178}
-  - {fileID: 67761375}
   - {fileID: 864121818}
   m_Father: {fileID: 1172501152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26592,7 +26602,7 @@ GameObject:
   - component: {fileID: 1913048594}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29409,3 +29419,4 @@ SceneRoots:
   - {fileID: 1898800106}
   - {fileID: 1811197677}
   - {fileID: 1174057764}
+  - {fileID: 67761375}

@@ -10506,6 +10506,14 @@ PrefabInstance:
       propertyPath: signal
       value: 
       objectReference: {fileID: 1365550153}
+    - target: {fileID: 7888572729835321607, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: carmaBorders.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888572729835321607, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: carmaBorders.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8149113638313133045, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: m_Value
       value: 1

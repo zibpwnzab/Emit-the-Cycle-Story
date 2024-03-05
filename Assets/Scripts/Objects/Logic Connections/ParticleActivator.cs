@@ -15,7 +15,10 @@ public class ParticleActivator : MonoBehaviour
         bool _signal = signal.Signal();
         foreach (var s in ParticleSystems)
         {
-            if (_signal) s.Play();
+            if (_signal) { 
+                if(s.isStopped)
+                s.Play();
+            }
             else s.Stop();
         }
 

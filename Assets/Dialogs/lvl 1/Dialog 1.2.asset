@@ -236,8 +236,8 @@ MonoBehaviour:
     width: 170
     height: 115
   isDragging: 0
-  isSelected: 0
-  answerCarmaValue: 0
+  isSelected: 1
+  answerCarmaValue: -1
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
     text: "(\u0425\u043C, \u043F\u043E\u0447\u0435\u043C\u0443 \u0435\u0433\u043E

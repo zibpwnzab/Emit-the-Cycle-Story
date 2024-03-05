@@ -724,8 +724,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0caee80a989679348a71dc495d6a2004, type: 2}
     - target: {fileID: 7888572729835321607, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: signal
+      value: 
+      objectReference: {fileID: 2000418855}
+    - target: {fileID: 7888572729835321607, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: needSignal
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7888572729835321607, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: carmaBorders.x
@@ -738,7 +742,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5149077563001276945, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2000418855}
   m_SourcePrefab: {fileID: 100100000, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
 --- !u!1 &140101396 stripped
 GameObject:
@@ -8164,8 +8171,8 @@ MonoBehaviour:
   stunDirection: {fileID: 1563156885}
   stunForce: 8
   stunTime: 0.2
-  needSignal: 0
-  signal: {fileID: 0}
+  needSignal: 1
+  signal: {fileID: 533080423}
 --- !u!114 &1705170275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9432,6 +9439,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4761177003162198, guid: 9fb49ad0440681b4493820bc697b4680, type: 3}
   m_PrefabInstance: {fileID: 1996440502}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2000418854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5149077563001276945, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 116007580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2000418855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000418854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1f705ffdce08a4288b495249798e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  incomingSignal: {fileID: 2000418856}
+  delay: 10
+  signalTime: 0.1
+--- !u!114 &2000418856 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2975675820758845258, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 116007580}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000418854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc7553a9c055cd4fb33bbb1f3bfd644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2014687800
 PrefabInstance:
   m_ObjectHideFlags: 0
