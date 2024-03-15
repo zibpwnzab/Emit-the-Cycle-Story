@@ -16,13 +16,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float rotateObjectSpeed;
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
-    public float delay = 1.5f;
-    float timer;
+
 
     public int Lifes = 3;
     [SerializeField] JumpButton jumpButton;
-    private bool isJumping = false;
-    private Interaction_Object interactionAnim;
+    [SerializeField]private bool isJumping = false;
     private List<IInteractable> interactables;
     private GameObject lastInteracteble;
     public PlayerState playerState = PlayerState.Walking;
@@ -39,7 +37,6 @@ public class PlayerController : MonoBehaviour
         if (!rigidbody)rigidbody = GetComponent<Rigidbody>();
         interactables = new();
         jumpButton = GameObject.FindObjectOfType<JumpButton>();
-        //interactionAnim = GameObject.Find("SM_Wep_Crowbar_01").GetComponent<Interaction_Object>();
         if (!animator) animator = GetComponent<Animator>();
 
     }
@@ -49,9 +46,8 @@ public class PlayerController : MonoBehaviour
 #if UNITY_EDITOR
         if (VelocityText) VelocityText.text = rigidbody.velocity.ToString("F2");
 #endif
-        Jump();
-        //Interaction();
-        rigidbody.angularVelocity = Vector3.zero;
+            JumpAnim();
+            rigidbody.angularVelocity = Vector3.zero;
 
     }
     public void ForceKick(Vector3 direction, float stunTime)
@@ -95,40 +91,7 @@ public class PlayerController : MonoBehaviour
                 break;
         }
         
-        void Move()
-        {
-            Vector3 forward = Camera.main.transform.forward;
-            Vector3 right = Camera.main.transform.right;
-            Vector3 forwardDir = new Vector3(forward.x, 0, forward.z).normalized;
-            Vector3 rightDir = new Vector3(right.x, 0, right.z).normalized;
-
-            if (joystick.Vertical > 0)  
-            {
-                rigidbody.AddForce(forwardDir * moveSpeed * Time.deltaTime, ForceMode.Force);
-            }
-
-            if (joystick.Horizontal < 0)
-            {
-                rigidbody.AddForce(rightDir * -moveSpeed * Time.deltaTime, ForceMode.Force);
-            }
-            if (joystick.Vertical < 0)
-            {
-                rigidbody.AddForce(forwardDir * -moveSpeed * Time.deltaTime, ForceMode.Force);
-            }
-
-            if (joystick.Horizontal > 0)
-            {
-                rigidbody.AddForce(rightDir * moveSpeed * Time.deltaTime,ForceMode.Force);
-            }
-
-            if (joystick.Horizontal != 0 || joystick.Vertical != 0)
-            {
-                transform.rotation = Quaternion.LookRotation(rigidbody.velocity - Vector3.up * rigidbody.velocity.y);
-                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
-            }
-            else
-                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
-        }
+        
     }
 
     void RotateObject()
@@ -193,32 +156,24 @@ public class PlayerController : MonoBehaviour
         desiredMoveDirection.y = direction.y;
         return desiredMoveDirection;
     }
-void Jump()
-    {
-#if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
-        {
-            animator.Play("Jump");
-            animator.SetTrigger("Jumping");
-            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
 
+    void JumpAnim() 
+    {
+        if (jumpButton.isPressed && !isJumping)
+        {
+            animator.SetTrigger("Jumping");
+            StartCoroutine(Jump());
             isJumping = true;
         }
+                
+    }
+IEnumerator Jump()
+    {
+        yield return new WaitForSeconds(1f);
+        Vector3 vector3 = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
+        rigidbody.velocity = vector3;
 
-#endif
-        timer += Time.deltaTime;
-        if (jumpButton.isPressed && !isJumping)
-            {
-            animator.SetTrigger("Jumping");
-            
-            if (timer > delay)
-            {
-
-                rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
-                isJumping = true;
-            }
-            }
-        
+        isJumping = false;
         jumpButton.isPressed = false;
 
     }
@@ -231,19 +186,6 @@ void Jump()
             isJumping = false;
         }
 
-
-    }
-
-    void Interaction()
-    {
-        if (interactionAnim.interactionEnabled)
-        {
-            animator.SetTrigger("Gather");
-            //rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
-
-
-        }
-        interactionAnim.interactionEnabled = false;
 
     }
 
