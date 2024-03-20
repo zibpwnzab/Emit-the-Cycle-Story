@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0043419357, g: 0.0044208216, b: 0.008134903, a: 1}
+  m_IndirectSpecularColor: {r: 0.004325781, g: 0.004404316, b: 0.008137923, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2162,10 +2162,10 @@ RectTransform:
   - {fileID: 811074715}
   m_Father: {fileID: 800410289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 502.1, y: -305.4}
-  m_SizeDelta: {x: 281.0952, y: 52.7053}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -130.01, y: 75}
+  m_SizeDelta: {x: 260.01758, y: 52.70529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &570342360
 MonoBehaviour:
@@ -2211,10 +2211,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800410290}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: FinishLevel
-        m_Mode: 6
+      - m_Target: {fileID: 776648108}
+        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
+        m_MethodName: ReturnButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3258,7 +3258,6 @@ GameObject:
   - component: {fileID: 800410288}
   - component: {fileID: 800410287}
   - component: {fileID: 800410286}
-  - component: {fileID: 800410290}
   m_Layer: 5
   m_Name: Skip
   m_TagString: Untagged
@@ -3349,24 +3348,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &800410290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800410285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06ca176c81bb5094bbfbdc1c76b2d5f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeathCutSceneName: MainMenu
-  LosePanel: {fileID: 599133498}
-  WinPanel: {fileID: 1591449177}
-  OnDeathA:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &809634356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4568883940115560, guid: 1337ff3f0ba67b743a229bd87105578f, type: 3}

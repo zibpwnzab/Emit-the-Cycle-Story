@@ -278,7 +278,7 @@ namespace cherrydev
         private bool CheckNextSentenceKeyCodes()
         {
             if (Input.touchCount > 0)
-            if (Input.GetTouch(0).phase == TouchPhase.Ended) return true;
+            if (Input.GetTouch(0).phase == TouchPhase.Began) return true;
 
 #if UNITY_EDITOR
             for (int i = 0; i < nextSentenceKeyCodes.Count; i++)
@@ -288,9 +288,10 @@ namespace cherrydev
                     return true;
                 }
             }
-
+#endif
             return false;
         }
+        
     }
-#endif
+
 }
