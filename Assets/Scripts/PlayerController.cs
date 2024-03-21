@@ -162,14 +162,13 @@ public class PlayerController : MonoBehaviour
         if (jumpButton.isPressed && !isJumping)
         {
             animator.SetTrigger("Jumping");
-            StartCoroutine(Jump());
+            Jump();
             isJumping = true;
         }
                 
     }
-IEnumerator Jump()
+void Jump()
     {
-        yield return new WaitForSeconds(1f);
         Vector3 vector3 = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
         rigidbody.velocity = vector3;
 
