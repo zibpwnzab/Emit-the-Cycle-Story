@@ -231,6 +231,8 @@ void Jump()
             if (Vector3.Distance(transform.position, slideDirection * slideDistance) < 0.1f)
             {
                 isSliding = false;
+                                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
+
             }
         }
     }
