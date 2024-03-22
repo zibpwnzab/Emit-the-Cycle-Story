@@ -210,14 +210,15 @@ void Jump()
     {
 #if UNITY_EDITOR
         if (Input.GetKey(KeyCode.LeftControl))
-        {
-            animator.SetTrigger("Sliding");
+        { 
+                animator.SetTrigger("Sliding");
             Vector3 slideDirection = transform.forward;
             rigidbody.MovePosition(transform.position + slideDirection * slideSpeed * Time.deltaTime);
 
             if (Vector3.Distance(transform.position, slideDirection * slideDistance) < 0.1f)
             {
                 isSliding = false;
+                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
             }
         }
 #endif
