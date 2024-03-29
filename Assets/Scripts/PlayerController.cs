@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody rigidbody;
     [SerializeField] private FixedJoystick joystick;
     [SerializeField] private Animator animator;
-    [SerializeField] public float moveSpeed;
+    [SerializeField] private float moveSpeed = 5;
     [SerializeField] public float movingObjectModifier;
     [SerializeField] public float rotateObjectSpeed;
     [SerializeField] private float jumpforce = 5;
@@ -22,7 +22,8 @@ public class PlayerController : MonoBehaviour
     public float slideSpeed = 5f;
     public float slideDistance = 5f;
     private bool isSliding = false;
-    private Vector3 slideDirection = Vector3.zero;
+    private Vector3 targetPosition;
+    public float fallThreshold = 10f;
 
 
     public int Lifes = 3;
@@ -55,9 +56,17 @@ public class PlayerController : MonoBehaviour
         if (VelocityText) VelocityText.text = rigidbody.velocity.ToString("F2");
 #endif
             Slide();
-            JumpAnim();
-            rigidbody.angularVelocity = Vector3.zero;
+#if UNITY_EDITOR
+        if (Input.GetKey("space"))
+        {
+            animator.SetTrigger("Jumping");
+            Jump();
+        }
 
+#endif
+        Jump();
+        rigidbody.angularVelocity = Vector3.zero;
+        IsPlayerFalling();
     }
     public void ForceKick(Vector3 direction, float stunTime)
     {
@@ -129,7 +138,7 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
         }
         else
-            if (!isJumping) animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
+        if (!isJumping) animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
     }
 
     void MoveWithObject()
@@ -138,10 +147,12 @@ public class PlayerController : MonoBehaviour
 
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
-            animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
+            animator.SetTrigger("Pushing");
+            //animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
         }
         else
-            animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
+            animator.ResetTrigger("Idle");
+        //animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
     }
 
     Vector3 ChangeVectorWRTCamera(Vector3 direction)
@@ -166,33 +177,16 @@ public class PlayerController : MonoBehaviour
         return desiredMoveDirection;
     }
 
-    void JumpAnim() 
+void Jump()
     {
-#if UNITY_EDITOR
-        if (Input.GetKey("space")) 
-        {
-            animator.SetTrigger("Jumping");
-            Jump();
-            isJumping = true;
-        }
-
-#endif
         if (jumpButton.isPressed && !isJumping)
         {
             animator.SetTrigger("Jumping");
-            Jump();
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
             isJumping = true;
+            jumpButton.isPressed = false;
         }
-                
-    }
-void Jump()
-    {
-        Vector3 vector3 = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
-        rigidbody.velocity = vector3;
-
         isJumping = false;
-        jumpButton.isPressed = false;
-
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -226,12 +220,15 @@ void Jump()
         {
             animator.SetTrigger("Sliding");
             Vector3 slideDirection = transform.forward;
-            rigidbody.MovePosition(transform.position + slideDirection * slideSpeed * Time.deltaTime);
+            targetPosition = transform.position + transform.forward * slideDistance;
+            rigidbody.MovePosition(Vector3.MoveTowards(transform.position, targetPosition, slideSpeed * Time.deltaTime));
+            isSliding = true; 
 
-            if (Vector3.Distance(transform.position, slideDirection * slideDistance) < 0.1f)
+            if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
             {
                 isSliding = false;
-                                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
+                rigidbody.velocity = Vector3.zero;
+                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
 
             }
         }
@@ -282,7 +279,18 @@ void Jump()
     {
         LevelManager.Instance.FinishLevel(false);
     }
+
+    private void IsPlayerFalling()
+    {
+        float heightChange = rigidbody.position.y - rigidbody.velocity.y;
+
+        if (heightChange < -fallThreshold)
+        {
+            moveSpeed = 2.5f; ;
+        }
+    }
 }
+
 
 public enum PlayerState
 {
@@ -292,3 +300,5 @@ public enum PlayerState
     RotatingObject,
     Stunned,
 }
+
+
