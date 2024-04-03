@@ -56,14 +56,7 @@ public class PlayerController : MonoBehaviour
         if (VelocityText) VelocityText.text = rigidbody.velocity.ToString("F2");
 #endif
             Slide();
-#if UNITY_EDITOR
-        if (Input.GetKey("space"))
-        {
-            animator.SetTrigger("Jumping");
-            Jump();
-        }
 
-#endif
         Jump();
         rigidbody.angularVelocity = Vector3.zero;
         IsPlayerFalling();
@@ -179,6 +172,16 @@ public class PlayerController : MonoBehaviour
 
 void Jump()
     {
+#if UNITY_EDITOR
+        if (Input.GetKey("space") && !isJumping)
+        {
+            animator.SetTrigger("Jumping");
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
+            isJumping = true;
+            jumpButton.isPressed = false;
+        }
+
+#endif
         if (jumpButton.isPressed && !isJumping)
         {
             animator.SetTrigger("Jumping");
@@ -186,7 +189,6 @@ void Jump()
             isJumping = true;
             jumpButton.isPressed = false;
         }
-        isJumping = false;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -195,6 +197,7 @@ void Jump()
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
+            Debug.Log("On ground");
         }
 
 
