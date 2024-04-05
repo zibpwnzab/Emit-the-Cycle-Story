@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Localization.Platform.iOS;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -24,6 +25,8 @@ public class PlayerController : MonoBehaviour
     private bool isSliding = false;
     private Vector3 targetPosition;
     public float fallThreshold = 10f;
+    public float climbSpeed = 5f;
+    private bool isClimbing = false;
 
 
     public int Lifes = 3;
@@ -200,13 +203,12 @@ void Jump()
             Debug.Log("On ground");
         }
 
-
     }
 
     void Slide() 
     {
 #if UNITY_EDITOR
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.LeftControl) && !isSliding)
         { 
                 animator.SetTrigger("Sliding");
             Vector3 slideDirection = transform.forward;
@@ -248,6 +250,11 @@ void Jump()
             lastInteracteble = other.gameObject;
         interactables.Add(obj);
         ResolveInteraction();
+
+        if (other.gameObject.CompareTag("Climb"))
+        {
+            Debug.Log("On ground");
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -292,6 +299,9 @@ void Jump()
             moveSpeed = 2.5f; ;
         }
     }
+
+
+
 }
 
 
