@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Localization.Platform.iOS;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -250,11 +249,6 @@ void Jump()
             lastInteracteble = other.gameObject;
         interactables.Add(obj);
         ResolveInteraction();
-
-        if (other.gameObject.CompareTag("Climb"))
-        {
-            Debug.Log("On ground");
-        }
     }
 
     private void OnTriggerExit(Collider other)
