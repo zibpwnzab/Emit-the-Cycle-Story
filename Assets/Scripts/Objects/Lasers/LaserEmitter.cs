@@ -59,7 +59,7 @@ public class LaserEmitter : MonoBehaviour
         {
             var in_ray = hit.point - position;
             var out_ray = in_ray - 2 * Vector3.Dot(in_ray, hit.normal.normalized) * hit.normal.normalized;
-            Debug.Log("Mirror Hit");
+            //Debug.Log("Mirror Hit");
             EmitLaser(hit.point, out_ray, currentCount + 1);
         }
         

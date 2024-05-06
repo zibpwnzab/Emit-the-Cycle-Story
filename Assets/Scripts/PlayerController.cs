@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
 [RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
 public class PlayerController : MonoBehaviour
 {
@@ -44,11 +45,11 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        if (!rigidbody)rigidbody = GetComponent<Rigidbody>();
+        rigidbody = GetComponent<Rigidbody>();
         interactables = new();
         jumpButton = FindObjectOfType<JumpButton>();
         slideButton = FindObjectOfType<SlideButton>();
-        if (!animator) animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
 
     }
 
@@ -121,7 +122,7 @@ public class PlayerController : MonoBehaviour
     }
     void MoveOld()
     {
-        if (playerState == PlayerState.Stunned) return;
+       // if (playerState == PlayerState.Stunned) return;
 
          rigidbody.velocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed));
         

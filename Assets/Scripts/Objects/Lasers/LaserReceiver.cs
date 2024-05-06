@@ -14,8 +14,8 @@ public class LaserReceiver : ISignal
     [SerializeField] Material offMaterial;
     override public bool Signal()
     {
-        foreach (bool b in prevStates)
-            if (b) return true;
+        foreach (bool b in prevStates) 
+        if (b) return true;
         return false;
     }
 
@@ -45,10 +45,12 @@ public class LaserReceiver : ISignal
             if(Signal())
             {
                 meshToLight.material = onMaterial;
+                powered = true;
             }
             else
             {
                 meshToLight.material = offMaterial;
+                powered = false;
             }
         }
     }
