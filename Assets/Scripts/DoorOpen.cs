@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class DoorOpen : MonoBehaviour
 {
-    public LaserReceiver signal;
-    public GameObject door;
-    float y; 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    [SerializeField] public LaserReceiver signal;
+    [SerializeField] public GameObject door;
+    [SerializeField] public GameObject[] plane; 
+    float y;
     void Update()
     {
-        if (signal.powered == true)
-        {
-            y += 0.05f;
-            transform.position = new Vector2 (77.84245f,y);
-        }
+        
+            if (signal.powered == true && y < 10)
+            {
+            foreach (GameObject obj in plane)
+            {
+                Renderer plane = obj.GetComponent<Renderer>();
+                plane.material.color = new Color(37, 232, 8);
+            }
+                y += 0.05f;
+                transform.position = new Vector2(77.84245f, y);
+
+            }
+        
     }
 }
