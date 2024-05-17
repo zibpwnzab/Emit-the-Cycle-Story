@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -14,7 +15,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody rigidbody;
     [SerializeField] private FixedJoystick joystick;
     [SerializeField] private Animator animator;
-    [SerializeField] private float moveSpeed = 5;
+    private float runSpeedThreshold = 4.0f;
+    private float moveSpeed = 5.5f;
     [SerializeField] public float movingObjectModifier;
     [SerializeField] public float rotateObjectSpeed;
     [SerializeField] private float jumpforce = 5;
@@ -59,7 +61,6 @@ public class PlayerController : MonoBehaviour
         if (VelocityText) VelocityText.text = rigidbody.velocity.ToString("F2");
 #endif
             Slide();
-
         Jump();
         rigidbody.angularVelocity = Vector3.zero;
         IsPlayerFalling();
@@ -120,22 +121,46 @@ public class PlayerController : MonoBehaviour
 
         }
     }
-    void MoveOld()
+
+void MoveOld()
+{
+    Vector3 desiredVelocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed));
+    rigidbody.velocity = desiredVelocity;
+
+    if (joystick.Horizontal != 0 || joystick.Vertical != 0)
     {
-       // if (playerState == PlayerState.Stunned) return;
 
-         rigidbody.velocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed));
-        
+        Vector3 lookDirection = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z);
+        transform.rotation = Quaternion.LookRotation(lookDirection);
 
-        if (joystick.Horizontal != 0 || joystick.Vertical != 0)
+
+        float currentSpeed = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z).magnitude;
+            Debug.Log(currentSpeed);
+
+        if (!isJumping)
         {
-            transform.rotation = Quaternion.LookRotation(rigidbody.velocity - Vector3.up * rigidbody.velocity.y);
-            if (!isJumping)
             animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
+
+            if (currentSpeed > runSpeedThreshold)
+            {
+                animator.SetBool("isRunning", true);
+            }
+            else
+            {
+                animator.SetBool("isRunning", false);
+            }
         }
-        else
-        if (!isJumping) animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
     }
+    else
+    {
+        if (!isJumping)
+        {
+            animator.SetFloat("Speed", 0);
+            animator.SetBool("isRunning", false);
+        }
+    }
+
+}
 
     void MoveWithObject()
     {
