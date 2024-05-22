@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirewallFollow : MonoBehaviour
+public class MoveObjectCoroutine : MonoBehaviour
 {
-    public Transform Target;
-    public float Speed;
-    public float RelaxDistance;
+    [SerializeField] private Transform pointA; 
+    [SerializeField] private Transform pointB; 
+    [SerializeField] private float speed = 1.0f; 
 
-    void Update()
+    void Start()
     {
-        var dir = Target.position - transform.position;
-        if (dir.sqrMagnitude > RelaxDistance * RelaxDistance)
-        {
-            float step = Speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, Target.position, step);
+        StartCoroutine(MoveObject());
+    }
 
+    IEnumerator MoveObject()
+    {
+        while (Vector3.Distance(transform.position, pointB.position) > 0.1f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, pointB.position, speed * Time.deltaTime);
+            yield return null;
         }
     }
 }

@@ -45,6 +45,11 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private TMPro.TMP_Text VelocityText;
 
+    private void Awake()
+    {
+        
+    }
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -103,6 +108,7 @@ public class PlayerController : MonoBehaviour
                 RotateObject();
                 break;
             case PlayerState.Stunned:
+                StunRecover(5.0f);
                 break;
         }
         
@@ -122,60 +128,68 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void MoveOld()
+void MoveOld()
+{
+    Vector3 desiredVelocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed));
+    rigidbody.velocity = desiredVelocity;
+
+    if (joystick.Horizontal != 0 || joystick.Vertical != 0)
     {
-        Vector3 desiredVelocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed));
-        rigidbody.velocity = desiredVelocity;
 
-        bool isMoving = joystick.Horizontal != 0 || joystick.Vertical != 0;
+        Vector3 lookDirection = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z);
+        transform.rotation = Quaternion.LookRotation(lookDirection);
 
-        if (isMoving)
+
+        float currentSpeed = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z).magnitude;
+
+        if (!isJumping)
         {
-            Vector3 lookDirection = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z);
-            transform.rotation = Quaternion.LookRotation(lookDirection);
+            animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
 
-            float currentSpeed = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z).magnitude;
-
-            if (!isJumping)
+            if (currentSpeed > runSpeedThreshold)
             {
-                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
-
-                animator.SetBool("isRunning", currentSpeed > runSpeedThreshold);
+                animator.SetBool("isRunning", true);
             }
-        }
-        else
-        {
-            if (!isJumping)
+            else
             {
-                animator.SetFloat("Speed", 0);
                 animator.SetBool("isRunning", false);
             }
         }
     }
+    else
+    {
+        if (!isJumping)
+        {
+            animator.SetFloat("Speed", 0);
+            animator.SetBool("isRunning", false);
+        }
+    }
+
+}
 
     void MoveWithObject()
     {
-        // Обновляем скорость rigidbody в зависимости от ввода с джойстика и камеры
+
         Vector3 newVelocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed * movingObjectModifier, rigidbody.velocity.y, joystick.Vertical * moveSpeed * movingObjectModifier));
         rigidbody.velocity = newVelocity;
 
-        // Проверяем, есть ли движение на джойстике
         bool isMoving = joystick.Horizontal != 0 || joystick.Vertical != 0;
 
-        // Проверяем состояние игрока и движение
+
         if (playerState == PlayerState.MovingObject && isMoving)
         {
-            // Включаем анимацию "Pushing" и устанавливаем скорость
             animator.SetBool("Pushing", true);
             animator.SetFloat("Speed", Vector3.ClampMagnitude(newVelocity, 1).magnitude);
         }
         else
         {
-            // Отключаем анимацию "Pushing" и сбрасываем скорость
+
             animator.SetBool("Pushing", false);
-            animator.SetFloat("Speed", 0); // Сбрасываем скорость, чтобы анимация остановилась
+            animator.SetFloat("Speed", 0); 
         }
     }
+
+
 
     Vector3 ChangeVectorWRTCamera(Vector3 direction)
     {
@@ -194,76 +208,70 @@ public class PlayerController : MonoBehaviour
         return desiredMoveDirection;
     }
 
-    void Jump()
+void Jump()
     {
 #if UNITY_EDITOR
         if (Input.GetKey("space") && !isJumping)
         {
-            PerformJump();
+            animator.SetTrigger("Jumping");
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
+            isJumping = true;
             jumpButton.isPressed = false;
         }
+
 #endif
         if (jumpButton.isPressed && !isJumping)
         {
-            PerformJump();
+            animator.SetTrigger("Jumping");
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
+            isJumping = true;
             jumpButton.isPressed = false;
         }
-    }
-
-    void PerformJump()
-    {
-        animator.SetTrigger("Jumping");
-        rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
-        isJumping = true;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
         }
+
     }
 
-    void Slide()
+    void Slide() 
     {
 #if UNITY_EDITOR
-        if (Input.GetKey(KeyCode.LeftControl) && !isSliding)
-        {
-            StartSlide();
+        if (Input.GetKey(KeyCode.LeftControl) && !isSliding && animator.GetBool("isRunning"))
+        { 
+                animator.SetTrigger("Sliding");
+            Vector3 slideDirection = transform.forward;
+            rigidbody.MovePosition(transform.position + slideDirection * slideSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, slideDirection * slideDistance) < 0.1f)
+            {
+                isSliding = false;
+                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
+            }
         }
 #endif
-        if (slideButton.isPressed && !isSliding)
+        if (slideButton.isPressed && !isSliding && animator.GetBool("isRunning")) 
         {
-            StartSlide();
-        }
-
-        if (isSliding)
-        {
+            animator.SetTrigger("Sliding");
             Vector3 slideDirection = transform.forward;
             targetPosition = transform.position + transform.forward * slideDistance;
             rigidbody.MovePosition(Vector3.MoveTowards(transform.position, targetPosition, slideSpeed * Time.deltaTime));
+            isSliding = true; 
 
             if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
             {
-                EndSlide();
+                isSliding = false;
+                rigidbody.velocity = Vector3.zero;
+                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
+
             }
         }
     }
-
-    void StartSlide()
-    {
-        animator.SetTrigger("Sliding");
-        isSliding = true;
-    }
-
-    void EndSlide()
-    {
-        isSliding = false;
-        rigidbody.velocity = Vector3.zero;
-        animator.SetFloat("Speed", 0); // Сбрасываем скорость, чтобы анимация остановилась
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         IInteractable obj;
@@ -317,7 +325,7 @@ public class PlayerController : MonoBehaviour
 
         if (heightChange < -fallThreshold)
         {
-            moveSpeed = 2.5f; ;
+            playerState = PlayerState.Stunned;
         }
     }
 
