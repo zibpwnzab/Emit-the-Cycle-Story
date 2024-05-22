@@ -87,12 +87,7 @@ public class PlayerController : MonoBehaviour
     {
         ForceKick(direction, 1);
     }
-    IEnumerator StunRecover(float stun)
-    {
-        playerState = PlayerState.Stunned;
-        yield return new WaitForSeconds(stun);
-        playerState = PlayerState.Walking;
-    }
+   
 
     private void FixedUpdate()
     {
@@ -107,12 +102,18 @@ public class PlayerController : MonoBehaviour
             case PlayerState.RotatingObject:
                 RotateObject();
                 break;
-            case PlayerState.Stunned:
-                StunRecover(5.0f);
-                break;
         }
         
         
+    }
+    IEnumerator StunRecover(float stun)
+    {
+        animator.SetBool("Stuned", true); 
+        moveSpeed = 3.0f; 
+        yield return new WaitForSeconds(stun);
+        playerState = PlayerState.Walking;
+        animator.SetBool("Stuned", false); 
+        moveSpeed = 5.5f; 
     }
 
     void RotateObject()
@@ -133,7 +134,8 @@ void MoveOld()
     Vector3 desiredVelocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed));
     rigidbody.velocity = desiredVelocity;
 
-    if (joystick.Horizontal != 0 || joystick.Vertical != 0)
+
+        if (joystick.Horizontal != 0 || joystick.Vertical != 0)
     {
 
         Vector3 lookDirection = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z);
@@ -321,13 +323,14 @@ void Jump()
 
     private void IsPlayerFalling()
     {
-        float heightChange = rigidbody.position.y - rigidbody.velocity.y;
+        float heightChange = rigidbody.velocity.y;
 
         if (heightChange < -fallThreshold)
         {
-            playerState = PlayerState.Stunned;
+            StartCoroutine(StunRecover(5.0f));
         }
     }
+
 
 
 
