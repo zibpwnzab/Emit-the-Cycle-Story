@@ -8,9 +8,10 @@ namespace cherrydev
 {
     public class DialogBehaviour : MonoBehaviour
     {
-        [SerializeField] private float dialogCharDelay;
-        [SerializeField] private List<KeyCode> nextSentenceKeyCodes;
+        [SerializeField] private float dialogCharDelay = 0.05f;
+        [SerializeField] private List<KeyCode> nextSentenceKeyCodes = new List<KeyCode> { KeyCode.Space };
         [SerializeField] private bool isCanSkippingText = true;
+        [SerializeField] private bool isAutoProceed = false; // Новый флаг для автоматического переключения
 
         [Space(10)]
         [SerializeField] private UnityEvent onDialogStarted;
@@ -20,26 +21,17 @@ namespace cherrydev
         public Node currentNode;
 
         private int maxAmountOfAnswerButtons;
-
         private bool isDialogStarted;
         private bool isCurrentSentenceSkipped;
 
         public event Action OnSentenceNodeActive;
-
         public event Action<string, string, Sprite> OnSentenceNodeActiveWithParameter;
-
         public event Action OnAnswerNodeActive;
-
         public event Action<int, AnswerNode> OnAnswerButtonSetUp;
-
         public event Action<int> OnMaxAmountOfAnswerButtonsCalculated;
-
         public event Action<int> OnAnswerNodeActiveWithParameter;
-
         public event Action<int, string> OnAnswerNodeSetUp;
-
         public event Action OnDialogTextCharWrote;
-
         public event Action<string> OnDialogTextSkipped;
 
         private void Update()
@@ -47,74 +39,50 @@ namespace cherrydev
             HandleSentenceSkipping();
         }
 
-        /// <summary>
-        /// Start a dialog
-        /// </summary>
-        /// <param name="dialogNodeGraph"></param>
         public void StartDialog(DialogNodeGraph dialogNodeGraph)
         {
-            isDialogStarted = true;
-
-            if (dialogNodeGraph.nodesList == null)
+            if (dialogNodeGraph == null || dialogNodeGraph.nodesList == null || dialogNodeGraph.nodesList.Count == 0)
             {
-                Debug.LogWarning("Dialog Graph's node list is empty");
+                Debug.LogWarning("Dialog Graph's node list is empty or null");
                 return;
             }
 
+            isDialogStarted = true;
             onDialogStarted?.Invoke();
 
             currentNodeGraph = dialogNodeGraph;
-
             DefineFirstNode(dialogNodeGraph);
             CalculateMaxAmountOfAnswerButtons();
             HandleDialogGraphCurrentNode(currentNode);
         }
 
-        /// <summary>
-        /// Adding listener to OnDialogFinished UnityEvent
-        /// </summary>
-        /// <param name="action"></param>
         public void AddListenerToDialogFinishedEvent(UnityAction action)
         {
             onDialogFinished.AddListener(action);
         }
 
-        /// <summary>
-        /// Setting currentNode field to Node and call HandleDialogGraphCurrentNode method
-        /// </summary>
-        /// <param name="node"></param>
         public void SetCurrentNodeAndHandleDialogGraph(Node node)
         {
             currentNode = node;
-            HandleDialogGraphCurrentNode(this.currentNode);
+            HandleDialogGraphCurrentNode(currentNode);
         }
 
-        /// <summary>
-        /// Processing dialog current node
-        /// </summary>
-        /// <param name="currentNode"></param>
         private void HandleDialogGraphCurrentNode(Node currentNode)
         {
             StopAllCoroutines();
 
-            if (currentNode.GetType() == typeof(SentenceNode))
+            if (currentNode is SentenceNode sentenceNode)
             {
-                SentenceNode sentenceNode = (SentenceNode)currentNode;
-
                 isCurrentSentenceSkipped = false;
 
                 OnSentenceNodeActive?.Invoke();
-                OnSentenceNodeActiveWithParameter?.Invoke(sentenceNode.GetSentenceCharacterName(), sentenceNode.GetSentenceText(),
-                    sentenceNode.GetCharacterSprite());
+                OnSentenceNodeActiveWithParameter?.Invoke(sentenceNode.GetSentenceCharacterName(), sentenceNode.GetSentenceText(), sentenceNode.GetCharacterSprite());
 
                 WriteDialogText(sentenceNode.GetSentenceText());
             }
-            else if (currentNode.GetType() == typeof(AnswerNode))
+            else if (currentNode is AnswerNode answerNode)
             {
-                AnswerNode answerNode = (AnswerNode)currentNode;
-
                 int amountOfActiveButtons = 0;
-
                 OnAnswerNodeActive?.Invoke();
 
                 for (int i = 0; i < answerNode.childSentenceNodes.Count; i++)
@@ -135,7 +103,6 @@ namespace cherrydev
                 if (amountOfActiveButtons == 0)
                 {
                     isDialogStarted = false;
-
                     onDialogFinished?.Invoke();
                     return;
                 }
@@ -144,16 +111,11 @@ namespace cherrydev
             }
         }
 
-        /// <summary>
-        /// Finds the first node that does not have a parent node but has a child one
-        /// </summary>
-        /// <param name="dialogNodeGraph"></param>
         private void DefineFirstNode(DialogNodeGraph dialogNodeGraph)
         {
             if (dialogNodeGraph.nodesList.Count == 0)
             {
                 Debug.LogWarning("The list of nodes in the DialogNodeGraph is empty");
-
                 return;
             }
 
@@ -161,14 +123,11 @@ namespace cherrydev
             {
                 currentNode = node;
 
-                if (node.GetType() == typeof(SentenceNode))
+                if (node is SentenceNode sentenceNode)
                 {
-                    SentenceNode sentenceNode = (SentenceNode)node;
-
                     if (sentenceNode.parentNode == null && sentenceNode.childNode != null)
                     {
                         currentNode = sentenceNode;
-
                         return;
                     }
                 }
@@ -177,20 +136,11 @@ namespace cherrydev
             currentNode = dialogNodeGraph.nodesList[0];
         }
 
-        /// <summary>
-        /// Writing dialog text
-        /// </summary>
-        /// <param name="text"></param>
         private void WriteDialogText(string text)
         {
             StartCoroutine(WriteDialogTextRoutine(text));
         }
 
-        /// <summary>
-        /// Writing dialog text coroutine
-        /// </summary>
-        /// <param name="text"></param>
-        /// <returns></returns>
         private IEnumerator WriteDialogTextRoutine(string text)
         {
             foreach (char textChar in text)
@@ -206,20 +156,22 @@ namespace cherrydev
                 yield return new WaitForSeconds(dialogCharDelay);
             }
 
-            yield return new WaitUntil(CheckNextSentenceKeyCodes);
-
-            CheckForDialogNextNode();
+            if (isAutoProceed)
+            {
+                yield return new WaitForSeconds(0.5f); // Небольшая задержка перед переключением на следующий узел
+                CheckForDialogNextNode();
+            }
+            else
+            {
+                yield return new WaitUntil(CheckNextSentenceKeyCodes);
+                CheckForDialogNextNode();
+            }
         }
 
-        /// <summary>
-        /// Checking is next dialog node has a child node
-        /// </summary>
         private void CheckForDialogNextNode()
         {
-            if (currentNode.GetType() == typeof(SentenceNode))
+            if (currentNode is SentenceNode sentenceNode)
             {
-                SentenceNode sentenceNode = (SentenceNode)currentNode;
-
                 if (sentenceNode.childNode != null)
                 {
                     currentNode = sentenceNode.childNode;
@@ -228,23 +180,17 @@ namespace cherrydev
                 else
                 {
                     isDialogStarted = false;
-
                     onDialogFinished?.Invoke();
                 }
             }
         }
 
-        /// <summary>
-        /// Calculate max amount of answer buttons
-        /// </summary>
         private void CalculateMaxAmountOfAnswerButtons()
         {
             foreach (Node node in currentNodeGraph.nodesList)
             {
-                if (node.GetType() == typeof(AnswerNode))
+                if (node is AnswerNode answerNode)
                 {
-                    AnswerNode answerNode = (AnswerNode)node;
-
                     if (answerNode.answers.Count > maxAmountOfAnswerButtons)
                     {
                         maxAmountOfAnswerButtons = answerNode.answers.Count;
@@ -255,9 +201,6 @@ namespace cherrydev
             OnMaxAmountOfAnswerButtonsCalculated?.Invoke(maxAmountOfAnswerButtons);
         }
 
-        /// <summary>
-        /// Handles text skipping mechanics
-        /// </summary>
         private void HandleSentenceSkipping()
         {
             if (!isDialogStarted || !isCanSkippingText)
@@ -271,18 +214,16 @@ namespace cherrydev
             }
         }
 
-        /// <summary>
-        /// Checking whether at least one key from the nextSentenceKeyCodes was pressed
-        /// </summary>
-        /// <returns></returns>
         private bool CheckNextSentenceKeyCodes()
         {
             if (Input.touchCount > 0)
-            if (Input.GetTouch(0).phase == TouchPhase.Began) return true;
+            {
+                if (Input.GetTouch(0).phase == TouchPhase.Began) return true;
+            }
 
 #if UNITY_EDITOR
             for (int i = 0; i < nextSentenceKeyCodes.Count; i++)
-            { 
+            {
                 if (Input.GetKeyDown(nextSentenceKeyCodes[i]))
                 {
                     return true;
@@ -291,7 +232,5 @@ namespace cherrydev
 #endif
             return false;
         }
-        
     }
-
 }

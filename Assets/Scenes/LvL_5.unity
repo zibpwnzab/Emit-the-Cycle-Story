@@ -18170,7 +18170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4656149463900843354, guid: f4239458165e3574287a1dd2fe7b3a24, type: 3}
       propertyPath: m_Name
-      value: Wall
+      value: Monster
       objectReference: {fileID: 0}
     - target: {fileID: 5705651213363613307, guid: f4239458165e3574287a1dd2fe7b3a24, type: 3}
       propertyPath: m_LocalPosition.x

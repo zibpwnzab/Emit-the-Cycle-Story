@@ -9,6 +9,7 @@ public class DeadlyObject : MonoBehaviour
     [SerializeField]float stunTime;
     [SerializeField] bool needSignal;
     [SerializeField] ISignal signal;
+    [SerializeField] int RemovedLifes = 1;
     private void OnTriggerEnter(Collider other)
     {
         if (needSignal) if (!signal.Signal()) return;
@@ -17,7 +18,7 @@ public class DeadlyObject : MonoBehaviour
             if (player.playerState == PlayerState.Stunned) return;
             if(stunDirection) player.ForceKick(stunDirection.forward * stunForce, stunTime);
             
-            player.Lifes -= 1;
+            player.Lifes -= RemovedLifes;
             if (player.Lifes <= 0)
             player.Die();
         }
