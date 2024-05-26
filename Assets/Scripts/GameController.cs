@@ -5,11 +5,13 @@ namespace cherrydev
     public class GameController : MonoBehaviour
     {
         [SerializeField] private DialogBehaviour dialogBehaviour;
-        [SerializeField] private GameObject nextActionObject; 
+        [SerializeField] private GameObject nextActionObject;
+        [SerializeField] private EventTrigger TriggerObj;
+        [SerializeField] private GameObject TriggerAnim;
 
         private void Start()
         {
-            
+
             if (nextActionObject != null)
             {
                 nextActionObject.SetActive(false);
@@ -40,5 +42,23 @@ namespace cherrydev
                 Debug.LogWarning("NextActionScript не присвоен в GameController.");
             }
         }
+
+
+
+        private void EventObjectTrigger()
+        {
+            if (TriggerObj.inAction = true) 
+            {
+                Debug.Log("dd");
+            }
+
+        }
+
+        private void EventAnimTrigger()
+        {
+
+
+        }
     }
 }
+

@@ -14,6 +14,7 @@ public class DialogController : ISignal
     [SerializeField] ISignal signal;
     [SerializeField] TMPro.TMP_Text carmaText;
     [SerializeField] GameObject blackScreen;
+    [SerializeField] bool hasBalckScreen;
     bool _dialogDone = false;
     bool _dialogFinished = false;
 
@@ -35,7 +36,7 @@ public class DialogController : ISignal
             if (signal.Signal())
             {
                 dialogBehaviour.StartDialog(graph);
-                blackScreen.SetActive(true);
+                if(hasBalckScreen == true) blackScreen.SetActive(true);
                 _dialogDone = true;
             }
         }
@@ -43,7 +44,7 @@ public class DialogController : ISignal
         {
             _dialogDone = true;
             dialogBehaviour.StartDialog(graph);
-            blackScreen.SetActive(true);
+            if (hasBalckScreen == true) blackScreen.SetActive(true);
         }
         
     }
@@ -51,7 +52,7 @@ public class DialogController : ISignal
     public void FinishDialog()
     {
         _dialogFinished = true;
-        blackScreen.SetActive(false);
+        if (hasBalckScreen == true) blackScreen.SetActive(false);
         LevelManager.Instance.AddCarma(dialogBehaviour.currentNode.answerCarmaValue);
     }
 

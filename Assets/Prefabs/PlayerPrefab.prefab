@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3378795802058531621}
   m_Layer: 0
   m_Name: PlayerPrefab
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,14 +125,18 @@ MonoBehaviour:
   rigidbody: {fileID: 6135288042736635346}
   joystick: {fileID: 0}
   animator: {fileID: 95208774547029062}
-  moveSpeed: 5
   movingObjectModifier: 0.5
   rotateObjectSpeed: 30
   jumpforce: 5
   interactButton: {fileID: 0}
-  delay: 3
+  slideButton: {fileID: 0}
+  slideSpeed: 5
+  slideDistance: 5
+  fallThreshold: 10
+  climbSpeed: 5
   Lifes: 3
   jumpButton: {fileID: 0}
+  isJumping: 0
   playerState: 0
   VelocityText: {fileID: 0}
 --- !u!1 &235611392239149135
