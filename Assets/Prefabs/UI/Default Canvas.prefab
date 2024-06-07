@@ -1565,6 +1565,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPressed: 0
+--- !u!1 &3215359266647984832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5181832361963173017}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5181832361963173017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3215359266647984832}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -406.38477, y: -222.79236, z: 29.10751}
+  m_LocalScale: {x: 0.41666666, y: 0.41666666, z: 0.41666666}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6117135325853116000}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3321251761788129635
 GameObject:
   m_ObjectHideFlags: 0
@@ -2832,6 +2863,7 @@ RectTransform:
   - {fileID: 7230057237520036059}
   - {fileID: 6748803974557845102}
   - {fileID: 8184855276706518401}
+  - {fileID: 5181832361963173017}
   - {fileID: 6527256002946415923}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3141,6 +3173,7 @@ MonoBehaviour:
   signal: {fileID: 0}
   carmaText: {fileID: 5496344346059526097}
   blackScreen: {fileID: 2112373720769205152}
+  hasBalckScreen: 0
 --- !u!1 &5175839432234170599
 GameObject:
   m_ObjectHideFlags: 0
@@ -5688,6 +5721,7 @@ MonoBehaviour:
   signal: {fileID: 0}
   carmaText: {fileID: 5496344346059526097}
   blackScreen: {fileID: 2112373720769205152}
+  hasBalckScreen: 0
 --- !u!1 &9151427365290641768
 GameObject:
   m_ObjectHideFlags: 0

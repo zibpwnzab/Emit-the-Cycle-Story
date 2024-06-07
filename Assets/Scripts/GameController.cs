@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace cherrydev
@@ -8,7 +9,19 @@ namespace cherrydev
         [SerializeField] private GameObject nextActionObject;
         [SerializeField] private EventTrigger TriggerObj;
         [SerializeField] private GameObject TriggerAnim;
-
+        public static GameController instance;
+        private void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
         private void Start()
         {
 
@@ -45,20 +58,18 @@ namespace cherrydev
 
 
 
-        private void EventObjectTrigger()
+        public void EventObjectTrigger()
         {
-            if (TriggerObj.inAction = true) 
-            {
-                Debug.Log("dd");
-            }
+            
+                Debug.Log("eot");
+            
 
         }
 
-        private void EventAnimTrigger()
+        public void EventAnimTrigger()
         {
-
-
+            FindObjectOfType<ParabolaMovement>().StartCoroutine("Jump");
         }
+
     }
 }
-

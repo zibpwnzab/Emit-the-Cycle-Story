@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     public float fallThreshold = 10f;
     public float climbSpeed = 5f;
     private bool isClimbing = false;
-
+    public static PlayerController instance;
 
     public int Lifes = 3;
     [SerializeField] JumpButton jumpButton;
@@ -47,7 +47,15 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()
@@ -65,7 +73,6 @@ public class PlayerController : MonoBehaviour
 #if UNITY_EDITOR
         if (VelocityText) VelocityText.text = rigidbody.velocity.ToString("F2");
 #endif
-            Slide();
         Jump();
         rigidbody.angularVelocity = Vector3.zero;
         IsPlayerFalling();
@@ -241,15 +248,16 @@ void Jump()
 
     }
 
-    void Slide() 
+    public IEnumerator Slide() 
     {
 #if UNITY_EDITOR
         if (Input.GetKey(KeyCode.LeftControl) && !isSliding && animator.GetBool("isRunning"))
         { 
                 animator.SetTrigger("Sliding");
             Vector3 slideDirection = transform.forward;
+            targetPosition = transform.position + transform.forward * slideDistance;
             rigidbody.MovePosition(transform.position + slideDirection * slideSpeed * Time.deltaTime);
-
+            isSliding = true;
             if (Vector3.Distance(transform.position, slideDirection * slideDistance) < 0.1f)
             {
                 isSliding = false;
@@ -257,8 +265,6 @@ void Jump()
             }
         }
 #endif
-        if (slideButton.isPressed && !isSliding && animator.GetBool("isRunning")) 
-        {
             animator.SetTrigger("Sliding");
             Vector3 slideDirection = transform.forward;
             targetPosition = transform.position + transform.forward * slideDistance;
@@ -272,7 +278,7 @@ void Jump()
                 animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
 
             }
-        }
+        yield return null;
     }
     private void OnTriggerEnter(Collider other)
     {

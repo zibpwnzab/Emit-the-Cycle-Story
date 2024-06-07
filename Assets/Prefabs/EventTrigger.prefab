@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4137755602573781298}
   - component: {fileID: 8770219475488590437}
-  - component: {fileID: 5235856179061710915}
+  - component: {fileID: 8469897483934282723}
   m_Layer: 0
   m_Name: EventTrigger
   m_TagString: Untagged
@@ -54,7 +54,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.283292, y: 0.13784403, z: 1.5644155}
   m_Center: {x: 0.07818377, y: -0.431078, z: -0.1494999}
---- !u!114 &5235856179061710915
+--- !u!114 &8469897483934282723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

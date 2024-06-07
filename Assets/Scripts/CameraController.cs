@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float dumping;
-    public Vector2 offset = new Vector2(2f, 5f);
-    private Transform player;
+    [SerializeField] private float dumping;
+    [SerializeField] private Vector3 offset = new Vector3(0f, 3f, -3f);
+    [SerializeField] private PlayerController player;
+    [SerializeField] private Camera mainCamera;
+    [SerializeField] List<Transform> cameraPoints;
+    [SerializeField] List<Collider> colliders;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = FindAnyObjectByType<PlayerController>();
     }
 
     void Update()
     {
         Vector3 target;
-        target = new Vector3(player.position.x, player.position.y + offset.y, transform.position.z);
-        Vector3 currentPosition = Vector3.Lerp(transform.position, target, dumping * Time.deltaTime);
-        transform.position = currentPosition;
+        target = new Vector3(player.transform.position.x, player.transform.position.y + offset.y, transform.position.z + offset.z);
+        Vector3 currentPosition = Vector3.Lerp(mainCamera.transform.position, target, dumping * Time.deltaTime);
+        mainCamera.transform.position = currentPosition;
     }
 }

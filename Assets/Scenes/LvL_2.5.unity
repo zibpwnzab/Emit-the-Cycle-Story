@@ -5845,7 +5845,6 @@ GameObject:
   - component: {fileID: 462136341}
   - component: {fileID: 462136345}
   - component: {fileID: 462136346}
-  - component: {fileID: 462136347}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6018,20 +6017,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &462136347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462136340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59397d5ce73911449b00fcdcb873f94c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dumping: 5
-  offset: {x: 2, y: 5}
 --- !u!4 &462694985 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7471451548712146190, guid: 9eb203379bc6dae4dad6ce200e56c4a5, type: 3}
@@ -22064,6 +22049,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719239463}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1720105429 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4000983385670848, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+  m_PrefabInstance: {fileID: 362659257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1733067433
 GameObject:
   m_ObjectHideFlags: 0
@@ -26872,8 +26862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2120108242}
-  - component: {fileID: 2120108244}
-  - component: {fileID: 2120108243}
+  - component: {fileID: 2120108245}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -26897,54 +26886,22 @@ Transform:
   - {fileID: 462136344}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2120108243
-Rigidbody:
+--- !u!114 &2120108245
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120108241}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 124
-  m_CollisionDetection: 0
---- !u!65 &2120108244
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2120108241}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59397d5ce73911449b00fcdcb873f94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dumping: 5
+  offset: {x: 2, y: 3, z: 1}
+  player: {fileID: 1720105429}
+  mainCamera: {fileID: 462136343}
 --- !u!4 &2124229456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4751164329511794, guid: 315faea84706f7946854c979233d54c5, type: 3}
