@@ -6,14 +6,16 @@ using UnityEngine.EventSystems;
 
 public class JumpButton : MonoBehaviour, IPointerClickHandler
 {
-
-    
-    public bool isPressed = false;
-    
-
     public void OnPointerClick(PointerEventData eventData)
     {
-        isPressed = true;
+#if UNITY_EDITOR
+        if (Input.GetKey("space"))
+        {
+        FindObjectOfType<PlayerController>().StartCoroutine("Jump");
+        }
+
+#endif
+        FindObjectOfType<PlayerController>().StartCoroutine("Jump");
     }
 
 }

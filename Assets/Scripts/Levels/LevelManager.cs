@@ -6,7 +6,6 @@ public class LevelManager : MonoBehaviour
 {
     
     [SerializeField] private string DeathCutSceneName;
-    [SerializeField] GameObject LosePanel;
     [SerializeField] GameObject WinPanel;
     public static LevelManager Instance;
     private int currentCarma;
@@ -54,7 +53,6 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetInt(PlayerController.NEXT_LEVEL_KEY, 1);
             PlayerPrefs.SetInt(PlayerController.PLAYER_CARMA_KEY, 0);
             UnityEngine.SceneManagement.SceneManager.LoadScene(DeathCutSceneName);
-            LosePanel.SetActive(true);
         }
     }
 

@@ -5,11 +5,25 @@ using UnityEngine;
 
 public class EventTrigger : MonoBehaviour
 {
+    private PlayerController player;
+    private void Start()
+    {
+        player = FindAnyObjectByType<PlayerController>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) 
+        if (player) 
         {
             GameController.instance.EventAnimTrigger();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (player) 
+        {
+            
         }
     }
 

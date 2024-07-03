@@ -30,12 +30,15 @@ public class PlayerController : MonoBehaviour
     public float climbSpeed = 5f;
     private bool isClimbing = false;
     public static PlayerController instance;
+    public bool isMovingRight = false;
+    private bool isInvulnerable = false;
+    public float invulnerabilityTime = 5f;
 
     public int Lifes = 3;
     [SerializeField] JumpButton jumpButton;
     [SerializeField]private bool isJumping = false;
     private List<IInteractable> interactables;
-    private GameObject lastInteracteble;
+    private GameObject lastInteractable;
     public PlayerState playerState = PlayerState.Walking;
 
     public static string PLAYER_CARMA_KEY = "PLAYER_CARMA_KEY";
@@ -73,28 +76,53 @@ public class PlayerController : MonoBehaviour
 #if UNITY_EDITOR
         if (VelocityText) VelocityText.text = rigidbody.velocity.ToString("F2");
 #endif
-        Jump();
         rigidbody.angularVelocity = Vector3.zero;
         IsPlayerFalling();
     }
     public void ForceKick(Vector3 direction, float stunTime)
     {
-        
-        if (lastInteracteble) if (lastInteracteble.TryGetComponent(out IInteractable interactable))
+        Debug.Log("ForceKick вызван с направлением: " + direction);
+
+        if (lastInteractable && lastInteractable.TryGetComponent(out IInteractable interactable))
         {
             interactable.StopInteraction(gameObject, animator);
         }
 
-        rigidbody.velocity = direction;
+        if (rigidbody != null)
+        {
+            rigidbody.velocity = direction;
+        }
+        else
+        {
+            Debug.LogWarning("Rigidbody отсутствует на " + gameObject.name);
+        }
+
         StartCoroutine(StunRecover(stunTime));
-        
-        
     }
-    public void ForceKick(Vector3 direction)
+
+    public void TakeDamage(int damage)
     {
-        ForceKick(direction, 1);
+        if (!isInvulnerable)
+        {
+            Lifes -= damage;
+            if (Lifes <= 0)
+            {
+                Die();
+            }
+            else
+            {
+                StartCoroutine(InvulnerabilityCoroutine());
+            }
+        }
     }
-   
+
+    private IEnumerator InvulnerabilityCoroutine()
+    {
+        isInvulnerable = true;
+        yield return new WaitForSeconds(invulnerabilityTime);
+        isInvulnerable = false;
+    }
+
 
     private void FixedUpdate()
     {
@@ -127,8 +155,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Mathf.Abs(joystick.Horizontal) > Mathf.Abs(joystick.Vertical))
         {
-            Debug.Log(lastInteracteble.name + " Rotate");
-            lastInteracteble.transform.Rotate(Vector3.up, Time.deltaTime * joystick.Horizontal * rotateObjectSpeed);
+            Debug.Log(lastInteractable.name + " Rotate");
+            lastInteractable.transform.Rotate(Vector3.up, Time.deltaTime * joystick.Horizontal * rotateObjectSpeed);
         }
         else
         {
@@ -147,9 +175,10 @@ void MoveOld()
 
         Vector3 lookDirection = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z);
         transform.rotation = Quaternion.LookRotation(lookDirection);
+            isMovingRight = true;
 
 
-        float currentSpeed = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z).magnitude;
+            float currentSpeed = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z).magnitude;
 
         if (!isJumping)
         {
@@ -188,13 +217,14 @@ void MoveOld()
         if (playerState == PlayerState.MovingObject && isMoving)
         {
             animator.SetBool("Pushing", true);
-            animator.SetFloat("Speed", Vector3.ClampMagnitude(newVelocity, 1).magnitude);
+            Debug.Log("FF");
+            //animator.SetFloat("Speed", Vector3.ClampMagnitude(newVelocity, 1).magnitude);
         }
         else
         {
 
             animator.SetBool("Pushing", false);
-            animator.SetFloat("Speed", 0); 
+            //animator.SetFloat("Speed", 0); 
         }
     }
 
@@ -217,25 +247,16 @@ void MoveOld()
         return desiredMoveDirection;
     }
 
-void Jump()
+    public IEnumerator Jump()
     {
-#if UNITY_EDITOR
-        if (Input.GetKey("space") && !isJumping)
+        if (!isJumping)
         {
             animator.SetTrigger("Jumping");
             rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
             isJumping = true;
-            jumpButton.isPressed = false;
-        }
 
-#endif
-        if (jumpButton.isPressed && !isJumping)
-        {
-            animator.SetTrigger("Jumping");
-            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
-            isJumping = true;
-            jumpButton.isPressed = false;
         }
+        yield return null;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -250,26 +271,13 @@ void Jump()
 
     public IEnumerator Slide() 
     {
-#if UNITY_EDITOR
-        if (Input.GetKey(KeyCode.LeftControl) && !isSliding && animator.GetBool("isRunning"))
-        { 
-                animator.SetTrigger("Sliding");
-            Vector3 slideDirection = transform.forward;
-            targetPosition = transform.position + transform.forward * slideDistance;
-            rigidbody.MovePosition(transform.position + slideDirection * slideSpeed * Time.deltaTime);
-            isSliding = true;
-            if (Vector3.Distance(transform.position, slideDirection * slideDistance) < 0.1f)
-            {
-                isSliding = false;
-                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
-            }
-        }
-#endif
+        if (!isSliding && animator.GetBool("isRunning"))
+        {
             animator.SetTrigger("Sliding");
             Vector3 slideDirection = transform.forward;
             targetPosition = transform.position + transform.forward * slideDistance;
             rigidbody.MovePosition(Vector3.MoveTowards(transform.position, targetPosition, slideSpeed * Time.deltaTime));
-            isSliding = true; 
+            isSliding = true;
 
             if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
             {
@@ -278,6 +286,7 @@ void Jump()
                 animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
 
             }
+        }
         yield return null;
     }
     private void OnTriggerEnter(Collider other)
@@ -288,8 +297,8 @@ void Jump()
 
         if (interactables.Contains(obj))
             return;
-        if (lastInteracteble == null)
-            lastInteracteble = other.gameObject;
+        if (lastInteractable == null)
+            lastInteractable = other.gameObject;
         interactables.Add(obj);
         ResolveInteraction();
     }
@@ -303,8 +312,8 @@ void Jump()
         if (!interactables.Contains(obj))
             return;
 
-        if (other.gameObject == lastInteracteble)
-            lastInteracteble = null;
+        if (other.gameObject == lastInteractable)
+            lastInteractable = null;
         interactables.Remove(obj);
         ResolveInteraction();
     }

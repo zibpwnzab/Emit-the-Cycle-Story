@@ -23,7 +23,6 @@ public class LaserEmitter : MonoBehaviour
         _lineRenderer = GetComponent<LineRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         laserPositions = new();
@@ -77,10 +76,7 @@ public class LaserEmitter : MonoBehaviour
             dir = dir.normalized * LaserKickForce;
             if (player.playerState == PlayerState.Stunned) return;
             player.ForceKick(dir, LaserStunTime);
-            Debug.Log(dir);
-            player.Lifes--;
-            if (player.Lifes <= 0)
-                player.Die();
+            player.TakeDamage(1);
         }
 
         if (hit.collider.gameObject.TryGetComponent(out DestroyableObject destroyableObject))
@@ -88,6 +84,7 @@ public class LaserEmitter : MonoBehaviour
             destroyableObject.TakeDamage(1 * Time.deltaTime);
         }
     }
+
 
     void MirrorLaser()
     {
