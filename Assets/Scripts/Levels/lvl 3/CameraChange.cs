@@ -11,12 +11,16 @@ public class CameraChange : MonoBehaviour
     [SerializeField] private float speed = 2f;
     [SerializeField] private PlayerController player;
     [SerializeField] private List<Collider> colliders;
+    [SerializeField] private bool followPlayer = true;
     private int _currentCamera = -1; // -1 means following the player
 
     void Start()
     {
         if (!player) player = FindAnyObjectByType<PlayerController>();
-        StartCoroutine(FollowPlayer());
+        if (followPlayer)
+        {
+            StartCoroutine(FollowPlayer());
+        }
     }
 
     void Update()
@@ -36,7 +40,7 @@ public class CameraChange : MonoBehaviour
     public void ChangePosition(int cameraNumber)
     {
         _currentCamera = cameraNumber % cameraPoints.Count;
-        SetCameraToTargetPosition(); 
+        SetCameraToTargetPosition();
     }
 
     private void AnimateCamera()
@@ -58,7 +62,10 @@ public class CameraChange : MonoBehaviour
                 return;
             }
         }
-        _currentCamera = -1;
+        if (followPlayer)
+        {
+            _currentCamera = -1;
+        }
     }
 
     private IEnumerator FollowPlayer()

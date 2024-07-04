@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace cherrydev
@@ -6,10 +7,12 @@ namespace cherrydev
     public class GameController : MonoBehaviour
     {
         [SerializeField] private DialogBehaviour dialogBehaviour;
-        [SerializeField] private GameObject nextActionObject;
+        [SerializeField] private List<GameObject> gameObjects;
         [SerializeField] private EventTrigger TriggerObj;
         [SerializeField] private GameObject TriggerAnim;
         public static GameController instance;
+        private int index = 0;
+
         private void Awake()
         {
             if (instance == null)
@@ -25,9 +28,13 @@ namespace cherrydev
         private void Start()
         {
 
-            if (nextActionObject != null)
+            if (gameObjects != null)
             {
-                nextActionObject.SetActive(false);
+                while (index < gameObjects.Count)
+                {
+                    gameObjects[index].SetActive(false);
+                    index++;
+                }
             }
 
             // Подписываемся на событие завершения диалога
@@ -46,9 +53,14 @@ namespace cherrydev
             Debug.Log("Диалог завершен!");
 
             // Запускаем следующий скрипт
-            if (nextActionObject != null)
+            if (gameObjects != null)
             {
-                nextActionObject.SetActive(true);
+                index = 0;
+                while (index < gameObjects.Count)
+                {
+                    gameObjects[index].SetActive(true);
+                    index++;
+                }
             }
             else
             {

@@ -736,7 +736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a98c9745dfd144daa2817da4518c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPressed: 0
 --- !u!1 &1279065397966342654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,7 +1563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb70d893d7ae474ea46e89ab0216e18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPressed: 0
 --- !u!1 &3215359266647984832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5181832361963173017}
+  - component: {fileID: 6052993443479116769}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1596,6 +1595,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6117135325853116000}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6052993443479116769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3215359266647984832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b343d952689f38c47bb0692ccad017fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogBehaviour: {fileID: 0}
+  gameObjects: []
+  TriggerObj: {fileID: 0}
+  TriggerAnim: {fileID: 0}
 --- !u!1 &3321251761788129635
 GameObject:
   m_ObjectHideFlags: 0
@@ -2974,7 +2989,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathCutSceneName: GameOver
-  LosePanel: {fileID: 1804131788214663504}
   WinPanel: {fileID: 8226328764408932154}
   OnDeathA:
     m_PersistentCalls:
