@@ -1,13 +1,20 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace cherrydev
 {
+    [Serializable]
+    public class GameObjectWithFlag
+    {
+        public GameObject gameObject;
+        public bool activateAfterDelay;
+    }
     public class GameController : MonoBehaviour
     {
         [SerializeField] private DialogBehaviour dialogBehaviour;
-        [SerializeField] private List<GameObject> gameObjects;
+        [SerializeField] private List<GameObjectWithFlag> gameObjectsWithFlags;
         [SerializeField] private EventTrigger TriggerObj;
         [SerializeField] private GameObject TriggerAnim;
         public static GameController instance;
@@ -28,11 +35,11 @@ namespace cherrydev
         private void Start()
         {
 
-            if (gameObjects != null)
+            if (gameObjectsWithFlags != null)
             {
-                while (index < gameObjects.Count)
+                while (index < gameObjectsWithFlags.Count)
                 {
-                    gameObjects[index].SetActive(false);
+                    gameObjectsWithFlags[index].gameObject.SetActive(false);
                     index++;
                 }
             }
@@ -52,13 +59,19 @@ namespace cherrydev
         {
             Debug.Log("Диалог завершен!");
 
-            // Запускаем следующий скрипт
-            if (gameObjects != null)
+            if (gameObjectsWithFlags != null)
             {
                 index = 0;
-                while (index < gameObjects.Count)
+                while (index < gameObjectsWithFlags.Count)
                 {
-                    gameObjects[index].SetActive(true);
+                    if (gameObjectsWithFlags[index].activateAfterDelay)
+                    {
+                        StartCoroutine(ActivateAfterDelay(gameObjectsWithFlags[index].gameObject, 3f));
+                    }
+                    else
+                    {
+                        gameObjectsWithFlags[index].gameObject.SetActive(true);
+                    }
                     index++;
                 }
             }
@@ -66,6 +79,12 @@ namespace cherrydev
             {
                 Debug.LogWarning("NextActionScript не присвоен в GameController.");
             }
+        }
+
+        private IEnumerator ActivateAfterDelay(GameObject gameObject, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            gameObject.SetActive(true);
         }
 
 
