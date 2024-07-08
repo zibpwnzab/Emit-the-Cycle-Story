@@ -5,7 +5,6 @@ using cherrydev;
 
 public class DialogController : ISignal
 {
-    // Start is called before the first frame update
 
     [SerializeField] DialogBehaviour dialogBehaviour;
     [SerializeField] DialogNodeGraph graph;
@@ -20,23 +19,22 @@ public class DialogController : ISignal
 
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         var carma = LevelManager.Instance.GetCarma();
         if (carmaText) carmaText.text = $"CURRENT CARMA: {carma}";
         if (_dialogDone) return;
-        
+
         if (!(carmaBorders.x <= carma && carma <= carmaBorders.y)) return;
         if (needSignal)
         {
             if (signal.Signal())
             {
                 dialogBehaviour.StartDialog(graph);
-                if(hasBalckScreen == true) blackScreen.SetActive(true);
+                if (hasBalckScreen == true) blackScreen.SetActive(true);
                 _dialogDone = true;
             }
         }
@@ -46,7 +44,7 @@ public class DialogController : ISignal
             dialogBehaviour.StartDialog(graph);
             if (hasBalckScreen == true) blackScreen.SetActive(true);
         }
-        
+
     }
 
     public void FinishDialog()
@@ -54,6 +52,7 @@ public class DialogController : ISignal
         _dialogFinished = true;
         if (hasBalckScreen == true) blackScreen.SetActive(false);
         LevelManager.Instance.AddCarma(dialogBehaviour.currentNode.answerCarmaValue);
+        if (_dialogFinished) Debug.Log("GG");
     }
 
     public void ResetDialogCarma()

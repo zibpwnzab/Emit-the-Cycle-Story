@@ -1,15 +1,25 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace cherrydev
 {
+    [Serializable]
+    public class GameObjectWithFlag
+    {
+        public GameObject gameObject;
+        public bool activateAfterDelay;
+    }
     public class GameController : MonoBehaviour
     {
         [SerializeField] private DialogBehaviour dialogBehaviour;
-        [SerializeField] private GameObject nextActionObject;
+        [SerializeField] private List<GameObjectWithFlag> gameObjectsWithFlags;
         [SerializeField] private EventTrigger TriggerObj;
         [SerializeField] private GameObject TriggerAnim;
         public static GameController instance;
+        private int index = 0;
+
         private void Awake()
         {
             if (instance == null)
@@ -25,12 +35,15 @@ namespace cherrydev
         private void Start()
         {
 
-            if (nextActionObject != null)
+            if (gameObjectsWithFlags != null)
             {
-                nextActionObject.SetActive(false);
+                while (index < gameObjectsWithFlags.Count)
+                {
+                    gameObjectsWithFlags[index].gameObject.SetActive(false);
+                    index++;
+                }
             }
 
-            // Подписываемся на событие завершения диалога
             if (dialogBehaviour != null)
             {
                 dialogBehaviour.AddListenerToDialogFinishedEvent(OnDialogFinished);
@@ -45,10 +58,21 @@ namespace cherrydev
         {
             Debug.Log("Диалог завершен!");
 
-            // Запускаем следующий скрипт
-            if (nextActionObject != null)
+            if (gameObjectsWithFlags != null)
             {
-                nextActionObject.SetActive(true);
+                index = 0;
+                while (index < gameObjectsWithFlags.Count)
+                {
+                    if (gameObjectsWithFlags[index].activateAfterDelay)
+                    {
+                        StartCoroutine(ActivateAfterDelay(gameObjectsWithFlags[index].gameObject, 3f));
+                    }
+                    else
+                    {
+                        gameObjectsWithFlags[index].gameObject.SetActive(true);
+                    }
+                    index++;
+                }
             }
             else
             {
@@ -56,13 +80,19 @@ namespace cherrydev
             }
         }
 
+        private IEnumerator ActivateAfterDelay(GameObject gameObject, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            gameObject.SetActive(true);
+        }
+
 
 
         public void EventObjectTrigger()
         {
-            
-                Debug.Log("eot");
-            
+
+            Debug.Log("eot");
+
 
         }
 
