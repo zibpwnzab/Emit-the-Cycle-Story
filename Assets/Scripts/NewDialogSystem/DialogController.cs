@@ -54,7 +54,6 @@ public class DialogController : ISignal
         _dialogFinished = true;
         if (hasBalckScreen == true) blackScreen.SetActive(false);
         LevelManager.Instance.AddCarma(dialogBehaviour.currentNode.answerCarmaValue);
-        if (_dialogFinished) Debug.Log("GG");
     }
 
     public void ResetDialogCarma()

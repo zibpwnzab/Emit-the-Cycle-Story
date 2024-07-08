@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private TMPro.TMP_Text VelocityText;
 
- /*   private void Awake()
+    private void Awake()
     {
         if (instance == null)
         {
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
     }
-*/
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();

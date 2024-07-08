@@ -15,12 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/LvL_2.unity
     guid: 7fd779f974c257149840b25e63097554
   - enabled: 1
-    path: Assets/Scenes/LvL_2.5.unity
-    guid: a55dd62bad16580478a92d3677f2a24c
-  - enabled: 1
-    path: Assets/Cutscene/SC3.unity
-    guid: 9871d0f1331791b4cad41c169734b287
-  - enabled: 1
     path: Assets/Scenes/LvL_3.unity
     guid: 61260f82d495b3a4a811eb9af891585a
   - enabled: 1
