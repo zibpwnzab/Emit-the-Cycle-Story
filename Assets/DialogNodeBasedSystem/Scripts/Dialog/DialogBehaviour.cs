@@ -11,7 +11,7 @@ namespace cherrydev
         [SerializeField] private float dialogCharDelay = 0.05f;
         [SerializeField] private List<KeyCode> nextSentenceKeyCodes = new List<KeyCode> { KeyCode.Space };
         [SerializeField] private bool isCanSkippingText = true;
-        [SerializeField] private bool isAutoProceed = false; // Новый флаг для автоматического переключения
+        [SerializeField] private bool isAutoProceed = false; 
 
         [Space(10)]
         [SerializeField] private UnityEvent onDialogStarted;
