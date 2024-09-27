@@ -10049,9 +10049,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994af4a25bad8f245bf5326ff89cb942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signalSource: {fileID: 636469240}
-  SceneNumber: 0
+  signalSources: []
+  sceneName: LvL_4
   needsSignal: 1
+  useTrigger: 0
+  useTimer: 0
+  delayBeforeLoad: 5
 --- !u!65 &1705170270
 BoxCollider:
   m_ObjectHideFlags: 0

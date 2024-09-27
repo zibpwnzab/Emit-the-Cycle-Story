@@ -5627,6 +5627,7 @@ MonoBehaviour:
   signal: {fileID: 1061859986}
   carmaText: {fileID: 1391338327}
   blackScreen: {fileID: 805368601}
+  hasBalckScreen: 0
 --- !u!114 &402791566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5657,6 +5658,8 @@ MonoBehaviour:
   dialogCharDelay: 0
   nextSentenceKeyCodes: 4301000020000000
   isCanSkippingText: 1
+  isAutoProceed: 0
+  autoProceedDelay: 2
   onDialogStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -9733,9 +9736,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994af4a25bad8f245bf5326ff89cb942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signalSource: {fileID: 810513263}
-  SceneNumber: 0
+  signalSources: []
+  sceneName: LvL_6
   needsSignal: 1
+  useTrigger: 0
+  useTimer: 0
+  delayBeforeLoad: 5
 --- !u!65 &768655451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10261,6 +10267,7 @@ MonoBehaviour:
   signal: {fileID: 1061859986}
   carmaText: {fileID: 1391338327}
   blackScreen: {fileID: 805368601}
+  hasBalckScreen: 0
 --- !u!114 &798467732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10291,6 +10298,8 @@ MonoBehaviour:
   dialogCharDelay: 0
   nextSentenceKeyCodes: 4301000020000000
   isCanSkippingText: 1
+  isAutoProceed: 0
+  autoProceedDelay: 2
   onDialogStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -10619,17 +10628,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &810513263 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6140741979051011611, guid: badcf7b6cb6f2004cb7179e6eecc0b39, type: 3}
-  m_PrefabInstance: {fileID: 1174057764}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93207bfed4f33cf4d98d5024013f7b70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &811987134
 GameObject:
   m_ObjectHideFlags: 0
@@ -14619,6 +14617,7 @@ MonoBehaviour:
   signal: {fileID: 1061859986}
   carmaText: {fileID: 1391338327}
   blackScreen: {fileID: 805368601}
+  hasBalckScreen: 0
 --- !u!114 &1039518098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14649,6 +14648,8 @@ MonoBehaviour:
   dialogCharDelay: 0
   nextSentenceKeyCodes: 4301000020000000
   isCanSkippingText: 1
+  isAutoProceed: 0
+  autoProceedDelay: 2
   onDialogStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -17534,6 +17535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 963194227}
+  dumping: 1.5
+  offset: {x: 0, y: 3, z: -3}
   cameraPoints:
   - {fileID: 1040976510}
   - {fileID: 1522155932}
@@ -17544,6 +17547,7 @@ MonoBehaviour:
   - {fileID: 504077879}
   - {fileID: 270201897}
   - {fileID: 1938603131}
+  followPlayer: 1
 --- !u!4 &1197178201
 Transform:
   m_ObjectHideFlags: 0

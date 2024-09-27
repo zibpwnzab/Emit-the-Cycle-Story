@@ -11,7 +11,8 @@ namespace cherrydev
         [SerializeField] private float dialogCharDelay = 0.05f;
         [SerializeField] private List<KeyCode> nextSentenceKeyCodes = new List<KeyCode> { KeyCode.Space };
         [SerializeField] private bool isCanSkippingText = true;
-        [SerializeField] private bool isAutoProceed = false; 
+        [SerializeField] private bool isAutoProceed = false;
+        [SerializeField] private float autoProceedDelay = 2.0f; // Добавляем настройку для задержки при автоматическом переключении
 
         [Space(10)]
         [SerializeField] private UnityEvent onDialogStarted;
@@ -158,7 +159,7 @@ namespace cherrydev
 
             if (isAutoProceed)
             {
-                yield return new WaitForSeconds(0.5f); // Небольшая задержка перед переключением на следующий узел
+                yield return new WaitForSeconds(autoProceedDelay); // Используем задержку из настройки
                 CheckForDialogNextNode();
             }
             else

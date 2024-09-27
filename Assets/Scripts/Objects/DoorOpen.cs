@@ -8,22 +8,34 @@ public class DoorOpen : MonoBehaviour
     [SerializeField] public GameObject door;
     [SerializeField] public GameObject[] plane;
     [SerializeField] public GameObject dust;
-    float y;
+    private float y;
+
+    void Start()
+    {
+        // Инициализируем переменную y текущим положением двери по оси Y
+        y = transform.position.y;
+    }
+
     void Update()
     {
-        
-            if (signal.powered == true && y < 10)
-            {
+        // Если сигнал активен и дверь еще не поднялась на максимальную высоту
+        if (signal.powered && y < 10)
+        {
+            // Включаем эффект пыли
             dust.gameObject.SetActive(true);
+
+            // Меняем цвет всех объектов в массиве plane
             foreach (GameObject obj in plane)
             {
-                Renderer plane = obj.GetComponent<Renderer>();
-                plane.material.color = new Color(0, 255, 0);
+                Renderer planeRenderer = obj.GetComponent<Renderer>();
+                planeRenderer.material.color = new Color(0, 255, 0);
             }
-                y += 0.05f;
-                transform.position = new Vector2(77.84245f, y);
 
-            }
-        
+            // Увеличиваем позицию двери по оси Y
+            y += 0.05f;
+
+            // Обновляем позицию двери с сохранением ее координат X и Z
+            transform.position = new Vector3(transform.position.x, y, transform.position.z);
+        }
     }
 }

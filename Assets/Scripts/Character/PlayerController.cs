@@ -79,6 +79,8 @@ public class PlayerController : MonoBehaviour
         rigidbody.angularVelocity = Vector3.zero;
         IsPlayerFalling();
     }
+
+
     public void ForceKick(Vector3 direction, float stunTime)
     {
         Debug.Log("ForceKick вызван с направлением: " + direction);
@@ -269,26 +271,30 @@ void MoveOld()
 
     }
 
-    public IEnumerator Slide() 
+    public IEnumerator Slide()
     {
-        if (!isSliding && animator.GetBool("isRunning"))
+        if (isSliding || !animator.GetBool("isRunning"))
+            yield break;
+
+        animator.SetTrigger("Sliding");
+        isSliding = true;
+
+        // Устанавливаем максимальную дистанцию подката
+        float maxSlideDistance = 2f;
+        Vector3 targetPosition = transform.position + transform.forward * Mathf.Min(slideDistance, maxSlideDistance);
+
+        while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {
-            animator.SetTrigger("Sliding");
-            Vector3 slideDirection = transform.forward;
-            targetPosition = transform.position + transform.forward * slideDistance;
             rigidbody.MovePosition(Vector3.MoveTowards(transform.position, targetPosition, slideSpeed * Time.deltaTime));
-            isSliding = true;
-
-            if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
-            {
-                isSliding = false;
-                rigidbody.velocity = Vector3.zero;
-                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 0).magnitude);
-
-            }
+            yield return null;
         }
-        yield return null;
+
+        isSliding = false;
+        rigidbody.velocity = Vector3.zero;
+        animator.SetFloat("Speed", 0);
     }
+
+
     private void OnTriggerEnter(Collider other)
     {
         IInteractable obj;
@@ -350,6 +356,8 @@ void MoveOld()
 
 
 }
+
+
 
 
 public enum PlayerState

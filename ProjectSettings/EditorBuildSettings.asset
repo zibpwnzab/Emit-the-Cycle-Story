@@ -35,6 +35,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cutscene/SC1.unity
     guid: 63debfc376c15824b8176fc1e0fc40b2
+  - enabled: 1
+    path: Assets/Scenes/LvL_6.unity
+    guid: 75b304043d81a8544883d8d5bd01266f
+  - enabled: 1
+    path: Assets/Cutscene/SC4.unity
+    guid: 4f458165e339ef14dad43d50593d95dc
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 5cf7671e24e64b542b43bddda7d38a68, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: a7642575f6aae814ba84996644306549, type: 2}

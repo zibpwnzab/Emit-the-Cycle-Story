@@ -17,11 +17,11 @@ public class MovableObject : MonoBehaviour, IInteractable
 
     public bool Interact(GameObject otherObject, Animator animator)
     {
-        if (ColliderToTurnOff)ColliderToTurnOff.enabled = _connected;
+        if (ColliderToTurnOff) ColliderToTurnOff.enabled = _connected;
         var controller = otherObject.GetComponent<PlayerController>();
         if (_connected)
         {
-             
+
             transform.parent = null;
             controller.playerState = PlayerState.Walking;
         }
@@ -42,19 +42,19 @@ public class MovableObject : MonoBehaviour, IInteractable
             transform.parent = otherObject.transform;
         }
         _connected = !_connected;
-        
+
         return true;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

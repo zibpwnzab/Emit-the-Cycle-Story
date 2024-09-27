@@ -1,10 +1,11 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    
+
     [SerializeField] private string DeathCutSceneName;
     [SerializeField] GameObject WinPanel;
     public static LevelManager Instance;
@@ -36,7 +37,7 @@ public class LevelManager : MonoBehaviour
     }
     public void AddCarma(int carma)
     {
-        currentCarma += carma; 
+        currentCarma += carma;
     }
 
     public void FinishLevel(bool win)
@@ -69,9 +70,9 @@ public class LevelManager : MonoBehaviour
     public void Save()
     {
         PlayerPrefs.SetInt(PlayerController.PLAYER_CARMA_KEY, currentCarma);
-        
+
     }
-    
+
     public int GetCarma()
     {
         return currentCarma;

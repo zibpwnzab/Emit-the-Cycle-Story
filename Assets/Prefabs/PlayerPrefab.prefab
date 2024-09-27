@@ -134,6 +134,8 @@ MonoBehaviour:
   slideDistance: 5
   fallThreshold: 10
   climbSpeed: 5
+  isMovingRight: 0
+  invulnerabilityTime: 3
   Lifes: 3
   jumpButton: {fileID: 0}
   isJumping: 0
