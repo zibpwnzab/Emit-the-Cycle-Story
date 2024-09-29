@@ -9651,6 +9651,14 @@ PrefabInstance:
       propertyPath: graph
       value: 
       objectReference: {fileID: 11400000, guid: 0caee80a989679348a71dc495d6a2004, type: 2}
+    - target: {fileID: 2975675820758845258, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: carmaBorders.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975675820758845258, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: carmaBorders.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5059531114921416181, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: m_Name
       value: Default Canvas (1)
@@ -9733,6 +9741,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6117135325853116000, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6474877867327756981, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: onDialogStarted.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7888572729835321607, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}

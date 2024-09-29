@@ -1,43 +1,48 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
     [SerializeField] private string DeathCutSceneName;
     [SerializeField] GameObject WinPanel;
     public static LevelManager Instance;
-    private int currentCarma;
     private float currentTime;
 
     [SerializeField] UnityEngine.Events.UnityEvent OnDeathA;
+
     void Start()
     {
         if (!Instance) Instance = this;
-        if (PlayerPrefs.HasKey(PlayerController.PLAYER_CARMA_KEY))
+
+        // Получаем текущее время из PlayerPrefs, если нужно
+        if (PlayerPrefs.HasKey(PlayerController.TOTAL_GAME_TIME))
         {
-            currentCarma = PlayerPrefs.GetInt(PlayerController.PLAYER_CARMA_KEY);
             currentTime = PlayerPrefs.GetInt(PlayerController.TOTAL_GAME_TIME);
         }
         else
         {
-            PlayerPrefs.SetInt(PlayerController.PLAYER_CARMA_KEY, 0);
             PlayerPrefs.SetFloat(PlayerController.TOTAL_GAME_TIME, 0);
-            currentCarma = 0;
             currentTime = 0;
         }
     }
 
-
     public void SetCarma(int carma)
     {
-        currentCarma = carma;
+        // Устанавливаем карму через KarmaManager
+        KarmaManager.Instance.SetCarma(carma);
     }
+
     public void AddCarma(int carma)
     {
-        currentCarma += carma;
+        // Добавляем карму через KarmaManager
+        KarmaManager.Instance.AddCarma(carma);
+    }
+
+    public int GetCarma()
+    {
+        // Получаем карму через KarmaManager
+        return KarmaManager.Instance.GetCarma();
     }
 
     public void FinishLevel(bool win)
@@ -50,9 +55,9 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt(PlayerController.PLAYER_CARMA_KEY, 0);
+            // Если игрок проиграл, сбрасываем карму через KarmaManager
+            KarmaManager.Instance.SetCarma(0);
             PlayerPrefs.SetInt(PlayerController.NEXT_LEVEL_KEY, 1);
-            PlayerPrefs.SetInt(PlayerController.PLAYER_CARMA_KEY, 0);
             UnityEngine.SceneManagement.SceneManager.LoadScene(DeathCutSceneName);
         }
     }
@@ -69,12 +74,8 @@ public class LevelManager : MonoBehaviour
 
     public void Save()
     {
-        PlayerPrefs.SetInt(PlayerController.PLAYER_CARMA_KEY, currentCarma);
-
-    }
-
-    public int GetCarma()
-    {
-        return currentCarma;
+        // В LevelManager не нужно сохранять карму в PlayerPrefs, так как это теперь делает KarmaManager.
+        // Если требуется сохранять дополнительные данные (например, время), их можно сохранять в PlayerPrefs.
+        PlayerPrefs.Save();
     }
 }

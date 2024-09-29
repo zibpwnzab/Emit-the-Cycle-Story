@@ -1845,6 +1845,51 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &289192055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 289192057}
+  - component: {fileID: 289192056}
+  m_Layer: 0
+  m_Name: Karma
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &289192056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289192055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8caf10ff3010a6c47b427adacb0088c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCarma: 0
+--- !u!4 &289192057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289192055}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.775587, y: -4.467598, z: 7.5763273}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &297800217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4614846788142368, guid: f08dbf1041be64d41ac1d4f9b6ce357a, type: 3}
@@ -9390,6 +9435,7 @@ GameObject:
   - component: {fileID: 1658114270}
   - component: {fileID: 1658114269}
   - component: {fileID: 1658114268}
+  - component: {fileID: 1658114272}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -9441,10 +9487,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: FinishLevel
-        m_Mode: 6
+      - m_Target: {fileID: 1658114272}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadSceneFromUIButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9511,6 +9557,24 @@ RectTransform:
   m_AnchoredPosition: {x: -723.05, y: 300.99}
   m_SizeDelta: {x: 189.66, y: 28.144}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1658114272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658114267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994af4a25bad8f245bf5326ff89cb942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signalSources: []
+  sceneName: LvL_2
+  needsSignal: 0
+  useTrigger: 0
+  useTimer: 0
+  delayBeforeLoad: 5
 --- !u!1001 &1660187297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12429,3 +12493,4 @@ SceneRoots:
   - {fileID: 953912449}
   - {fileID: 933127493}
   - {fileID: 879796309}
+  - {fileID: 289192057}

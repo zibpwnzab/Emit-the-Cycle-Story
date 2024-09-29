@@ -27,7 +27,7 @@ public class SceneLoader : MonoBehaviour, IInteractable
     private IEnumerator LoadSceneAfterDelay()
     {
         yield return new WaitForSeconds(delayBeforeLoad);
-        LoadNextScene(null); // Передаем null, чтобы не удалять игрока
+        LoadNextScene(null); // Удалим игрока перед загрузкой
     }
 
     // Метод, который вызывается при прохождении через триггер
@@ -35,7 +35,7 @@ public class SceneLoader : MonoBehaviour, IInteractable
     {
         if (useTrigger && other.CompareTag("Player")) // Проверяем, что объект — это игрок
         {
-            LoadNextScene(other.gameObject); // Загружаем сцену, не удаляя игрока
+            LoadNextScene(other.gameObject); // Удалим игрока перед загрузкой
         }
     }
 
@@ -51,7 +51,7 @@ public class SceneLoader : MonoBehaviour, IInteractable
             return false; // Если хотя бы один сигнал не активен, не загружаем сцену
         }
 
-        LoadNextScene(gameObject); // Загружаем сцену, не удаляя игрока
+        LoadNextScene(gameObject); // Удалим игрока перед загрузкой
         return true;
     }
 
@@ -68,14 +68,19 @@ public class SceneLoader : MonoBehaviour, IInteractable
         return true; // Все сигналы активны
     }
 
-    private void LoadNextScene(GameObject gameObject)
+    private void LoadNextScene(GameObject player)
     {
         if (sceneLoadingTriggered)
             return;
 
         sceneLoadingTriggered = true;
 
-        // Просто загружаем новую сцену без удаления игрока
+        // Удаляем объект игрока перед загрузкой новой сцены
+        if (player != null)
+        {
+            Destroy(player);
+        }
+
         Debug.Log("Загружаем сцену: " + sceneName);
         SceneManager.LoadScene(sceneName);
     }
@@ -83,11 +88,17 @@ public class SceneLoader : MonoBehaviour, IInteractable
     // Метод для загрузки сцены по нажатию кнопки UI
     public void LoadSceneFromUIButton()
     {
+        if (sceneLoadingTriggered)
+            return; // Избегаем повторной загрузки
+
         if (needsSignal && !AreAllSignalsActive())
         {
+            Debug.Log("Не все сигналы активны, сцена не загружена.");
             return; // Если сигналы нужны и не все активны, не загружаем сцену
         }
 
-        LoadNextScene(null); // Загружаем сцену без удаления игрока, если это вызвано из UI
+        // Если не требуется проверка сигналов или все сигналы активны, загружаем сцену
+        Debug.Log("Загружаем сцену через кнопку UI: " + sceneName);
+        LoadNextScene(null); // Загружаем сцену (вызвано из UI кнопки)
     }
 }
