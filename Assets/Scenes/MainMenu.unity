@@ -1551,7 +1551,7 @@ MonoBehaviour:
   minWaitTime: 0
   maxWaitTime: 3
   turnOff: 1
-  intensityRanges: {x: 20, y: 1}
+  intensityRanges: {x: 5, y: 10}
   positionOffset: {x: 0, y: 0, z: 0}
 --- !u!224 &608529614 stripped
 RectTransform:
@@ -5638,7 +5638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000983385670848, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0076884134
+      value: 1.04
       objectReference: {fileID: 0}
     - target: {fileID: 4000983385670848, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: m_LocalRotation.w

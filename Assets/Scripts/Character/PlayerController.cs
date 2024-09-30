@@ -1,12 +1,7 @@
-﻿using Microsoft.Win32.SafeHandles;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
 
 [RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
 public class PlayerController : MonoBehaviour
@@ -22,8 +17,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
     [SerializeField] SlideButton slideButton;
-    public float slideSpeed = 5f;
-    public float slideDistance = 5f;
+    public float slideSpeed = 5f; // Настраиваемая скорость подката
+    public float slideDistance = 5f; // Настраиваемая дистанция подката
     private bool isSliding = false;
     private Vector3 targetPosition;
     public float fallThreshold = 10f;
@@ -36,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     public int Lifes = 3;
     [SerializeField] JumpButton jumpButton;
-    [SerializeField]private bool isJumping = false;
+    [SerializeField] private bool isJumping = false;
     private List<IInteractable> interactables;
     private GameObject lastInteractable;
     public PlayerState playerState = PlayerState.Walking;
@@ -44,7 +39,6 @@ public class PlayerController : MonoBehaviour
     public static string PLAYER_CARMA_KEY = "PLAYER_CARMA_KEY";
     public static string NEXT_LEVEL_KEY = "NEXT_LEVEL_KEY";
     public static string TOTAL_GAME_TIME = "TOTAL_GAME_TIME";
-
 
     [SerializeField] private TMPro.TMP_Text VelocityText;
 
@@ -68,8 +62,8 @@ public class PlayerController : MonoBehaviour
         jumpButton = FindObjectOfType<JumpButton>();
         slideButton = FindObjectOfType<SlideButton>();
         animator = GetComponent<Animator>();
-
     }
+
 
     void Update()
     {
@@ -78,6 +72,11 @@ public class PlayerController : MonoBehaviour
 #endif
         rigidbody.angularVelocity = Vector3.zero;
         IsPlayerFalling();
+        // Проверяем нажатие Ctrl и запуск подката
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !isSliding && animator.GetBool("isRunning"))
+        {
+            StartCoroutine(Slide());
+        }
     }
 
 
@@ -271,28 +270,61 @@ void MoveOld()
 
     }
 
+
     public IEnumerator Slide()
     {
-        if (isSliding || !animator.GetBool("isRunning"))
+        if (isSliding)
             yield break;
 
+        // Отключаем джойстик для блокировки управления
+        joystick.enabled = false;
+
+        // Триггерим анимацию подката
         animator.SetTrigger("Sliding");
         isSliding = true;
 
-        // Устанавливаем максимальную дистанцию подката
-        float maxSlideDistance = 2f;
-        Vector3 targetPosition = transform.position + transform.forward * Mathf.Min(slideDistance, maxSlideDistance);
+        // Рассчитываем конечную позицию подката
+        Vector3 startPosition = transform.position;
+        Vector3 targetPosition = startPosition + transform.forward * slideDistance;
 
-        while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
+        // Определяем переменную для управления временем и скоростью подката
+        float currentSlideDistance = 0f;
+        float minDistanceBeforeStop = 0.05f; // Минимальное расстояние для завершения подката
+
+        while (currentSlideDistance < slideDistance)
         {
-            rigidbody.MovePosition(Vector3.MoveTowards(transform.position, targetPosition, slideSpeed * Time.deltaTime));
-            yield return null;
+            // Проверяем, есть ли препятствие на пути
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position + Vector3.up * 0.1f, transform.forward, out hit, 0.5f))
+            {
+                // Останавливаем подкат, если на пути есть препятствие
+                break;
+            }
+
+            // Плавное движение вперед
+            Vector3 nextPosition = Vector3.MoveTowards(transform.position, targetPosition, slideSpeed * Time.fixedDeltaTime);
+
+            // Применяем новое положение
+            rigidbody.MovePosition(nextPosition);
+
+            // Увеличиваем пройденное расстояние
+            currentSlideDistance += (nextPosition - transform.position).magnitude;
+
+            // Ожидаем следующее обновление физики
+            yield return new WaitForFixedUpdate();
         }
 
+        // Завершаем подкат
         isSliding = false;
         rigidbody.velocity = Vector3.zero;
         animator.SetFloat("Speed", 0);
+
+        // Включаем джойстик обратно
+        joystick.enabled = true;
     }
+
+
+
 
 
     private void OnTriggerEnter(Collider other)

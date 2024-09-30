@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovableObject : MonoBehaviour, IInteractable
 {
@@ -21,10 +22,12 @@ public class MovableObject : MonoBehaviour, IInteractable
         var controller = otherObject.GetComponent<PlayerController>();
         if (_connected)
         {
-
             transform.parent = null;
+            // Убедись, что объект вернулся на "корневой" уровень и не наследует DontDestroyOnLoad
+            SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
             controller.playerState = PlayerState.Walking;
         }
+
         else
         {
             controller.playerState = PlayerState.MovingObject;

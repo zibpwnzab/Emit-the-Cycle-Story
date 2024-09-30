@@ -4356,6 +4356,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1001881825}
     - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: slideSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: playerState
       value: 0
       objectReference: {fileID: 0}
@@ -4363,6 +4367,14 @@ PrefabInstance:
       propertyPath: slideButton
       value: 
       objectReference: {fileID: 506118384}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fallThreshold
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: slideDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: interactButton
       value: 
