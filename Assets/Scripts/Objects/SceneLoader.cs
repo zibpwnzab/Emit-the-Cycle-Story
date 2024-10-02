@@ -86,7 +86,7 @@ public class SceneLoader : MonoBehaviour, IInteractable
     }
 
     // Метод для загрузки сцены по нажатию кнопки UI
-    public void LoadSceneFromUIButton()
+    public void LoadSceneFromUIButton(GameObject player)
     {
         if (sceneLoadingTriggered)
             return; // Избегаем повторной загрузки
@@ -97,8 +97,14 @@ public class SceneLoader : MonoBehaviour, IInteractable
             return; // Если сигналы нужны и не все активны, не загружаем сцену
         }
 
+        // Удаляем объект игрока перед загрузкой новой сцены
+        if (player != null)
+        {
+            Destroy(player);
+        }
+
         // Если не требуется проверка сигналов или все сигналы активны, загружаем сцену
         Debug.Log("Загружаем сцену через кнопку UI: " + sceneName);
-        LoadNextScene(null); // Загружаем сцену (вызвано из UI кнопки)
+        SceneManager.LoadScene(sceneName); // Загружаем сцену (вызвано из UI кнопки)
     }
 }
