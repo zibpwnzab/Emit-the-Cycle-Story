@@ -1664,7 +1664,10 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_ShowDebugText: 0
   m_Loop: 0
-  m_ChildCameras: []
+  m_ChildCameras:
+  - {fileID: 1063174289}
+  - {fileID: 2063459675}
+  - {fileID: 1831469040}
   m_Instructions:
   - m_VirtualCamera: {fileID: 1063174289}
     m_Hold: 1
@@ -2941,7 +2944,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.8291495e+22, y: 1.6508e+28, z: 3991.2756, w: 1.8058762e+28}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.33333334}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -4064,7 +4067,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathCutSceneName: 
-  LosePanel: {fileID: 0}
   WinPanel: {fileID: 0}
   OnDeathA:
     m_PersistentCalls:
@@ -4241,9 +4243,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994af4a25bad8f245bf5326ff89cb942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signalSource: {fileID: 0}
-  SceneNumber: 2
+  signalSources: []
+  sceneName: 
   needsSignal: 1
+  useTrigger: 1
+  useTimer: 0
+  delayBeforeLoad: 5
 --- !u!1001 &787005808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4700,7 +4705,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathCutSceneName: LvL_1
-  LosePanel: {fileID: 0}
   WinPanel: {fileID: 0}
   OnDeathA:
     m_PersistentCalls:
@@ -6377,6 +6381,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4140063754780846, guid: 503b99e1e84259b4b9d26fa97b9ee0ff, type: 3}
   m_PrefabInstance: {fileID: 702516320}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1194753248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1194753250}
+  - component: {fileID: 1194753249}
+  m_Layer: 0
+  m_Name: Scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1194753249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194753248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994af4a25bad8f245bf5326ff89cb942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signalSources: []
+  sceneName: LvL_1
+  needsSignal: 0
+  useTrigger: 0
+  useTimer: 1
+  delayBeforeLoad: 18
+--- !u!4 &1194753250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194753248}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 81.85266, y: -23.911858, z: -62.396004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236448390
 GameObject:
   m_ObjectHideFlags: 0
@@ -13511,3 +13565,4 @@ SceneRoots:
   - {fileID: 714640525}
   - {fileID: 651651125}
   - {fileID: 1645504536}
+  - {fileID: 1194753250}

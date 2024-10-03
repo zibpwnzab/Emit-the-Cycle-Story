@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] TMPro.TMP_Text ContinueButtonText;
     [SerializeField] string FirstCutSceneName;
     int nextLevel;
+
     private void Start()
     {
         if (PlayerPrefs.HasKey(PlayerController.NEXT_LEVEL_KEY))
@@ -20,6 +21,7 @@ public class MainMenu : MonoBehaviour
             nextLevel = 1;
             PlayerPrefs.SetInt(PlayerController.NEXT_LEVEL_KEY, 1);
         }
+
         if (nextLevel > 1)
         {
             if (ContinueButton)
@@ -31,17 +33,37 @@ public class MainMenu : MonoBehaviour
                 }
             }
         }
-        
     }
-    public void NewGame() {
+
+    public void NewGame()
+    {
+        // Удаляем все объекты, помеченные как DontDestroyOnLoad
+        DestroyAllDontDestroyOnLoadObjects();
+
+        // Загружаем новую игру
         SceneManager.LoadScene(FirstCutSceneName);
     }
 
-    public void ContinueGame() {
+    public void ContinueGame()
+    {
         SceneManager.LoadScene(nextLevel);
     }
 
-    public void QuitGame() {
+    public void QuitGame()
+    {
         Application.Quit();
+    }
+
+    // Метод для удаления всех объектов, помеченных как DontDestroyOnLoad
+    private void DestroyAllDontDestroyOnLoadObjects()
+    {
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.scene.name == null || obj.scene.name == "DontDestroyOnLoad")
+            {
+                Destroy(obj);
+            }
+        }
     }
 }

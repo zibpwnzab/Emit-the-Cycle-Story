@@ -7,6 +7,7 @@ public class MovableObject : MonoBehaviour, IInteractable
 {
     [SerializeField] List<Transform> grabPoints;
     [SerializeField] Collider ColliderToTurnOff;
+    [SerializeField] private float distanceFromObject = 1.0f; // ƒобавим поле дл€ указани€ дистанции
     private bool _connected;
 
     public bool StopInteraction(GameObject gameObject, Animator animator)
@@ -20,6 +21,7 @@ public class MovableObject : MonoBehaviour, IInteractable
     {
         if (ColliderToTurnOff) ColliderToTurnOff.enabled = _connected;
         var controller = otherObject.GetComponent<PlayerController>();
+
         if (_connected)
         {
             transform.parent = null;
@@ -27,7 +29,6 @@ public class MovableObject : MonoBehaviour, IInteractable
             SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
             controller.playerState = PlayerState.Walking;
         }
-
         else
         {
             controller.playerState = PlayerState.MovingObject;
@@ -40,10 +41,15 @@ public class MovableObject : MonoBehaviour, IInteractable
             currentForward = currentForward.normalized;
 
             float angle = Vector3.SignedAngle(dir, currentForward, Vector3.up);
-
             otherObject.transform.Rotate(Vector3.down, angle);
+
+            // ќтодвинем игрока на небольшое рассто€ние
+            Vector3 moveBackPosition = otherObject.transform.position - dir * distanceFromObject;
+            otherObject.transform.position = moveBackPosition;
+
             transform.parent = otherObject.transform;
         }
+
         _connected = !_connected;
 
         return true;
