@@ -138,7 +138,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1402166914541490840, guid: 9eb203379bc6dae4dad6ce200e56c4a5, type: 3}
       propertyPath: distanceFromObject
-      value: 0.5
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 1437034159897372545, guid: 9eb203379bc6dae4dad6ce200e56c4a5, type: 3}
       propertyPath: m_Size.z
