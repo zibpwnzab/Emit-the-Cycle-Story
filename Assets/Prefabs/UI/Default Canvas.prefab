@@ -1442,7 +1442,6 @@ GameObject:
   - component: {fileID: 845164992317456415}
   - component: {fileID: 8630983743505550292}
   - component: {fileID: 233478486471978610}
-  - component: {fileID: 2719535820435017687}
   m_Layer: 5
   m_Name: SlideButton
   m_TagString: Untagged
@@ -1551,18 +1550,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2719535820435017687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2984641671932951542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb70d893d7ae474ea46e89ab0216e18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3215359266647984832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,6 +2869,7 @@ GameObject:
   - component: {fileID: 6933290792268921467}
   - component: {fileID: 295882007486835002}
   - component: {fileID: 2990111460380262071}
+  - component: {fileID: 2479663735784952333}
   m_Layer: 5
   m_Name: Default Canvas
   m_TagString: Untagged
@@ -3029,6 +3017,21 @@ MonoBehaviour:
   OnDeathA:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2479663735784952333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5059531114921416181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6339dd4a58ae79d429e6fa024cbfb49b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ContinueButton: {fileID: 0}
+  ContinueButtonText: {fileID: 0}
+  FirstCutSceneName: GameOver
 --- !u!1 &5138286687014438029
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,6 +3161,7 @@ MonoBehaviour:
   nextSentenceKeyCodes: 4301000020000000
   isCanSkippingText: 1
   isAutoProceed: 0
+  autoProceedDelay: 2
   onDialogStarted:
     m_PersistentCalls:
       m_Calls:
@@ -5652,10 +5656,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2990111460380262071}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: FinishLevel
-        m_Mode: 6
+      - m_Target: {fileID: 2479663735784952333}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: NewGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5718,6 +5722,7 @@ MonoBehaviour:
   nextSentenceKeyCodes: 4301000020000000
   isCanSkippingText: 1
   isAutoProceed: 0
+  autoProceedDelay: 2
   onDialogStarted:
     m_PersistentCalls:
       m_Calls: []

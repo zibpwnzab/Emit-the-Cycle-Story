@@ -37,6 +37,10 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
+        // Сбрасываем все сохранённые данные (PlayerPrefs)
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+
         // Удаляем все объекты, помеченные как DontDestroyOnLoad
         DestroyAllDontDestroyOnLoadObjects();
 
@@ -44,17 +48,6 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(FirstCutSceneName);
     }
 
-    public void ContinueGame()
-    {
-        SceneManager.LoadScene(nextLevel);
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
-    // Метод для удаления всех объектов, помеченных как DontDestroyOnLoad
     private void DestroyAllDontDestroyOnLoadObjects()
     {
         GameObject[] allObjects = FindObjectsOfType<GameObject>();
@@ -66,4 +59,16 @@ public class MainMenu : MonoBehaviour
             }
         }
     }
+
+
+    public void ContinueGame()
+    {
+        SceneManager.LoadScene(nextLevel);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.004325781, g: 0.004404316, b: 0.008137923, a: 1}
+  m_IndirectSpecularColor: {r: 0.0043419357, g: 0.0044208216, b: 0.008134903, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2212,8 +2212,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 776648108}
-        m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
-        m_MethodName: ReturnButton
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: NewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3180,8 +3180,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 776648107}
-  - component: {fileID: 776648108}
   - component: {fileID: 776648105}
+  - component: {fileID: 776648108}
   m_Layer: 0
   m_Name: LevelM
   m_TagString: Untagged
@@ -3207,7 +3207,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 776648108}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: ReturnToMenu, Assembly-CSharp
           m_MethodName: ReturnButton
           m_Mode: 1
@@ -3243,9 +3243,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 776648104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 117e643b4a9973c478b6f19d88b35f83, type: 3}
+  m_Script: {fileID: 11500000, guid: 6339dd4a58ae79d429e6fa024cbfb49b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ContinueButton: {fileID: 0}
+  ContinueButtonText: {fileID: 0}
+  FirstCutSceneName: MainMenu
 --- !u!1 &800410285
 GameObject:
   m_ObjectHideFlags: 0

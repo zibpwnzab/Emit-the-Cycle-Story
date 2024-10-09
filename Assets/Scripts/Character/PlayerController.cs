@@ -16,25 +16,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float rotateObjectSpeed;
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
-    [SerializeField] SlideButton slideButton;
-    public float slideSpeed = 5f; // Настраиваемая скорость подката
-    public float slideDistance = 5f; // Настраиваемая дистанция подката
-    private bool isSliding = false;
-    private Vector3 targetPosition;
-    public float fallThreshold = 10f;
-    public float climbSpeed = 5f;
-    private bool isClimbing = false;
-    public static PlayerController instance;
-    public bool isMovingRight = false;
-    private bool isInvulnerable = false;
-    public float invulnerabilityTime = 5f;
-
-    public int Lifes = 3;
-    [SerializeField] JumpButton jumpButton;
-    [SerializeField] private bool isJumping = false;
+    [SerializeField] private Button fireButton; // Кнопка для активации фаера
+    [SerializeField] private GameObject fireVFX; // Префаб VFX фаера
+    [SerializeField] private Light fireLight; // Источник света для фаера
+    [SerializeField] private float fireLightDuration = 2f; // Длительность света
+    private bool isUsingFire = false; // Проверка, активирован ли фаер
+    private bool isJumping = false;
     private List<IInteractable> interactables;
     private GameObject lastInteractable;
     public PlayerState playerState = PlayerState.Walking;
+    public static PlayerController instance;
+    public int Lifes = 3;
+    public float fallThreshold = 10f; // Минимальная скорость падения, при которой будет считаться, что игрок падает
 
     public static string PLAYER_CARMA_KEY = "PLAYER_CARMA_KEY";
     public static string NEXT_LEVEL_KEY = "NEXT_LEVEL_KEY";
@@ -58,10 +51,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
-        interactables = new();
-        jumpButton = FindObjectOfType<JumpButton>();
-        slideButton = FindObjectOfType<SlideButton>();
+        interactables = new List<IInteractable>();
         animator = GetComponent<Animator>();
+        // Привязываем событие нажатия кнопки фаера
+        fireButton.onClick.AddListener(ToggleFire);
     }
 
 
@@ -72,10 +65,40 @@ public class PlayerController : MonoBehaviour
 #endif
         rigidbody.angularVelocity = Vector3.zero;
         IsPlayerFalling();
-        // Проверяем нажатие Ctrl и запуск подката
-        if (Input.GetKeyDown(KeyCode.LeftControl) && !isSliding && animator.GetBool("isRunning"))
+    }
+
+    private void ToggleFire()
+    {
+        isUsingFire = !isUsingFire; // Переключаем состояние
+
+        if (isUsingFire)
         {
-            StartCoroutine(Slide());
+            Debug.Log("Fire activated"); // Лог-сообщение для проверки
+            if (fireVFX != null)
+            {
+                fireVFX.SetActive(true);
+            }
+            if (fireLight != null)
+            {
+                fireLight.enabled = true;
+                Debug.Log("Light is enabled"); // Лог-сообщение для проверки
+            }
+            animator.SetTrigger("FireUse");
+
+
+        }
+        else
+        {
+            Debug.Log("Fire deactivated"); // Лог-сообщение для проверки
+            if (fireVFX != null)
+            {
+                fireVFX.SetActive(false);
+            }
+            if (fireLight != null)
+            {
+                fireLight.enabled = false;
+                Debug.Log("Light is disabled"); // Лог-сообщение для проверки
+            }
         }
     }
 
@@ -103,26 +126,14 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (!isInvulnerable)
+        Lifes -= damage;
+        if (Lifes <= 0)
         {
-            Lifes -= damage;
-            if (Lifes <= 0)
-            {
-                Die();
-            }
-            else
-            {
-                StartCoroutine(InvulnerabilityCoroutine());
-            }
+            Die();
         }
     }
 
-    private IEnumerator InvulnerabilityCoroutine()
-    {
-        isInvulnerable = true;
-        yield return new WaitForSeconds(invulnerabilityTime);
-        isInvulnerable = false;
-    }
+   
 
 
     private void FixedUpdate()
@@ -165,46 +176,41 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-void MoveOld()
-{
-    Vector3 desiredVelocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed));
-    rigidbody.velocity = desiredVelocity;
-
+    void MoveOld()
+    {
+        Vector3 desiredVelocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed));
+        rigidbody.velocity = desiredVelocity;
 
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
-    {
-
-        Vector3 lookDirection = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z);
-        transform.rotation = Quaternion.LookRotation(lookDirection);
-            isMovingRight = true;
-
+        {
+            Vector3 lookDirection = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z);
+            transform.rotation = Quaternion.LookRotation(lookDirection);
 
             float currentSpeed = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z).magnitude;
 
-        if (!isJumping)
-        {
-            animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
+            if (!isJumping)
+            {
+                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
 
-            if (currentSpeed > runSpeedThreshold)
-            {
-                animator.SetBool("isRunning", true);
+                if (currentSpeed > runSpeedThreshold)
+                {
+                    animator.SetBool("isRunning", true);
+                }
+                else
+                {
+                    animator.SetBool("isRunning", false);
+                }
             }
-            else
+        }
+        else
+        {
+            if (!isJumping)
             {
+                animator.SetFloat("Speed", 0);
                 animator.SetBool("isRunning", false);
             }
         }
     }
-    else
-    {
-        if (!isJumping)
-        {
-            animator.SetFloat("Speed", 0);
-            animator.SetBool("isRunning", false);
-        }
-    }
-
-}
 
     void MoveWithObject()
     {
@@ -271,58 +277,7 @@ void MoveOld()
     }
 
 
-    public IEnumerator Slide()
-    {
-        if (isSliding)
-            yield break;
-
-        // Отключаем джойстик для блокировки управления
-        joystick.enabled = false;
-
-        // Триггерим анимацию подката
-        animator.SetTrigger("Sliding");
-        isSliding = true;
-
-        // Рассчитываем конечную позицию подката
-        Vector3 startPosition = transform.position;
-        Vector3 targetPosition = startPosition + transform.forward * slideDistance;
-
-        // Определяем переменную для управления временем и скоростью подката
-        float currentSlideDistance = 0f;
-        float minDistanceBeforeStop = 0.05f; // Минимальное расстояние для завершения подката
-
-        while (currentSlideDistance < slideDistance)
-        {
-            // Проверяем, есть ли препятствие на пути
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position + Vector3.up * 0.1f, transform.forward, out hit, 0.5f))
-            {
-                // Останавливаем подкат, если на пути есть препятствие
-                break;
-            }
-
-            // Плавное движение вперед
-            Vector3 nextPosition = Vector3.MoveTowards(transform.position, targetPosition, slideSpeed * Time.fixedDeltaTime);
-
-            // Применяем новое положение
-            rigidbody.MovePosition(nextPosition);
-
-            // Увеличиваем пройденное расстояние
-            currentSlideDistance += (nextPosition - transform.position).magnitude;
-
-            // Ожидаем следующее обновление физики
-            yield return new WaitForFixedUpdate();
-        }
-
-        // Завершаем подкат
-        isSliding = false;
-        rigidbody.velocity = Vector3.zero;
-        animator.SetFloat("Speed", 0);
-
-        // Включаем джойстик обратно
-        joystick.enabled = true;
-    }
-
+    
 
 
 

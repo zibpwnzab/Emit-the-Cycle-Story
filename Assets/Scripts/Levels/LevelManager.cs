@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -57,11 +58,26 @@ public class LevelManager : MonoBehaviour
         {
             // Если игрок проиграл, сбрасываем карму через KarmaManager
             KarmaManager.Instance.SetCarma(0);
-            PlayerPrefs.SetInt(PlayerController.NEXT_LEVEL_KEY, 1);
+
+            // Удаляем все объекты, помеченные как DontDestroyOnLoad
+            DestroyAllDontDestroyOnLoadObjects();
+
+            // Загружаем
+            SceneManager.LoadScene(DeathCutSceneName);
             UnityEngine.SceneManagement.SceneManager.LoadScene(DeathCutSceneName);
         }
     }
-
+    private void DestroyAllDontDestroyOnLoadObjects()
+    {
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.scene.name == null || obj.scene.name == "DontDestroyOnLoad")
+            {
+                Destroy(obj);
+            }
+        }
+    }
     public void Exit()
     {
         Application.Quit();
