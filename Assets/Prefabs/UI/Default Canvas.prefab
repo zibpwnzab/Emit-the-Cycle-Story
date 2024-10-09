@@ -4639,7 +4639,7 @@ MonoBehaviour:
   dialogBehaviour: {fileID: 5575494075839174541}
   graph: {fileID: 11400000, guid: 3be020aaa2d6d364c8195cf2606d5f58, type: 2}
   carmaBorders: {x: 1, y: 1}
-  needSignal: 1
+  needSignal: 0
   signal: {fileID: 0}
   carmaText: {fileID: 5496344346059526097}
   blackScreen: {fileID: 2112373720769205152}

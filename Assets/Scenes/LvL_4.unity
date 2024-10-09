@@ -5104,7 +5104,7 @@ PrefabInstance:
       objectReference: {fileID: 1061859986}
     - target: {fileID: 2975675820758845258, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: needSignal
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2975675820758845258, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: carmaBorders.x
@@ -5996,7 +5996,7 @@ MonoBehaviour:
   dialogBehaviour: {fileID: 402791567}
   graph: {fileID: 11400000, guid: 2cff57a3dd579ea45a5c4b2da7608a83, type: 2}
   carmaBorders: {x: -2, y: -2}
-  needSignal: 1
+  needSignal: 0
   signal: {fileID: 1061859986}
   carmaText: {fileID: 1391338327}
   blackScreen: {fileID: 805368601}
@@ -10902,7 +10902,7 @@ MonoBehaviour:
   dialogBehaviour: {fileID: 798467733}
   graph: {fileID: 11400000, guid: f8422e293a709b74b8ac22b30b4c0884, type: 2}
   carmaBorders: {x: 0, y: 0}
-  needSignal: 1
+  needSignal: 0
   signal: {fileID: 1061859986}
   carmaText: {fileID: 1391338327}
   blackScreen: {fileID: 805368601}
@@ -15518,7 +15518,7 @@ MonoBehaviour:
   dialogBehaviour: {fileID: 1039518099}
   graph: {fileID: 11400000, guid: b533cd8f8fd466240a9b4bf3fa17e761, type: 2}
   carmaBorders: {x: 1, y: 1}
-  needSignal: 1
+  needSignal: 0
   signal: {fileID: 1061859986}
   carmaText: {fileID: 1391338327}
   blackScreen: {fileID: 805368601}
@@ -17502,6 +17502,10 @@ PrefabInstance:
     - target: {fileID: 7471451548712146190, guid: 1b879569728afdd46a48e15accee21d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022316361583944737, guid: 1b879569728afdd46a48e15accee21d4, type: 3}
+      propertyPath: needSignal
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

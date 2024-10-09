@@ -5,19 +5,22 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LaserEmitter : MonoBehaviour
 {
-    [SerializeField] float LaserKickForce;
-    [SerializeField] float LaserStunTime;
+    [SerializeField] private float laserKickForce = 10f;
+    [SerializeField] private float laserStunTime = 3f;
 
-    LineRenderer _lineRenderer;
-    [SerializeField] Transform laserDirection;
-    [SerializeField] Transform laserStart;
-    [SerializeField] int maxBounces;
-    List<Vector3> laserPositions;
-    [SerializeField] int mirrorLayer;
-    [SerializeField] LayerMask collideLayer;
-    [SerializeField] int positionsPerSegment;
-    [SerializeField] bool NeedSignal;
-    [SerializeField] ISignal signalSource;
+    private LineRenderer _lineRenderer;
+    [SerializeField] private Transform laserDirection;
+    [SerializeField] private Transform laserStart;
+    [SerializeField] private int maxBounces = 3;
+    private List<Vector3> laserPositions;
+    [SerializeField] private int mirrorLayer;
+    [SerializeField] private LayerMask collideLayer;
+    [SerializeField] private int positionsPerSegment = 10;
+    [SerializeField] private bool needSignal;
+    [SerializeField] private ISignal signalSource;
+
+    private bool canDealDamage = true; // Флаг для управления нанесением урона
+
     void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
@@ -25,9 +28,10 @@ public class LaserEmitter : MonoBehaviour
 
     void Update()
     {
-        laserPositions = new();
+        laserPositions = new List<Vector3>();
         laserPositions.Add(laserStart.position);
-        if (NeedSignal)
+
+        if (needSignal)
         {
             if (signalSource.Signal())
                 EmitLaser(laserStart.position, laserDirection.forward, 0);
@@ -44,25 +48,24 @@ public class LaserEmitter : MonoBehaviour
     {
         if (currentCount > maxBounces)
             return;
-        Ray ray;
+
+        Ray ray = new Ray(position, direction);
         RaycastHit hit;
 
-        if (!Physics.Raycast(position, direction.normalized, out hit, float.MaxValue, collideLayer))
+        if (!Physics.Raycast(ray, out hit, float.MaxValue, collideLayer))
         {
             laserPositions.Add(position + direction * 100);
             return;
         }
 
         laserPositions.Add(hit.point);
+
         if (hit.collider.gameObject.layer == mirrorLayer)
         {
-            var in_ray = hit.point - position;
-            var out_ray = in_ray - 2 * Vector3.Dot(in_ray, hit.normal.normalized) * hit.normal.normalized;
-            //Debug.Log("Mirror Hit");
-            EmitLaser(hit.point, out_ray, currentCount + 1);
+            Vector3 inRay = hit.point - position;
+            Vector3 outRay = inRay - 2 * Vector3.Dot(inRay, hit.normal.normalized) * hit.normal.normalized;
+            EmitLaser(hit.point, outRay, currentCount + 1);
         }
-        
-
 
         if (hit.collider.gameObject.TryGetComponent(out LaserReceiver laserReceiver))
         {
@@ -71,12 +74,17 @@ public class LaserEmitter : MonoBehaviour
 
         if (hit.collider.gameObject.TryGetComponent(out PlayerController player))
         {
-            var dir = player.transform.position - hit.point;
-            dir.y = 0;
-            dir = dir.normalized * LaserKickForce;
-            if (player.playerState == PlayerState.Stunned) return;
-            player.ForceKick(dir, LaserStunTime);
-            player.TakeDamage(1);
+            if (canDealDamage) // Проверяем, можно ли наносить урон
+            {
+                Vector3 dir = player.transform.position - hit.point;
+                dir.y = 0;
+                dir = dir.normalized * laserKickForce;
+
+                player.ForceKick(dir, laserStunTime);
+                player.TakeDamage(1);
+
+                StartCoroutine(DisableLaserDamageTemporarily()); // Запускаем корутину для временного отключения урона
+            }
         }
 
         if (hit.collider.gameObject.TryGetComponent(out DestroyableObject destroyableObject))
@@ -85,10 +93,15 @@ public class LaserEmitter : MonoBehaviour
         }
     }
 
-
-    void MirrorLaser()
+    /// <summary>
+    /// Корутин для временного отключения урона лазера.
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator DisableLaserDamageTemporarily()
     {
-
+        canDealDamage = false; // Отключаем урон
+        yield return new WaitForSeconds(laserStunTime); // Ждем 3 секунды
+        canDealDamage = true; // Включаем урон обратно
     }
 
     void DrawLaser()
@@ -102,10 +115,10 @@ public class LaserEmitter : MonoBehaviour
             var dir = laserPositions[i + 1] - laserPositions[i];
             for (int j = 0; j < positionsPerSegment; j++)
             {
-                var pos = laserPositions[i] + dir * ((float)j/(float)positionsPerSegment);
+                var pos = laserPositions[i] + dir * ((float)j / (float)positionsPerSegment);
                 _lineRenderer.SetPosition(i * positionsPerSegment + j, pos);
             }
         }
-        _lineRenderer.SetPosition((laserPositions.Count - 1) * positionsPerSegment, laserPositions[laserPositions.Count-1]);
+        _lineRenderer.SetPosition((laserPositions.Count - 1) * positionsPerSegment, laserPositions[laserPositions.Count - 1]);
     }
 }

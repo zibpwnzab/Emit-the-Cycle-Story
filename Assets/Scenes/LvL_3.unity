@@ -7027,6 +7027,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6f93fa74298c2944aafa22555d3c3518, type: 2}
     - target: {fileID: 7888572729835321607, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: needSignal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888572729835321607, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: carmaBorders.x
       value: -1
       objectReference: {fileID: 0}

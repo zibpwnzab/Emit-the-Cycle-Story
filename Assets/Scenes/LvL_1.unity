@@ -379,6 +379,10 @@ PrefabInstance:
       propertyPath: signal
       value: 
       objectReference: {fileID: 1365550153}
+    - target: {fileID: 7888572729835321607, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: needSignal
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3328,7 +3332,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.54e-43, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -0.0017163507}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -3886,11 +3890,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9096187331321207553, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
       propertyPath: LaserStunTime
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9096187331321207553, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
       propertyPath: LaserKickForce
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096187331321207553, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
+      propertyPath: positionsPerSegment
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12677,7 +12685,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.11e-43, y: 0, z: 0, w: NaN}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 1.73e-42, w: -9.5795026e+20}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

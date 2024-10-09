@@ -16,8 +16,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 112
-    y: 495
+    x: -324
+    y: 378
     width: 170
     height: 115
   isDragging: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
     characterName: "\u042D\u043C\u0438\u0442"
     text: " \u0421\u043B\u0443\u0448\u0430\u0439 \u0442\u044B \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u043E
       \u0432\u0441\u0435-\u0435\u0449\u0435 \u0437\u043B\u0438\u0448\u044C\u0441\u044F?  "
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -1448582281501583994}
   childNode: {fileID: 5689732045476846897}
 --- !u!114 &-7802394985112391240
@@ -46,8 +46,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1173
-    y: 168
+    x: 737
+    y: 51
     width: 170
     height: 115
   isDragging: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
       \u0412\u044B\u0431\u0435\u0440\u0438\u0441\u044C \u043D\u0430\u0440\u0443\u0436\u0443,
       \u0434\u043E\u043A\u0430\u0436\u0438 \u0447\u0442\u043E \u044F \u043D\u0435
       \u043F\u0440\u0430\u0432\u0430! "
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: -5284767695367678749}
   childNode: {fileID: -1718406539116121267}
 --- !u!114 &-7602996960026060454
@@ -80,8 +80,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 660
-    y: 190
+    x: 224
+    y: 73
     width: 170
     height: 115
   isDragging: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
       \u043E\u0449\u0443\u0449\u0430\u0435\u0442\u0441\u044F \u0442\u0430\u043A\u043E\u043C
       \u0437\u043D\u0430\u043A\u043E\u043C\u043E\u0439, \u043D\u043E \u043F\u0440\u0438
       \u044D\u0442\u043E\u043C \u0442\u0430\u043A\u043E\u0439 \u0445\u043E\u043B\u043E\u0434\u043D\u043E\u0439 "
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 5000439192804159167}
   childNode: {fileID: -899388332853351837}
 --- !u!114 &-7327417817915680294
@@ -112,8 +112,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 581
-    y: -95
+    x: 145
+    y: -212
     width: 170
     height: 115
   isDragging: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
       \u0434\u0430\u0436\u0435 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0443\u044E
       \u0447\u0430\u0441\u0442\u044C.. \u043D\u043E \u043E\u043D\u043E \u043D\u0435
       \u0437\u0430\u043A\u0430\u043D\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044F "
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 2113775321914450071}
   childNode: {fileID: 5000439192804159167}
 --- !u!114 &-6048380836385127337
@@ -146,8 +146,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1149
-    y: 420
+    x: 713
+    y: 303
     width: 170
     height: 115
   isDragging: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
       \u0418 \u0432 \u043A\u043E\u043D\u0446\u0435 \u0433\u0440\u043E\u043C\u043A\u0438\u0435
       \u0444\u0440\u0430\u0437\u044B \u043D\u0435 \u0441\u043F\u0430\u0441\u0443\u0442
       \u0442\u0435\u0431\u044F \u043E\u0442 \u043D\u0435\u043C\u0438\u043D\u0443\u0435\u043C\u043E\u0433\u043E"
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: -4884667907447090851}
   childNode: {fileID: -5284767695367678749}
 --- !u!114 &-5805549351957622060
@@ -179,8 +179,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 560
-    y: 843
+    x: 124
+    y: 726
     width: 170
     height: 115
   isDragging: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
     text: "\u0422\u044B \u0441\u0438\u0434\u0438\u0448\u044C \u043D\u0435\u0437\u043D\u0430\u043C\u043E
       \u0433\u0434\u0435, \u0432 \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438
       \u0438 \u0441\u043C\u0435\u0435\u0448\u044C \u0435\u0449\u0435 \u043E\u0431\u0438\u0436\u0430\u0442\u044C\u0441\u044F?"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 6427375920088970604}
   childNode: {fileID: 7204790198612192719}
 --- !u!114 &-5435254819415840256
@@ -210,8 +210,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1153
-    y: 818
+    x: 717
+    y: 701
     width: 170
     height: 115
   isDragging: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
       \u0443\u0436\u0435 \u043F\u0440\u043E\u0448\u0435\u043B \u0447\u0435\u0440\u0435\u0437
       \u0441\u0442\u043E\u043B\u044C\u043A\u043E, \u043D\u043E \u0447\u0442\u043E
       \u0442\u044B \u0434\u0435\u043B\u0430\u0435\u0448\u044C? "
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 5512481414698382201}
   childNode: {fileID: 1708245597396686760}
 --- !u!114 &-5284767695367678749
@@ -242,8 +242,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1154
-    y: 305
+    x: 718
+    y: 188
     width: 170
     height: 115
   isDragging: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
       \u044D\u0442\u043E \u0437\u0430\u0442\u043A\u043D\u0443\u0442\u044C\u0441\u044F
       \u0438 \u0441\u043E\u0431\u0440\u0430\u0442\u044C \u0441\u0435\u0431\u044F
       \u0432 \u0440\u0443\u043A\u0438"
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: -6048380836385127337}
   childNode: {fileID: -7802394985112391240}
 --- !u!114 &-4884667907447090851
@@ -278,8 +278,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1160
-    y: 564
+    x: 724
+    y: 447
     width: 170
     height: 115
   isDragging: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
       \u0432\u0441\u0435 \u0440\u0430\u0432\u043D\u043E, \u0441\u043B\u043E\u0432\u043D\u043E
       \u0433\u0435\u0440\u043E\u0439 \u0438\u0437 \u0433\u043B\u0443\u043F\u044B\u0445
       \u043A\u043E\u043C\u0438\u043A\u0441\u043E\u0432 "
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 1708245597396686760}
   childNode: {fileID: -6048380836385127337}
 --- !u!114 &-4644963856882111367
@@ -311,8 +311,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 554
-    y: 597
+    x: 118
+    y: 480
     width: 170
     height: 115
   isDragging: 0
@@ -324,7 +324,7 @@ MonoBehaviour:
       \u043D\u0430 \u043B\u0435\u0437\u0432\u0438\u0438 \u043D\u043E\u0436\u0430
       \u043C\u0435\u0436\u0434\u0443 \u0436\u0438\u0437\u043D\u044C\u044E \u0438
       \u0441\u043C\u0435\u0440\u0442\u044C\u044E!"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 6458080979945290406}
   childNode: {fileID: 6427375920088970604}
 --- !u!114 &-4084594917337223984
@@ -343,8 +343,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 351
-    y: 476
+    x: -85
+    y: 359
     width: 170
     height: 115
   isDragging: 0
@@ -354,7 +354,7 @@ MonoBehaviour:
     characterName: "\u042D\u043C\u0438\u0442"
     text: "\u0414\u0410 \u043F\u043E\u0441\u043B\u0443\u0448\u0430\u0439 \u0436\u0435
       \u0442\u044B! \u042F\u2026"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 5689732045476846897}
   childNode: {fileID: 1018885173864632383}
 --- !u!114 &-3971291369990281979
@@ -373,8 +373,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 751
-    y: 474
+    x: 315
+    y: 357
     width: 170
     height: 115
   isDragging: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
       \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u043A\u043E \u0438 \u043C\u043D\u0435
       \u043F\u043B\u0435\u0432\u0430\u0442\u044C \u0447\u0442\u043E \u0442\u044B
       \u043C\u043E\u043B\u0447\u0438\u0448\u044C"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 9144720038748657136}
   childNode: {fileID: 5794296729054450634}
 --- !u!114 &-3044414378038984456
@@ -406,8 +406,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 767
-    y: 13
+    x: 331
+    y: -104
     width: 170
     height: 115
   isDragging: 0
@@ -421,7 +421,7 @@ MonoBehaviour:
       \u043D\u0430\u0447\u0438\u043D\u0430\u044E\u0442 \u0442\u0440\u044F\u0441\u0442\u0438\u0441\u044C,
       \u0430 \u0437\u0435\u043C\u043B\u044F \u0438\u0437 \u043F\u043E\u0434 \u043D\u043E\u0433
       \u0431\u0443\u0434\u0442\u043E \u043F\u0440\u043E\u043F\u0430\u0434\u0430\u0435\u0442\u2026"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -899388332853351837}
   childNode: {fileID: 6295345193273517732}
 --- !u!114 &-1818111086924366017
@@ -440,8 +440,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 376
-    y: 22
+    x: -60
+    y: -95
     width: 170
     height: 115
   isDragging: 0
@@ -451,7 +451,7 @@ MonoBehaviour:
     characterName: "\u042D\u043C\u0438\u0442"
     text: "\u041D\u0443 \u0442\u044B \u0436\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u0435\u0448\u044C
       \u0434\u0430 \u043A\u0430\u043A \u0442\u0443\u0442?"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 6647796832129358338}
   childNode: {fileID: -1170342587773915792}
 --- !u!114 &-1718406539116121267
@@ -470,8 +470,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1348
-    y: 185
+    x: 912
+    y: 68
     width: 170
     height: 115
   isDragging: 0
@@ -480,7 +480,7 @@ MonoBehaviour:
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
     text: ......
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -7802394985112391240}
   childNode: {fileID: 8538059247437999559}
 --- !u!114 &-1448582281501583994
@@ -499,8 +499,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 126
-    y: 378
+    x: -310
+    y: 261
     width: 170
     height: 115
   isDragging: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
     text: "\u2026"
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 4169396131992112463}
   childNode: {fileID: -8355311916668184429}
 --- !u!114 &-1170342587773915792
@@ -528,8 +528,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 378
-    y: -98
+    x: -58
+    y: -215
     width: 170
     height: 115
   isDragging: 0
@@ -540,7 +540,7 @@ MonoBehaviour:
     text: "\u0412\u0441\u0435\u0433\u043E \u0441\u0442\u0430\u043B\u043E \u043A\u0430\u043A-\u0442\u043E
       \u043C\u043D\u043E\u0433\u043E.. \u0411\u0443\u043D\u043A\u0435\u0440, \u0442\u0430\u0439\u043C\u0435\u0440,
       \u043E\u0433\u043E\u043D\u044C \u0442\u0435\u043F\u0435\u0440\u044C \u044D\u0442\u043E.."
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -1818111086924366017}
   childNode: {fileID: 832558540097084895}
 --- !u!114 &-899388332853351837
@@ -559,8 +559,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 846
-    y: 140
+    x: 410
+    y: 23
     width: 170
     height: 115
   isDragging: 0
@@ -573,7 +573,7 @@ MonoBehaviour:
       \u043F\u043E\u0445\u043E\u0436\u0435 \u043E\u0434\u043D\u043E \u043D\u0430
       \u0434\u0440\u0443\u0433\u043E\u0435 \u043A\u0430\u043A \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u044B\u0439
       \u0437\u0435\u0440\u043A\u0430\u043B\u044C\u043D\u044B\u0439 \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -7602996960026060454}
   childNode: {fileID: -3044414378038984456}
 --- !u!114 &11400000
@@ -647,8 +647,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 952
-    y: 292
+    x: 516
+    y: 175
     width: 170
     height: 115
   isDragging: 0
@@ -659,7 +659,7 @@ MonoBehaviour:
     text: "\u041C\u043E\u0436\u0435\u0448\u044C \u0442\u044B \u043D\u0430\u043A\u043E\u043D\u0435\u0446
       \u0437\u0430\u0442\u043A\u043D\u0443\u0442\u044C\u0441\u044F?! \u0422\u043E\u043B\u044C\u043A\u043E
       \u0438 \u0441\u043B\u044B\u0448\u0443 \u201C\u042F\u201D \u0434\u0430 \u201C\u042F\u201D "
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 5794296729054450634}
   childNode: {fileID: 1625035938385573067}
 --- !u!114 &832558540097084895
@@ -678,8 +678,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 388
-    y: -220
+    x: -48
+    y: -337
     width: 170
     height: 115
   isDragging: 0
@@ -692,7 +692,7 @@ MonoBehaviour:
       \u043A\u0430\u043A \u0441\u043D\u0435\u0436\u043D\u044B\u043C \u043A\u043E\u043C
       \u0441\u0442\u0430\u043D\u043E\u0432\u044F\u0441\u044C \u0432\u0441\u0435 \u0431\u043E\u043B\u044C\u0448\u0435
       \u0438 \u0431\u043E\u043B\u044C\u0448\u0435"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -1170342587773915792}
   childNode: {fileID: 2113775321914450071}
 --- !u!114 &1018885173864632383
@@ -711,8 +711,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 339
-    y: 316
+    x: -97
+    y: 199
     width: 190
     height: 115
   isDragging: 0
@@ -744,8 +744,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 960
-    y: 414
+    x: 524
+    y: 297
     width: 170
     height: 115
   isDragging: 0
@@ -754,7 +754,7 @@ MonoBehaviour:
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
     text: " \u041D\u0435\u0442, \u044F\u2026"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 758313995506102865}
   childNode: {fileID: 3077128849827658294}
 --- !u!114 &1708245597396686760
@@ -773,8 +773,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1157
-    y: 684
+    x: 721
+    y: 567
     width: 170
     height: 115
   isDragging: 0
@@ -788,7 +788,7 @@ MonoBehaviour:
       \u0442\u044B \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0435\u0448\u044C
       \u0441\u0442\u0440\u043E\u0438\u0442\u044C \u0438\u0437 \u0441\u0435\u0431\u044F
       \u043A\u0440\u0443\u0442\u043E\u0433\u043E "
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: -5435254819415840256}
   childNode: {fileID: -4884667907447090851}
 --- !u!114 &2113775321914450071
@@ -807,8 +807,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 570
-    y: -226
+    x: 134
+    y: -343
     width: 170
     height: 115
   isDragging: 0
@@ -820,7 +820,7 @@ MonoBehaviour:
       \u0443\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0435\u0448\u044C\u0441\u044F,
       \u043D\u043E \u043E\u043D\u043E \u0432\u0441\u0435 \u043D\u0438\u043A\u0430\u043A
       \u043D\u0435 \u0437\u0430\u043A\u0430\u043D\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044F "
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 832558540097084895}
   childNode: {fileID: -7327417817915680294}
 --- !u!114 &3077128849827658294
@@ -839,8 +839,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 950
-    y: 542
+    x: 514
+    y: 425
     width: 170
     height: 115
   isDragging: 0
@@ -854,7 +854,7 @@ MonoBehaviour:
       \u0433\u0440\u0443\u0431\u0438\u0448\u044C \u0438 \u0434\u0435\u043B\u0430\u0435\u0448\u044C
       \u0438\u0437 \u0441\u0435\u0431\u044F \u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u043E\u0433\u043E.
       \u201C\u0418\u0434\u0435\u0430\u043B\u044C\u043D\u043E\u0433\u043E\u201D "
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 1625035938385573067}
   childNode: {fileID: 6472533342483095398}
 --- !u!114 &3300705791552926996
@@ -873,8 +873,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 770
-    y: -225
+    x: 334
+    y: -342
     width: 170
     height: 115
   isDragging: 0
@@ -887,7 +887,7 @@ MonoBehaviour:
       \u0447\u0442\u043E \u0442\u044B \u0432\u0441\u0435 \u0435\u0449\u0435 \u0436\u0438\u0432..
       \u0414\u0430\u0436\u0435 \u0435\u0441\u043B\u0438 \u0441\u0430\u043C \u0442\u0430\u043A
       \u0443\u0436\u0435 \u043D\u0435 \u0441\u0447\u0438\u0442\u0430\u0435\u0448\u044C "
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 6295345193273517732}
   childNode: {fileID: 0}
 --- !u!114 &4169396131992112463
@@ -906,8 +906,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 135
-    y: 266
+    x: -301
+    y: 149
     width: 170
     height: 115
   isDragging: 0
@@ -916,7 +916,7 @@ MonoBehaviour:
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
     text: "\u0410\u043B\u043E? \u0420\u0443\u043D\u0438 \u0442\u044B \u0437\u0434\u0435\u0441\u044C?"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 0}
   childNode: {fileID: -1448582281501583994}
 --- !u!114 &5000439192804159167
@@ -935,8 +935,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 585
-    y: 18
+    x: 149
+    y: -99
     width: 170
     height: 115
   isDragging: 0
@@ -948,7 +948,7 @@ MonoBehaviour:
       \u043D\u0435 \u0437\u043D\u0430\u044E, \u0442\u0430\u043A\u043E\u0435 \u043E\u0449\u0443\u0449\u0435\u043D\u0438\u0435
       \u0431\u0443\u0434\u0442\u043E \u044F \u0443\u0436\u0435 \u0431\u044B\u043B
       \u0437\u0434\u0435\u0441\u044C"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -7327417817915680294}
   childNode: {fileID: -7602996960026060454}
 --- !u!114 &5512481414698382201
@@ -967,8 +967,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 954
-    y: 815
+    x: 518
+    y: 698
     width: 170
     height: 115
   isDragging: 0
@@ -981,7 +981,7 @@ MonoBehaviour:
       \u043D\u043E \u0442\u044B \u0432\u0441\u0435\u0433\u043E \u043B\u0438\u0448\u044C
       \u0440\u0435\u0431\u0435\u043D\u043E\u043A \u0438 \u0442\u0435\u0431\u0435
       \u0441\u0442\u0440\u0430\u0448\u043D\u043E "
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 6472533342483095398}
   childNode: {fileID: -5435254819415840256}
 --- !u!114 &5689732045476846897
@@ -1000,8 +1000,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 257
-    y: 607
+    x: -179
+    y: 490
     width: 170
     height: 115
   isDragging: 0
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
     text: "\u2026"
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: -8355311916668184429}
   childNode: {fileID: -4084594917337223984}
 --- !u!114 &5794296729054450634
@@ -1029,8 +1029,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 753
-    y: 324
+    x: 317
+    y: 207
     width: 170
     height: 115
   isDragging: 0
@@ -1043,7 +1043,7 @@ MonoBehaviour:
       \u0432\u044B\u0431\u0435\u0440\u0443\u0441\u044C \u043E\u0442\u0441\u044E\u0434\u0430
       \u0441 \u0442\u0432\u043E\u0435\u0439 \u043F\u043E\u043C\u043E\u0449\u044C\u044E
       \u0438\u043B\u0438 \u0431\u0435\u0437 \u043D\u0435\u0435!  "
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -3971291369990281979}
   childNode: {fileID: 758313995506102865}
 --- !u!114 &6295345193273517732
@@ -1062,8 +1062,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 778
-    y: -107
+    x: 342
+    y: -224
     width: 170
     height: 115
   isDragging: 0
@@ -1076,7 +1076,7 @@ MonoBehaviour:
       \u0432\u043E\u043A\u0440\u0443\u0433 \u0432\u0441\u0435 \u0442\u0435 \u0436\u0435
       \u0434\u0435\u0440\u0435\u0432\u044C\u044F, \u0432\u0441\u0435 \u0442\u043E\u0442
       \u0436\u0435 \u043B\u0435\u0441"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -3044414378038984456}
   childNode: {fileID: 3300705791552926996}
 --- !u!114 &6427375920088970604
@@ -1095,8 +1095,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 558
-    y: 720
+    x: 122
+    y: 603
     width: 170
     height: 115
   isDragging: 0
@@ -1109,7 +1109,7 @@ MonoBehaviour:
       \u041D\u0430\u0432\u0435\u0440\u043D\u044F\u043A\u0430 \u043E\u0431\u044B\u0447\u043D\u044B\u0439
       \u0432\u0442\u043E\u0440\u043D\u0438\u043A \u043D\u0435 \u0442\u0430\u043A
       \u043B\u0438? "
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -4644963856882111367}
   childNode: {fileID: -5805549351957622060}
 --- !u!114 &6458080979945290406
@@ -1128,8 +1128,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 560
-    y: 471
+    x: 124
+    y: 354
     width: 170
     height: 115
   isDragging: 0
@@ -1138,7 +1138,7 @@ MonoBehaviour:
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
     text: " \u2026 "
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 7984663229873771056}
   childNode: {fileID: -4644963856882111367}
 --- !u!114 &6472533342483095398
@@ -1157,8 +1157,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 958
-    y: 681
+    x: 522
+    y: 564
     width: 170
     height: 115
   isDragging: 0
@@ -1172,7 +1172,7 @@ MonoBehaviour:
       \u0442\u0440\u0443\u0441 \u0447\u0442\u043E \u0434\u0430\u0436\u0435 \u043D\u0435
       \u043C\u043E\u0436\u0435\u0442 \u043F\u0440\u0438\u0437\u043D\u0430\u0442\u044C
       \u044D\u0442\u043E\u0433\u043E "
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 3077128849827658294}
   childNode: {fileID: 5512481414698382201}
 --- !u!114 &6647796832129358338
@@ -1191,8 +1191,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 377
-    y: 162
+    x: -59
+    y: 45
     width: 170
     height: 115
   isDragging: 0
@@ -1201,7 +1201,7 @@ MonoBehaviour:
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
     text: "\u0412 \u043E\u0431\u0449\u0435\u043C \u0434\u0430.. "
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 1018885173864632383}
   childNode: {fileID: -1818111086924366017}
 --- !u!114 &7204790198612192719
@@ -1220,8 +1220,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 737
-    y: 842
+    x: 301
+    y: 725
     width: 170
     height: 115
   isDragging: 0
@@ -1233,7 +1233,7 @@ MonoBehaviour:
       \u0442\u044B \u043D\u0435 \u0434\u0435\u043B\u0430\u0435\u0448\u044C \u043D\u0438\u0447\u0435\u0433\u043E!
       \u0410\u0431\u0441\u043E\u043B\u044E\u0442\u043D\u043E \u043D\u0438\u043A\u0430\u043A\u043E\u0439
       \u043F\u043E\u043B\u044C\u0437\u044B"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -5805549351957622060}
   childNode: {fileID: 9144720038748657136}
 --- !u!114 &7984663229873771056
@@ -1252,8 +1252,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 558
-    y: 337
+    x: 122
+    y: 220
     width: 170
     height: 115
   isDragging: 0
@@ -1265,7 +1265,7 @@ MonoBehaviour:
       \u043F\u044B\u0442\u0430\u044E\u0441\u044C \u0431\u043E\u0440\u043E\u0442\u044C\u0441\u044F
       \u0437\u0430 \u0441\u0432\u043E\u044E \u0436\u0438\u0437\u043D\u044C, \u0434\u0435\u043B\u0430\u044F
       \u0432\u0441\u0435 \u0447\u0442\u043E \u0432 \u043C\u043E\u0438\u0445 \u0441\u0438\u043B\u0430\u0445"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 1018885173864632383}
   childNode: {fileID: 6458080979945290406}
 --- !u!114 &8538059247437999559
@@ -1284,8 +1284,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1358
-    y: 323
+    x: 922
+    y: 206
     width: 170
     height: 115
   isDragging: 0
@@ -1294,7 +1294,7 @@ MonoBehaviour:
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
     text: ......
-    characterSprite: {fileID: 21300000, guid: a29f821a5c908084cbdc8881a2fe8147, type: 3}
+    characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: -1718406539116121267}
   childNode: {fileID: 0}
 --- !u!114 &9144720038748657136
@@ -1313,8 +1313,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 744
-    y: 611
+    x: 308
+    y: 494
     width: 170
     height: 115
   isDragging: 0
@@ -1326,6 +1326,6 @@ MonoBehaviour:
       \u043C\u0435\u043D\u044F \u0447\u0435\u0440\u0442\u0435\u0436\u0438 \u0447\u0442\u043E
       \u0435\u0441\u0442\u044C \u0443 \u0442\u0435\u0431\u044F \u042F \u0431\u044B
       \u0443\u0436\u0435 \u0432\u044B\u0431\u0440\u0430\u043B\u0441\u044F"
-    characterSprite: {fileID: 21300000, guid: 319544e4245415d44a7a015de0d1dcee, type: 3}
+    characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 7204790198612192719}
   childNode: {fileID: -3971291369990281979}

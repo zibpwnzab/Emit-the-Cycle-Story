@@ -5686,6 +5686,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9022316361583944737, guid: 1b879569728afdd46a48e15accee21d4, type: 3}
+      propertyPath: needSignal
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7451,7 +7455,7 @@ PrefabInstance:
     - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: slideButton
       value: 
-      objectReference: {fileID: 1455559550}
+      objectReference: {fileID: 0}
     - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: interactButton
       value: 
@@ -7553,17 +7557,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4868432134925252, guid: 9e9f8f40d066f5a4791df15af8ea53ee, type: 3}
   m_PrefabInstance: {fileID: 1873073085}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1455559550 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2719535820435017687, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
-  m_PrefabInstance: {fileID: 2024819515}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb70d893d7ae474ea46e89ab0216e18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1459270546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10357,7 +10350,7 @@ PrefabInstance:
       insertIndex: 5
       addedObject: {fileID: 774359540}
     - targetCorrespondingSourceObject: {fileID: 6117135325853116000, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
-      insertIndex: 15
+      insertIndex: -1
       addedObject: {fileID: 1702763535}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
