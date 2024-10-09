@@ -70,7 +70,8 @@ namespace cherrydev
         public void EnableDialogAnswerPanel()
         {
             ActiveGameObject(dialogAnswerPanel.gameObject, true);
-            dialogAnswerPanel.DisalbleAllButtons();
+            //dialogAnswerPanel.DisalbleAllButtons();
+            Time.timeScale = 0f;
         }
 
         /// <summary>
@@ -79,6 +80,7 @@ namespace cherrydev
         public void DisableDialogAnswerPanel()
         {
             ActiveGameObject(dialogAnswerPanel.gameObject, false);
+            Time.timeScale = 1f;
         }
 
         /// <summary>

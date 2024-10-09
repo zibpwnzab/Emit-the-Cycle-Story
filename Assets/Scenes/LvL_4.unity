@@ -6030,8 +6030,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogCharDelay: 0
   nextSentenceKeyCodes: 4301000020000000
-  isCanSkippingText: 1
-  isAutoProceed: 0
+  isCanSkippingText: 0
+  isAutoProceed: 1
   autoProceedDelay: 2
   onDialogStarted:
     m_PersistentCalls:
@@ -10936,8 +10936,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogCharDelay: 0
   nextSentenceKeyCodes: 4301000020000000
-  isCanSkippingText: 1
-  isAutoProceed: 0
+  isCanSkippingText: 0
+  isAutoProceed: 1
   autoProceedDelay: 2
   onDialogStarted:
     m_PersistentCalls:
@@ -15552,8 +15552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogCharDelay: 0
   nextSentenceKeyCodes: 4301000020000000
-  isCanSkippingText: 1
-  isAutoProceed: 0
+  isCanSkippingText: 0
+  isAutoProceed: 1
   autoProceedDelay: 2
   onDialogStarted:
     m_PersistentCalls:

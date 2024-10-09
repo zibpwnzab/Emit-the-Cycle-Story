@@ -5804,6 +5804,14 @@ PrefabInstance:
       propertyPath: blackScreen
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2975675820758845258, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: carmaBorders.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975675820758845258, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: carmaBorders.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3265796453910231447, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 77.2
@@ -5830,7 +5838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3768973137646903843, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4795804731992001554, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: m_AnchoredPosition.x

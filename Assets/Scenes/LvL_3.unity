@@ -18344,7 +18344,7 @@ PrefabInstance:
     - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: slideButton
       value: 
-      objectReference: {fileID: 2053081322}
+      objectReference: {fileID: 0}
     - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: interactButton
       value: 
@@ -30373,17 +30373,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4820687053070796, guid: cc35a8040314817478c1e324aa887a1c, type: 3}
   m_PrefabInstance: {fileID: 2050924321}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2053081322 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2719535820435017687, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
-  m_PrefabInstance: {fileID: 514055494}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb70d893d7ae474ea46e89ab0216e18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2053568295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31614,11 +31603,11 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1188919281}
+  - {fileID: 514055494}
+  - {fileID: 1221535766}
   - {fileID: 1733067434}
   - {fileID: 174052723}
   - {fileID: 1970865458}
   - {fileID: 85439926}
-  - {fileID: 1221535766}
-  - {fileID: 514055494}
   - {fileID: 688059346}
   - {fileID: 389877347}

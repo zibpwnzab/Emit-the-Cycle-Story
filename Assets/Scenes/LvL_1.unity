@@ -247,9 +247,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireButton
       objectReference: {fileID: 0}
+    - target: {fileID: 5023797089020402509, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: defaultTimeScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5059531114921416181, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: m_Name
       value: Default Canvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575494075839174541, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: isAutoProceed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575494075839174541, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: autoProceedDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575494075839174541, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: isCanSkippingText
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6117135325853116000, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: m_Pivot.x
@@ -329,6 +345,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6117135325853116000, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6474877867327756981, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: isAutoProceed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6474877867327756981, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: autoProceedDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6474877867327756981, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+      propertyPath: isCanSkippingText
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7482300985643742901, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
@@ -3300,7 +3328,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.54e-43, y: 7.1e-44, z: 0, w: 1.3658988e+30}
+  m_BoundingSphereOverride: {x: 7.54e-43, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -12649,7 +12677,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.11e-43, y: 0, z: 0, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
