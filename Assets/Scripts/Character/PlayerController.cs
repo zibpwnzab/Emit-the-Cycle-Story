@@ -69,38 +69,58 @@ public class PlayerController : MonoBehaviour
 
     private void ToggleFire()
     {
-        isUsingFire = !isUsingFire; // Переключаем состояние
+        isUsingFire = !isUsingFire;
 
         if (isUsingFire)
         {
-            Debug.Log("Fire activated"); // Лог-сообщение для проверки
+            // Включаем VFX
             if (fireVFX != null)
             {
                 fireVFX.SetActive(true);
             }
+
+            // Запускаем анимацию экипирования факела
+            animator.SetTrigger("FireUse");
+
+            // Включаем свет
             if (fireLight != null)
             {
                 fireLight.enabled = true;
-                Debug.Log("Light is enabled"); // Лог-сообщение для проверки
             }
-            animator.SetTrigger("FireUse");
 
-
+            // Устанавливаем флаг бега с факелом
+            StartCoroutine(StartRunningWithTorchAfterEquip());
         }
         else
         {
-            Debug.Log("Fire deactivated"); // Лог-сообщение для проверки
+            // Отключаем VFX
             if (fireVFX != null)
             {
                 fireVFX.SetActive(false);
             }
+
+            // Отключаем свет
             if (fireLight != null)
             {
                 fireLight.enabled = false;
-                Debug.Log("Light is disabled"); // Лог-сообщение для проверки
             }
+
+            // Сбрасываем флаг бега с факелом
+            animator.SetBool("isRunning", false);
         }
     }
+
+    private IEnumerator StartRunningWithTorchAfterEquip()
+    {
+        // Ждём окончания анимации экипирования факела (например, 1 секунда)
+        yield return new WaitForSeconds(0f);
+
+        // Устанавливаем флаг для перехода в состояние бега с факелом
+        animator.SetBool("isRunning", true);
+    }
+
+
+
 
 
     public void ForceKick(Vector3 direction, float stunTime)

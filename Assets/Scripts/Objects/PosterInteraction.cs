@@ -64,8 +64,10 @@ public class PosterInteractable : MonoBehaviour, IInteractable
         isPosterOpen = false;
         canClick = true; // Снова разрешаем клики
 
-        // Увеличиваем количество собранных постеров
-        PosterManager.instance.CollectPoster(); // <-- вызов менеджера постеров
+        // Увеличиваем количество собранных постеров через PosterManager
+       
+        PosterManager.instance.CollectPoster(); // Обновляем количество собранных постеров
+        Debug.Log("Poster collected" );
 
         // Перемещаем объект вниз на 20 единиц по оси Y
         transform.position += new Vector3(0, -20, 0);
