@@ -10,16 +10,26 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody rigidbody;
     [SerializeField] private FixedJoystick joystick;
     [SerializeField] private Animator animator;
-    private float runSpeedThreshold = 4.0f;
-    private float moveSpeed = 5.5f;
+    [SerializeField] private float runSpeedThreshold = 2f;
+    [SerializeField] private float moveSpeed = 3f;
     [SerializeField] public float movingObjectModifier;
     [SerializeField] public float rotateObjectSpeed;
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
     [SerializeField] private Button fireButton; // Кнопка для активации фаера
+    [SerializeField] private Button buttonToDisable1; // Первая кнопка, отключаемая во время использования фаера
+    [SerializeField] private Button buttonToDisable2; // Вторая кнопка, отключаемая во время использования фаера
     [SerializeField] private GameObject fireVFX; // Префаб VFX фаера
     [SerializeField] private Light fireLight; // Источник света для фаера
-    [SerializeField] private float fireLightDuration = 2f; // Длительность света
+    [SerializeField] private GameObject fire3DModel; // 3D-модель, которая будет активироваться
+    [SerializeField] private float fireActivationDelay = 0.5f; // Задержка перед активацией фаера
+
+    // Поля для звуков
+    [SerializeField] private AudioClip activationSound; // Звук активации фаера
+    [SerializeField] private AudioClip fireLoopSound; // Звук, проигрывающийся во время использования фаера
+    [SerializeField] private AudioClip deactivationSound; // Звук деактивации фаера
+    private AudioSource audioSource; // Аудиоисточник для проигрывания звуков
+
     private bool isUsingFire = false; // Проверка, активирован ли фаер
     private bool isJumping = false;
     private List<IInteractable> interactables;
@@ -55,6 +65,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         // Привязываем событие нажатия кнопки фаера
         fireButton.onClick.AddListener(ToggleFire);
+        audioSource = gameObject.AddComponent<AudioSource>(); // Создаем компонент AudioSource
     }
 
 
@@ -65,60 +76,144 @@ public class PlayerController : MonoBehaviour
 #endif
         rigidbody.angularVelocity = Vector3.zero;
         IsPlayerFalling();
+
+        // Проверяем состояние движения игрока
+        if (animator.GetBool("FireUse"))
+        {
+            if (rigidbody.velocity.magnitude > 0.1f)
+            {
+                // Если игрок двигается, устанавливаем состояние бега с факелом
+                animator.SetBool("isRunning", true);
+            }
+            else
+            {
+                // Если игрок остановился, возвращаемся в состояние стояния с факелом
+                animator.SetBool("isRunning", false);
+            }
+        }
     }
 
     private void ToggleFire()
     {
         isUsingFire = !isUsingFire;
 
+        // Устанавливаем значение булевого параметра FireUse в зависимости от состояния isUsingFire
+        animator.SetBool("FireUse", isUsingFire);
+
         if (isUsingFire)
         {
-            // Включаем VFX
-            if (fireVFX != null)
-            {
-                fireVFX.SetActive(true);
-            }
+            // Запускаем корутину для задержки перед активацией
+            StartCoroutine(ActivateFireWithDelay());
 
-            // Запускаем анимацию экипирования факела
-            animator.SetTrigger("FireUse");
+            // Отключаем кнопки
+            if (buttonToDisable1 != null) buttonToDisable1.interactable = false;
+            if (buttonToDisable2 != null) buttonToDisable2.interactable = false;
 
-            // Включаем свет
-            if (fireLight != null)
-            {
-                fireLight.enabled = true;
-            }
-
-            // Устанавливаем флаг бега с факелом
-            StartCoroutine(StartRunningWithTorchAfterEquip());
+            // Проигрываем звук активации с задержкой 2 секунды
+            StartCoroutine(PlaySoundWithDelay(activationSound, 1.7f, 2.5f));
         }
         else
         {
-            // Отключаем VFX
-            if (fireVFX != null)
-            {
-                fireVFX.SetActive(false);
-            }
+            // Отключаем все эффекты немедленно
+            DeactivateFireEffects();
 
-            // Отключаем свет
-            if (fireLight != null)
-            {
-                fireLight.enabled = false;
-            }
+            // Включаем кнопки обратно
+            if (buttonToDisable1 != null) buttonToDisable1.interactable = true;
+            if (buttonToDisable2 != null) buttonToDisable2.interactable = true;
 
-            // Сбрасываем флаг бега с факелом
-            animator.SetBool("isRunning", false);
+            // Проигрываем звук деактивации с запуском после 4 секунд звука
+            StartCoroutine(PlaySoundWithDelay(deactivationSound, 0f, 3f, 4f));
         }
     }
+
+    private IEnumerator ActivateFireWithDelay()
+    {
+        // Ждем указанное время перед активацией
+        yield return new WaitForSeconds(fireActivationDelay);
+
+        // Включаем VFX
+        if (fireVFX != null)
+        {
+            fireVFX.SetActive(true);
+        }
+
+        // Включаем свет
+        if (fireLight != null)
+        {
+            fireLight.enabled = true;
+        }
+
+        // Включаем 3D-модель
+        if (fire3DModel != null)
+        {
+            fire3DModel.SetActive(true);
+        }
+
+        // Запускаем звук использования фаера (постоянный)
+        if (fireLoopSound != null)
+        {
+            audioSource.clip = fireLoopSound;
+            audioSource.loop = true;
+            StartCoroutine(PlaySoundWithDelay(fireLoopSound, 0f, 200f, 0f));
+            audioSource.Play();
+        }
+    }
+
+    private void DeactivateFireEffects()
+    {
+        // Останавливаем звук использования фаера
+        audioSource.Stop();
+
+        // Отключаем VFX
+        if (fireVFX != null)
+        {
+            fireVFX.SetActive(false);
+        }
+
+        // Отключаем свет
+        if (fireLight != null)
+        {
+            fireLight.enabled = false;
+        }
+
+        // Отключаем 3D-модель
+        if (fire3DModel != null)
+        {
+            fire3DModel.SetActive(false);
+        }
+    }
+
+    private IEnumerator PlaySoundWithDelay(AudioClip clip, float startDelay, float duration, float startTime = 0f)
+    {
+        yield return new WaitForSeconds(startDelay);
+
+        if (clip != null)
+        {
+            audioSource.time = startTime; // Устанавливаем начальную точку воспроизведения
+            audioSource.PlayOneShot(clip);
+            yield return new WaitForSeconds(duration);
+            audioSource.Stop();
+        }
+    }
+
+
+
+
+
 
     private IEnumerator StartRunningWithTorchAfterEquip()
     {
         // Ждём окончания анимации экипирования факела (например, 1 секунда)
-        yield return new WaitForSeconds(0f);
+        yield return new WaitForSeconds(1.0f);
+
+        // Устанавливаем флаг, что персонаж держит факел
+        animator.SetBool("isHoldingTorch", true);
 
         // Устанавливаем флаг для перехода в состояние бега с факелом
         animator.SetBool("isRunning", true);
     }
 
+    
 
 
 

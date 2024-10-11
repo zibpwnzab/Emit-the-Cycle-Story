@@ -806,6 +806,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4757518352619872, guid: 8211dfbdf5b200e44a83c7b7db5d8a45, type: 3}
   m_PrefabInstance: {fileID: 187538850}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &202010536 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 233478486471978610, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 2024819515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &208540685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7449,6 +7460,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 988596203}
     - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fireButton
+      value: 
+      objectReference: {fileID: 202010536}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: jumpButton
       value: 
       objectReference: {fileID: 2015907613}
@@ -7460,6 +7475,14 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 1289648798}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: buttonToDisable1
+      value: 
+      objectReference: {fileID: 1289648798}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: buttonToDisable2
+      value: 
+      objectReference: {fileID: 2024819517}
     - target: {fileID: 7810453045046048682, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: joystick
       value: 
@@ -10496,6 +10519,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6117135325853116000, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
   m_PrefabInstance: {fileID: 2024819515}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2024819517 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1352638484825004321, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 2024819515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2046872188
 PrefabInstance:
   m_ObjectHideFlags: 0

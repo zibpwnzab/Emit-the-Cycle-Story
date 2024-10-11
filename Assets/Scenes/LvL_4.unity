@@ -22889,6 +22889,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 319259121}
     - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fireButton
+      value: 
+      objectReference: {fileID: 905809071}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: jumpButton
       value: 
       objectReference: {fileID: 1026707690}
@@ -22900,6 +22904,14 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 662599076}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: buttonToDisable1
+      value: 
+      objectReference: {fileID: 662599076}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: buttonToDisable2
+      value: 
+      objectReference: {fileID: 1026707691}
     - target: {fileID: 7810453045046048682, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: joystick
       value: 
@@ -30645,8 +30657,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1197178201}
-  - {fileID: 1546269854}
   - {fileID: 319259118}
+  - {fileID: 1546269854}
   - {fileID: 1965458686}
   - {fileID: 1172501152}
   - {fileID: 985866877}

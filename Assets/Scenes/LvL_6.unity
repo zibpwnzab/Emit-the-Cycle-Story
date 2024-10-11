@@ -3024,6 +3024,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+--- !u!114 &304460553 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1352638484825004321, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 304460552}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &311633919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11378,17 +11389,6 @@ MonoBehaviour:
   cameraPoints: []
   colliders: []
   followZOnly: 1
---- !u!114 &976351951 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2719535820435017687, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
-  m_PrefabInstance: {fileID: 304460552}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb70d893d7ae474ea46e89ab0216e18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &981206409 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6140741979051011611, guid: badcf7b6cb6f2004cb7179e6eecc0b39, type: 3}
@@ -15869,6 +15869,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4868432134925252, guid: 9e9f8f40d066f5a4791df15af8ea53ee, type: 3}
   m_PrefabInstance: {fileID: 1522680255}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1525098109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 233478486471978610, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 304460552}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1532370109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4375568088351838, guid: f6ab2fd480ef4ff42a4c2dfdddd1e3b6, type: 3}
@@ -16143,15 +16154,27 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1599037671}
     - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fireButton
+      value: 
+      objectReference: {fileID: 1525098109}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: jumpButton
       value: 
       objectReference: {fileID: 824055606}
     - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: slideButton
       value: 
-      objectReference: {fileID: 976351951}
+      objectReference: {fileID: 0}
     - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 494871863}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: buttonToDisable1
+      value: 
+      objectReference: {fileID: 304460553}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: buttonToDisable2
       value: 
       objectReference: {fileID: 494871863}
     - target: {fileID: 7810453045046048682, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
@@ -22353,8 +22376,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 963194228}
-  - {fileID: 1546269854}
   - {fileID: 304460552}
+  - {fileID: 1546269854}
   - {fileID: 1172501152}
   - {fileID: 985866877}
   - {fileID: 453269801}

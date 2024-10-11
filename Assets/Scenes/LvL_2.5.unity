@@ -3831,6 +3831,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fireButton
+      value: 
+      objectReference: {fileID: 442305635}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: jumpButton
       value: 
       objectReference: {fileID: 442305633}
@@ -3842,6 +3846,14 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 442305632}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: buttonToDisable1
+      value: 
+      objectReference: {fileID: 442305632}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: buttonToDisable2
+      value: 
+      objectReference: {fileID: 442305636}
     - target: {fileID: 3628518082246554712, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.019212298
@@ -6082,6 +6094,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &442305635 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 233478486471978610, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 442305631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615596851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &442305636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1352638484825004321, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 442305631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &444373860 stripped
@@ -28853,8 +28887,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 2120108242}
   - {fileID: 587985246}
-  - {fileID: 362659257}
   - {fileID: 442305631}
+  - {fileID: 362659257}
   - {fileID: 1733067434}
   - {fileID: 174052723}
   - {fileID: 1970865458}
