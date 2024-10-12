@@ -3854,6 +3854,22 @@ PrefabInstance:
       propertyPath: buttonToDisable2
       value: 
       objectReference: {fileID: 442305636}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fireUIElements.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fireUIElements.Array.data[0]
+      value: 
+      objectReference: {fileID: 1438738378}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fireUIElements.Array.data[1]
+      value: 
+      objectReference: {fileID: 1438738377}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fireUIElements.Array.data[2]
+      value: 
+      objectReference: {fileID: 1438738376}
     - target: {fileID: 3628518082246554712, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.019212298
@@ -19120,6 +19136,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d6139dbc29e1434d99ab9d0231e8b2c, type: 3}
+--- !u!1 &1438738376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8479119396469279670, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 442305631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1438738377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1410505037364966919, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 442305631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1438738378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6945172740241444990, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 442305631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1439489040
 GameObject:
   m_ObjectHideFlags: 0

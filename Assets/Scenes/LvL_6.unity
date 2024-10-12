@@ -3035,6 +3035,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &304460554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8479119396469279670, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 304460552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &304460555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1410505037364966919, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 304460552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &304460556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6945172740241444990, guid: d9eeb4c51ca9f3a40a0e4ede3c7bc352, type: 3}
+  m_PrefabInstance: {fileID: 304460552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &311633919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16177,6 +16192,22 @@ PrefabInstance:
       propertyPath: buttonToDisable2
       value: 
       objectReference: {fileID: 494871863}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fireUIElements.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fireUIElements.Array.data[0]
+      value: 
+      objectReference: {fileID: 304460556}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fireUIElements.Array.data[1]
+      value: 
+      objectReference: {fileID: 304460555}
+    - target: {fileID: 3378795802058531621, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
+      propertyPath: fireUIElements.Array.data[2]
+      value: 
+      objectReference: {fileID: 304460554}
     - target: {fileID: 7810453045046048682, guid: 5f12d3436f23d6e4a8e79bba8ca88303, type: 3}
       propertyPath: joystick
       value: 

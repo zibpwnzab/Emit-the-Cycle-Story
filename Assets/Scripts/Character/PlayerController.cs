@@ -16,21 +16,30 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float rotateObjectSpeed;
     [SerializeField] private float jumpforce = 5;
     [SerializeField] private Button interactButton;
+    [SerializeField] private GameObject fireVFX;
+    [SerializeField] private Light fireLight;
+    [SerializeField] private GameObject fire3DModel;
     [SerializeField] private Button fireButton; // Кнопка для активации фаера
-    [SerializeField] private Button buttonToDisable1; // Первая кнопка, отключаемая во время использования фаера
-    [SerializeField] private Button buttonToDisable2; // Вторая кнопка, отключаемая во время использования фаера
-    [SerializeField] private GameObject fireVFX; // Префаб VFX фаера
-    [SerializeField] private Light fireLight; // Источник света для фаера
-    [SerializeField] private GameObject fire3DModel; // 3D-модель, которая будет активироваться
     [SerializeField] private float fireActivationDelay = 0.5f; // Задержка перед активацией фаера
+    [SerializeField] private float fireTotalDuration = 6f; // Общее время работы фаера
+    private float fireRemainingTime; // Оставшееся время работы фаера
 
-    // Поля для звуков
-    [SerializeField] private AudioClip activationSound; // Звук активации фаера
-    [SerializeField] private AudioClip fireLoopSound; // Звук, проигрывающийся во время использования фаера
-    [SerializeField] private AudioClip deactivationSound; // Звук деактивации фаера
-    private AudioSource audioSource; // Аудиоисточник для проигрывания звуков
+    // UI элементы
+    [SerializeField] private GameObject[] fireUIElements; // Массив для хранения трёх UI элементов
 
-    private bool isUsingFire = false; // Проверка, активирован ли фаер
+    // Кнопки, которые будут отключаться во время использования фаера
+    [SerializeField] private Button buttonToDisable1;
+    [SerializeField] private Button buttonToDisable2;
+
+    // Поля для объектов со звуком
+    [SerializeField] private GameObject activationSoundObject;
+    [SerializeField] private GameObject fireLoopSoundObject;
+    [SerializeField] private GameObject deactivationSoundObject;
+
+    private bool isUsingFire = false;
+    private bool fireDepleting = false; // Флаг, отслеживающий истощение фаера
+
+    //rivate bool isUsingFire = false; // Проверка, активирован ли фаер
     private bool isJumping = false;
     private List<IInteractable> interactables;
     private GameObject lastInteractable;
@@ -44,6 +53,7 @@ public class PlayerController : MonoBehaviour
     public static string TOTAL_GAME_TIME = "TOTAL_GAME_TIME";
 
     [SerializeField] private TMPro.TMP_Text VelocityText;
+
 
     private void Awake()
     {
@@ -65,7 +75,8 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         // Привязываем событие нажатия кнопки фаера
         fireButton.onClick.AddListener(ToggleFire);
-        audioSource = gameObject.AddComponent<AudioSource>(); // Создаем компонент AudioSource
+        fireRemainingTime = fireTotalDuration; // Устанавливаем начальное время работы фаера
+        UpdateFireUI();
     }
 
 
@@ -96,8 +107,6 @@ public class PlayerController : MonoBehaviour
     private void ToggleFire()
     {
         isUsingFire = !isUsingFire;
-
-        // Устанавливаем значение булевого параметра FireUse в зависимости от состояния isUsingFire
         animator.SetBool("FireUse", isUsingFire);
 
         if (isUsingFire)
@@ -109,8 +118,18 @@ public class PlayerController : MonoBehaviour
             if (buttonToDisable1 != null) buttonToDisable1.interactable = false;
             if (buttonToDisable2 != null) buttonToDisable2.interactable = false;
 
-            // Проигрываем звук активации с задержкой 2 секунды
-            StartCoroutine(PlaySoundWithDelay(activationSound, 1.7f, 2.5f));
+            // Включаем объект со звуком активации
+            if (activationSoundObject != null)
+            {
+                activationSoundObject.SetActive(true);
+                StartCoroutine(DisableSoundObjectAfterDelay(activationSoundObject, 1.5f));
+            }
+
+            // Запускаем процесс истощения фаера
+            if (!fireDepleting)
+            {
+                StartCoroutine(FireDepletionCoroutine());
+            }
         }
         else
         {
@@ -121,8 +140,12 @@ public class PlayerController : MonoBehaviour
             if (buttonToDisable1 != null) buttonToDisable1.interactable = true;
             if (buttonToDisable2 != null) buttonToDisable2.interactable = true;
 
-            // Проигрываем звук деактивации с запуском после 4 секунд звука
-            StartCoroutine(PlaySoundWithDelay(deactivationSound, 0f, 3f, 4f));
+            // Включаем объект со звуком деактивации
+            if (deactivationSoundObject != null)
+            {
+                deactivationSoundObject.SetActive(true);
+                StartCoroutine(DisableSoundObjectAfterDelay(deactivationSoundObject, 1.5f));
+            }
         }
     }
 
@@ -149,20 +172,20 @@ public class PlayerController : MonoBehaviour
             fire3DModel.SetActive(true);
         }
 
-        // Запускаем звук использования фаера (постоянный)
-        if (fireLoopSound != null)
+        // Включаем объект со звуком использования фаера
+        if (fireLoopSoundObject != null)
         {
-            audioSource.clip = fireLoopSound;
-            audioSource.loop = true;
-            StartCoroutine(PlaySoundWithDelay(fireLoopSound, 0f, 200f, 0f));
-            audioSource.Play();
+            fireLoopSoundObject.SetActive(true);
         }
     }
 
     private void DeactivateFireEffects()
     {
-        // Останавливаем звук использования фаера
-        audioSource.Stop();
+        // Отключаем объект со звуком использования фаера
+        if (fireLoopSoundObject != null)
+        {
+            fireLoopSoundObject.SetActive(false);
+        }
 
         // Отключаем VFX
         if (fireVFX != null)
@@ -183,18 +206,56 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private IEnumerator PlaySoundWithDelay(AudioClip clip, float startDelay, float duration, float startTime = 0f)
+    private IEnumerator FireDepletionCoroutine()
     {
-        yield return new WaitForSeconds(startDelay);
+        fireDepleting = true;
+        fireRemainingTime = fireTotalDuration;
 
-        if (clip != null)
+        while (fireRemainingTime > 0 && isUsingFire)
         {
-            audioSource.time = startTime; // Устанавливаем начальную точку воспроизведения
-            audioSource.PlayOneShot(clip);
-            yield return new WaitForSeconds(duration);
-            audioSource.Stop();
+            fireRemainingTime -= Time.deltaTime;
+            UpdateFireUI();
+            yield return null;
+        }
+
+        if (fireRemainingTime <= 0)
+        {
+            // Если фаер полностью иссяк, выключаем его автоматически
+            isUsingFire = false;
+            DeactivateFireEffects();
+            animator.SetBool("FireUse", false);
+
+            // Включаем кнопки обратно
+            if (buttonToDisable1 != null) buttonToDisable1.interactable = true;
+            if (buttonToDisable2 != null) buttonToDisable2.interactable = true;
+        }
+
+        fireDepleting = false;
+    }
+
+    private void UpdateFireUI()
+    {
+        float timePerState = fireTotalDuration / 3f;
+
+        // Активируем или деактивируем UI элементы в зависимости от оставшегося времени
+        for (int i = 0; i < fireUIElements.Length; i++)
+        {
+            if (fireUIElements[i] != null)
+            {
+                fireUIElements[i].SetActive(fireRemainingTime > i * timePerState);
+            }
         }
     }
+
+    private IEnumerator DisableSoundObjectAfterDelay(GameObject soundObject, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (soundObject != null)
+        {
+            soundObject.SetActive(false);
+        }
+    }
+
 
 
 
