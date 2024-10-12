@@ -141,7 +141,10 @@ MonoBehaviour:
   fire3DModel: {fileID: 4195420260357113764}
   fireButton: {fileID: 0}
   fireActivationDelay: 1.5
-  fireTotalDuration: 6
+  fireTotalDuration: 12
+  fireRemainingTime: 0
+  totalFireCount: 3
+  rechargeTime: 10
   fireUIElements: []
   buttonToDisable1: {fileID: 0}
   buttonToDisable2: {fileID: 0}

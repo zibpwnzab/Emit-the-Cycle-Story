@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
 public class PlayerController : MonoBehaviour
@@ -20,9 +22,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Light fireLight;
     [SerializeField] private GameObject fire3DModel;
     [SerializeField] private Button fireButton; // Кнопка для активации фаера
-    [SerializeField] private float fireActivationDelay = 0.5f; // Задержка перед активацией фаера
+    [SerializeField] private float fireActivationDelay = 01.5f; // Задержка перед активацией фаера
     [SerializeField] private float fireTotalDuration = 6f; // Общее время работы фаера
-    private float fireRemainingTime; // Оставшееся время работы фаера
+     [SerializeField]private float fireRemainingTime; // Оставшееся время работы фаера
+    [SerializeField] private int totalFireCount = 3; // Общее количество фаеров, доступных игроку
+    [SerializeField] private float rechargeTime = 10f; // Время перезарядки после использования фаера
 
     // UI элементы
     [SerializeField] private GameObject[] fireUIElements; // Массив для хранения трёх UI элементов
@@ -38,8 +42,9 @@ public class PlayerController : MonoBehaviour
 
     private bool isUsingFire = false;
     private bool fireDepleting = false; // Флаг, отслеживающий истощение фаера
+    private bool isRecharging = false; // Флаг, указывающий на процесс перезарядки
 
-    //rivate bool isUsingFire = false; // Проверка, активирован ли фаер
+    
     private bool isJumping = false;
     private List<IInteractable> interactables;
     private GameObject lastInteractable;
@@ -66,6 +71,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+         SceneManager.sceneLoaded += (scene, mode) => OnSceneLoaded();
     }
 
     void Start()
@@ -106,26 +112,24 @@ public class PlayerController : MonoBehaviour
 
     private void ToggleFire()
     {
+        if (isRecharging || FireManager.Instance.GetTotalFireCount() <= 0) return; // Проверяем, не на перезарядке ли фаер и есть ли доступные фаеры
+
         isUsingFire = !isUsingFire;
         animator.SetBool("FireUse", isUsingFire);
 
         if (isUsingFire)
         {
-            // Запускаем корутину для задержки перед активацией
             StartCoroutine(ActivateFireWithDelay());
 
-            // Отключаем кнопки
             if (buttonToDisable1 != null) buttonToDisable1.interactable = false;
             if (buttonToDisable2 != null) buttonToDisable2.interactable = false;
 
-            // Включаем объект со звуком активации
             if (activationSoundObject != null)
             {
                 activationSoundObject.SetActive(true);
                 StartCoroutine(DisableSoundObjectAfterDelay(activationSoundObject, 1.5f));
             }
 
-            // Запускаем процесс истощения фаера
             if (!fireDepleting)
             {
                 StartCoroutine(FireDepletionCoroutine());
@@ -133,14 +137,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // Отключаем все эффекты немедленно
             DeactivateFireEffects();
 
-            // Включаем кнопки обратно
             if (buttonToDisable1 != null) buttonToDisable1.interactable = true;
             if (buttonToDisable2 != null) buttonToDisable2.interactable = true;
 
-            // Включаем объект со звуком деактивации
             if (deactivationSoundObject != null)
             {
                 deactivationSoundObject.SetActive(true);
@@ -149,68 +150,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private IEnumerator ActivateFireWithDelay()
-    {
-        // Ждем указанное время перед активацией
-        yield return new WaitForSeconds(fireActivationDelay);
-
-        // Включаем VFX
-        if (fireVFX != null)
-        {
-            fireVFX.SetActive(true);
-        }
-
-        // Включаем свет
-        if (fireLight != null)
-        {
-            fireLight.enabled = true;
-        }
-
-        // Включаем 3D-модель
-        if (fire3DModel != null)
-        {
-            fire3DModel.SetActive(true);
-        }
-
-        // Включаем объект со звуком использования фаера
-        if (fireLoopSoundObject != null)
-        {
-            fireLoopSoundObject.SetActive(true);
-        }
-    }
-
-    private void DeactivateFireEffects()
-    {
-        // Отключаем объект со звуком использования фаера
-        if (fireLoopSoundObject != null)
-        {
-            fireLoopSoundObject.SetActive(false);
-        }
-
-        // Отключаем VFX
-        if (fireVFX != null)
-        {
-            fireVFX.SetActive(false);
-        }
-
-        // Отключаем свет
-        if (fireLight != null)
-        {
-            fireLight.enabled = false;
-        }
-
-        // Отключаем 3D-модель
-        if (fire3DModel != null)
-        {
-            fire3DModel.SetActive(false);
-        }
-    }
-
     private IEnumerator FireDepletionCoroutine()
     {
         fireDepleting = true;
-        fireRemainingTime = fireTotalDuration;
 
+        // Здесь мы больше не сбрасываем fireRemainingTime, чтобы сохранить его текущее значение
         while (fireRemainingTime > 0 && isUsingFire)
         {
             fireRemainingTime -= Time.deltaTime;
@@ -220,14 +164,17 @@ public class PlayerController : MonoBehaviour
 
         if (fireRemainingTime <= 0)
         {
-            // Если фаер полностью иссяк, выключаем его автоматически
             isUsingFire = false;
             DeactivateFireEffects();
             animator.SetBool("FireUse", false);
 
-            // Включаем кнопки обратно
+            FireManager.Instance.DecreaseTotalFireCount(); // Уменьшаем общее количество фаеров
+            fireRemainingTime = fireTotalDuration; // Сбрасываем оставшееся время на начальное значение для следующего фаера
+
             if (buttonToDisable1 != null) buttonToDisable1.interactable = true;
             if (buttonToDisable2 != null) buttonToDisable2.interactable = true;
+
+            StartCoroutine(RechargeFireButton());
         }
 
         fireDepleting = false;
@@ -235,25 +182,83 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateFireUI()
     {
-        float timePerState = fireTotalDuration / 3f;
+        // Обновляем UI элементов в зависимости от оставшегося времени работы фаера
+        float[] thresholds = { fireTotalDuration * 2 / 3, fireTotalDuration / 2, fireTotalDuration / 3 };
 
-        // Активируем или деактивируем UI элементы в зависимости от оставшегося времени
         for (int i = 0; i < fireUIElements.Length; i++)
         {
             if (fireUIElements[i] != null)
             {
-                fireUIElements[i].SetActive(fireRemainingTime > i * timePerState);
+                // Активируем/деактивируем элемент в зависимости от оставшегося времени работы фаера
+                fireUIElements[i].SetActive(fireRemainingTime > thresholds[i]);
             }
         }
+
+        // Также обновляем UI, если количество фаеров в FireManager равно 0
+        if (FireManager.Instance.GetTotalFireCount() <= 0)
+        {
+            foreach (var element in fireUIElements)
+            {
+                if (element != null)
+                {
+                    element.SetActive(false); // Отключаем все UI элементы, если фаеров больше нет
+                }
+            }
+        }
+    }
+
+    private void OnSceneLoaded()
+    {
+        // При загрузке новой сцены обновляем состояние UI, чтобы оно соответствовало текущему количеству фаеров
+        UpdateFireUI();
+    }
+
+
+    private IEnumerator RechargeFireButton()
+    {
+        isRecharging = true; // Устанавливаем статус перезарядки
+        fireButton.interactable = false; // Отключаем кнопку на время перезарядки
+
+        yield return new WaitForSeconds(rechargeTime); // Ждем время перезарядки
+
+        isRecharging = false; // Перезарядка завершена
+
+        // Активируем кнопку, если еще остались фаеры
+        if (totalFireCount > 0)
+        {
+            fireButton.interactable = true;
+        }
+    }
+
+    private void DeactivateFireEffects()
+    {
+        // Отключаем все эффекты фаера
+        if (fireVFX != null) fireVFX.SetActive(false);
+        if (fireLight != null) fireLight.enabled = false;
+        if (fire3DModel != null) fire3DModel.SetActive(false);
+
+        // Останавливаем звук фаера
+        if (fireLoopSoundObject != null) fireLoopSoundObject.SetActive(false);
+    }
+
+
+
+    private IEnumerator ActivateFireWithDelay()
+    {
+        yield return new WaitForSeconds(fireActivationDelay);
+        // Включаем эффекты фаера после задержки
+        if (fireVFX != null) fireVFX.SetActive(true);
+        if (fireLight != null) fireLight.enabled = true;
+        if (fire3DModel != null) fire3DModel.SetActive(true);
+
+        // Включаем звук фаера
+        if (fireLoopSoundObject != null) fireLoopSoundObject.SetActive(true);
     }
 
     private IEnumerator DisableSoundObjectAfterDelay(GameObject soundObject, float delay)
     {
         yield return new WaitForSeconds(delay);
-        if (soundObject != null)
-        {
-            soundObject.SetActive(false);
-        }
+        if (soundObject != null) soundObject.SetActive(false);
     }
 
 

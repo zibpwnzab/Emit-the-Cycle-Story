@@ -1,59 +1,70 @@
 using UnityEngine;
-using System;
-using System.Collections;
+using TMPro; // Подключаем TextMeshPro
+using UnityEngine.SceneManagement; // Подключаем SceneManager для работы с событиями сцены
 
-
-public class FireDurationManager : MonoBehaviour
+public class FireManager : MonoBehaviour
 {
-    public event Action OnFireTimeExpired; // Событие, вызываемое при истечении времени
+    public static FireManager Instance { get; private set; }
 
-    [SerializeField] private float totalFireDuration = 6f; // Общее время работы фаера
-    private float remainingFireTime; // Оставшееся время работы фаера
-    private bool isFireActive = false;
+    [SerializeField] private int totalFireCount = 3; // Общее количество фаеров
+    private TMP_Text fireCountText; // Ссылка на UI-текст для отображения количества фаеров
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Не уничтожать объект при смене сцен
+            SceneManager.sceneLoaded += OnSceneLoaded; // Подписываемся на событие загрузки сцены
+        }
+        else
+        {
+            Destroy(gameObject); // Удалить дублирующий объект, если уже существует экземпляр
+        }
+    }
 
     private void Start()
     {
-        remainingFireTime = totalFireDuration;
+        FindFireCountText(); // Ищем текстовый объект на текущей сцене
+        UpdateFireCountUI(); // Обновляем UI при запуске игры
     }
 
-    public void StartFireTimer()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (!isFireActive)
+        FindFireCountText(); // Ищем текстовый объект при каждой загрузке новой сцены
+        UpdateFireCountUI(); // Обновляем UI после загрузки новой сцены
+    }
+
+    private void FindFireCountText()
+    {
+        // Ищем текстовый объект по имени на сцене
+        fireCountText = GameObject.Find("FireCountText")?.GetComponent<TMP_Text>();
+    }
+
+    public int GetTotalFireCount()
+    {
+        return totalFireCount;
+    }
+
+    public void DecreaseTotalFireCount()
+    {
+        if (totalFireCount > 0)
         {
-            remainingFireTime = totalFireDuration;
-            isFireActive = true;
-            StartCoroutine(FireDurationCountdown());
+            totalFireCount--;
+            UpdateFireCountUI(); // Обновляем UI при изменении количества фаеров
         }
     }
 
-    public void StopFireTimer()
+    private void UpdateFireCountUI()
     {
-        isFireActive = false;
-        remainingFireTime = 0;
-    }
-
-    private IEnumerator FireDurationCountdown()
-    {
-        while (remainingFireTime > 0 && isFireActive)
+        if (fireCountText != null)
         {
-            remainingFireTime -= Time.deltaTime;
-            yield return null;
-        }
-
-        if (remainingFireTime <= 0)
-        {
-            isFireActive = false;
-            OnFireTimeExpired?.Invoke(); // Запускаем событие окончания времени
+            fireCountText.text = $"X{totalFireCount}"; // Обновляем текст с количеством фаеров
         }
     }
 
-    public float GetRemainingTime()
+    private void OnDestroy()
     {
-        return remainingFireTime;
-    }
-
-    public float GetTotalFireDuration()
-    {
-        return totalFireDuration;
+        SceneManager.sceneLoaded -= OnSceneLoaded; // Отписываемся от события при уничтожении объекта
     }
 }
