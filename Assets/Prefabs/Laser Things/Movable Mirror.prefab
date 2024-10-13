@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabPoints: []
   ColliderToTurnOff: {fileID: 0}
-  distanceFromObject: 0.35
+  distanceFromObject: 0.25
 --- !u!136 &3633264503105923089
 CapsuleCollider:
   m_ObjectHideFlags: 0
