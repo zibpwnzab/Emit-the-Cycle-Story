@@ -5,7 +5,7 @@ using UnityEngine;
 public class PosterManager : MonoBehaviour
 {
     public static PosterManager instance;
-    public int collectedPosters;
+    public int collectedPosters = 0;
       
     [SerializeField] private string textObjectName = "PosterText"; // Имя текстового объекта
     private TextMeshProUGUI posterText;
@@ -41,7 +41,7 @@ public class PosterManager : MonoBehaviour
 
     public void CollectPoster()
     {
-        collectedPosters++;
+        collectedPosters+= 1;
         Debug.Log("Poster collected! Total posters: " + collectedPosters);
         if (posterText == null)
         {

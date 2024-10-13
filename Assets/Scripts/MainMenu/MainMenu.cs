@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject ContinueButton;
     [SerializeField] TMPro.TMP_Text ContinueButtonText;
     [SerializeField] string FirstCutSceneName;
+    [SerializeField] private GameObject exceptionObject;
     int nextLevel;
 
     private void Start()
@@ -41,24 +42,34 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
 
-        // Удаляем все объекты, помеченные как DontDestroyOnLoad
-        DestroyAllDontDestroyOnLoadObjects();
+        // Найти объект GraphicManager, который не должен удаляться
+        GameObject graphicManager = GameObject.Find("GraphicManager");
+
+        // Удаляем все объекты, помеченные как DontDestroyOnLoad, кроме GraphicManager
+        DestroyAllDontDestroyOnLoadObjectsExcept(graphicManager);
 
         // Загружаем новую игру
         SceneManager.LoadScene(FirstCutSceneName);
     }
 
-    private void DestroyAllDontDestroyOnLoadObjects()
+    private void DestroyAllDontDestroyOnLoadObjectsExcept(GameObject exception)
     {
-        GameObject[] allObjects = FindObjectsOfType<GameObject>();
-        foreach (GameObject obj in allObjects)
+        var dontDestroyOnLoadObjects = new List<GameObject>();
+
+        // Получаем все корневые объекты сцены
+        //var sceneRoots = SceneManager.GetSceneByName("DontDestroyOnLoad").GetRootGameObjects();
+        //dontDestroyOnLoadObjects.AddRange(sceneRoots);
+
+        // Удаляем все объекты, кроме исключения (GraphicManager)
+        foreach (var obj in dontDestroyOnLoadObjects)
         {
-            if (obj.scene.name == null || obj.scene.name == "DontDestroyOnLoad")
+            if (obj != exception)
             {
                 Destroy(obj);
             }
         }
     }
+
 
 
     public void ContinueGame()
