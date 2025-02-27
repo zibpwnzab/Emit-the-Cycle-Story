@@ -165,12 +165,12 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 340
-    y: 77
+    x: 293
+    y: 63
     width: 170
     height: 115
   isDragging: 0
-  isSelected: 0
+  isSelected: 1
   answerCarmaValue: 0
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
