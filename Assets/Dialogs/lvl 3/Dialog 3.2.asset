@@ -16,8 +16,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 116
-    y: 354
+    x: -696
+    y: 367
     width: 170
     height: 115
   isDragging: 0
@@ -25,10 +25,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
-    text: "\u0423\u0434\u0430\u0447\u0430?! \u041C\u0435\u043D\u044F \u0447\u0443\u0442\u044C
-      \u0436\u0438\u0432\u044C\u0435\u043C \u043D\u0435 \u043F\u043E\u0434\u0436\u0430\u0440\u0438\u043B\u0438
-      \u0438 \u0442\u044B \u0442\u0430\u043A \u0441\u043F\u043E\u043A\u043E\u0439\u043D\u043E
-      \u043E\u0431 \u044D\u0442\u043E\u043C \u0433\u043E\u0432\u043E\u0440\u0438\u0448\u044C?! "
+    text: LUCK?! I almost fried alive and you so easy speach about it?
     characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -1448582281501583994}
   childNode: {fileID: 5689732045476846897}
@@ -48,8 +45,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 733
-    y: 483
+    x: -54
+    y: 479
     width: 170
     height: 115
   isDragging: 0
@@ -57,7 +54,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
-    text: " \u0414\u0430, \u0447\u0442\u043E \u0442\u0430\u043A\u043E\u0435?"
+    text: Yeah what is it?
     characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 6427375920088970604}
   childNode: {fileID: 7204790198612192719}
@@ -77,8 +74,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 543
-    y: 350
+    x: -244
+    y: 346
     width: 170
     height: 115
   isDragging: 0
@@ -86,9 +83,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
-    text: "\u0414\u0430, \u0434\u0430, \u044F \u043F\u043E\u043D\u0438\u043C\u0430\u044E\u2026
-      \u0422\u0435\u0431\u0435 \u0441\u0435\u0439\u0447\u0430\u0441 \u043D\u0435
-      \u043B\u0435\u0433\u043A\u043E "
+    text: I.. I understand yeah understand. It's not easy for you either
     characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 6458080979945290406}
   childNode: {fileID: 6427375920088970604}
@@ -108,8 +103,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 325
-    y: 481
+    x: -462
+    y: 477
     width: 170
     height: 115
   isDragging: 0
@@ -117,9 +112,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
-    text: "\u041A\u043E\u043D\u0435\u0447\u043D\u043E, \u043D\u0435 \u0442\u044B
-      \u0436\u0435 \u043D\u0430\u0445\u043E\u0434\u0438\u0448\u044C\u0441\u044F \u043D\u0430\u0434
-      \u0433\u0440\u0435\u0431\u0430\u043D\u043D\u043E\u0439 \u0431\u043E\u043C\u0431\u043E\u0439"
+    text: Oh sorry? It easy to tell when you're not sitting above damn bomb
     characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 5689732045476846897}
   childNode: {fileID: -200444447192860944}
@@ -139,8 +132,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 736
-    y: 77
+    x: -51
+    y: 73
     width: 170
     height: 115
   isDragging: 0
@@ -148,9 +141,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
-    text: "\u0417\u043D\u0430\u0435\u0448\u044C \u0438\u043D\u043E\u0433\u0434\u0430
-      \u0438 \u043F\u0440\u043E\u0441\u0442\u043E\u0439 \u0443\u043B\u044B\u0431\u043A\u0438
-      \u0431\u0443\u0434\u0435\u0442 \u0434\u043E\u0441\u0442\u0430\u0442\u043E\u0447\u043D\u043E "
+    text: You know sometimes simple smile can be more than enough
     characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 9144720038748657136}
   childNode: {fileID: 5794296729054450634}
@@ -170,8 +161,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 340
-    y: 47
+    x: -447
+    y: 43
     width: 170
     height: 115
   isDragging: 0
@@ -199,8 +190,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 76
-    y: 241
+    x: -700
+    y: 226
     width: 170
     height: 115
   isDragging: 0
@@ -208,7 +199,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
-    text: "\u0414\u0430 \u0443\u0436, \u0432\u043E\u0442 \u0442\u0430\u043A \u0443\u0434\u0430\u0447\u0430"
+    text: Yes, that's the luck
     characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 4169396131992112463}
   childNode: {fileID: -8355311916668184429}
@@ -228,8 +219,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 324
-    y: 371
+    x: -463
+    y: 367
     width: 170
     height: 115
   isDragging: 0
@@ -237,7 +228,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
-    text: "\u0414\u0430 \u043C\u043E\u0436\u0435\u0448\u044C \u0442\u044B \u0432\u044B\u0441\u043B\u0443\u0448\u0430\u0442\u044C\u2026"
+    text: Can you just hear me-..
     characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: -4084594917337223984}
   childNode: {fileID: 2262954471798752656}
@@ -294,8 +285,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 931
-    y: 208
+    x: 144
+    y: 204
     width: 170
     height: 115
   isDragging: 0
@@ -303,7 +294,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
-    text: "\u041D\u0435 \u0442\u0430\u043A \u0431\u044B\u0441\u0442\u0440\u043E"
+    text: Huh, Not so fast
     characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 5794296729054450634}
   childNode: {fileID: 1625035938385573067}
@@ -323,17 +314,16 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 531
-    y: 49
+    x: -257
+    y: 45
     width: 190
     height: 115
   isDragging: 0
   isSelected: 0
   answerCarmaValue: 0
   answers:
-  - "\u041D\u0443 \u0438 \u043C\u043E\u043B\u0447\u0438 \u0434\u0430\u043B\u044C\u0448\u0435"
-  - "\u0421\u043B\u0443\u0448\u0430\u0439, \u0438\u0437\u0432\u0438\u043D\u0438,
-    \u043F\u0440\u043E\u0441\u0442\u043E \u0432\u0441\u0435 \u044D\u0442\u043E\u2026"
+  - 'Silent? Nice choice, keep going '
+  - Um..Listen, okay, I'm sorry
   parentSentenceNode: {fileID: -2677917095856630796}
   childSentenceNodes:
   - {fileID: 6647796832129358338}
@@ -354,8 +344,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 939
-    y: 337
+    x: 152
+    y: 333
     width: 170
     height: 115
   isDragging: 0
@@ -363,9 +353,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
-    text: "\u0425\u044D\u0439 \u043D\u0435 \u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0439
-      \u043C\u0435\u043D\u044F \u0432 \u0442\u0430\u043A\u043E\u043C \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0438.
-      \u0412\u044B\u043A\u043B\u0430\u0434\u044B\u0432\u0430\u0439 \u0434\u0430\u0432\u0430\u0439"
+    text: 'Hey. Don''t left me hanging '
     characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 758313995506102865}
   childNode: {fileID: 3077128849827658294}
@@ -385,8 +373,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 335
-    y: 210
+    x: -452
+    y: 206
     width: 170
     height: 115
   isDragging: 0
@@ -394,13 +382,8 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
-    text: "\u0412\u044B\u0441\u043B\u0443\u0448\u0430\u0442\u044C? \u0427\u0435\u0440\u0435\u0437
-      \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043C\u0438\u043D\u0443\u0442
-      \u043C\u0435\u043D\u044F, \u0432\u0441\u0435\u0445 \u043A\u043E\u0433\u043E
-      \u044F \u0437\u043D\u0430\u043B \u0438 \u043B\u044E\u0431\u0438\u043B \u043D\u0435
-      \u0441\u0442\u0430\u043D\u0435\u0442! \u0418 \u0442\u044B \u043F\u0440\u0435\u0434\u043B\u0430\u0433\u0430\u0435\u0448\u044C
-      \u0442\u0440\u0430\u0442\u0438\u0442\u044C \u0432\u0440\u0435\u043C\u044F \u043D\u0430
-      \u0432\u044B\u0441\u043B\u0443\u0448\u0438\u0432\u0430\u043D\u0438\u044F?!"
+    text: Listen? You? After few minutes everything I knew and loved will be faded
+      from Earth and you suggest spend time and "hear" you?
     characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -200444447192860944}
   childNode: {fileID: -2677917095856630796}
@@ -420,8 +403,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 947
-    y: 469
+    x: 160
+    y: 465
     width: 170
     height: 115
   isDragging: 0
@@ -429,8 +412,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
-    text: "\u041D\u0443 \u0443\u0436 \u043D\u0435\u0442. \u041A\u0430\u043A \u0432\u044B\u0431\u0435\u0440\u0443\u0441\u044C
-      - \u0442\u043E\u0433\u0434\u0430 \u0438 \u043F\u043E\u0433\u043E\u0432\u043E\u0440\u0438\u043C"
+    text: Ha ha no. As I escape than I will share it with you
     characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 1625035938385573067}
   childNode: {fileID: 6472533342483095398}
@@ -450,8 +432,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 62
-    y: 81
+    x: -725
+    y: 77
     width: 170
     height: 115
   isDragging: 0
@@ -459,7 +441,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
-    text: "\u0425\u0430\u0445\u2026 \u0425\u0430\u0445\u2026 \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u043E\u0441\u044C"
+    text: Hah..Hah.. finally
     characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 0}
   childNode: {fileID: -1448582281501583994}
@@ -479,8 +461,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 111
-    y: 496
+    x: -676
+    y: 492
     width: 170
     height: 115
   isDragging: 0
@@ -488,8 +470,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
-    text: " \u041F\u043E\u0441\u043B\u0443\u0448\u0430\u0439\u0442\u0435, \u044F
-      \u043D\u0435 \u0442\u0430\u043A \u0432\u044B\u0440\u0430\u0437\u0438\u043B\u0430\u0441\u044C"
+    text: Sorry I just mis-..
     characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: -8355311916668184429}
   childNode: {fileID: -4084594917337223984}
@@ -509,8 +490,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 926
-    y: 66
+    x: 139
+    y: 62
     width: 170
     height: 115
   isDragging: 0
@@ -518,10 +499,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
-    text: "\u0414\u0430 \u0442\u044B \u0434\u043E\u043B\u0436\u043D\u043E \u0431\u044B\u0442\u044C
-      \u0448\u0443\u0442\u0438\u0448\u044C. \u0422\u0435\u043F\u0435\u0440\u044C
-      \u044F \u0445\u043E\u0447\u0443 \u0443\u0441\u043B\u044B\u0448\u0430\u0442\u044C
-      \u044D\u0442\u043E"
+    text: You must be kidding. Now I want hear it
     characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: -3971291369990281979}
   childNode: {fileID: 758313995506102865}
@@ -541,8 +519,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 542
-    y: 480
+    x: -245
+    y: 476
     width: 170
     height: 115
   isDragging: 0
@@ -550,7 +528,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
-    text: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E\u2026\u0418... \u042D\u043C\u2026 "
+    text: Thanks.. And.. Um..
     characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -4644963856882111367}
   childNode: {fileID: -5805549351957622060}
@@ -570,8 +548,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 537
-    y: 216
+    x: -250
+    y: 212
     width: 170
     height: 115
   isDragging: 0
@@ -579,8 +557,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
-    text: "\u042F \u043D\u0430\u0433\u043E\u0432\u043E\u0440\u0438\u043B \u0432\u0441\u044F\u043A\u043E\u0433\u043E..
-      \u041F\u0440\u043E\u0441\u0442\u0438 \u0432 \u043E\u0431\u0449\u0435\u043C "
+    text: 'I.. told not the good things. Well... Sorry '
     characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: 1607549205324661540}
   childNode: {fileID: -4644963856882111367}
@@ -600,8 +577,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1154
-    y: 456
+    x: 367
+    y: 452
     width: 170
     height: 115
   isDragging: 0
@@ -609,7 +586,7 @@ MonoBehaviour:
   answerCarmaValue: 1
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
-    text: "\u0425\u043C, \u0434\u043E\u0433\u043E\u0432\u043E\u0440\u0438\u043B\u0438\u0441\u044C"
+    text: Okay. Deal
     characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 3077128849827658294}
   childNode: {fileID: 0}
@@ -629,8 +606,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 554
-    y: -88
+    x: -233
+    y: -92
     width: 170
     height: 115
   isDragging: 0
@@ -658,8 +635,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 728
-    y: 335
+    x: -59
+    y: 331
     width: 170
     height: 115
   isDragging: 0
@@ -667,8 +644,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u042D\u043C\u0438\u0442"
-    text: " \u042F \u0442\u0443\u0442 \u043F\u0440\u0438\u0434\u0443\u043C\u0430\u043B
-      \u0448\u0443\u0442\u043A\u0443.."
+    text: I got an idea for nice joke
     characterSprite: {fileID: 21300000, guid: 72c4290a342a878499f932a7aa7af0eb, type: 3}
   parentNode: {fileID: -5805549351957622060}
   childNode: {fileID: 9144720038748657136}
@@ -688,8 +664,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 736
-    y: 197
+    x: -51
+    y: 193
     width: 170
     height: 115
   isDragging: 0
@@ -697,8 +673,7 @@ MonoBehaviour:
   answerCarmaValue: 0
   sentence:
     characterName: "\u0420\u0443\u043D\u0438"
-    text: "\u0428\u0443\u0442\u043A\u0443? \u0412 \u0442\u0430\u043A\u043E\u0439
-      \u043C\u043E\u043C\u0435\u043D\u0442? "
+    text: A joke? In such moment?
     characterSprite: {fileID: 21300000, guid: 6a564c0da59f46144a4016207925d8c1, type: 3}
   parentNode: {fileID: 7204790198612192719}
   childNode: {fileID: -3971291369990281979}
