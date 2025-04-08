@@ -139,7 +139,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 1.1b
+  bundleVersion: Release
   preloadedAssets:
   - {fileID: 11400000, guid: a7642575f6aae814ba84996644306549, type: 2}
   metroInputSource: 0
@@ -264,8 +264,8 @@ PlayerSettings:
   AndroidTargetDevices: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: S:/NewMy/Keys/New.keystore
-  AndroidKeyaliasName: kkey
+  AndroidKeystoreName: '{dedicated}: Documents/KEY.keystore'
+  AndroidKeyaliasName: d...123
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
@@ -280,7 +280,7 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   chromeosInputEmulation: 1
-  AndroidMinifyRelease: 0
+  AndroidMinifyRelease: 1
   AndroidMinifyDebug: 0
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 100
