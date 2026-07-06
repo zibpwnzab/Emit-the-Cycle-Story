@@ -18,7 +18,6 @@ public class DialogController : ISignal
 
     void Start()
     {
-        // ќтображаем текущую карму при старте, если текстовое поле доступно
         if (carmaText)
         {
             var carma = KarmaManager.Instance.GetCarma();
@@ -28,17 +27,13 @@ public class DialogController : ISignal
 
     void Update()
     {
-        // ќбновл€ем отображение кармы в UI
         var carma = KarmaManager.Instance.GetCarma();
         if (carmaText) carmaText.text = $"CURRENT CARMA: {carma}";
 
-        // ≈сли диалог уже завершен, выходим
         if (_dialogDone) return;
 
-        // ѕровер€ем, находитс€ ли текуща€ карма в пределах допустимых границ
         if (!(carmaBorders.x <= carma && carma <= carmaBorders.y)) return;
 
-        // ≈сли нужен сигнал дл€ начала диалога
         if (needSignal)
         {
             if (signal.Signal())
@@ -63,14 +58,12 @@ public class DialogController : ISignal
     {
         _dialogFinished = true;
         if (hasBalckScreen) blackScreen.SetActive(false);
-        // ѕосле завершени€ диалога добавл€ем значение кармы, указанное в текущем ответе
         KarmaManager.Instance.AddCarma(dialogBehaviour.currentNode.answerCarmaValue);
         Debug.Log("GG");
     }
 
     public void ResetDialogCarma()
     {
-        // —брасываем карму через KarmaManager
         KarmaManager.Instance.SetCarma(0);
     }
 
