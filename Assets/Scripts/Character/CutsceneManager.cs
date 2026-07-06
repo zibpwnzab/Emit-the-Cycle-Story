@@ -21,7 +21,6 @@ public class CutsceneManager : MonoBehaviour
 
     void StartGameplay()
     {
-        // Логика для начала геймпле
         Debug.Log("Gameplay started");
     }
 }
