@@ -19,7 +19,7 @@ public class LaserEmitter : MonoBehaviour
     [SerializeField] private bool needSignal;
     [SerializeField] private ISignal signalSource;
 
-    private bool canDealDamage = true; // Флаг для управления нанесением урона
+    private bool canDealDamage = true; // Г”Г«Г ГЈ Г¤Г«Гї ГіГЇГ°Г ГўГ«ГҐГ­ГЁГї Г­Г Г­ГҐГ±ГҐГ­ГЁГҐГ¬ ГіГ°Г®Г­Г 
 
     void Start()
     {
@@ -74,7 +74,7 @@ public class LaserEmitter : MonoBehaviour
 
         if (hit.collider.gameObject.TryGetComponent(out PlayerController player))
         {
-            if (canDealDamage) // Проверяем, можно ли наносить урон
+            if (canDealDamage) // ГЏГ°Г®ГўГҐГ°ГїГҐГ¬, Г¬Г®Г¦Г­Г® Г«ГЁ Г­Г Г­Г®Г±ГЁГІГј ГіГ°Г®Г­
             {
                 Vector3 dir = player.transform.position - hit.point;
                 dir.y = 0;
@@ -83,7 +83,7 @@ public class LaserEmitter : MonoBehaviour
                 player.ForceKick(dir, laserStunTime);
                 player.TakeDamage(1);
 
-                StartCoroutine(DisableLaserDamageTemporarily()); // Запускаем корутину для временного отключения урона
+                StartCoroutine(DisableLaserDamageTemporarily()); // Г‡Г ГЇГіГ±ГЄГ ГҐГ¬ ГЄГ®Г°ГіГІГЁГ­Гі Г¤Г«Гї ГўГ°ГҐГ¬ГҐГ­Г­Г®ГЈГ® Г®ГІГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ°Г®Г­Г 
             }
         }
 
@@ -93,15 +93,12 @@ public class LaserEmitter : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Корутин для временного отключения урона лазера.
-    /// </summary>
-    /// <returns></returns>
+ 
     private IEnumerator DisableLaserDamageTemporarily()
     {
-        canDealDamage = false; // Отключаем урон
-        yield return new WaitForSeconds(laserStunTime); // Ждем 3 секунды
-        canDealDamage = true; // Включаем урон обратно
+        canDealDamage = false; // ГЋГІГЄГ«ГѕГ·Г ГҐГ¬ ГіГ°Г®Г­
+        yield return new WaitForSeconds(laserStunTime); // Г†Г¤ГҐГ¬ 3 Г±ГҐГЄГіГ­Г¤Г»
+        canDealDamage = true; // Г‚ГЄГ«ГѕГ·Г ГҐГ¬ ГіГ°Г®Г­ Г®ГЎГ°Г ГІГ­Г®
     }
 
     void DrawLaser()
