@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class FireUse : MonoBehaviour
 {
-    [SerializeField] private GameObject fireVFX; // Префаб VFX
-    [SerializeField] private Animator fireAnimator; // Аниматор для фаера
-    [SerializeField] private Light fireLight; // Источник света фаера
-    [SerializeField] private float lightDuration = 2f; // Время, на которое свет активен
+    [SerializeField] private GameObject fireVFX; 
+    [SerializeField] private Animator fireAnimator; 
+    [SerializeField] private Light fireLight; 
+    [SerializeField] private float lightDuration = 2f; 
 
-    // Метод для использования фаера
+
     public void UseFire()
     {
         Debug.Log("Fire used!");
@@ -17,27 +17,27 @@ public class FireUse : MonoBehaviour
 
     private IEnumerator ActivateFire()
     {
-        // Включаем VFX
+
         if (fireVFX != null)
         {
             fireVFX.SetActive(true);
         }
 
-        // Запускаем анимацию
+    
         if (fireAnimator != null)
         {
             fireAnimator.SetTrigger("Activate");
         }
 
-        // Включаем свет
+     
         if (fireLight != null)
         {
             fireLight.enabled = true;
             yield return new WaitForSeconds(lightDuration);
-            fireLight.enabled = false; // Выключаем свет после завершения
+            fireLight.enabled = false; 
         }
 
-        // Отключаем VFX (если нужно)
+    
         if (fireVFX != null)
         {
             fireVFX.SetActive(false);
