@@ -54,7 +54,7 @@ public class Rope : MonoBehaviour
         foreach (var c in _childs)
         {
             c.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.ClampMagnitude(c.gameObject.GetComponent<Rigidbody>().angularVelocity, angularLimit);
-            c.gameObject.GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(c.gameObject.GetComponent<Rigidbody>().velocity, angularLimit);
+            c.gameObject.GetComponent<Rigidbody>().linearVelocity = Vector3.ClampMagnitude(c.gameObject.GetComponent<Rigidbody>().linearVelocity, angularLimit);
         }
         if ((ropeEnd.position - _childs[_childs.Count - 1].EndPoint.position).sqrMagnitude > magnitudeError * magnitudeError)
             ropeEnd.position = _childs[_childs.Count - 1].EndPoint.position;

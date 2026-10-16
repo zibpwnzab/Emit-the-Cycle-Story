@@ -1,30 +1,21 @@
 using cherrydev;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EventTrigger : MonoBehaviour
 {
-    private PlayerController player;
-    private void Start()
-    {
-        player = FindAnyObjectByType<PlayerController>();
-    }
+    private bool _hasTriggered;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (player) 
+        if (_hasTriggered) return;
+
+        if (other.CompareTag("Player") || other.GetComponent<PlayerController>() != null)
         {
-            GameController.instance.EventAnimTrigger();
+            if (GameController.instance != null)
+            {
+                _hasTriggered = true;
+                GameController.instance.EventAnimTrigger();
+            }
         }
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (player) 
-        {
-            
-        }
-    }
-
 }

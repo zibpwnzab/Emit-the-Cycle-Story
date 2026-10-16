@@ -1,33 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerLifes : MonoBehaviour
 {
-    private PlayerController player;
     [SerializeField] private GameObject heartImage1;
     [SerializeField] private GameObject heartImage2;
     [SerializeField] private GameObject heartImage3;
     [SerializeField] private GameObject gameoverImage;
-    void Start()
+
+    private PlayerController _player;
+    private int _lastDisplayedLives = -1;
+
+    private void Start()
     {
-
-        player = GameObject.FindAnyObjectByType<PlayerController>();
-
+        _player = FindFirstObjectByType<PlayerController>();
+        RefreshHearts();
     }
 
-    
-    void Update()
+    private void Update()
     {
-        if (player.Lifes < 3)
+        if (_player != null && _player.Lifes != _lastDisplayedLives)
         {
-            heartImage3.SetActive(false);
+            RefreshHearts();
         }
+    }
 
-        if (player.Lifes == 1) 
-        { 
-        heartImage2.SetActive(false);
-        }
+    private void RefreshHearts()
+    {
+        if (_player == null) return;
+        _lastDisplayedLives = _player.Lifes;
 
+        if (heartImage3 != null) heartImage3.SetActive(_lastDisplayedLives >= 3);
+        if (heartImage2 != null) heartImage2.SetActive(_lastDisplayedLives >= 2);
+        if (heartImage1 != null) heartImage1.SetActive(_lastDisplayedLives >= 1);
+        if (gameoverImage != null) gameoverImage.SetActive(_lastDisplayedLives <= 0);
     }
 }

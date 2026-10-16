@@ -39,13 +39,13 @@ public class Level2point5Manager : MonoBehaviour
         var dir = (player.transform.position.x - _cameraRigidbody.transform.position.x);
         if (Mathf.Abs(dir) < 0.1)
         {
-            _cameraRigidbody.velocity = Vector3.zero;
+            _cameraRigidbody.linearVelocity = Vector3.zero;
             return;
         }
         if (linearMovement)
-            _cameraRigidbody.velocity = Mathf.Sign(dir) * cameraMovementSpeed * Vector3.right;
+            _cameraRigidbody.linearVelocity = Mathf.Sign(dir) * cameraMovementSpeed * Vector3.right;
         else 
-            _cameraRigidbody.velocity = dir * cameraMovementSpeed * Vector3.right;
+            _cameraRigidbody.linearVelocity = dir * cameraMovementSpeed * Vector3.right;
  
     }
 

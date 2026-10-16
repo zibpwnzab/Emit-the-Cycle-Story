@@ -1,23 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SaveGame : MonoBehaviour
 {
-    private GameObject Savedata;
+    private const string SavePrefsKey = "SaveGame";
+
+    [SerializeField] private Text saveDataText;
 
     private void Start()
     {
-        if (PlayerPrefs.GetString("SaveGame") != "") 
+        if (saveDataText == null)
         {
-            Savedata.GetComponent<Text>().text = PlayerPrefs.GetString("SaveGame");
+            saveDataText = GetComponent<Text>();
+        }
+
+        string savedValue = PlayerPrefs.GetString(SavePrefsKey, string.Empty);
+        if (!string.IsNullOrEmpty(savedValue) && saveDataText != null)
+        {
+            saveDataText.text = savedValue;
         }
     }
 
-    private void OnAnimatorIK(int layerIndex)
+    public void SaveCurrentText()
     {
-        PlayerPrefs.SetString("SaveGame", Savedata.GetComponent<Text>().text);
+        if (saveDataText != null)
+        {
+            PlayerPrefs.SetString(SavePrefsKey, saveDataText.text);
+            PlayerPrefs.Save();
+        }
     }
 }

@@ -11,36 +11,33 @@ namespace cherrydev
         public GameObject gameObject;
         public bool activateAfterDelay;
     }
+
     public class GameController : MonoBehaviour
     {
+        private const float DefaultActivationDelay = 3f;
+
         [SerializeField] private DialogBehaviour dialogBehaviour;
         [SerializeField] private List<GameObjectWithFlag> gameObjectsWithFlags;
         [SerializeField] private EventTrigger TriggerObj;
         [SerializeField] private GameObject TriggerAnim;
+
         public static GameController instance;
-        private int index = 0;
 
         private void Awake()
         {
-            if (instance == null)
-            {
-                instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            instance = this;
         }
+
         private void Start()
         {
-
             if (gameObjectsWithFlags != null)
             {
-                while (index < gameObjectsWithFlags.Count)
+                foreach (var item in gameObjectsWithFlags)
                 {
-                    gameObjectsWithFlags[index].gameObject.SetActive(false);
-                    index++;
+                    if (item?.gameObject != null)
+                    {
+                        item.gameObject.SetActive(false);
+                    }
                 }
             }
 
@@ -48,58 +45,45 @@ namespace cherrydev
             {
                 dialogBehaviour.AddListenerToDialogFinishedEvent(OnDialogFinished);
             }
-            else
-            {
-                Debug.LogWarning("DialogBehaviour не присвоен в GameController.");
-            }
         }
 
         private void OnDialogFinished()
         {
-            Debug.Log("Диалог завершен!");
+            if (gameObjectsWithFlags == null) return;
 
-            if (gameObjectsWithFlags != null)
+            foreach (var item in gameObjectsWithFlags)
             {
-                index = 0;
-                while (index < gameObjectsWithFlags.Count)
+                if (item?.gameObject == null) continue;
+
+                if (item.activateAfterDelay)
                 {
-                    if (gameObjectsWithFlags[index].activateAfterDelay)
-                    {
-                        StartCoroutine(ActivateAfterDelay(gameObjectsWithFlags[index].gameObject, 3f));
-                    }
-                    else
-                    {
-                        gameObjectsWithFlags[index].gameObject.SetActive(true);
-                    }
-                    index++;
+                    StartCoroutine(ActivateAfterDelay(item.gameObject, DefaultActivationDelay));
+                }
+                else
+                {
+                    item.gameObject.SetActive(true);
                 }
             }
-            else
+        }
+
+        private IEnumerator ActivateAfterDelay(GameObject targetObject, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            if (targetObject != null)
             {
-                Debug.LogWarning("NextActionScript не присвоен в GameController.");
+                targetObject.SetActive(true);
             }
         }
 
-        private IEnumerator ActivateAfterDelay(GameObject gameObject, float delay)
-        {
-            yield return new WaitForSeconds(delay);
-            gameObject.SetActive(true);
-        }
-
-
-
-        public void EventObjectTrigger()
-        {
-
-            Debug.Log("eot");
-
-
-        }
+        public void EventObjectTrigger() { }
 
         public void EventAnimTrigger()
         {
-            FindObjectOfType<ParabolaMovement>().StartCoroutine("Jump");
+            ParabolaMovement parabola = FindFirstObjectByType<ParabolaMovement>();
+            if (parabola != null)
+            {
+                StartCoroutine(parabola.Jump());
+            }
         }
-
     }
 }

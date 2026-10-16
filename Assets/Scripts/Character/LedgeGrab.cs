@@ -2,44 +2,48 @@ using UnityEngine;
 
 public class LedgeGrab : MonoBehaviour
 {
-    public float pullSpeed = 5f; 
-    public Transform ledgePosition; 
+    private const float SnapDistance = 0.1f;
 
-    private Rigidbody rb;
-    private bool isPulling = false;
+    public float pullSpeed = 5f;
+    public Transform ledgePosition;
 
-    void Start()
+    private Rigidbody _targetRb;
+    private bool _isPulling;
+
+    private void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.isKinematic = true; 
+        if (TryGetComponent(out Rigidbody selfRb))
+        {
+            selfRb.isKinematic = true;
+            _targetRb = selfRb;
+        }
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            
-            isPulling = true;
-            Debug.Log("GGG");
+            if (_targetRb == null)
+            {
+                _targetRb = other.GetComponent<Rigidbody>();
+            }
+            _isPulling = true;
         }
-        
     }
 
-    void Update()
+    private void Update()
     {
-        if (isPulling)
+        if (!_isPulling || ledgePosition == null || _targetRb == null) return;
+
+        Vector3 currentPos = _targetRb.position;
+        Vector3 direction = (ledgePosition.position - currentPos).normalized;
+        float distance = Vector3.Distance(currentPos, ledgePosition.position);
+
+        _targetRb.MovePosition(currentPos + direction * (pullSpeed * Time.deltaTime));
+
+        if (distance < SnapDistance)
         {
-            
-            Vector3 direction = (ledgePosition.position - transform.position).normalized;
-            float distance = Vector3.Distance(transform.position, ledgePosition.position);
-
-            rb.MovePosition(rb.position + direction * pullSpeed * Time.deltaTime);
-
-            if (distance < 0.1f)
-            {
-                isPulling = false;
-            }
+            _isPulling = false;
         }
     }
 }
-

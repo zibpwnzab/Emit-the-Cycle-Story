@@ -1,17 +1,35 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Playables;
 
 public class CutsceneManager : MonoBehaviour
 {
     public PlayableDirector playableDirector;
+    public UnityEvent onCutsceneFinished;
 
-    void Start()
+    private void Start()
     {
-        playableDirector.stopped += OnPlayableDirectorStopped;
-        playableDirector.Play();
+        if (playableDirector == null)
+        {
+            playableDirector = GetComponent<PlayableDirector>();
+        }
+
+        if (playableDirector != null)
+        {
+            playableDirector.stopped += OnPlayableDirectorStopped;
+            playableDirector.Play();
+        }
     }
 
-    void OnPlayableDirectorStopped(PlayableDirector director)
+    private void OnDestroy()
+    {
+        if (playableDirector != null)
+        {
+            playableDirector.stopped -= OnPlayableDirectorStopped;
+        }
+    }
+
+    private void OnPlayableDirectorStopped(PlayableDirector director)
     {
         if (director == playableDirector)
         {
@@ -19,8 +37,8 @@ public class CutsceneManager : MonoBehaviour
         }
     }
 
-    void StartGameplay()
+    private void StartGameplay()
     {
-        Debug.Log("Gameplay started");
+        onCutsceneFinished?.Invoke();
     }
 }

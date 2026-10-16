@@ -1,33 +1,41 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private float dumping;
+    [SerializeField] private float dumping = 5f;
     [SerializeField] private Vector3 offset = new Vector3(0f, 3f, -3f);
     [SerializeField] private PlayerController player;
     [SerializeField] private Camera mainCamera;
-    [SerializeField] List<Transform> cameraPoints;
-    [SerializeField] List<Collider> colliders;
+    [SerializeField] private List<Transform> cameraPoints;
+    [SerializeField] private List<Collider> colliders;
+
     public bool followZOnly = false;
-    void Start()
+
+    private void Start()
     {
-        player = FindAnyObjectByType<PlayerController>();
+        if (player == null)
+        {
+            player = FindFirstObjectByType<PlayerController>();
+        }
+
+        if (mainCamera == null)
+        {
+            mainCamera = Camera.main;
+        }
     }
 
-    void Update()
+    private void LateUpdate()
     {
-        Vector3 target;
-        if (followZOnly)
-        {
-            target = new Vector3(transform.position.x, transform.position.y, player.transform.position.z - offset.z);
-        }
-        else 
-        { 
-        target = new Vector3(player.transform.position.x, player.transform.position.y + offset.y, transform.position.z + offset.z);
-        }
-        Vector3 currentPosition = Vector3.Lerp(mainCamera.transform.position, target, dumping * Time.deltaTime);
-        mainCamera.transform.position = currentPosition;
+        if (player == null || mainCamera == null) return;
+
+        Vector3 target = followZOnly
+            ? new Vector3(transform.position.x, transform.position.y, player.transform.position.z - offset.z)
+            : new Vector3(player.transform.position.x, player.transform.position.y + offset.y, transform.position.z + offset.z);
+
+        mainCamera.transform.position = Vector3.Lerp(
+            mainCamera.transform.position,
+            target,
+            dumping * Time.deltaTime);
     }
 }

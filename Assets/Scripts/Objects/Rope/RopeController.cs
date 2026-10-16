@@ -20,6 +20,6 @@ public class RopeController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift)) input += Vector3.up;
         if (Input.GetKey(KeyCode.LeftControl)) input += Vector3.down;
 
-        _rigidbody.velocity = Vector3.ClampMagnitude(input * speed + _rigidbody.velocity, speed);
+        _rigidbody.linearVelocity = Vector3.ClampMagnitude(input * speed + _rigidbody.linearVelocity, speed);
     }
 }

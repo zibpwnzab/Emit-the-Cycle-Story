@@ -1,230 +1,258 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
 public class PlayerController : MonoBehaviour
 {
-    private CharacterController controller;
-    [SerializeField] private Rigidbody rigidbody;
+    private const float SoundDisableDelay = 1.5f;
+    private const float FallStunDuration = 5.0f;
+
+    [Header("Components")]
+    [SerializeField] private new Rigidbody rigidbody;
     [SerializeField] private FixedJoystick joystick;
     [SerializeField] private Animator animator;
+
+    [Header("Movement Settings")]
     [SerializeField] private float runSpeedThreshold = 2f;
     [SerializeField] private float moveSpeed = 3f;
-    [SerializeField] public float movingObjectModifier;
-    [SerializeField] public float rotateObjectSpeed;
-    [SerializeField] private float jumpforce = 5;
+    public float movingObjectModifier = 0.5f;
+    public float rotateObjectSpeed = 50f;
+    [SerializeField] private float jumpforce = 5f;
+    public float fallThreshold = 10f;
+
+    [Header("Interaction & Health")]
     [SerializeField] private Button interactButton;
+    public int Lifes = 3;
+
+    [Header("Flare / Fire System")]
     [SerializeField] private GameObject fireVFX;
     [SerializeField] private Light fireLight;
     [SerializeField] private GameObject fire3DModel;
-    [SerializeField] private Button fireButton; // Кнопка для активации фаера
-    [SerializeField] private float fireActivationDelay = 01.5f; // Задержка перед активацией фаера
-    [SerializeField] private float fireTotalDuration = 6f; // Общее время работы фаера
-     [SerializeField]private float fireRemainingTime; // Оставшееся время работы фаера
-    [SerializeField] private int totalFireCount = 3; // Общее количество фаеров, доступных игроку
-    [SerializeField] private float rechargeTime = 10f; // Время перезарядки после использования фаера
-
-    // UI элементы
-    [SerializeField] private GameObject[] fireUIElements; // Массив для хранения трёх UI элементов
-
-    // Кнопки, которые будут отключаться во время использования фаера
+    [SerializeField] private Button fireButton;
+    [SerializeField] private float fireActivationDelay = 1.5f;
+    [SerializeField] private float fireTotalDuration = 6f;
+    [SerializeField] private float fireRemainingTime;
+    [SerializeField] private int totalFireCount = 3;
+    [SerializeField] private float rechargeTime = 10f;
+    [SerializeField] private GameObject[] fireUIElements;
     [SerializeField] private Button buttonToDisable1;
     [SerializeField] private Button buttonToDisable2;
 
-    // Поля для объектов со звуком
+    [Header("Flare Audio")]
     [SerializeField] private GameObject activationSoundObject;
     [SerializeField] private GameObject fireLoopSoundObject;
     [SerializeField] private GameObject deactivationSoundObject;
 
-    private bool isUsingFire = false;
-    private bool fireDepleting = false; // Флаг, отслеживающий истощение фаера
-    private bool isRecharging = false; // Флаг, указывающий на процесс перезарядки
+    [Header("Debug")]
+    [SerializeField] private TMP_Text VelocityText;
 
-    
-    private bool isJumping = false;
-    private List<IInteractable> interactables;
-    private GameObject lastInteractable;
     public PlayerState playerState = PlayerState.Walking;
     public static PlayerController instance;
-    public int Lifes = 3;
-    public float fallThreshold = 10f; // Минимальная скорость падения, при которой будет считаться, что игрок падает
 
     public static string PLAYER_CARMA_KEY = "PLAYER_CARMA_KEY";
     public static string NEXT_LEVEL_KEY = "NEXT_LEVEL_KEY";
     public static string TOTAL_GAME_TIME = "TOTAL_GAME_TIME";
 
-    [SerializeField] private TMPro.TMP_Text VelocityText;
+    private bool _isUsingFire;
+    private bool _fireDepleting;
+    private bool _isRecharging;
+    private bool _isJumping;
+    private bool _isStunned;
+    private float _defaultMoveSpeed;
 
+    private readonly List<IInteractable> _interactables = new List<IInteractable>();
+    private GameObject _lastInteractable;
+    private Camera _mainCamera;
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-         SceneManager.sceneLoaded += (scene, mode) => OnSceneLoaded();
+        instance = this;
+        _defaultMoveSpeed = moveSpeed;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    void Start()
+    private void OnDestroy()
     {
-        rigidbody = GetComponent<Rigidbody>();
-        interactables = new List<IInteractable>();
-        animator = GetComponent<Animator>();
-        // Привязываем событие нажатия кнопки фаера
-        fireButton.onClick.AddListener(ToggleFire);
-        fireRemainingTime = fireTotalDuration; // Устанавливаем начальное время работы фаера
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        if (fireButton != null)
+        {
+            fireButton.onClick.RemoveListener(ToggleFire);
+        }
+    }
+
+    private void Start()
+    {
+        if (rigidbody == null) rigidbody = GetComponent<Rigidbody>();
+        if (animator == null) animator = GetComponent<Animator>();
+        _mainCamera = Camera.main;
+
+        if (fireButton != null)
+        {
+            fireButton.onClick.AddListener(ToggleFire);
+        }
+
+        fireRemainingTime = fireTotalDuration;
         UpdateFireUI();
     }
 
-
-    void Update()
+    private void Update()
     {
 #if UNITY_EDITOR
-        if (VelocityText) VelocityText.text = rigidbody.velocity.ToString("F2");
-#endif
-        rigidbody.angularVelocity = Vector3.zero;
-        IsPlayerFalling();
-
-        // Проверяем состояние движения игрока
-        if (animator.GetBool("FireUse"))
+        if (VelocityText != null && rigidbody != null)
         {
-            if (rigidbody.velocity.magnitude > 0.1f)
-            {
-                // Если игрок двигается, устанавливаем состояние бега с факелом
-                animator.SetBool("isRunning", true);
-            }
-            else
-            {
-                // Если игрок остановился, возвращаемся в состояние стояния с факелом
-                animator.SetBool("isRunning", false);
-            }
+            VelocityText.text = rigidbody.linearVelocity.ToString("F2");
+        }
+#endif
+        if (rigidbody == null) return;
+
+        rigidbody.angularVelocity = Vector3.zero;
+        CheckFallingState();
+
+        if (animator != null && animator.GetBool("FireUse"))
+        {
+            bool isMoving = rigidbody.linearVelocity.magnitude > 0.1f;
+            animator.SetBool("isRunning", isMoving);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (_isStunned || rigidbody == null) return;
+
+        switch (playerState)
+        {
+            case PlayerState.Walking:
+                MoveStandard();
+                break;
+            case PlayerState.MovingObject:
+                MoveWithObject();
+                break;
+            case PlayerState.RotatingObject:
+                RotateObject();
+                break;
         }
     }
 
     private void ToggleFire()
     {
-        if (isRecharging || FireManager.Instance.GetTotalFireCount() <= 0) return; // Проверяем, не на перезарядке ли фаер и есть ли доступные фаеры
+        int availableFlares = FireManager.Instance != null
+            ? FireManager.Instance.GetTotalFireCount()
+            : totalFireCount;
 
-        isUsingFire = !isUsingFire;
-        animator.SetBool("FireUse", isUsingFire);
+        if (_isRecharging || availableFlares <= 0) return;
 
-        if (isUsingFire)
+        _isUsingFire = !_isUsingFire;
+        if (animator != null) animator.SetBool("FireUse", _isUsingFire);
+
+        if (_isUsingFire)
         {
             StartCoroutine(ActivateFireWithDelay());
+            SetSecondaryButtonsInteractable(false);
+            TriggerSoundObject(activationSoundObject, SoundDisableDelay);
 
-            if (buttonToDisable1 != null) buttonToDisable1.interactable = false;
-            if (buttonToDisable2 != null) buttonToDisable2.interactable = false;
-
-            if (activationSoundObject != null)
+            if (!_fireDepleting)
             {
-                activationSoundObject.SetActive(true);
-                StartCoroutine(DisableSoundObjectAfterDelay(activationSoundObject, 1.5f));
-            }
-
-            if (!fireDepleting)
-            {
-                StartCoroutine(FireDepletionCoroutine());
+                StartCoroutine(FireDepletionRoutine());
             }
         }
         else
         {
             DeactivateFireEffects();
-
-            if (buttonToDisable1 != null) buttonToDisable1.interactable = true;
-            if (buttonToDisable2 != null) buttonToDisable2.interactable = true;
-
-            if (deactivationSoundObject != null)
-            {
-                deactivationSoundObject.SetActive(true);
-                StartCoroutine(DisableSoundObjectAfterDelay(deactivationSoundObject, 1.5f));
-            }
+            SetSecondaryButtonsInteractable(true);
+            TriggerSoundObject(deactivationSoundObject, SoundDisableDelay);
         }
     }
 
-    private IEnumerator FireDepletionCoroutine()
+    private IEnumerator FireDepletionRoutine()
     {
-        fireDepleting = true;
+        _fireDepleting = true;
 
-        // Здесь мы больше не сбрасываем fireRemainingTime, чтобы сохранить его текущее значение
-        while (fireRemainingTime > 0 && isUsingFire)
+        while (fireRemainingTime > 0f && _isUsingFire)
         {
             fireRemainingTime -= Time.deltaTime;
             UpdateFireUI();
             yield return null;
         }
 
-        if (fireRemainingTime <= 0)
+        if (fireRemainingTime <= 0f)
         {
-            isUsingFire = false;
+            _isUsingFire = false;
             DeactivateFireEffects();
-            animator.SetBool("FireUse", false);
+            if (animator != null) animator.SetBool("FireUse", false);
 
-            FireManager.Instance.DecreaseTotalFireCount(); // Уменьшаем общее количество фаеров
-            fireRemainingTime = fireTotalDuration; // Сбрасываем оставшееся время на начальное значение для следующего фаера
+            if (FireManager.Instance != null)
+            {
+                FireManager.Instance.DecreaseTotalFireCount();
+            }
+            else
+            {
+                totalFireCount = Mathf.Max(0, totalFireCount - 1);
+            }
 
-            if (buttonToDisable1 != null) buttonToDisable1.interactable = true;
-            if (buttonToDisable2 != null) buttonToDisable2.interactable = true;
-
-            StartCoroutine(RechargeFireButton());
+            fireRemainingTime = fireTotalDuration;
+            SetSecondaryButtonsInteractable(true);
+            StartCoroutine(RechargeFireButtonRoutine());
         }
 
-        fireDepleting = false;
+        _fireDepleting = false;
     }
 
     private void UpdateFireUI()
     {
-        // Обновляем UI элементов в зависимости от оставшегося времени работы фаера
-        float[] thresholds = { fireTotalDuration * 2 / 3, fireTotalDuration / 2, fireTotalDuration / 3 };
+        if (fireUIElements == null || fireUIElements.Length == 0) return;
 
-        for (int i = 0; i < fireUIElements.Length; i++)
-        {
-            if (fireUIElements[i] != null)
-            {
-                // Активируем/деактивируем элемент в зависимости от оставшегося времени работы фаера
-                fireUIElements[i].SetActive(fireRemainingTime > thresholds[i]);
-            }
-        }
+        int count = FireManager.Instance != null
+            ? FireManager.Instance.GetTotalFireCount()
+            : totalFireCount;
 
-        // Также обновляем UI, если количество фаеров в FireManager равно 0
-        if (FireManager.Instance.GetTotalFireCount() <= 0)
+        if (count <= 0)
         {
             foreach (var element in fireUIElements)
             {
-                if (element != null)
-                {
-                    element.SetActive(false); // Отключаем все UI элементы, если фаеров больше нет
-                }
+                if (element != null) element.SetActive(false);
+            }
+            return;
+        }
+
+        float[] thresholds =
+        {
+            fireTotalDuration * 2f / 3f,
+            fireTotalDuration * 0.5f,
+            fireTotalDuration / 3f
+        };
+
+        for (int i = 0; i < fireUIElements.Length && i < thresholds.Length; i++)
+        {
+            if (fireUIElements[i] != null)
+            {
+                fireUIElements[i].SetActive(fireRemainingTime > thresholds[i]);
             }
         }
     }
 
-    private void OnSceneLoaded()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // При загрузке новой сцены обновляем состояние UI, чтобы оно соответствовало текущему количеству фаеров
+        _mainCamera = Camera.main;
         UpdateFireUI();
     }
 
-
-    private IEnumerator RechargeFireButton()
+    private IEnumerator RechargeFireButtonRoutine()
     {
-        isRecharging = true; // Устанавливаем статус перезарядки
-        fireButton.interactable = false; // Отключаем кнопку на время перезарядки
+        _isRecharging = true;
+        if (fireButton != null) fireButton.interactable = false;
 
-        yield return new WaitForSeconds(rechargeTime); // Ждем время перезарядки
+        yield return new WaitForSeconds(rechargeTime);
 
-        isRecharging = false; // Перезарядка завершена
+        _isRecharging = false;
+        int remaining = FireManager.Instance != null
+            ? FireManager.Instance.GetTotalFireCount()
+            : totalFireCount;
 
-        // Активируем кнопку, если еще остались фаеры
-        if (totalFireCount > 0)
+        if (remaining > 0 && fireButton != null)
         {
             fireButton.interactable = true;
         }
@@ -232,77 +260,58 @@ public class PlayerController : MonoBehaviour
 
     private void DeactivateFireEffects()
     {
-        // Отключаем все эффекты фаера
         if (fireVFX != null) fireVFX.SetActive(false);
         if (fireLight != null) fireLight.enabled = false;
         if (fire3DModel != null) fire3DModel.SetActive(false);
-
-        // Останавливаем звук фаера
         if (fireLoopSoundObject != null) fireLoopSoundObject.SetActive(false);
     }
-
-
 
     private IEnumerator ActivateFireWithDelay()
     {
         yield return new WaitForSeconds(fireActivationDelay);
-        // Включаем эффекты фаера после задержки
+        if (!_isUsingFire) yield break;
+
         if (fireVFX != null) fireVFX.SetActive(true);
         if (fireLight != null) fireLight.enabled = true;
         if (fire3DModel != null) fire3DModel.SetActive(true);
-
-        // Включаем звук фаера
         if (fireLoopSoundObject != null) fireLoopSoundObject.SetActive(true);
     }
 
-    private IEnumerator DisableSoundObjectAfterDelay(GameObject soundObject, float delay)
+    private void TriggerSoundObject(GameObject soundObject, float duration)
+    {
+        if (soundObject == null) return;
+        soundObject.SetActive(true);
+        StartCoroutine(DisableObjectAfterDelay(soundObject, duration));
+    }
+
+    private IEnumerator DisableObjectAfterDelay(GameObject target, float delay)
     {
         yield return new WaitForSeconds(delay);
-        if (soundObject != null) soundObject.SetActive(false);
+        if (target != null) target.SetActive(false);
     }
 
-
-
-
-
-
-
-    private IEnumerator StartRunningWithTorchAfterEquip()
+    private void SetSecondaryButtonsInteractable(bool state)
     {
-        // Ждём окончания анимации экипирования факела (например, 1 секунда)
-        yield return new WaitForSeconds(1.0f);
-
-        // Устанавливаем флаг, что персонаж держит факел
-        animator.SetBool("isHoldingTorch", true);
-
-        // Устанавливаем флаг для перехода в состояние бега с факелом
-        animator.SetBool("isRunning", true);
+        if (buttonToDisable1 != null) buttonToDisable1.interactable = state;
+        if (buttonToDisable2 != null) buttonToDisable2.interactable = state;
     }
-
-    
-
-
-
 
     public void ForceKick(Vector3 direction, float stunTime)
     {
-        Debug.Log("ForceKick вызван с направлением: " + direction);
-
-        if (lastInteractable && lastInteractable.TryGetComponent(out IInteractable interactable))
+        if (_lastInteractable != null && _lastInteractable.TryGetComponent(out IInteractable interactable))
         {
             interactable.StopInteraction(gameObject, animator);
         }
 
         if (rigidbody != null)
         {
-            rigidbody.velocity = direction;
-        }
-        else
-        {
-            Debug.LogWarning("Rigidbody отсутствует на " + gameObject.name);
+            rigidbody.linearVelocity = direction;
         }
 
-        StartCoroutine(StunRecover(stunTime));
+        if (!_isStunned)
+        {
+            StartCoroutine(StunRecoverRoutine(stunTime));
+        }
     }
 
     public void TakeDamage(int damage)
@@ -314,219 +323,177 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   
-
-
-    private void FixedUpdate()
+    private IEnumerator StunRecoverRoutine(float stunDuration)
     {
-        switch (playerState)
-        {
-            case PlayerState.Walking:
-                MoveOld();
-                break;
-            case PlayerState.MovingObject:
-                MoveWithObject();
-                break;
-            case PlayerState.RotatingObject:
-                RotateObject();
-                break;
-        }
-        
-        
-    }
-    IEnumerator StunRecover(float stun)
-    {
-        animator.SetBool("Stuned", true); 
-        moveSpeed = 3.0f; 
-        yield return new WaitForSeconds(stun);
+        _isStunned = true;
+        playerState = PlayerState.Stunned;
+        if (animator != null) animator.SetBool("Stuned", true);
+
+        yield return new WaitForSeconds(stunDuration);
+
+        _isStunned = false;
         playerState = PlayerState.Walking;
-        animator.SetBool("Stuned", false); 
-        moveSpeed = 5.5f; 
+        moveSpeed = _defaultMoveSpeed;
+        if (animator != null) animator.SetBool("Stuned", false);
     }
 
-    void RotateObject()
+    private void RotateObject()
     {
+        if (joystick == null || _lastInteractable == null) return;
+
         if (Mathf.Abs(joystick.Horizontal) > Mathf.Abs(joystick.Vertical))
         {
-            Debug.Log(lastInteractable.name + " Rotate");
-            lastInteractable.transform.Rotate(Vector3.up, Time.deltaTime * joystick.Horizontal * rotateObjectSpeed);
-        }
-        else
-        {
-
+            _lastInteractable.transform.Rotate(Vector3.up, Time.deltaTime * joystick.Horizontal * rotateObjectSpeed);
         }
     }
 
-    void MoveOld()
+    private void MoveStandard()
     {
-        Vector3 desiredVelocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed, rigidbody.velocity.y, joystick.Vertical * moveSpeed));
-        rigidbody.velocity = desiredVelocity;
+        if (joystick == null) return;
 
-        if (joystick.Horizontal != 0 || joystick.Vertical != 0)
+        Vector3 inputVelocity = new Vector3(
+            joystick.Horizontal * moveSpeed,
+            rigidbody.linearVelocity.y,
+            joystick.Vertical * moveSpeed);
+
+        Vector3 desiredVelocity = TransformInputRelativeToCamera(inputVelocity);
+        rigidbody.linearVelocity = desiredVelocity;
+
+        if (joystick.Horizontal != 0f || joystick.Vertical != 0f)
         {
-            Vector3 lookDirection = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z);
-            transform.rotation = Quaternion.LookRotation(lookDirection);
-
-            float currentSpeed = new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z).magnitude;
-
-            if (!isJumping)
+            Vector3 planarVelocity = new Vector3(rigidbody.linearVelocity.x, 0f, rigidbody.linearVelocity.z);
+            if (planarVelocity.sqrMagnitude > 0.001f)
             {
-                animator.SetFloat("Speed", Vector3.ClampMagnitude(rigidbody.velocity, 1).magnitude);
+                transform.rotation = Quaternion.LookRotation(planarVelocity);
+            }
 
-                if (currentSpeed > runSpeedThreshold)
-                {
-                    animator.SetBool("isRunning", true);
-                }
-                else
-                {
-                    animator.SetBool("isRunning", false);
-                }
+            if (!_isJumping && animator != null)
+            {
+                animator.SetFloat("Speed", Vector3.ClampMagnitude(planarVelocity, 1f).magnitude);
+                animator.SetBool("isRunning", planarVelocity.magnitude > runSpeedThreshold);
             }
         }
-        else
+        else if (!_isJumping && animator != null)
         {
-            if (!isJumping)
-            {
-                animator.SetFloat("Speed", 0);
-                animator.SetBool("isRunning", false);
-            }
+            animator.SetFloat("Speed", 0f);
+            animator.SetBool("isRunning", false);
         }
     }
 
-    void MoveWithObject()
+    private void MoveWithObject()
     {
+        if (joystick == null) return;
 
-        Vector3 newVelocity = ChangeVectorWRTCamera(new Vector3(joystick.Horizontal * moveSpeed * movingObjectModifier, rigidbody.velocity.y, joystick.Vertical * moveSpeed * movingObjectModifier));
-        rigidbody.velocity = newVelocity;
+        float modifiedSpeed = moveSpeed * movingObjectModifier;
+        Vector3 inputVelocity = new Vector3(
+            joystick.Horizontal * modifiedSpeed,
+            rigidbody.linearVelocity.y,
+            joystick.Vertical * modifiedSpeed);
 
-        bool isMoving = joystick.Horizontal != 0 || joystick.Vertical != 0;
+        rigidbody.linearVelocity = TransformInputRelativeToCamera(inputVelocity);
 
-
-        if (playerState == PlayerState.MovingObject && isMoving)
+        bool isMoving = joystick.Horizontal != 0f || joystick.Vertical != 0f;
+        if (animator != null)
         {
-            animator.SetBool("Pushing", true);
-            Debug.Log("FF");
-            //animator.SetFloat("Speed", Vector3.ClampMagnitude(newVelocity, 1).magnitude);
-        }
-        else
-        {
-
-            animator.SetBool("Pushing", false);
-            //animator.SetFloat("Speed", 0); 
+            animator.SetBool("Pushing", playerState == PlayerState.MovingObject && isMoving);
         }
     }
 
-
-
-    Vector3 ChangeVectorWRTCamera(Vector3 direction)
+    private Vector3 TransformInputRelativeToCamera(Vector3 direction)
     {
-        var camera = Camera.main;
+        if (_mainCamera == null) _mainCamera = Camera.main;
+        if (_mainCamera == null) return direction;
 
-        var forward = camera.transform.forward;
-        var right = camera.transform.right;
+        Vector3 forward = _mainCamera.transform.forward;
+        Vector3 right = _mainCamera.transform.right;
 
         forward.y = 0f;
         right.y = 0f;
         forward.Normalize();
         right.Normalize();
 
-        var desiredMoveDirection = forward * direction.z + right * direction.x;
+        Vector3 desiredMoveDirection = forward * direction.z + right * direction.x;
         desiredMoveDirection.y = direction.y;
         return desiredMoveDirection;
     }
 
     public IEnumerator Jump()
     {
-        if (!isJumping)
+        if (!_isJumping && rigidbody != null)
         {
-            animator.SetTrigger("Jumping");
-            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpforce, rigidbody.velocity.z);
-            isJumping = true;
-
+            if (animator != null) animator.SetTrigger("Jumping");
+            rigidbody.linearVelocity = new Vector3(
+                rigidbody.linearVelocity.x,
+                jumpforce,
+                rigidbody.linearVelocity.z);
+            _isJumping = true;
         }
         yield return null;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isJumping = false;
+            _isJumping = false;
         }
-
     }
-
-
-    
-
-
-
 
     private void OnTriggerEnter(Collider other)
     {
-        IInteractable obj;
-        if (!other.TryGetComponent(out obj))
-            return;
+        if (!other.TryGetComponent(out IInteractable obj)) return;
+        if (_interactables.Contains(obj)) return;
 
-        if (interactables.Contains(obj))
-            return;
-        if (lastInteractable == null)
-            lastInteractable = other.gameObject;
-        interactables.Add(obj);
+        if (_lastInteractable == null)
+        {
+            _lastInteractable = other.gameObject;
+        }
+
+        _interactables.Add(obj);
         ResolveInteraction();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        IInteractable obj;
-        if (!other.TryGetComponent(out obj))
-            return;
+        if (!other.TryGetComponent(out IInteractable obj)) return;
+        if (!_interactables.Contains(obj)) return;
 
-        if (!interactables.Contains(obj))
-            return;
+        if (other.gameObject == _lastInteractable)
+        {
+            _lastInteractable = null;
+        }
 
-        if (other.gameObject == lastInteractable)
-            lastInteractable = null;
-        interactables.Remove(obj);
+        _interactables.Remove(obj);
         ResolveInteraction();
     }
 
-    void ResolveInteraction()
+    private void ResolveInteraction()
     {
-        interactButton.onClick.RemoveAllListeners();
-        if (interactables.Count == 0)
-        {
+        if (interactButton == null) return;
 
-        }
-        else
+        interactButton.onClick.RemoveAllListeners();
+        if (_interactables.Count > 0)
         {
-            interactButton.onClick.AddListener(delegate { interactables[0].Interact(gameObject, animator); });
+            interactButton.onClick.AddListener(() => _interactables[0].Interact(gameObject, animator));
         }
     }
 
     public void Die()
     {
-        LevelManager.Instance.FinishLevel(false);
-    }
-
-    private void IsPlayerFalling()
-    {
-        float heightChange = rigidbody.velocity.y;
-
-        if (heightChange < -fallThreshold)
+        if (LevelManager.Instance != null)
         {
-            StartCoroutine(StunRecover(5.0f));
+            LevelManager.Instance.FinishLevel(false);
         }
     }
 
-
-
-
+    private void CheckFallingState()
+    {
+        if (!_isStunned && rigidbody.linearVelocity.y < -fallThreshold)
+        {
+            StartCoroutine(StunRecoverRoutine(FallStunDuration));
+        }
+    }
 }
-
-
-
 
 public enum PlayerState
 {
@@ -534,7 +501,5 @@ public enum PlayerState
     Dead,
     MovingObject,
     RotatingObject,
-    Stunned,
+    Stunned
 }
-
-
