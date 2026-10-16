@@ -5,117 +5,122 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LaserEmitter : MonoBehaviour
 {
+    private const float MaxRayDistance = 100f;
+    private const float SurfaceOffset = 0.001f;
+
+    [Header("Damage & Knockback")]
     [SerializeField] private float laserKickForce = 10f;
     [SerializeField] private float laserStunTime = 3f;
 
-    private LineRenderer _lineRenderer;
+    [Header("Ray Settings")]
     [SerializeField] private Transform laserDirection;
     [SerializeField] private Transform laserStart;
     [SerializeField] private int maxBounces = 3;
-    private List<Vector3> laserPositions;
     [SerializeField] private int mirrorLayer;
     [SerializeField] private LayerMask collideLayer;
     [SerializeField] private int positionsPerSegment = 10;
+
+    [Header("Signal Dependency")]
     [SerializeField] private bool needSignal;
     [SerializeField] private ISignal signalSource;
 
-    private bool canDealDamage = true; // Ôëàã äëÿ óïðàâëåíèÿ íàíåñåíèåì óðîíà
+    private LineRenderer _lineRenderer;
+    private readonly List<Vector3> _laserPositions = new List<Vector3>();
+    private bool _canDealDamage = true;
 
-    void Start()
+    private void Awake()
     {
         _lineRenderer = GetComponent<LineRenderer>();
     }
 
-    void Update()
+    private void Update()
     {
-        laserPositions = new List<Vector3>();
-        laserPositions.Add(laserStart.position);
+        if (laserStart == null || laserDirection == null) return;
 
-        if (needSignal)
+        _laserPositions.Clear();
+        _laserPositions.Add(laserStart.position);
+
+        bool shouldEmit = !needSignal || (signalSource != null && signalSource.Signal());
+        if (shouldEmit)
         {
-            if (signalSource.Signal())
-                EmitLaser(laserStart.position, laserDirection.forward, 0);
-        }
-        else
-        {
-            EmitLaser(laserStart.position, laserDirection.forward, 0);
+            CastLaserBeam(laserStart.position, laserDirection.forward.normalized, 0);
         }
 
-        DrawLaser();
+        RenderLaserLine();
     }
 
-    void EmitLaser(Vector3 position, Vector3 direction, int currentCount)
+    private void CastLaserBeam(Vector3 origin, Vector3 direction, int bounceIndex)
     {
-        if (currentCount > maxBounces)
-            return;
+        if (bounceIndex > maxBounces) return;
 
-        Ray ray = new Ray(position, direction);
-        RaycastHit hit;
-
-        if (!Physics.Raycast(ray, out hit, float.MaxValue, collideLayer))
+        Ray ray = new Ray(origin, direction);
+        if (!Physics.Raycast(ray, out RaycastHit hit, MaxRayDistance, collideLayer))
         {
-            laserPositions.Add(position + direction * 100);
+            _laserPositions.Add(origin + direction * MaxRayDistance);
             return;
         }
 
-        laserPositions.Add(hit.point);
+        _laserPositions.Add(hit.point);
+        GameObject hitObject = hit.collider.gameObject;
 
-        if (hit.collider.gameObject.layer == mirrorLayer)
+        if (hitObject.layer == mirrorLayer)
         {
-            Vector3 inRay = hit.point - position;
-            Vector3 outRay = inRay - 2 * Vector3.Dot(inRay, hit.normal.normalized) * hit.normal.normalized;
-            EmitLaser(hit.point, outRay, currentCount + 1);
+            Vector3 reflectedDir = Vector3.Reflect(direction, hit.normal).normalized;
+            CastLaserBeam(hit.point + reflectedDir * SurfaceOffset, reflectedDir, bounceIndex + 1);
         }
 
-        if (hit.collider.gameObject.TryGetComponent(out LaserReceiver laserReceiver))
+        if (hitObject.TryGetComponent(out LaserReceiver receiver))
         {
-            laserReceiver.Power(true);
+            receiver.Power(true);
         }
 
-        if (hit.collider.gameObject.TryGetComponent(out PlayerController player))
+        if (hitObject.TryGetComponent(out PlayerController player) && _canDealDamage)
         {
-            if (canDealDamage) // Ïðîâåðÿåì, ìîæíî ëè íàíîñèòü óðîí
-            {
-                Vector3 dir = player.transform.position - hit.point;
-                dir.y = 0;
-                dir = dir.normalized * laserKickForce;
+            Vector3 knockbackDir = player.transform.position - hit.point;
+            knockbackDir.y = 0f;
+            knockbackDir = knockbackDir.normalized * laserKickForce;
 
-                player.ForceKick(dir, laserStunTime);
-                player.TakeDamage(1);
-
-                StartCoroutine(DisableLaserDamageTemporarily()); // Çàïóñêàåì êîðóòèíó äëÿ âðåìåííîãî îòêëþ÷åíèÿ óðîíà
-            }
+            player.ForceKick(knockbackDir, laserStunTime);
+            player.TakeDamage(1);
+            StartCoroutine(DamageCooldownRoutine());
         }
 
-        if (hit.collider.gameObject.TryGetComponent(out DestroyableObject destroyableObject))
+        if (hitObject.TryGetComponent(out DestroyableObject destroyable))
         {
-            destroyableObject.TakeDamage(1 * Time.deltaTime);
+            destroyable.TakeDamage(Time.deltaTime);
         }
     }
 
- 
-    private IEnumerator DisableLaserDamageTemporarily()
+    private IEnumerator DamageCooldownRoutine()
     {
-        canDealDamage = false; // Îòêëþ÷àåì óðîí
-        yield return new WaitForSeconds(laserStunTime); // Æäåì 3 ñåêóíäû
-        canDealDamage = true; // Âêëþ÷àåì óðîí îáðàòíî
+        _canDealDamage = false;
+        yield return new WaitForSeconds(laserStunTime);
+        _canDealDamage = true;
     }
 
-    void DrawLaser()
+    private void RenderLaserLine()
     {
-        var previousPos = laserPositions[0];
-
-        _lineRenderer.positionCount = (laserPositions.Count - 1) * positionsPerSegment + 1;
-
-        for (int i = 0; i < laserPositions.Count - 1; i++)
+        if (_laserPositions.Count < 2)
         {
-            var dir = laserPositions[i + 1] - laserPositions[i];
-            for (int j = 0; j < positionsPerSegment; j++)
+            _lineRenderer.positionCount = 0;
+            return;
+        }
+
+        int segmentSubdivisions = Mathf.Max(1, positionsPerSegment);
+        _lineRenderer.positionCount = (_laserPositions.Count - 1) * segmentSubdivisions + 1;
+
+        for (int i = 0; i < _laserPositions.Count - 1; i++)
+        {
+            Vector3 segmentVector = _laserPositions[i + 1] - _laserPositions[i];
+            for (int j = 0; j < segmentSubdivisions; j++)
             {
-                var pos = laserPositions[i] + dir * ((float)j / (float)positionsPerSegment);
-                _lineRenderer.SetPosition(i * positionsPerSegment + j, pos);
+                Vector3 interpolatedPos = _laserPositions[i] + segmentVector * ((float)j / segmentSubdivisions);
+                _lineRenderer.SetPosition(i * segmentSubdivisions + j, interpolatedPos);
             }
         }
-        _lineRenderer.SetPosition((laserPositions.Count - 1) * positionsPerSegment, laserPositions[laserPositions.Count - 1]);
+
+        _lineRenderer.SetPosition(
+            (_laserPositions.Count - 1) * segmentSubdivisions,
+            _laserPositions[_laserPositions.Count - 1]);
     }
 }

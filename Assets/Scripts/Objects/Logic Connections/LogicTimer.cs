@@ -1,30 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LogicTimer : ISignal
 {
-    [SerializeField] ISignal incomingSignal;
-    [SerializeField] float delay;
-    [SerializeField] float signalTime = 0.1f;
+    [SerializeField] private ISignal incomingSignal;
+    [SerializeField] private float delay = 1f;
+    [SerializeField] private float signalTime = 0.1f;
 
-    float _signalLeft;
-    float _delayLeft;
-    bool powered => (_delayLeft <= 0);
+    private float _delayLeft;
+    private bool _isPowered => _delayLeft <= 0f;
+
     public override bool Signal()
     {
-        return powered;
+        return _isPowered;
     }
 
-    void Start()
+    private void Start()
     {
         _delayLeft = delay;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (powered) return;
+        if (_isPowered || incomingSignal == null) return;
+
         if (incomingSignal.Signal())
         {
             _delayLeft -= Time.deltaTime;

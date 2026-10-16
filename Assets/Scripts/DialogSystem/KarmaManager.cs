@@ -1,54 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class KarmaManager : MonoBehaviour
 {
-    public static KarmaManager Instance; // Singleton для доступа к объекту из других скриптов
+    public static KarmaManager Instance { get; private set; }
 
-    [SerializeField] private int currentCarma; // Отображение кармы в инспекторе (только для чтения)
-    private bool carmaInitialized = false; // Флаг для контроля однократной инициализации кармы
+    [SerializeField] private int currentCarma;
+    private bool _carmaInitialized;
 
-    void Awake()
+    private void Awake()
     {
-        // Убедиться, что существует только один экземпляр KarmaManager
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Не уничтожать объект при загрузке новых сцен
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject); // Если уже есть экземпляр, уничтожаем новый
-            return; // Прекращаем выполнение Awake() для нового объекта
+            Destroy(gameObject);
         }
     }
 
-    void Start()
+    private void Start()
     {
-        if (!carmaInitialized)
+        if (!_carmaInitialized)
         {
-            // Инициализация кармы только один раз
-            currentCarma = 0; // Устанавливаем начальное значение кармы
-            carmaInitialized = true;
-            Debug.Log($"Карма инициализирована: {currentCarma}");
+            currentCarma = 0;
+            _carmaInitialized = true;
         }
     }
 
     public void SetCarma(int carma)
     {
         currentCarma = carma;
-        Debug.Log($"Карма установлена: {currentCarma}");
     }
 
     public void AddCarma(int carma)
     {
         currentCarma += carma;
-        Debug.Log($"Карма изменена: {currentCarma}");
     }
 
-    public int GetCarma()
-    {
-        return currentCarma;
-    }
+    public int GetCarma() => currentCarma;
 }

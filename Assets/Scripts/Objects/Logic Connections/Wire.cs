@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Wire : ISignal
 {
-    [SerializeField] public ISignal signalSource;
-    [SerializeField] public bool inverseSignal;
-    override public bool Signal()
+    public ISignal signalSource;
+    public bool inverseSignal;
+
+    public override bool Signal()
     {
-        if (inverseSignal)
-            return !signalSource.Signal();
-        return signalSource.Signal();
+        if (signalSource == null) return false;
+        bool state = signalSource.Signal();
+        return inverseSignal ? !state : state;
     }
 }

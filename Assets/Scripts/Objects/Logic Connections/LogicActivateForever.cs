@@ -1,22 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LogicActivateForever : ISignal
 {
-    [SerializeField] ISignal signal;
-    [SerializeField] bool inverse;
-    bool Power;
+    [SerializeField] private ISignal signal;
+    [SerializeField] private bool inverse;
+
+    private bool _isActivated;
+
     public override bool Signal()
     {
-        if (inverse)
-            return !Power;
-        return Power;
+        return inverse ? !_isActivated : _isActivated;
     }
 
-    void Update()
+    private void Update()
     {
-        if (Power) return;
-        Power = signal.Signal();
+        if (_isActivated || signal == null) return;
+
+        if (signal.Signal())
+        {
+            _isActivated = true;
+        }
     }
 }

@@ -2,34 +2,24 @@ using UnityEngine;
 
 public class LaserMovement : MonoBehaviour
 {
-    public float speed = 5f; // Скорость движения лазера
-    public float maxHeight = 10f; // Максимальная высота
-    public float minHeight = 0f; // Минимальная высота
-    private bool movingUp = true; // Начальное направление движения
+    public float speed = 5f;
+    public float maxHeight = 10f;
+    public float minHeight = 0f;
 
-    // Update вызывается на каждом кадре
-    void Update()
+    private bool _movingUp = true;
+
+    private void Update()
     {
-        // Проверяем, в каком направлении двигаться
         if (transform.position.y >= maxHeight)
         {
-            movingUp = false;
+            _movingUp = false;
         }
         else if (transform.position.y <= minHeight)
         {
-            movingUp = true;
+            _movingUp = true;
         }
 
-        // Выполняем движение вверх или вниз в зависимости от направления
-        if (movingUp)
-        {
-            // Движение вверх
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
-        }
-        else
-        {
-            // Движение вниз
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
-        }
+        Vector3 direction = _movingUp ? Vector3.up : Vector3.down;
+        transform.Translate(direction * (speed * Time.deltaTime));
     }
 }

@@ -1,45 +1,75 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LogicAnd : ISignal
 {
-    [SerializeField] GateType gate;
-    [SerializeField] List<GameObject> sources;
-    override public bool Signal()
-    {
-        switch (gate){
-            case GateType.AND:
-                return And();
-            case GateType.OR:
-                return Or();
-            case GateType.NOR:
-                return !Or();
-            default:
-                return !And();
-        }
-    }
-    private bool And()
-    {
-        foreach (var source in sources)
-            if (!source.GetComponent<ISignal>().Signal())
-                return false;
-        return true;
-    }
-
-    private bool Or()
-    {
-        foreach (var source in sources)
-            if (source.GetComponent<ISignal>().Signal())
-                return true;
-        return false;
-    }
     private enum GateType
     {
         AND,
         OR,
         NOR,
-        NAND,
+        NAND
+    }
+
+    [SerializeField] private GateType gate;
+    [SerializeField] private List<GameObject> sources = new List<GameObject>();
+
+    private readonly List<ISignal> _cachedSignals = new List<ISignal>();
+
+    private void Awake()
+    {
+        CacheSignalSources();
+    }
+
+    private void CacheSignalSources()
+    {
+        _cachedSignals.Clear();
+        if (sources == null) return;
+
+        foreach (GameObject sourceObj in sources)
+        {
+            if (sourceObj != null && sourceObj.TryGetComponent(out ISignal signal))
+            {
+                _cachedSignals.Add(signal);
+            }
+        }
+    }
+
+    public override bool Signal()
+    {
+        return gate switch
+        {
+            GateType.AND => EvaluateAnd(),
+            GateType.OR => EvaluateOr(),
+            GateType.NOR => !EvaluateOr(),
+            GateType.NAND => !EvaluateAnd(),
+            _ => false
+        };
+    }
+
+    private bool EvaluateAnd()
+    {
+        if (_cachedSignals.Count == 0) return false;
+
+        foreach (ISignal signal in _cachedSignals)
+        {
+            if (signal == null || !signal.Signal())
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private bool EvaluateOr()
+    {
+        foreach (ISignal signal in _cachedSignals)
+        {
+            if (signal != null && signal.Signal())
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
-

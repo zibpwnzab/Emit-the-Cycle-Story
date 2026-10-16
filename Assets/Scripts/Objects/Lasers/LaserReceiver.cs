@@ -1,57 +1,48 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LaserReceiver : ISignal
 {
+    private const float PowerGracePeriod = 0.15f;
 
     public bool powered;
-    Queue<bool> prevStates = new Queue<bool>();
-    private int queueCapacity = 10;
-    [SerializeField] MeshRenderer meshToLight;
-    [SerializeField] Animator animator;
-    [SerializeField] Material onMaterial;
-    [SerializeField] Material offMaterial;
-    override public bool Signal()
+
+    [SerializeField] private MeshRenderer meshToLight;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Material onMaterial;
+    [SerializeField] private Material offMaterial;
+
+    private float _lastPoweredTime = -1f;
+    private bool _lastVisualState;
+    private bool _isVisualInitialized;
+
+    public override bool Signal()
     {
-        foreach (bool b in prevStates) 
-        if (b) return true;
-        return false;
+        return Time.time - _lastPoweredTime <= PowerGracePeriod;
     }
 
-    public void Power(bool b)
+    public void Power(bool isPowered)
     {
-        if (animator) {
-            if (Signal())animator.SetFloat("speed", 1);
-        else animator.SetFloat("speed", 0);
-        }
-        if (prevStates.Count >= queueCapacity)
-            prevStates.Dequeue();
-        prevStates.Enqueue(b);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Power(false);
-        if (meshToLight)
+        if (isPowered)
         {
-            if(Signal())
-            {
-                meshToLight.material = onMaterial;
-                powered = true;
-            }
-            else
-            {
-                meshToLight.material = offMaterial;
-                powered = false;
-            }
+            _lastPoweredTime = Time.time;
+        }
+    }
+
+    private void Update()
+    {
+        bool isActive = Signal();
+        powered = isActive;
+
+        if (animator != null)
+        {
+            animator.SetFloat("speed", isActive ? 1f : 0f);
+        }
+
+        if (meshToLight != null && (!_isVisualInitialized || _lastVisualState != isActive))
+        {
+            _isVisualInitialized = true;
+            _lastVisualState = isActive;
+            meshToLight.sharedMaterial = isActive ? onMaterial : offMaterial;
         }
     }
 }

@@ -1,76 +1,93 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(LineRenderer))]
 public class Rope : MonoBehaviour
 {
-    [SerializeField] Transform ropeEnd;
-    [SerializeField] Transform ropeStart;
-    [SerializeField] float magnitudeError;
-    [SerializeField] float angularLimit;
-    LineRenderer _lineRenderer;
+    [SerializeField] private Transform ropeEnd;
+    [SerializeField] private Transform ropeStart;
+    [SerializeField] private float magnitudeError = 0.5f;
+    [SerializeField] private float angularLimit = 5f;
 
-    List<RopeSegment> _childs;
-    void Start()
+    private LineRenderer _lineRenderer;
+    private List<RopeSegment> _segments;
+
+    private void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
-
-        _childs = new(GetComponentsInChildren<RopeSegment>());
-        _lineRenderer.positionCount = _childs.Count + 2;
+        _segments = new List<RopeSegment>(GetComponentsInChildren<RopeSegment>());
+        _lineRenderer.positionCount = _segments.Count + 2;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        UpdatePosition();
+        if (ropeStart == null || ropeEnd == null || _segments == null || _segments.Count == 0)
+        {
+            return;
+        }
+
+        UpdatePositions();
         DrawRope();
-        
     }
 
-    void UpdatePosition()
+    private void UpdatePositions()
     {
-        var previous_pos = ropeStart.position;
-        float total_length = 0;
-        foreach (var rope in _childs)
-        {
-            var dir = previous_pos - rope.transform.position;
-            total_length += dir.magnitude;
-            if (dir.sqrMagnitude >= magnitudeError * magnitudeError)
-            {
-                rope.transform.position = (previous_pos + 3 * rope.transform.position) / 4;
-            }
-            previous_pos = rope.EndPoint.position;
-        }
-        if ((ropeStart.position - _childs[0].transform.position).sqrMagnitude > magnitudeError * magnitudeError)
-            _childs[0].transform.position = ropeStart.position;
-/*
-        for (int i = 1; i < _childs.Count; i++)
-        {
-            if ((_childs[i].transform.position - _childs[i - 1].EndPoint.position).sqrMagnitude < magnitudeError * magnitudeError)
-                continue;
-                _childs[i].transform.position = _childs[i - 1].EndPoint.position;
-        }*/
+        Vector3 previousPos = ropeStart.position;
+        float sqrErrorLimit = magnitudeError * magnitudeError;
 
-        foreach (var c in _childs)
+        foreach (RopeSegment segment in _segments)
         {
-            c.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.ClampMagnitude(c.gameObject.GetComponent<Rigidbody>().angularVelocity, angularLimit);
-            c.gameObject.GetComponent<Rigidbody>().linearVelocity = Vector3.ClampMagnitude(c.gameObject.GetComponent<Rigidbody>().linearVelocity, angularLimit);
+            if (segment == null) continue;
+
+            Vector3 dir = previousPos - segment.transform.position;
+            if (dir.sqrMagnitude >= sqrErrorLimit)
+            {
+                segment.transform.position = (previousPos + 3f * segment.transform.position) * 0.25f;
+            }
+
+            if (segment.EndPoint != null)
+            {
+                previousPos = segment.EndPoint.position;
+            }
         }
-        if ((ropeEnd.position - _childs[_childs.Count - 1].EndPoint.position).sqrMagnitude > magnitudeError * magnitudeError)
-            ropeEnd.position = _childs[_childs.Count - 1].EndPoint.position;
-        
+
+        if ((ropeStart.position - _segments[0].transform.position).sqrMagnitude > sqrErrorLimit)
+        {
+            _segments[0].transform.position = ropeStart.position;
+        }
+
+        foreach (RopeSegment segment in _segments)
+        {
+            Rigidbody rb = segment != null ? segment.CachedRigidbody : null;
+            if (rb != null)
+            {
+                rb.angularVelocity = Vector3.ClampMagnitude(rb.angularVelocity, angularLimit);
+                rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, angularLimit);
+            }
+        }
+
+        RopeSegment lastSegment = _segments[_segments.Count - 1];
+        if (lastSegment != null && lastSegment.EndPoint != null)
+        {
+            if ((ropeEnd.position - lastSegment.EndPoint.position).sqrMagnitude > sqrErrorLimit)
+            {
+                ropeEnd.position = lastSegment.EndPoint.position;
+            }
+        }
     }
 
-    void DrawRope()
+    private void DrawRope()
     {
         _lineRenderer.SetPosition(0, ropeStart.position);
-        for (int i = 1; i <= _childs.Count; i++)
-        {
-            _lineRenderer.SetPosition(i, _childs[i - 1].transform.position);
 
+        for (int i = 0; i < _segments.Count; i++)
+        {
+            if (_segments[i] != null)
+            {
+                _lineRenderer.SetPosition(i + 1, _segments[i].transform.position);
+            }
         }
+
         _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, ropeEnd.position);
     }
 }
-
-

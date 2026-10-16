@@ -1,26 +1,29 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ParticleActivator : MonoBehaviour
 {
-    [SerializeField] ISignal signal;
-    [SerializeField] List<ParticleSystem> ParticleSystems;
+    [SerializeField] private ISignal signal;
+    [SerializeField] private List<ParticleSystem> ParticleSystems = new List<ParticleSystem>();
 
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (!signal) return;
-        bool _signal = signal.Signal();
-        foreach (var s in ParticleSystems)
-        {
-            if (_signal) { 
-                if(s.isStopped)
-                s.Play();
-            }
-            else s.Stop();
-        }
+        if (signal == null || ParticleSystems == null) return;
 
+        bool isActive = signal.Signal();
+
+        foreach (ParticleSystem ps in ParticleSystems)
+        {
+            if (ps == null) continue;
+
+            if (isActive)
+            {
+                if (ps.isStopped) ps.Play();
+            }
+            else
+            {
+                if (ps.isPlaying) ps.Stop();
+            }
+        }
     }
 }

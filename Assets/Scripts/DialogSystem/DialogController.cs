@@ -1,42 +1,41 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using cherrydev;
+using TMPro;
+using UnityEngine;
 
 public class DialogController : ISignal
 {
-    [SerializeField] DialogBehaviour dialogBehaviour;
-    [SerializeField] DialogNodeGraph graph;
-    [SerializeField] Vector2 carmaBorders;
-    [SerializeField] bool needSignal;
-    [SerializeField] ISignal signal;
-    [SerializeField] TMPro.TMP_Text carmaText;
-    [SerializeField] GameObject blackScreen;
-    [SerializeField] bool hasBalckScreen;
-    bool _dialogDone = false;
-    bool _dialogFinished = false;
+    [SerializeField] private DialogBehaviour dialogBehaviour;
+    [SerializeField] private DialogNodeGraph graph;
+    [SerializeField] private Vector2 carmaBorders;
+    [SerializeField] private bool needSignal;
+    [SerializeField] private ISignal signal;
+    [SerializeField] private TMP_Text carmaText;
+    [SerializeField] private GameObject blackScreen;
+    [SerializeField] private bool hasBalckScreen;
 
-    void Start()
+    private bool _dialogDone;
+    private bool _dialogFinished;
+    private int _cachedKarma = int.MinValue;
+
+    private void Start()
     {
-        if (carmaText)
-        {
-            var carma = KarmaManager.Instance.GetCarma();
-            carmaText.text = $"CURRENT CARMA: {carma}";
-        }
+        UpdateKarmaDisplay();
     }
 
-    void Update()
+    private void Update()
     {
-        var carma = KarmaManager.Instance.GetCarma();
-        if (carmaText) carmaText.text = $"CURRENT CARMA: {carma}";
+        if (KarmaManager.Instance == null) return;
+
+        UpdateKarmaDisplay();
 
         if (_dialogDone) return;
 
-        if (!(carmaBorders.x <= carma && carma <= carmaBorders.y)) return;
+        int currentKarma = KarmaManager.Instance.GetCarma();
+        if (currentKarma < carmaBorders.x || currentKarma > carmaBorders.y) return;
 
         if (needSignal)
         {
-            if (signal.Signal())
+            if (signal != null && signal.Signal())
             {
                 StartDialogSequence();
             }
@@ -47,28 +46,54 @@ public class DialogController : ISignal
         }
     }
 
+    private void UpdateKarmaDisplay()
+    {
+        if (carmaText == null || KarmaManager.Instance == null) return;
+
+        int currentKarma = KarmaManager.Instance.GetCarma();
+        if (currentKarma != _cachedKarma)
+        {
+            _cachedKarma = currentKarma;
+            carmaText.text = $"CURRENT KARMA: {currentKarma}";
+        }
+    }
+
     private void StartDialogSequence()
     {
         _dialogDone = true;
-        dialogBehaviour.StartDialog(graph);
-        if (hasBalckScreen) blackScreen.SetActive(true);
+        if (dialogBehaviour != null)
+        {
+            dialogBehaviour.StartDialog(graph);
+        }
+
+        if (hasBalckScreen && blackScreen != null)
+        {
+            blackScreen.SetActive(true);
+        }
     }
 
     public void FinishDialog()
     {
         _dialogFinished = true;
-        if (hasBalckScreen) blackScreen.SetActive(false);
-        KarmaManager.Instance.AddCarma(dialogBehaviour.currentNode.answerCarmaValue);
-        Debug.Log("GG");
+
+        if (hasBalckScreen && blackScreen != null)
+        {
+            blackScreen.SetActive(false);
+        }
+
+        if (KarmaManager.Instance != null && dialogBehaviour != null && dialogBehaviour.currentNode != null)
+        {
+            KarmaManager.Instance.AddCarma(dialogBehaviour.currentNode.answerCarmaValue);
+        }
     }
 
     public void ResetDialogCarma()
     {
-        KarmaManager.Instance.SetCarma(0);
+        if (KarmaManager.Instance != null)
+        {
+            KarmaManager.Instance.SetCarma(0);
+        }
     }
 
-    public override bool Signal()
-    {
-        return _dialogFinished;
-    }
+    public override bool Signal() => _dialogFinished;
 }

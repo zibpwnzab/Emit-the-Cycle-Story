@@ -1,25 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class RopeController : MonoBehaviour
 {
-    Rigidbody _rigidbody;
-    [SerializeField] float speed;
-    void Start()
+    [SerializeField] private float speed = 5f;
+    private Rigidbody _rigidbody;
+
+    private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        Vector3 input = new();
-        input += Vector3.forward * Input.GetAxis("Vertical");
-        input += Vector3.right * Input.GetAxis("Horizontal");
+        Vector3 input = Vector3.forward * Input.GetAxis("Vertical") +
+                        Vector3.right * Input.GetAxis("Horizontal");
+
         if (Input.GetKey(KeyCode.LeftShift)) input += Vector3.up;
         if (Input.GetKey(KeyCode.LeftControl)) input += Vector3.down;
 
-        _rigidbody.linearVelocity = Vector3.ClampMagnitude(input * speed + _rigidbody.linearVelocity, speed);
+        _rigidbody.linearVelocity = Vector3.ClampMagnitude(
+            input * speed + _rigidbody.linearVelocity,
+            speed);
     }
 }
