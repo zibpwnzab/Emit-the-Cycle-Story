@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(LineRenderer))]
 public class LaserEmitter : MonoBehaviour
@@ -9,7 +10,10 @@ public class LaserEmitter : MonoBehaviour
     private const float SurfaceOffset = 0.001f;
 
     [Header("Damage & Knockback")]
+    // Old field names are still used in the turret prefabs
+    [FormerlySerializedAs("LaserKickForce")]
     [SerializeField] private float laserKickForce = 10f;
+    [FormerlySerializedAs("LaserStunTime")]
     [SerializeField] private float laserStunTime = 3f;
 
     [Header("Ray Settings")]
@@ -21,6 +25,7 @@ public class LaserEmitter : MonoBehaviour
     [SerializeField] private int positionsPerSegment = 10;
 
     [Header("Signal Dependency")]
+    [FormerlySerializedAs("NeedSignal")]
     [SerializeField] private bool needSignal;
     [SerializeField] private ISignal signalSource;
 
