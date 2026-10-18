@@ -11,6 +11,8 @@ public class CameraScreenShake : MonoBehaviour
     [SerializeField] bool controlledByOtherScript;
     public static CameraScreenShake Instance;
 
+    private Tween _shakeTween;
+
     private void Awake()
     {
         Instance = this;
@@ -20,16 +22,15 @@ public class CameraScreenShake : MonoBehaviour
         if (!controlledByOtherScript) StartCoroutine(SelfShake());
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        if (Instance == this) Instance = null;
     }
 
     public void Shake()
     {
         if (!controlledByOtherScript) return;
-        transform.DOShakePosition(Random.Range(shakeRange.x, shakeRange.y), shakePower);
+        StartShake();
     }
 
     IEnumerator SelfShake()
@@ -37,7 +38,15 @@ public class CameraScreenShake : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(intervalRange.x, intervalRange.y));
-            transform.DOShakePosition(Random.Range(shakeRange.x, shakeRange.y), shakePower);
+            StartShake();
         }
+    }
+
+    private void StartShake()
+    {
+        // Finish the previous shake first, otherwise overlapping shakes make the camera drift
+        if (_shakeTween != null && _shakeTween.IsActive()) _shakeTween.Complete();
+        _shakeTween = transform.DOShakePosition(Random.Range(shakeRange.x, shakeRange.y), shakePower)
+            .SetLink(gameObject);
     }
 }

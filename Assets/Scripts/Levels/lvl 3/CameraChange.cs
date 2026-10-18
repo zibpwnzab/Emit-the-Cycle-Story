@@ -25,6 +25,7 @@ public class CameraChange : MonoBehaviour
 
     void Update()
     {
+        if (mainCamera == null || cameraPoints == null) return;
         CheckPlayer();
         if (_currentCamera >= 0)
         {
@@ -39,6 +40,7 @@ public class CameraChange : MonoBehaviour
 
     public void ChangePosition(int cameraNumber)
     {
+        if (cameraPoints == null || cameraPoints.Count == 0) return;
         _currentCamera = cameraNumber % cameraPoints.Count;
         SetCameraToTargetPosition();
     }
@@ -54,11 +56,14 @@ public class CameraChange : MonoBehaviour
 
     private void CheckPlayer()
     {
+        if (player == null || colliders == null) return;
+
         for (int i = 0; i < colliders.Count; i++)
         {
-            if (colliders[i].bounds.Contains(player.transform.position))
+            if (colliders[i] != null && colliders[i].bounds.Contains(player.transform.position))
             {
-                ChangePosition(i);
+                // Snap only when entering a new zone
+                if (i != _currentCamera) ChangePosition(i);
                 return;
             }
         }
@@ -72,7 +77,7 @@ public class CameraChange : MonoBehaviour
     {
         while (true)
         {
-            if (_currentCamera < 0)
+            if (_currentCamera < 0 && player != null && mainCamera != null)
             {
                 Vector3 target = new Vector3(player.transform.position.x, player.transform.position.y + offset.y, player.transform.position.z + offset.z);
                 Vector3 currentPosition = Vector3.Lerp(mainCamera.transform.position, target, dumping * Time.deltaTime);

@@ -87,6 +87,12 @@ public class SceneLoader : MonoBehaviour, IInteractable
         SceneManager.LoadScene(sceneName);
     }
 
+    // Для кнопок без аргумента (пустой GameObject-аргумент в редакторе вызывает ArgumentException)
+    public void LoadSceneFromUIButton()
+    {
+        LoadSceneFromUIButton(null);
+    }
+
     // Метод для загрузки сцены по нажатию кнопки UI
     public void LoadSceneFromUIButton(GameObject player)
     {

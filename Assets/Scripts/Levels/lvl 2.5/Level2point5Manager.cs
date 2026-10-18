@@ -23,7 +23,7 @@ public class Level2point5Manager : MonoBehaviour
     
     void Start()
     {
-        _cameraRigidbody = mainCamera.GetComponent<Rigidbody>();
+        if (mainCamera != null) _cameraRigidbody = mainCamera.GetComponent<Rigidbody>();
         StartCoroutine(Shake());
     }
 
@@ -36,6 +36,7 @@ public class Level2point5Manager : MonoBehaviour
 
     void MoveCamera()
     {
+        if (player == null || _cameraRigidbody == null) return;
         var dir = (player.transform.position.x - _cameraRigidbody.transform.position.x);
         if (Mathf.Abs(dir) < 0.1)
         {
@@ -51,6 +52,7 @@ public class Level2point5Manager : MonoBehaviour
 
     void MoveWall()
     {
+        if (wall == null || startPoint == null || endPoint == null) return;
         var dir = endPoint.position.x - wall.transform.position.x;
         if (dir < 0.1) return;
         var speed = curve.Evaluate(dir / (endPoint.position.x - startPoint.position.x));
@@ -62,8 +64,8 @@ public class Level2point5Manager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(screenShakeInterval.x, screenShakeInterval.y));
-            CameraScreenShake.Instance.Shake();
-            audioSource.Play();
+            if (CameraScreenShake.Instance != null) CameraScreenShake.Instance.Shake();
+            if (audioSource != null) audioSource.Play();
         }
     }
 }

@@ -8,7 +8,8 @@ public class TimeScaler : MonoBehaviour
     private void OnValidate()
     {
         // Проверка, чтобы обновить Time.timeScale при изменении значения в инспекторе
-        UpdateTimeScale();
+        // (только в Play Mode)
+        if (Application.isPlaying && isActiveAndEnabled) UpdateTimeScale();
     }
 
     private void UpdateTimeScale()
@@ -23,6 +24,7 @@ public class TimeScaler : MonoBehaviour
 
     private void OnDisable()
     {
-        Time.timeScale = 1f; // Сбрасываем Time.timeScale на 1 при отключении объекта
+        // Сбрасываем Time.timeScale на 1 при отключении объекта, если это не пауза
+        if (Mathf.Approximately(Time.timeScale, timeScale)) Time.timeScale = 1f;
     }
 }

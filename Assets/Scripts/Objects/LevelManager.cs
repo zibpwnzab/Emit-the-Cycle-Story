@@ -30,7 +30,7 @@ public class LevelManager2 : MonoBehaviour
             for (int j = 0; j < passwordLength; j++)
                 password += Random.Range(0, 10).ToString();
             passwords.Add(i, password);
-            locks[i].SetPassword(password);
+            if (locks[i] != null) locks[i].SetPassword(password);
             Debug.Log("Password:" + password);
         }
     }

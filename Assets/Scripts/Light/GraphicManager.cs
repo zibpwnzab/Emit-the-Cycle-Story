@@ -22,15 +22,34 @@ public class GraphicsSettingsManager : MonoBehaviour
         }
         else
         {
+            Instance.AdoptSceneUI(this);
             Destroy(gameObject); // Удалить дублирующий объект, если уже существует экземпляр
         }
     }
 
     private void Start()
     {
+        if (Instance != this) return;
+
         // Подписка на событие загрузки новой сцены
+        SceneManager.sceneLoaded -= OnSceneLoaded;
         SceneManager.sceneLoaded += OnSceneLoaded;
 
+        SetupSceneUI();
+    }
+
+    // Дубликат из заново загруженного MainMenu передаёт ссылки на UI новой сцены
+    private void AdoptSceneUI(GraphicsSettingsManager sceneCopy)
+    {
+        graphicsSelectionCanvas = sceneCopy.graphicsSelectionCanvas;
+        inGameCanvas = sceneCopy.inGameCanvas;
+        lowGraphicsButton = sceneCopy.lowGraphicsButton;
+        highGraphicsButton = sceneCopy.highGraphicsButton;
+        SetupSceneUI();
+    }
+
+    private void SetupSceneUI()
+    {
         // Проверяем сохраненные настройки и применяем их
         if (PlayerPrefs.HasKey(GraphicsQualityKey))
         {
@@ -38,14 +57,14 @@ public class GraphicsSettingsManager : MonoBehaviour
             ApplyGraphicsSettings(savedQuality);
             ActivateInGameCanvas(); // Активируем основной Canvas
         }
-        else
+        else if (graphicsSelectionCanvas != null)
         {
             graphicsSelectionCanvas.SetActive(true); // Показываем выбор графики, если нет сохраненных настроек
         }
 
         // Устанавливаем слушатели для кнопок
-        lowGraphicsButton.onClick.AddListener(() => SetGraphicsQuality(0));
-        highGraphicsButton.onClick.AddListener(() => SetGraphicsQuality(1));
+        if (lowGraphicsButton != null) lowGraphicsButton.onClick.AddListener(() => SetGraphicsQuality(0));
+        if (highGraphicsButton != null) highGraphicsButton.onClick.AddListener(() => SetGraphicsQuality(1));
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -66,13 +85,13 @@ public class GraphicsSettingsManager : MonoBehaviour
         ApplyGraphicsSettings(qualityLevel);
 
         // Отключаем Canvas с выбором графики и активируем основной Canvas
-        graphicsSelectionCanvas.SetActive(false);
+        if (graphicsSelectionCanvas != null) graphicsSelectionCanvas.SetActive(false);
         ActivateInGameCanvas();
     }
 
     private void ApplyGraphicsSettings(int qualityLevel)
     {
-        Light[] sceneLights = FindObjectsOfType<Light>();
+        Light[] sceneLights = FindObjectsByType<Light>(FindObjectsSortMode.None);
 
         foreach (Light light in sceneLights)
         {

@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TouchButton : ISignal, IInteractable
 {
     [SerializeField] bool onCollider;
     private bool power;
-    
+
     private Collider triger;
     public bool Interact(GameObject gameObject, Animator animator)
     {
@@ -24,7 +22,6 @@ public class TouchButton : ISignal, IInteractable
         return false;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         foreach (var collider in GetComponents<Collider>())
@@ -34,11 +31,18 @@ public class TouchButton : ISignal, IInteractable
             triger = collider;
             break;
         }
+
+        if (triger == null)
+        {
+            Debug.LogWarning($"TouchButton '{name}' has no trigger collider.", this);
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        triger.enabled = !power || onCollider;
+        if (triger != null)
+        {
+            triger.enabled = !power || onCollider;
+        }
     }
 }

@@ -27,7 +27,7 @@ public class FlickerS : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(minWaitTime, maxWaitTime));
             transform.localPosition = _startPos + Vector3.Scale(Random.insideUnitSphere, positionOffset);
-            if (!testLight) yield return null;
+            if (!testLight) continue; // no Light component: only the position flickers
             testLight.enabled = !testLight.enabled || !turnOff;
             testLight.intensity = Random.Range(intensityRanges.x, intensityRanges.y);
             

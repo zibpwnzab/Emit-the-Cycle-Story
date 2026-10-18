@@ -14,12 +14,14 @@ public class VolumeControl : MonoBehaviour
 
     private void Awake()
     {
-        slider.onValueChanged.AddListener(HandleSliderValueChanged);
+        if (slider != null) slider.onValueChanged.AddListener(HandleSliderValueChanged);
     }
 
     private void HandleSliderValueChanged(float value) 
     {
-        var volumeValue = Mathf.Log10(value) * _multiplier;
+        if (mixer == null) return;
+        // Log10(0) = -Infinity, clamp to -80 dB
+        var volumeValue = Mathf.Log10(Mathf.Max(value, 0.0001f)) * _multiplier;
         mixer.SetFloat(volumeParametr, volumeValue);
     }
     void Start()

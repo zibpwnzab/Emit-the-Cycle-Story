@@ -66,7 +66,10 @@ public class PosterInteractable : MonoBehaviour, IInteractable
 
         // Увеличиваем количество собранных постеров через PosterManager
        
-        PosterManager.instance.CollectPoster(); // Обновляем количество собранных постеров
+        if (PosterManager.instance != null)
+            PosterManager.instance.CollectPoster(); // Обновляем количество собранных постеров
+        else
+            Debug.LogWarning("PosterManager not found, poster is not counted.");
         Debug.Log("Poster collected" );
 
         // Перемещаем объект вниз на 20 единиц по оси Y

@@ -3,7 +3,7 @@ using UnityEngine;
 
 [DisallowMultipleComponent]
 [AddComponentMenu("Graphics Control/Settings/VolumeSetting")]
-public class VolumeSetting
+public class VolumeSetting : MonoBehaviour
 {
     
 }

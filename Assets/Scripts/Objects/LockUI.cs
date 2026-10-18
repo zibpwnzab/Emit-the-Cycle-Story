@@ -21,14 +21,19 @@ public class LockUI : MonoBehaviour
     void Start()
     {
         _currentAttempt = "";
-        passwordField.text = _currentAttempt;
+        SetFieldText(_currentAttempt);
         for (int i = 0; i < numbers.Count; i++)
         {
             int c = 0 + i;
-            numbers[i].onClick.AddListener(() => EnterDigit(c));
+            if (numbers[i] != null) numbers[i].onClick.AddListener(() => EnterDigit(c));
         }
-        resetButton.onClick.AddListener(ResetPassword);
-        enterButton.onClick.AddListener(EnterPassword);
+        if (resetButton != null) resetButton.onClick.AddListener(ResetPassword);
+        if (enterButton != null) enterButton.onClick.AddListener(EnterPassword);
+    }
+
+    private void SetFieldText(string text)
+    {
+        if (passwordField != null) passwordField.text = text;
     }
 
     // Update is called once per frame
@@ -41,20 +46,16 @@ public class LockUI : MonoBehaviour
 
     public bool SetPassword(string newPassword)
     {
-        int b;
-        if (!int.TryParse(newPassword.ToString(), out b)) return false;
-        
+        // int.TryParse fails on passwords longer than 9 digits
+        if (string.IsNullOrEmpty(newPassword)) return false;
+        foreach (char ch in newPassword)
+        {
+            if (ch < '0' || ch > '9') return false;
+        }
+
         if (newPassword.Length > passwordMaxLength) return false;
 
         password = newPassword;
-
-        if (newPassword.Length == passwordMaxLength) return true;
-
-        return true;
-        while (password.Length < passwordMaxLength)
-        {
-            password = "0" + password;
-        }
         return true;
     }
 
@@ -62,7 +63,7 @@ public class LockUI : MonoBehaviour
     private void ResetPassword()
     {
         _currentAttempt = "";
-        passwordField.text = _currentAttempt;
+        SetFieldText(_currentAttempt);
 
     }
 
@@ -75,7 +76,7 @@ public class LockUI : MonoBehaviour
     {
         if (_currentAttempt.Length == 0)
         {
-            passwordField.text = _currentAttempt;
+            SetFieldText(_currentAttempt);
         }
         else
         if (_currentAttempt.Equals(password))
@@ -83,13 +84,13 @@ public class LockUI : MonoBehaviour
             Debug.Log("PASSWORD: "+ _currentAttempt + " IS CORRECT!");
             _isCorrect = true;
             StartCoroutine(CloseAfterCorrect());
-            passwordField.text = correctMessege;
+            SetFieldText(correctMessege);
         }
         else
         {
             
             Debug.Log("PASSWORD: " + _currentAttempt + " IS WRONG!");
-            passwordField.text = wrongMessege;
+            SetFieldText(wrongMessege);
         }
         _currentAttempt = "";
     }
@@ -99,18 +100,18 @@ public class LockUI : MonoBehaviour
         {
             _currentAttempt += digit.ToString();
         }
-        passwordField.text = _currentAttempt;
+        SetFieldText(_currentAttempt);
     }
 
     public void ShowPanel()
     {
-        panel.SetActive(true);
-        bachGround.SetActive(true);
+        if (panel != null) panel.SetActive(true);
+        if (bachGround != null) bachGround.SetActive(true);
     }
     public void HidePanel()
     {
-        panel.SetActive(false);
-        bachGround.SetActive(false);
+        if (panel != null) panel.SetActive(false);
+        if (bachGround != null) bachGround.SetActive(false);
     }
 
     public bool IsCorrect()
