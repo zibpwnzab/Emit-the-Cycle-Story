@@ -10,9 +10,8 @@ public class RotatableObjects : MonoBehaviour, IInteractable
 
     public bool Interact(GameObject otherObject, Animator animator)
     {
+        if (otherObject == null || !otherObject.TryGetComponent(out PlayerController controller)) return false;
 
-
-        var controller = otherObject.GetComponent<PlayerController>();
         if (_connected)
         {
             controller.playerState = PlayerState.Walking;

@@ -16,7 +16,7 @@ public class LogicActivateForever : ISignal
     {
         if (_isActivated || signal == null) return;
 
-        if (signal.Signal())
+        if (signal.Evaluate())
         {
             _isActivated = true;
         }

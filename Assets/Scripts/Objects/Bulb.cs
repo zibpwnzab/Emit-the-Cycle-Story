@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
-
 
 public class Bulb : MonoBehaviour
 {
@@ -10,8 +7,6 @@ public class Bulb : MonoBehaviour
     [SerializeField] ISignal signalSource;
     [SerializeField] Light lightSource;
 
-
-    // Update is called once per frame
     void Update()
     {
         Activate();
@@ -19,6 +14,12 @@ public class Bulb : MonoBehaviour
 
     void Activate()
     {
-        lightSource.gameObject.SetActive(signalSource.Signal());
+        if (signalSource == null || lightSource == null) return;
+
+        bool isActive = signalSource.Evaluate();
+        if (lightSource.gameObject.activeSelf != isActive)
+        {
+            lightSource.gameObject.SetActive(isActive);
+        }
     }
 }

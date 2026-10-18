@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -10,6 +10,15 @@ public class PlayerController : MonoBehaviour
 {
     private const float SoundDisableDelay = 1.5f;
     private const float FallStunDuration = 5.0f;
+    private const float GroundNormalMinY = 0.5f;
+    private const float GroundedMaxRiseSpeed = 0.1f;
+
+    private static readonly int FireUseHash = Animator.StringToHash("FireUse");
+    private static readonly int IsRunningHash = Animator.StringToHash("isRunning");
+    private static readonly int SpeedHash = Animator.StringToHash("Speed");
+    private static readonly int StunedHash = Animator.StringToHash("Stuned");
+    private static readonly int JumpingHash = Animator.StringToHash("Jumping");
+    private static readonly int PushingHash = Animator.StringToHash("Pushing");
 
     [Header("Components")]
     [SerializeField] private new Rigidbody rigidbody;
@@ -53,9 +62,15 @@ public class PlayerController : MonoBehaviour
     public PlayerState playerState = PlayerState.Walking;
     public static PlayerController instance;
 
-    public static string PLAYER_CARMA_KEY = "PLAYER_CARMA_KEY";
-    public static string NEXT_LEVEL_KEY = "NEXT_LEVEL_KEY";
-    public static string TOTAL_GAME_TIME = "TOTAL_GAME_TIME";
+    public const string PLAYER_CARMA_KEY = "PLAYER_CARMA_KEY";
+    public const string NEXT_LEVEL_KEY = "NEXT_LEVEL_KEY";
+    public const string TOTAL_GAME_TIME = "TOTAL_GAME_TIME";
+
+    private struct InteractableEntry
+    {
+        public IInteractable Interactable;
+        public Collider Trigger;
+    }
 
     private bool _isUsingFire;
     private bool _fireDepleting;
@@ -63,9 +78,13 @@ public class PlayerController : MonoBehaviour
     private bool _isJumping;
     private bool _isStunned;
     private float _defaultMoveSpeed;
+    private Coroutine _fireActivationRoutine;
 
-    private readonly List<IInteractable> _interactables = new List<IInteractable>();
-    private GameObject _lastInteractable;
+    // Objects in trigger range. OnTriggerExit is not raised for disabled or destroyed colliders, see PruneInteractables
+    private readonly List<InteractableEntry> _interactables = new List<InteractableEntry>();
+    // Object currently held (MovingObject / RotatingObject)
+    private IInteractable _heldInteractable;
+    private GameObject _heldObject;
     private Camera _mainCamera;
 
     private void Awake()
@@ -81,6 +100,11 @@ public class PlayerController : MonoBehaviour
         if (fireButton != null)
         {
             fireButton.onClick.RemoveListener(ToggleFire);
+        }
+
+        if (instance == this)
+        {
+            instance = null;
         }
     }
 
@@ -112,10 +136,10 @@ public class PlayerController : MonoBehaviour
         rigidbody.angularVelocity = Vector3.zero;
         CheckFallingState();
 
-        if (animator != null && animator.GetBool("FireUse"))
+        if (animator != null && animator.GetBool(FireUseHash))
         {
             bool isMoving = rigidbody.linearVelocity.magnitude > 0.1f;
-            animator.SetBool("isRunning", isMoving);
+            animator.SetBool(IsRunningHash, isMoving);
         }
     }
 
@@ -139,6 +163,8 @@ public class PlayerController : MonoBehaviour
 
     private void ToggleFire()
     {
+        if (playerState == PlayerState.Dead || _isStunned) return;
+
         int availableFlares = FireManager.Instance != null
             ? FireManager.Instance.GetTotalFireCount()
             : totalFireCount;
@@ -146,11 +172,18 @@ public class PlayerController : MonoBehaviour
         if (_isRecharging || availableFlares <= 0) return;
 
         _isUsingFire = !_isUsingFire;
-        if (animator != null) animator.SetBool("FireUse", _isUsingFire);
+        if (animator != null) animator.SetBool(FireUseHash, _isUsingFire);
+
+        // Cancel a pending activation from the previous toggle
+        if (_fireActivationRoutine != null)
+        {
+            StopCoroutine(_fireActivationRoutine);
+            _fireActivationRoutine = null;
+        }
 
         if (_isUsingFire)
         {
-            StartCoroutine(ActivateFireWithDelay());
+            _fireActivationRoutine = StartCoroutine(ActivateFireWithDelay());
             SetSecondaryButtonsInteractable(false);
             TriggerSoundObject(activationSoundObject, SoundDisableDelay);
 
@@ -182,7 +215,7 @@ public class PlayerController : MonoBehaviour
         {
             _isUsingFire = false;
             DeactivateFireEffects();
-            if (animator != null) animator.SetBool("FireUse", false);
+            if (animator != null) animator.SetBool(FireUseHash, false);
 
             if (FireManager.Instance != null)
             {
@@ -269,6 +302,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator ActivateFireWithDelay()
     {
         yield return new WaitForSeconds(fireActivationDelay);
+        _fireActivationRoutine = null;
         if (!_isUsingFire) yield break;
 
         if (fireVFX != null) fireVFX.SetActive(true);
@@ -298,10 +332,8 @@ public class PlayerController : MonoBehaviour
 
     public void ForceKick(Vector3 direction, float stunTime)
     {
-        if (_lastInteractable != null && _lastInteractable.TryGetComponent(out IInteractable interactable))
-        {
-            interactable.StopInteraction(gameObject, animator);
-        }
+        // Release only the held object: StopInteraction on e.g. SceneLoader loads a scene
+        ReleaseHeldObject();
 
         if (rigidbody != null)
         {
@@ -316,6 +348,8 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (playerState == PlayerState.Dead) return;
+
         Lifes -= damage;
         if (Lifes <= 0)
         {
@@ -325,25 +359,34 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator StunRecoverRoutine(float stunDuration)
     {
+        PlayerState stateBeforeStun = playerState;
+
         _isStunned = true;
-        playerState = PlayerState.Stunned;
-        if (animator != null) animator.SetBool("Stuned", true);
+        if (playerState != PlayerState.Dead) playerState = PlayerState.Stunned;
+        if (animator != null) animator.SetBool(StunedHash, true);
 
         yield return new WaitForSeconds(stunDuration);
 
         _isStunned = false;
-        playerState = PlayerState.Walking;
         moveSpeed = _defaultMoveSpeed;
-        if (animator != null) animator.SetBool("Stuned", false);
+        if (animator != null) animator.SetBool(StunedHash, false);
+
+        // Keep Dead; restore the holding state only if the object is still held
+        if (playerState != PlayerState.Dead)
+        {
+            bool stillHolding = _heldInteractable != null && IsAlive(_heldInteractable);
+            bool wasHolding = stateBeforeStun == PlayerState.MovingObject || stateBeforeStun == PlayerState.RotatingObject;
+            playerState = wasHolding && stillHolding ? stateBeforeStun : PlayerState.Walking;
+        }
     }
 
     private void RotateObject()
     {
-        if (joystick == null || _lastInteractable == null) return;
+        if (joystick == null || _heldObject == null) return;
 
         if (Mathf.Abs(joystick.Horizontal) > Mathf.Abs(joystick.Vertical))
         {
-            _lastInteractable.transform.Rotate(Vector3.up, Time.deltaTime * joystick.Horizontal * rotateObjectSpeed);
+            _heldObject.transform.Rotate(Vector3.up, Time.deltaTime * joystick.Horizontal * rotateObjectSpeed);
         }
     }
 
@@ -364,19 +407,19 @@ public class PlayerController : MonoBehaviour
             Vector3 planarVelocity = new Vector3(rigidbody.linearVelocity.x, 0f, rigidbody.linearVelocity.z);
             if (planarVelocity.sqrMagnitude > 0.001f)
             {
-                transform.rotation = Quaternion.LookRotation(planarVelocity);
+                rigidbody.MoveRotation(Quaternion.LookRotation(planarVelocity));
             }
 
             if (!_isJumping && animator != null)
             {
-                animator.SetFloat("Speed", Vector3.ClampMagnitude(planarVelocity, 1f).magnitude);
-                animator.SetBool("isRunning", planarVelocity.magnitude > runSpeedThreshold);
+                animator.SetFloat(SpeedHash, Vector3.ClampMagnitude(planarVelocity, 1f).magnitude);
+                animator.SetBool(IsRunningHash, planarVelocity.magnitude > runSpeedThreshold);
             }
         }
         else if (!_isJumping && animator != null)
         {
-            animator.SetFloat("Speed", 0f);
-            animator.SetBool("isRunning", false);
+            animator.SetFloat(SpeedHash, 0f);
+            animator.SetBool(IsRunningHash, false);
         }
     }
 
@@ -395,7 +438,7 @@ public class PlayerController : MonoBehaviour
         bool isMoving = joystick.Horizontal != 0f || joystick.Vertical != 0f;
         if (animator != null)
         {
-            animator.SetBool("Pushing", playerState == PlayerState.MovingObject && isMoving);
+            animator.SetBool(PushingHash, playerState == PlayerState.MovingObject && isMoving);
         }
     }
 
@@ -419,9 +462,9 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator Jump()
     {
-        if (!_isJumping && rigidbody != null)
+        if (!_isJumping && rigidbody != null && playerState != PlayerState.Dead)
         {
-            if (animator != null) animator.SetTrigger("Jumping");
+            if (animator != null) animator.SetTrigger(JumpingHash);
             rigidbody.linearVelocity = new Vector3(
                 rigidbody.linearVelocity.x,
                 jumpforce,
@@ -436,35 +479,59 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             _isJumping = false;
+            return;
+        }
+
+        CheckLanding(collision);
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (_isJumping) CheckLanding(collision);
+    }
+
+    // Ground check by contact normal, so untagged surfaces count too
+    private void CheckLanding(Collision collision)
+    {
+        if (rigidbody != null && rigidbody.linearVelocity.y > GroundedMaxRiseSpeed) return;
+
+        for (int i = 0; i < collision.contactCount; i++)
+        {
+            if (collision.GetContact(i).normal.y >= GroundNormalMinY)
+            {
+                _isJumping = false;
+                return;
+            }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!other.TryGetComponent(out IInteractable obj)) return;
-        if (_interactables.Contains(obj)) return;
+        if (IndexOfInteractable(obj) >= 0) return;
 
-        if (_lastInteractable == null)
-        {
-            _lastInteractable = other.gameObject;
-        }
-
-        _interactables.Add(obj);
+        _interactables.Add(new InteractableEntry { Interactable = obj, Trigger = other });
         ResolveInteraction();
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (!other.TryGetComponent(out IInteractable obj)) return;
-        if (!_interactables.Contains(obj)) return;
 
-        if (other.gameObject == _lastInteractable)
-        {
-            _lastInteractable = null;
-        }
+        int index = IndexOfInteractable(obj);
+        if (index < 0) return;
 
-        _interactables.Remove(obj);
+        _interactables.RemoveAt(index);
         ResolveInteraction();
+    }
+
+    private int IndexOfInteractable(IInteractable interactable)
+    {
+        for (int i = 0; i < _interactables.Count; i++)
+        {
+            if (_interactables[i].Interactable == interactable) return i;
+        }
+        return -1;
     }
 
     private void ResolveInteraction()
@@ -472,23 +539,98 @@ public class PlayerController : MonoBehaviour
         if (interactButton == null) return;
 
         interactButton.onClick.RemoveAllListeners();
+        if (_interactables.Count > 0 || _heldInteractable != null)
+        {
+            interactButton.onClick.AddListener(TryInteract);
+        }
+    }
+
+    private void TryInteract()
+    {
+        if (playerState == PlayerState.Dead || _isStunned) return;
+
+        // While holding, the button releases the held object
+        if (_heldInteractable != null && IsAlive(_heldInteractable))
+        {
+            InteractWith(_heldInteractable);
+            return;
+        }
+
+        PruneInteractables();
         if (_interactables.Count > 0)
         {
-            interactButton.onClick.AddListener(() => _interactables[0].Interact(gameObject, animator));
+            InteractWith(_interactables[0].Interactable);
         }
+    }
+
+    private void InteractWith(IInteractable target)
+    {
+        target.Interact(gameObject, animator);
+
+        bool isHolding = playerState == PlayerState.MovingObject || playerState == PlayerState.RotatingObject;
+        _heldInteractable = isHolding ? target : null;
+        _heldObject = isHolding && target is Component component ? component.gameObject : null;
+        ResolveInteraction();
+    }
+
+    private void ReleaseHeldObject()
+    {
+        if (_heldInteractable != null && IsAlive(_heldInteractable))
+        {
+            _heldInteractable.StopInteraction(gameObject, animator);
+        }
+
+        _heldInteractable = null;
+        _heldObject = null;
+
+        if (playerState == PlayerState.MovingObject || playerState == PlayerState.RotatingObject)
+        {
+            playerState = PlayerState.Walking;
+        }
+    }
+
+    // Drop destroyed objects and disabled triggers (e.g. a pressed TouchButton)
+    private void PruneInteractables()
+    {
+        int countBefore = _interactables.Count;
+        _interactables.RemoveAll(entry =>
+            !IsAlive(entry.Interactable)
+            || entry.Trigger == null
+            || !entry.Trigger.enabled
+            || !entry.Trigger.gameObject.activeInHierarchy);
+
+        if (_interactables.Count != countBefore)
+        {
+            ResolveInteraction();
+        }
+    }
+
+    private static bool IsAlive(IInteractable interactable)
+    {
+        // Cast to Behaviour so Unity's null check catches destroyed objects
+        return interactable is Behaviour behaviour ? behaviour != null && behaviour.isActiveAndEnabled : interactable != null;
     }
 
     public void Die()
     {
+        if (playerState == PlayerState.Dead) return;
+
         if (LevelManager.Instance != null)
         {
+            // FixedUpdate has no Dead branch, so the player stops until the scene reloads
+            ReleaseHeldObject();
+            playerState = PlayerState.Dead;
             LevelManager.Instance.FinishLevel(false);
+        }
+        else
+        {
+            Debug.LogWarning("PlayerController.Die: no LevelManager in the scene, the level cannot be restarted.", this);
         }
     }
 
     private void CheckFallingState()
     {
-        if (!_isStunned && rigidbody.linearVelocity.y < -fallThreshold)
+        if (!_isStunned && playerState != PlayerState.Dead && rigidbody.linearVelocity.y < -fallThreshold)
         {
             StartCoroutine(StunRecoverRoutine(FallStunDuration));
         }

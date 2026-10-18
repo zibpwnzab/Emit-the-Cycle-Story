@@ -35,7 +35,7 @@ public class DialogController : ISignal
 
         if (needSignal)
         {
-            if (signal != null && signal.Signal())
+            if (signal != null && signal.Evaluate())
             {
                 StartDialogSequence();
             }

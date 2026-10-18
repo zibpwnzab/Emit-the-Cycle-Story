@@ -8,7 +8,15 @@ public class Wire : ISignal
     public override bool Signal()
     {
         if (signalSource == null) return false;
-        bool state = signalSource.Signal();
+        bool state = signalSource.Evaluate();
         return inverseSignal ? !state : state;
+    }
+
+    private void OnValidate()
+    {
+        if (signalSource == this)
+        {
+            Debug.LogWarning($"Wire '{name}' uses itself as a signal source.", this);
+        }
     }
 }

@@ -17,7 +17,9 @@ public class LaserReceiver : ISignal
 
     public override bool Signal()
     {
-        return Time.time - _lastPoweredTime <= PowerGracePeriod;
+        // Wider window at low FPS so the signal does not flicker
+        float gracePeriod = Mathf.Max(PowerGracePeriod, Time.deltaTime * 2f);
+        return Time.time - _lastPoweredTime <= gracePeriod;
     }
 
     public void Power(bool isPowered)

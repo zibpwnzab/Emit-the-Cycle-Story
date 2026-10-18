@@ -1,37 +1,34 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class QTE : MonoBehaviour
 {
+    private const float StartDelay = 2f;
+    // ~0.02 per frame at 60 FPS, frame-rate independent
+    private const float DecayPerSecond = 1.2f;
+
     public Slider slider;
-    
-    
-    
+
+    private float _decayStartTime;
+
     void Start()
     {
-         slider.value = 0f;
+        if (slider != null) slider.value = 0f;
+        _decayStartTime = Time.time + StartDelay;
     }
 
     private void Update()
     {
-        StartCoroutine(ValueMinus());
+        if (slider == null || Time.time < _decayStartTime) return;
+
+        if (slider.value != 10 && slider.value != 0)
+        {
+            slider.value -= DecayPerSecond * Time.deltaTime;
+        }
     }
+
     public void ValueChange()
     {
-         slider.value += 1;
-    }
-
-    private IEnumerator ValueMinus() 
-    {
-        yield return new WaitForSeconds(2);
-
-        if (slider.value != 10 && slider.value !=0)
-        {
-            slider.value -= 0.02f;
-        }
-
+        if (slider != null) slider.value += 1;
     }
 }

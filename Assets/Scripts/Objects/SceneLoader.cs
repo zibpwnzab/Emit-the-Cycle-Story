@@ -58,9 +58,11 @@ public class SceneLoader : MonoBehaviour, IInteractable
     // Метод проверки всех сигналов
     private bool AreAllSignalsActive()
     {
+        if (signalSources == null) return true;
+
         foreach (var signal in signalSources)
         {
-            if (!signal.Signal()) // Проверяем каждый сигнал
+            if (signal == null || !signal.Evaluate()) // Проверяем каждый сигнал (пустой слот считается неактивным)
             {
                 return false; // Если хотя бы один сигнал не активен, возвращаем false
             }

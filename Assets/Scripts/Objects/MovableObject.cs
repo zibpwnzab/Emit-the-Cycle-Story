@@ -19,8 +19,10 @@ public class MovableObject : MonoBehaviour, IInteractable
 
     public bool Interact(GameObject otherObject, Animator animator)
     {
+        // Взаимодействовать может только игрок
+        if (otherObject == null || !otherObject.TryGetComponent(out PlayerController controller)) return false;
+
         if (ColliderToTurnOff) ColliderToTurnOff.enabled = _connected;
-        var controller = otherObject.GetComponent<PlayerController>();
 
         if (_connected)
         {

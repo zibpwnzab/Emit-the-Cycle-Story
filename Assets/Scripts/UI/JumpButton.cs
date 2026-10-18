@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,14 +6,14 @@ public class JumpButton : MonoBehaviour, IPointerClickHandler
 {
     public void OnPointerClick(PointerEventData eventData)
     {
-#if UNITY_EDITOR
-        if (Input.GetKey("space"))
-        {
-        FindObjectOfType<PlayerController>().StartCoroutine("Jump");
-        }
+        PlayerController player = PlayerController.instance != null
+            ? PlayerController.instance
+            : FindFirstObjectByType<PlayerController>();
 
-#endif
-        FindObjectOfType<PlayerController>().StartCoroutine("Jump");
+        if (player != null)
+        {
+            player.StartCoroutine(player.Jump());
+        }
     }
 
 }

@@ -21,6 +21,19 @@ public class LogicAnd : ISignal
         CacheSignalSources();
     }
 
+    private void OnEnable()
+    {
+        CacheSignalSources();
+    }
+
+    private void OnValidate()
+    {
+        if (sources != null && sources.Contains(gameObject))
+        {
+            Debug.LogWarning($"Logic gate '{name}' lists its own GameObject as a source.", this);
+        }
+    }
+
     private void CacheSignalSources()
     {
         _cachedSignals.Clear();
@@ -53,7 +66,7 @@ public class LogicAnd : ISignal
 
         foreach (ISignal signal in _cachedSignals)
         {
-            if (signal == null || !signal.Signal())
+            if (signal == null || !signal.Evaluate())
             {
                 return false;
             }
@@ -65,7 +78,7 @@ public class LogicAnd : ISignal
     {
         foreach (ISignal signal in _cachedSignals)
         {
-            if (signal != null && signal.Signal())
+            if (signal != null && signal.Evaluate())
             {
                 return true;
             }
