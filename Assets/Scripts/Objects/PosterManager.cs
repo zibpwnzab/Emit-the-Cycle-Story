@@ -6,7 +6,7 @@ public class PosterManager : MonoBehaviour
 {
     public static PosterManager instance;
     public int collectedPosters = 0;
-      
+
     [SerializeField] private string textObjectName = "PosterText"; // Имя текстового объекта
     private TextMeshProUGUI posterText;
 
@@ -15,9 +15,25 @@ public class PosterManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad работает только для корневых объектов
+            if (transform.parent == null)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
         }
-        
+        else if (instance != this)
+        {
+            // Удаляем только компонент: объект общий с другими менеджерами
+            Destroy(this);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (instance == this)
+        {
+            instance = null;
+        }
     }
 
     private void Start()
@@ -31,7 +47,10 @@ public class PosterManager : MonoBehaviour
         if (textObject != null)
         {
             posterText = textObject.GetComponent<TextMeshProUGUI>();
-            posterText.gameObject.SetActive(false); // Деактивируем текст по умолчанию
+            if (posterText != null)
+            {
+                posterText.gameObject.SetActive(false); // Деактивируем текст по умолчанию
+            }
         }
         else
         {
@@ -50,8 +69,15 @@ public class PosterManager : MonoBehaviour
 
         if (posterText != null)
         {
+            StopAllCoroutines(); // Перезапуск анимации текста
             StartCoroutine(DisplayPosterText());
         }
+    }
+
+    // Сброс при смерти / новой игре
+    public void ResetState()
+    {
+        collectedPosters = 0;
     }
 
     private IEnumerator DisplayPosterText()
@@ -62,11 +88,12 @@ public class PosterManager : MonoBehaviour
         // Плавное отображение текста буква за буквой
         for (int i = 0; i <= posterText.text.Length; i++)
         {
+            if (posterText == null) yield break;
             posterText.maxVisibleCharacters = i;
             yield return new WaitForSeconds(0.05f); // Задержка между отображением каждой буквы
         }
 
         yield return new WaitForSeconds(3f); // Ждём 3 секунды перед скрытием текста
-        posterText.gameObject.SetActive(false);
+        if (posterText != null) posterText.gameObject.SetActive(false);
     }
 }

@@ -9,8 +9,15 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject WinPanel;
     public static LevelManager Instance;
     private float currentTime;
+    private bool _isFinishing;
 
     [SerializeField] UnityEngine.Events.UnityEvent OnDeathA;
+
+    void Awake()
+    {
+        // В Awake, чтобы Instance был доступен в Start других скриптов
+        if (!Instance) Instance = this;
+    }
 
     void Start()
     {
@@ -19,7 +26,8 @@ public class LevelManager : MonoBehaviour
         // Получаем текущее время из PlayerPrefs, если нужно
         if (PlayerPrefs.HasKey(PlayerController.TOTAL_GAME_TIME))
         {
-            currentTime = PlayerPrefs.GetInt(PlayerController.TOTAL_GAME_TIME);
+            // Ключ записывается через SetFloat
+            currentTime = PlayerPrefs.GetFloat(PlayerController.TOTAL_GAME_TIME);
         }
         else
         {
@@ -28,22 +36,27 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    void OnDestroy()
+    {
+        if (Instance == this) Instance = null;
+    }
+
     public void SetCarma(int carma)
     {
         // Устанавливаем карму через KarmaManager
-        KarmaManager.Instance.SetCarma(carma);
+        if (KarmaManager.Instance != null) KarmaManager.Instance.SetCarma(carma);
     }
 
     public void AddCarma(int carma)
     {
         // Добавляем карму через KarmaManager
-        KarmaManager.Instance.AddCarma(carma);
+        if (KarmaManager.Instance != null) KarmaManager.Instance.AddCarma(carma);
     }
 
     public int GetCarma()
     {
         // Получаем карму через KarmaManager
-        return KarmaManager.Instance.GetCarma();
+        return KarmaManager.Instance != null ? KarmaManager.Instance.GetCarma() : 0;
     }
 
     public void FinishLevel(bool win)
@@ -52,32 +65,24 @@ public class LevelManager : MonoBehaviour
         {
             Save();
             PlayerPrefs.SetInt(PlayerController.NEXT_LEVEL_KEY, UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
-            WinPanel.SetActive(true);
+            if (WinPanel) WinPanel.SetActive(true);
         }
         else
         {
-            // Если игрок проиграл, сбрасываем карму через KarmaManager
-            KarmaManager.Instance.SetCarma(0);
+            // Защита от повторного вызова до загрузки сцены
+            if (_isFinishing) return;
+            _isFinishing = true;
 
-            // Удаляем все объекты, помеченные как DontDestroyOnLoad
-            DestroyAllDontDestroyOnLoadObjects();
+            // Менеджеры в DontDestroyOnLoad не уничтожаем (на поздних уровнях их негде пересоздать), только сбрасываем
+            if (KarmaManager.Instance != null) KarmaManager.Instance.ResetState();
+            if (FireManager.Instance != null) FireManager.Instance.ResetState();
+            if (PosterManager.instance != null) PosterManager.instance.ResetState();
 
             // Загружаем
             SceneManager.LoadScene(DeathCutSceneName);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(DeathCutSceneName);
         }
     }
-    private void DestroyAllDontDestroyOnLoadObjects()
-    {
-        GameObject[] allObjects = FindObjectsOfType<GameObject>();
-        foreach (GameObject obj in allObjects)
-        {
-            if (obj.scene.name == null || obj.scene.name == "DontDestroyOnLoad")
-            {
-                Destroy(obj);
-            }
-        }
-    }
+
     public void Exit()
     {
         Application.Quit();
@@ -85,7 +90,12 @@ public class LevelManager : MonoBehaviour
 
     public void Continue()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(PlayerPrefs.GetInt(PlayerController.NEXT_LEVEL_KEY));
+        int nextLevel = PlayerPrefs.GetInt(PlayerController.NEXT_LEVEL_KEY);
+        if (nextLevel < 0 || nextLevel >= SceneManager.sceneCountInBuildSettings)
+        {
+            nextLevel = 0;
+        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextLevel);
     }
 
     public void Save()

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DeadlyObject : MonoBehaviour
@@ -12,15 +10,13 @@ public class DeadlyObject : MonoBehaviour
     [SerializeField] int RemovedLifes = 1;
     private void OnTriggerEnter(Collider other)
     {
-        if (needSignal) if (!signal.Signal()) return;
+        if (needSignal && (signal == null || !signal.Evaluate())) return;
         if ((!other.isTrigger) && other.TryGetComponent(out PlayerController player))
         {
-            if (player.playerState == PlayerState.Stunned) return;
+            if (player.playerState == PlayerState.Stunned || player.playerState == PlayerState.Dead) return;
             if(stunDirection) player.ForceKick(stunDirection.forward * stunForce, stunTime);
-            
-            player.Lifes -= RemovedLifes;
-            if (player.Lifes <= 0)
-            player.Die();
+
+            player.TakeDamage(RemovedLifes);
         }
     }
 }

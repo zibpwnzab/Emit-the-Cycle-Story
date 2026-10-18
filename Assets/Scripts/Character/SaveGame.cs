@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class SaveGame : MonoBehaviour
 {
-    private const string SavePrefsKey = "SaveGame";
+    public const string SavePrefsKey = "SaveGame";
 
     [SerializeField] private Text saveDataText;
 

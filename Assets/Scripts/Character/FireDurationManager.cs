@@ -10,12 +10,14 @@ public class FireManager : MonoBehaviour
 
     [SerializeField] private int totalFireCount = 3;
     private TMP_Text _fireCountText;
+    private int _initialFireCount;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            _initialFireCount = totalFireCount;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
@@ -35,7 +37,15 @@ public class FireManager : MonoBehaviour
         if (Instance == this)
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;
+            Instance = null;
         }
+    }
+
+    /// <summary>Restores the starting number of flares (death / new game).</summary>
+    public void ResetState()
+    {
+        totalFireCount = _initialFireCount;
+        UpdateFireCountUI();
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)

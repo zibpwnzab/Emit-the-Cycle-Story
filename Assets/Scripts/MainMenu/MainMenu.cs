@@ -38,42 +38,28 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        // Сбрасываем все сохранённые данные (PlayerPrefs)
-        PlayerPrefs.DeleteAll();
+        // Сбрасываем только прогресс, настройки (графика, язык) сохраняем
+        PlayerPrefs.DeleteKey(PlayerController.NEXT_LEVEL_KEY);
+        PlayerPrefs.DeleteKey(PlayerController.TOTAL_GAME_TIME);
+        PlayerPrefs.DeleteKey(PlayerController.PLAYER_CARMA_KEY);
+        PlayerPrefs.DeleteKey(SaveGame.SavePrefsKey);
         PlayerPrefs.Save();
 
-        // Найти объект GraphicManager, который не должен удаляться
-        GameObject graphicManager = GameObject.Find("GraphicManager");
-
-        // Удаляем все объекты, помеченные как DontDestroyOnLoad, кроме GraphicManager
-        DestroyAllDontDestroyOnLoadObjectsExcept(graphicManager);
+        // Менеджеры живут в DontDestroyOnLoad, сбрасываем их состояние
+        if (KarmaManager.Instance != null) KarmaManager.Instance.ResetState();
+        if (FireManager.Instance != null) FireManager.Instance.ResetState();
+        if (PosterManager.instance != null) PosterManager.instance.ResetState();
 
         // Загружаем новую игру
         SceneManager.LoadScene(FirstCutSceneName);
     }
 
-    private void DestroyAllDontDestroyOnLoadObjectsExcept(GameObject exception)
-    {
-        var dontDestroyOnLoadObjects = new List<GameObject>();
-
-        // Получаем все корневые объекты сцены
-        //var sceneRoots = SceneManager.GetSceneByName("DontDestroyOnLoad").GetRootGameObjects();
-        //dontDestroyOnLoadObjects.AddRange(sceneRoots);
-
-        // Удаляем все объекты, кроме исключения (GraphicManager)
-        foreach (var obj in dontDestroyOnLoadObjects)
-        {
-            if (obj != exception)
-            {
-                Destroy(obj);
-            }
-        }
-    }
-
-
-
     public void ContinueGame()
     {
+        if (nextLevel < 0 || nextLevel >= SceneManager.sceneCountInBuildSettings)
+        {
+            nextLevel = 1;
+        }
         SceneManager.LoadScene(nextLevel);
     }
 
