@@ -2,3 +2,19 @@
 *.html text
 *.css text
 *.js text
+# Ignore Unity assets, shaders, and third-party plugins in GitHub language stats
+*.shader linguist-vendored
+*.cginc linguist-vendored
+*.hlsl linguist-vendored
+*.mat linguist-vendored
+*.asset linguist-vendored
+*.unity linguist-vendored
+*.prefab linguist-vendored
+*.c linguist-vendored
+*.cpp linguist-vendored
+*.h linguist-vendored
+*.cmake linguist-vendored
+.utmp/** linguist-vendored
+Assets/TextMesh Pro/** linguist-vendored
+Assets/Joystick Pack/** linguist-vendored
+Assets/DialogNodeBasedSystem/** linguist-vendored
