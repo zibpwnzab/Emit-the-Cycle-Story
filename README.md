@@ -1,45 +1,105 @@
-# [Emit-the-Cycle-Story]
+<div align="center">
 
-**Emit-the-Cycle-Story** — это сюжетно-ориентированная приключенческая игра, разработанная на движке Unity. Сфокусирована на глубоком погружении в историю и взаимодействии с окружающим миром.
+# 🔦 EMIT: THE CYCLE STORY — 3D Laser Puzzle & Narrative Adventure
 
-> **Примечание для .NET бэкенд рекрутеров:** Этот проект был разработан мной, Дмитрием Прокофьевым, для демонстрации навыков проектирования сложной архитектуры на языке C#. Основной акцент в описании ниже сделан не на игровой механике, а на примененных паттернах проектирования, алгоритмах и техниках оптимизации кода.
+**Приключенческая 3D-головоломка с геометрической оптикой лазеров, системой логических вентилей и нелинейными диалогами с механикой кармы**
 
-## Технологический стек
-* **Язык программирования:** C# 
-* **Платформа:** Unity 2022+
+[![Unity](https://img.shields.io/badge/Engine-Unity%206-black?logo=unity)](https://unity.com/)
+[![Language](https://img.shields.io/badge/Language-C%23-239120?logo=c-sharp)](https://learn.microsoft.com/en-us/dotnet/csharp/)
+[![Genre](https://img.shields.io/badge/Genre-3D%20Puzzle%20%7C%20Narrative%20Adventure-purple)]()
 
-## Архитектурные решения и инженерный фокус
+[**🇷🇺 Русская версия**](#-о-проекте) | [**🇬🇧 English Version (Click below or scroll)**](#-english-version)
 
-В данном проекте я уделил особое внимание созданию расширяемой и поддерживаемой кодовой базы. Ниже приведены ключевые инженерные решения, реализованные в C#:
+</div>
 
-### 1. Реализация Стейт-машины 
-Для управления сложной логикой поведения персонажа я отказался от громоздких цепочек `if-else` и реализовал паттерн **State** на базе `enum PlayerState`. Это позволило:
-* Инкапсулировать логику каждого состояния (`Walking`, `MovingObject`, `RotatingObject`, `Stunned`) в отдельные блоки.
-* Гарантировать корректность переходов между состояниями и упростить отладку системы.
+---
 
-### 2. Реализация систем Булевой Логики 
-Я спроектировал и реализовал систему логических вентилей (класс `LogicAnd.cs`), позволяющую создавать сложные связи между объектами (вентили AND, OR, NOR, NAND).
-* **Маркер навыка:** Это решение показывает умение проектировать движки правил, системы прав доступа или сложные фильтры данных, применимые в бэкенд-разработке.
+<details>
+<summary><b>🌐 Switch to English / Read in English (Click to expand)</b></summary>
 
-### 3. Сложные алгоритмы и физика: Рекурсивный рейкастинг
-Для системы лазеров (класс `LaserEmitter.cs`) я разработал рекурсивный алгоритм отражения, использующий математику векторов и нормалей.
-* **Техническая реализация:** Реализовал рекурсивную функцию `EmitLaser`, использующую `Raycast` и математику отражения вектора (`Vector3.Dot`).
-* **Маркер навыка:** Демонстрирует умение работать со сложными вычислениями и алгоритмами.
+<br>
 
-### 4. Управление асинхронными процессами и оптимизация
-Реализация механик, требующих задержек по времени, была выполнена с использованием асинхронных **корутин**:
-* Реализована система кулдаунов урона (`DisableLaserDamageTemporarily`) и перезарядки без блокировки основного потока.
-* Внедрены очереди (`Queue<bool>` в `LaserReceiver.cs`) для сглаживания состояний и повышения стабильности данных.
+## 🎯 Project Overview (English Version)
 
-### 5. Слабая связанность через событийную модель
-Для взаимодействия между изолированными системами (катсцены в `CutsceneManager`, диалоги) была применена **событийная модель**.
-* Это решение обеспечивает выполнение принципа слабой связанности (Loose Coupling), критичного для поддерживаемости систем.
+**Emit: The Cycle Story** is an authorial 3D puzzle-adventure game built in Unity. The core gameplay combines spatial laser-reflection puzzles and boolean logic circuits with a branching narrative driven by a persistent Karma system. The player navigates dark industrial environments using time-limited signal flares, manipulates movable mirrors and turrets, and routes laser beams into optical receivers to unlock level transitions.
 
-## Как изучить код проекта
-Самые интересные с точки зрения архитектуры на C# файлы находятся в папках: `Assets/Scripts/Player`, `Assets/Scripts/Objects/Lasers` и `Assets/Scripts/Objects/Logic Connections`. Рекомендую обратить внимание на:
-* `PlayerController.cs` — пример использования стейт-машины и корутин.
-* `LaserEmitter.cs` — рекурсивный алгоритм и управление состояниями.
-* `LogicAnd.cs` — реализация Булевой логики.
+### ⚙️ Technical & Architectural Highlights (Unity / C#)
+* **Recursive Raycast Laser Optics (`LaserEmitter.cs`, `LaserReceiver.cs`):**
+  Calculates multi-bounce laser trajectories using `Physics.Raycast` and `Vector3.Reflect(direction, hit.normal)` up to a configurable bounce limit. Features zero-allocation line rendering via cached `Vector3[]` buffers and timestamp-based knockback/damage cooldowns.
+* **Modular Boolean Signal Circuitry (`ISignal.cs`, `LogicAnd.cs`, `LogicTimer.cs`, `Wire.cs`):**
+  A designer-friendly signal graph architecture allowing level designers to wire laser receivers, timers, latches (`LogicActivateForever`), inverters (`Wire`), and boolean logic gates (`AND`, `OR`, `NOR`, `NAND`) directly in the Unity Inspector without writing custom level scripts.
+* **Branching Dialogues & Karma State (`KarmaManager.cs`, `DialogController.cs`):**
+  Tracks player moral choices across scenes (`DontDestroyOnLoad`). Dialogue triggers dynamically evaluate current Karma thresholds (`carmaBorders`) and external signal states before initiating node-based conversations.
+* **Context-Sensitive Interaction & Flare System (`PlayerController.cs`, `MovableObject.cs`, `FireManager.cs`):**
+  State-driven character controller (`Walking`, `MovingObject`, `RotatingObject`, `Stunned`, `Dead`) with contact-normal ground detection, automatic pruning of disabled interaction triggers, and a resource-based flare lighting mechanic with cooldowns.
 
-## Отказ от ответственности
-Некоторые классы в данном проекте (например, `PlayerController`) могут быть перегружены ответственностью из-за жестких временных ограничений при разработке. Я полностью осознаю важность принципа единственной ответственности (SRP) и в коммерческой бэкенд-разработке применяю практики рефакторинга для декомпозиции God-объектов на более мелкие, специализированные сервисы.
+</details>
+
+---
+
+## 🎮 О проекте
+
+**Emit: The Cycle Story** — авторская 3D-головоломка с элементами нарративного приключения на Unity. Игра объединяет пространственные пазлы на базе отражения лазерных лучей и булевой логики с нелинейной системой диалогов, зависящей от накопленной кармы игрока.
+
+Игрок исследует темные уровни, используя ограниченный запас временных фаеров для освещения пути, передвигает и вращает отражающие турели/зеркала и выстраивает цепочки лазерных лучей для запитки приемников и открытия дверей.
+
+---
+
+## 🛠 Архитектура и ключевые механики (C# / Unity 6)
+
+Проект построен вокруг модульных систем, позволяющих собирать сложные головоломки прямо в редакторе Unity:
+
+* **Геометрическая оптика и трассировка лазера (`LaserEmitter`, `LaserReceiver`):**
+  Расчет многократных рикошетов луча через `Physics.Raycast` и векторное отражение `Vector3.Reflect(direction, hit.normal)` с ограничением глубины рекурсии (`maxBounces`). Отрисовка луча через `LineRenderer` оптимизирована за счет переиспользования буфера вершин `Vector3[]` без лишних аллокаций памяти в `Update`.
+* **Конструктор логических схем и сигналов (`ISignal`, `LogicAnd`, `LogicTimer`, `Wire`):**
+  Абстрактная система сигналов позволяет связывать элементы уровня в полноценные логические цепи прямо в Инспекторе:
+  * **Вентили (`LogicAnd`):** Поддержка логических операций `AND`, `OR`, `NOR`, `NAND` над произвольным списком источников сигнала с предварительным кешированием компонентов.
+  * **Таймеры и триггеры-защелки (`LogicTimer`, `LogicActivateForever`, `LaserReceiver`):** Требуют удерживать луч лазера в приемнике заданное количество секунд для срабатывания механизма или двери (`SceneLoader`).
+* **Система кармы и ветвления диалогов (`KarmaManager`, `DialogController`):**
+  Межсценовый синглтон отслеживает моральный рейтинг игрока. Контроллер диалогов проверяет попадание текущей кармы в заданный диапазон `[min, max]` и наличие входного сигнала `ISignal`, открывая уникальные ветки сюжета и катсцены (`CutsceneManager` на базе `PlayableDirector`).
+* **Контроллер персонажа и механика фаеров (`PlayerController`, `FireManager`, `MovableObject`):**
+  Машина состояний игрока (`Walking`, `MovingObject`, `RotatingObject`, `Stunned`, `Dead`) с проверкой приземления по нормали поверхности, физическим отталкиванием при попадании под лазер (`ForceKick`) и системой расходуемых фаеров с фазами горения, затухания и перезарядки.
+
+---
+
+## 🧩 Геймдизайн: взаимодействие систем
+
+| Система | Геймплейная роль |
+| :--- | :--- |
+| **Отражение лазера + Турели** | Пространственная задача: игрок должен сопоставить углы падения и отражения, двигая (`MovingObject`) или поворачивая (`RotatingObject`) зеркала и турели. |
+| **Удержание луча (`LaserReceiver` + `LogicTimer`)** | Защищает пазлы от случайного прохождения («прострела» лучом во время вращения): луч должен стабильно питать приемник несколько секунд, чтобы открыть дверь. |
+| **Система фаеров (`FireManager`)** | Менеджмент ресурсов: фаер освещает окружение лишь на `6` секунд и требует `10` секунд перезарядки, заставляя игрока запоминать расположение зеркал и ловушек. |
+| **Карма и развилки (`KarmaManager`)** | Реиграбельность: ответы в диалогах меняют счетчик кармы, блокируя или открывая альтернативные диалоговые графы на последующих уровнях. |
+
+---
+
+## 📂 Структура скриптов (`Assets/Scripts`)
+
+```text
+Assets/Scripts/
+├── Character & Camera
+│   ├── PlayerController.cs       # Движение, машина состояний, интеракция и механика фаеров
+│   ├── CameraController.cs       # Плавное следование камеры (LateUpdate Lerp)
+│   ├── ParabolaMovement.cs       # Скриптовые прыжки по параболической траектории
+│   ├── LedgeGrab.cs              # Механика подтягивания на уступы
+│   └── PlayerLifes.cs            # Отображение здоровья и состояния игрока в UI
+├── Lasers & Logic Circuits
+│   ├── ISignal.cs                # Базовый абстрактный класс источника логического сигнала
+│   ├── LaserEmitter.cs           # Трассировка луча, рикошеты от зеркал и урон игроку
+│   ├── LaserReceiver.cs          # Оптический приемник лазера, генерирующий сигнал
+│   ├── LaserMovement.cs          # Патрулирование / движение лазерных излучателей
+│   ├── LogicAnd.cs               # Логические вентили (AND, OR, NOR, NAND)
+│   ├── LogicTimer.cs             # Таймер удержания сигнала для открытия дверей
+│   ├── LogicActivateForever.cs   # Логическая защелка (RS-триггер постоянной активации)
+│   └── Wire.cs                   # Передатчик и инвертор сигнала (NOT)
+├── Narrative, Karma & Level Flow
+│   ├── KarmaManager.cs           # Межсценовое хранение и модификация кармы
+│   ├── DialogController.cs       # Условный запуск диалоговых графов по карме и сигналам
+│   ├── CutsceneManager.cs        # Управление катсценами через PlayableDirector (Timeline)
+│   ├── LevelManager.cs           # Завершение уровня, сохранения и переходы
+│   └── SceneLoader.cs            # Двери/переходы между сценами с проверкой массива сигналов
+└── Interactive Objects
+    ├── MovableObject.cs          # Захват и перемещение объектов игроком (IInteractable)
+    ├── Rope.cs / RopeSegment.cs  # Физика и отрисовка сегментированных канатов
+    └── FireManager.cs            # Глобальный учет запаса фаеров между сценами
+```
