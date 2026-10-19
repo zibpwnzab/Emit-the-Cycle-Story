@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-
+#pragma warning disable CS0618
 namespace UnityStandardAssets.ImageEffects
 {
     [ExecuteInEditMode]

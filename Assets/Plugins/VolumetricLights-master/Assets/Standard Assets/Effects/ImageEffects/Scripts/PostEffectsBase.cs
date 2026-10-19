@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-
+#pragma warning disable CS0618
 namespace UnityStandardAssets.ImageEffects
 {
     [ExecuteInEditMode]
@@ -10,6 +10,7 @@ namespace UnityStandardAssets.ImageEffects
         protected bool  supportHDRTextures = true;
         protected bool  supportDX11 = false;
         protected bool  isSupported = true;
+        #pragma warning disable CS0618
 
         protected Material CheckShaderAndCreateMaterial ( Shader s, Material m2Create)
 		{

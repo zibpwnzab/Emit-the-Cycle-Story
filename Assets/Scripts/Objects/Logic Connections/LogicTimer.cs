@@ -4,8 +4,6 @@ public class LogicTimer : ISignal
 {
     [SerializeField] private ISignal incomingSignal;
     [SerializeField] private float delay = 1f;
-    // TODO: unused
-    [SerializeField] private float signalTime = 0.1f;
 
     private float _delayLeft;
     private bool _isPowered => _delayLeft <= 0f;
@@ -17,7 +15,6 @@ public class LogicTimer : ISignal
 
     private void Awake()
     {
-        // Awake, not Start: must not report "powered" before initialization
         _delayLeft = delay;
     }
 
