@@ -5,106 +5,91 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour, IInteractable
 {
-    [SerializeField] private List<ISignal> signalSources; // Список сигналов
-    [SerializeField] private string sceneName; // Загрузка сцены по имени
-    [SerializeField] private bool needsSignal = true; // Требуются ли сигналы для загрузки
-    [SerializeField] private bool useTrigger = true; // Чекбокс для активации через триггер
-    [SerializeField] private bool useTimer = false; // Чекбокс для активации через таймер
-    [SerializeField] private float delayBeforeLoad = 5.0f; // Задержка перед загрузкой сцены
+    [SerializeField] private List<ISignal> signalSources;
+    [SerializeField] private string sceneName;
+    [SerializeField] private bool needsSignal = true;
+    [SerializeField] private bool useTrigger = true;
+    [SerializeField] private bool useTimer = false;
+    [SerializeField] private float delayBeforeLoad = 5.0f;
 
-    private bool sceneLoadingTriggered = false; // Флаг, чтобы избежать повторной загрузки
+    private bool _sceneLoadingTriggered;
 
     private void Start()
     {
-        // Если таймер активирован, запускаем его
         if (useTimer)
         {
             StartCoroutine(LoadSceneAfterDelay());
         }
     }
 
-    // Метод загрузки сцены по истечении таймера
     private IEnumerator LoadSceneAfterDelay()
     {
         yield return new WaitForSeconds(delayBeforeLoad);
-        LoadNextScene(null); // Удалим игрока перед загрузкой
+        LoadNextScene(null);
     }
 
-    // Метод, который вызывается при прохождении через триггер
     private void OnTriggerEnter(Collider other)
     {
-        if (useTrigger && other.CompareTag("Player")) // Проверяем, что объект — это игрок
+        if (useTrigger && other.CompareTag("Player"))
         {
-            LoadNextScene(other.gameObject); // Удалим игрока перед загрузкой
+            LoadNextScene(other.gameObject);
         }
     }
 
     public bool StopInteraction(GameObject gameObject, Animator animator)
     {
-        return Interact(gameObject, animator);
+        return true;
     }
 
     public bool Interact(GameObject gameObject, Animator animator)
     {
         if (needsSignal && !AreAllSignalsActive())
         {
-            return false; // Если хотя бы один сигнал не активен, не загружаем сцену
+            return false;
         }
 
-        LoadNextScene(gameObject); // Удалим игрока перед загрузкой
+        LoadNextScene(gameObject);
         return true;
     }
 
-    // Метод проверки всех сигналов
     private bool AreAllSignalsActive()
     {
+        if (signalSources == null) return true;
+
         foreach (var signal in signalSources)
         {
-            if (!signal.Signal()) // Проверяем каждый сигнал
+            if (signal == null || !signal.Evaluate())
             {
-                return false; // Если хотя бы один сигнал не активен, возвращаем false
+                return false;
             }
         }
-        return true; // Все сигналы активны
+        return true;
     }
 
     private void LoadNextScene(GameObject player)
     {
-        if (sceneLoadingTriggered)
-            return;
+        if (_sceneLoadingTriggered || string.IsNullOrEmpty(sceneName)) return;
 
-        sceneLoadingTriggered = true;
+        _sceneLoadingTriggered = true;
 
-        // Удаляем объект игрока перед загрузкой новой сцены
         if (player != null)
         {
             Destroy(player);
         }
 
-        Debug.Log("Загружаем сцену: " + sceneName);
         SceneManager.LoadScene(sceneName);
     }
 
-    // Метод для загрузки сцены по нажатию кнопки UI
+    public void LoadSceneFromUIButton()
+    {
+        LoadSceneFromUIButton(null);
+    }
+
     public void LoadSceneFromUIButton(GameObject player)
     {
-        if (sceneLoadingTriggered)
-            return; // Избегаем повторной загрузки
+        if (_sceneLoadingTriggered) return;
+        if (needsSignal && !AreAllSignalsActive()) return;
 
-        if (needsSignal && !AreAllSignalsActive())
-        {
-            Debug.Log("Не все сигналы активны, сцена не загружена.");
-            return; // Если сигналы нужны и не все активны, не загружаем сцену
-        }
-
-        // Удаляем объект игрока перед загрузкой новой сцены
-        if (player != null)
-        {
-            Destroy(player);
-        }
-
-        // Если не требуется проверка сигналов или все сигналы активны, загружаем сцену
-        Debug.Log("Загружаем сцену через кнопку UI: " + sceneName);
-        SceneManager.LoadScene(sceneName); // Загружаем сцену (вызвано из UI кнопки)
+        LoadNextScene(player);
     }
 }

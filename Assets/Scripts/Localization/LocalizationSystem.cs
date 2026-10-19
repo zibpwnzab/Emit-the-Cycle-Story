@@ -8,15 +8,27 @@ public class LocalizationSystem : MonoBehaviour
 {
     [SerializeField] UnityEngine.Localization.Settings.LocalizationSettings settings;
     UnityEngine.Localization.Settings.LocalizedStringDatabase stringDatabase;
-    static Dictionary<TMP_Text, (string key, string[] args)> activeJobs;
-    static Queue<(TMP_Text text, string key, string[] args)> queueJobs;
+    // Created here: AddLocalizationJob can be called before Start
+    static readonly Dictionary<TMP_Text, (string key, string[] args)> activeJobs = new();
+    static readonly Queue<(TMP_Text text, string key, string[] args)> queueJobs = new();
     public static LocalizationSystem instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
-        activeJobs = new();
-        queueJobs = new();
+        if (settings == null) return;
         stringDatabase = settings.GetStringDatabase();
         settings.OnSelectedLocaleChanged += ChangeLanguage;
+    }
+
+    private void OnDestroy()
+    {
+        if (settings != null) settings.OnSelectedLocaleChanged -= ChangeLanguage;
+        if (instance == this) instance = null;
     }
 
     public static void AddLocalizationJob(TMP_Text text, string key, params string[] args)
@@ -27,13 +39,13 @@ public class LocalizationSystem : MonoBehaviour
 
     public void Update()
     {
-        if (queueJobs.Count == 0)
+        if (queueJobs.Count == 0 || stringDatabase == null)
             return;
         var job = queueJobs.Dequeue();
+        if (!job.text)
+            return;
 
-        if (!activeJobs.ContainsKey(job.text))
-            activeJobs.Add(job.text, (job.key, job.args));
-        else activeJobs[job.text] = (job.key, job.args);
+        activeJobs[job.text] = (job.key, job.args);
 
         ExecuteJob(job.text, job.key, job.args);
     }
@@ -41,10 +53,9 @@ public class LocalizationSystem : MonoBehaviour
     private void ExecuteJob(TMP_Text field, string key, string[] args)
     {
         string text = stringDatabase.GetLocalizedString(key);
-        if (args.Length > 0)
+        if (args != null && args.Length > 0)
         {
             text = string.Format(text, args);
-            Debug.Log(text);
         }
         if (field)
             field.text = text;
@@ -52,9 +63,21 @@ public class LocalizationSystem : MonoBehaviour
 
     public void ChangeLanguage(Locale locale)
     {
+        // Skip texts destroyed together with their scene
+        var deadTexts = new List<TMP_Text>();
         foreach (var job in activeJobs)
         {
+            if (!job.Key)
+            {
+                deadTexts.Add(job.Key);
+                continue;
+            }
             queueJobs.Enqueue((job.Key, job.Value.key, job.Value.args));
+        }
+
+        foreach (var text in deadTexts)
+        {
+            activeJobs.Remove(text);
         }
     }
 }

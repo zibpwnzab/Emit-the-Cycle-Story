@@ -10,7 +10,7 @@ public class ParticleActivator : MonoBehaviour
     {
         if (signal == null || ParticleSystems == null) return;
 
-        bool isActive = signal.Signal();
+        bool isActive = signal.Evaluate();
 
         foreach (ParticleSystem ps in ParticleSystems)
         {

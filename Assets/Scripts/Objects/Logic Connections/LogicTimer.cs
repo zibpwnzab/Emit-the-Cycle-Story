@@ -4,7 +4,6 @@ public class LogicTimer : ISignal
 {
     [SerializeField] private ISignal incomingSignal;
     [SerializeField] private float delay = 1f;
-    [SerializeField] private float signalTime = 0.1f;
 
     private float _delayLeft;
     private bool _isPowered => _delayLeft <= 0f;
@@ -14,7 +13,7 @@ public class LogicTimer : ISignal
         return _isPowered;
     }
 
-    private void Start()
+    private void Awake()
     {
         _delayLeft = delay;
     }
@@ -23,7 +22,7 @@ public class LogicTimer : ISignal
     {
         if (_isPowered || incomingSignal == null) return;
 
-        if (incomingSignal.Signal())
+        if (incomingSignal.Evaluate())
         {
             _delayLeft -= Time.deltaTime;
         }
